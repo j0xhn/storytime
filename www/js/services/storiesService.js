@@ -30,6 +30,20 @@ angular.module('starter.services', [])
             },
             html:'Here is a sample story,<b ng-bind="main"></b> lets see if this works <b ng-bind="first"></b>'
           }
+        },
+        3: {
+            title: "A Special Surprise",
+            desc: "Friends find a new puppy to play with... rabis?",
+            photoUrl:"http://t2.uccdn.com/en/images/6/2/1/img_how_much_should_my_labrador_puppy_eat_126_100_square.jpg",
+            author: 'Kerry Reynolds',
+            tags: ['puppy','sickness'],
+            id: 3,
+            inputs:{
+              first:   { title:"Temporary Variable", type: 'text'},
+              main:   { title:"Does This Mimic Above?", type: 'text'}
+            },
+            html:'Here is a sample story,<b ng-bind="main"></b> lets see if this works <b ng-bind="first"></b>'
+          }
         };
         return {
             getStories: function () {
