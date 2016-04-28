@@ -29,9 +29,8 @@ angular.module('starter.services', [])
               main:   { title:"Does This Mimic Above?", type: 'text'}
             },
             html:'Here is a sample story,<b ng-bind="main"></b> lets see if this works <b ng-bind="first"></b>'
-          }
-        },
-        3: {
+          },
+          3: {
             title: "A Special Surprise",
             desc: "Friends find a new puppy to play with... rabis?",
             photoUrl:"http://t2.uccdn.com/en/images/6/2/1/img_how_much_should_my_labrador_puppy_eat_126_100_square.jpg",
@@ -43,9 +42,8 @@ angular.module('starter.services', [])
               main:   { title:"Does This Mimic Above?", type: 'text'}
             },
             html:'Here is a sample story,<b ng-bind="main"></b> lets see if this works <b ng-bind="first"></b>'
-          }
-        },
-        4: {
+          },
+          4: {
             title: "The Mysterious Rocklands - cultivate curiosity",
             desc: "Extraordinary things in life are only found if you are curious enough to seek them out",
             photoUrl:"http://www.duluthnewstribune.com/sites/default/files/styles/square_100/public/field/image/ROCKS0628c5_0.jpg?itok=m_Oj4jj4",
@@ -62,7 +60,6 @@ angular.module('starter.services', [])
           }
         };
 
-        };
         return {
             getStories: function () {
                 return allStories;
