@@ -72,7 +72,22 @@ angular.module('starter.services', [])
         dvehicle:   { title:"Favorite vehicle - i.e.- Batmobile",type: 'text'}
       },
       html: '<b ng-bind="dcity"></b> was plagued with thieves, plunderers, gangsters, and criminals of all kinds.  <b ng-bind="main"></b> wasn&#39;t the only one concerned for the welfare of the people.  God had heard the prayers of <b ng-bind="main"></b> on behalf of the good people and decided to intervene.  God told <b ng-bind="main"></b> that he would send a mighty rain to flood the land and wash away the crime so the city could start fresh.  God told <b ng-bind="main"></b> that he would need a boat and supplies and that he should warn the people. <br><br> <b ng-bind="main"></b> told the people that he had prayed for their city, and God had promised to send a flood.  He advised them to build ships, so they wouldn&#39;t drown.  The people all laughed and ignored him, especially <b ng-bind="dvillian"></b>.  <br><br> They watched as <b ng-bind="main"></b> pulled out his <b ng-bind="dvehicle"></b>.  He prayed that God would tell him how to modify the <b ng-bind="dvehicle"></b> so it could float and hold all the needed supplies.  God answered <b ng-bind="main"></b> prayer and enlightened his mind with new constructions.  As <b ng-bind="main"></b> was making his <b ng-bind="dvehicle"></b> much larger, <b ng-bind="dvillian"></b> laughed and taunted <b ng-bind="main"></b> saying that his modifications were making the <b ng-bind="dvehicle"></b> slow and less maneuverable.   <b ng-bind="dvillian"></b> told <b ng-bind="main"></b> he would never be able to rid the city of crime in that monstrosity. <br><br> <b ng-bind="main"></b> didn&#39;t listen to the laughing around him and counseled all the good people of the city that they should do the same.  They finished their boats and waited. <br><br> Dark clouds began forming.  The rain started to pour down soaking <b ng-bind="dvillian"></b>.  <b ng-bind="main"></b> entered his <b ng-bind="dvehicle"></b> and said a prayer of thanks to God.  He was thankful that he would be protected from the storm.  The End'
-    }
+    },
+    6: {
+            title: "Making Choices",
+            desc: "Make a thoughtful choice and be happy with it",
+            photoUrl:"http://a2.mzstatic.com/us/r30/Purple/v4/d8/3b/78/d83b78da-0424-0945-3b4c-43579556c103/icon100x100.png",
+            author: 'Michelle Reynolds',
+            tags: ['choices','decision','consumerism','contentment'],
+            id: 6,
+            inputs:{
+              main:       { title:'Your Name', type: 'text'},
+              dfun:        { title:'Activity you like to do',type: 'text'},
+              dsupplies:     { title:'Supplies needed for the activity',type: 'text'},
+              l/setting:   { title:"Best location for activity",type: 'text'}
+            },
+html: '<b ng-bind="main"></b> was having a fantastic day.  He/She had been up early getting chores done and was now free to <b ng-bind="dfun"></b>.  He/she began to gather the <b ng-bind="dsupplies"></b> but noticed that his/her arms were quickly filling and he/she couldn&#39;t hold everything.  He/she had to decide what was the most important.  He/she looked over all the supplies and thought playing eenie-meenie-miney-mo with them might help him/her choose.  But he/she knew some supplies were more important than others and didn&#39;t like the thought of leaving this decision to chance.  After all, what if it meant leaving (Insert the most important supply).  No, he/she could not let that happen! So <b ng-bind="main"></b> carefully thought about the pros and cons to each item.  (Insert  a few pros and cons to some supplies).  Ultimately, <b ng-bind="main"></b> decided that he/she could leave behind the (Insert supply with the most cons) and set off for the <b ng-bind="l/setting"></b>. (Add description of setting: items to touch, smell, see, hear, taste) <br><br>.  <b ng-bind="main"></b> was having so much fun using the (insert item with the most pros) (Show <b ng-bind="main"></b> using the item - what do you do with it, how does it feel, sound, taste, smell, look) that he/she didn&#39;t even miss the (Insert item left behind). <b ng-bind="main"></b> was glad he/she had made a thoughtful choice! The End'
+	}
   };
 
   return {
