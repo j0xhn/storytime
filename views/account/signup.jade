@@ -6,6 +6,11 @@ block content
   form.form-horizontal(id='signup-form', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group
+      .col-sm-offset-3.col-sm-7
+        a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
+          i.fa.fa-facebook
+          | Sign in with Facebook
+    .form-group
       label.col-sm-3.control-label(for='email') Email
       .col-sm-7
         input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, required)
