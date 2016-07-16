@@ -22,7 +22,7 @@ const upload = multer({ dest: path.join(__dirname, 'uploads') });
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
  */
-dotenv.load({ path: 'https://s3-us-west-2.amazonaws.com/story-time/keys.prod' });
+dotenv.load({ path: '.env.example' });
 
 /**
  * Controllers (route handlers).
