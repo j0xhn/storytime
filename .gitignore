@@ -6,4 +6,5 @@ platforms/
 plugins/
 exclude/
 secret/
+*.log
 .env.example
