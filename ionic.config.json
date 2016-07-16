@@ -1,8 +1,0 @@
-{
-  "name": "Story Time",
-  "app_id": "5a624eb0",
-  "gulpStartupTasks": [
-    "sass",
-    "watch"
-  ]
-}
