@@ -11043,6 +11043,21 @@ button.close {
   margin: 0 15px 0 0;
   border-color: gray; }
 
+/* line 2, /Users/John/Dev/projects/storytime/public/css/pages/storyPage.scss */
+.story-page .story-text {
+  padding: 15px; }
+
+/* line 3, /Users/John/Dev/projects/storytime/public/css/pages/storyPage.scss */
+.story-page b {
+  color: blue;
+  min-width: 25px;
+  display: inline-block; }
+  /* line 7, /Users/John/Dev/projects/storytime/public/css/pages/storyPage.scss */
+  .story-page b:empty {
+    height: 10px;
+    opacity: .3;
+    background-color: grayLight; }
+
 /* line 4, /Users/John/Dev/projects/storytime/public/css/themes/default/_default.scss */
 .btn {
   border-radius: 0;
@@ -11079,48 +11094,48 @@ button.close {
     text-transform: uppercase;
     transition: all 0.2s linear; }
 
-/* line 14, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 15, /Users/John/Dev/projects/storytime/public/css/main.scss */
 html {
   position: relative;
   min-height: 100%; }
 
-/* line 19, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 20, /Users/John/Dev/projects/storytime/public/css/main.scss */
 body {
   padding-top: 60px;
   margin-bottom: 75px; }
 
-/* line 24, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 25, /Users/John/Dev/projects/storytime/public/css/main.scss */
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 45px;
   line-height: 45px; }
-  /* line 31, /Users/John/Dev/projects/storytime/public/css/main.scss */
+  /* line 32, /Users/John/Dev/projects/storytime/public/css/main.scss */
   footer p, footer ul {
     margin-bottom: 0; }
 
-/* line 39, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 40, /Users/John/Dev/projects/storytime/public/css/main.scss */
 textarea {
   resize: vertical; }
 
-/* line 46, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 47, /Users/John/Dev/projects/storytime/public/css/main.scss */
 .navbar-nav img {
   width: 30px;
   height: 30px;
   margin: -15px 15px -15px; }
 
-/* line 55, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 56, /Users/John/Dev/projects/storytime/public/css/main.scss */
 .alert {
   margin-top: 20px; }
 
-/* line 62, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 63, /Users/John/Dev/projects/storytime/public/css/main.scss */
 .thumbnail {
   padding: 0;
   border-radius: 0;
   box-shadow: 0 0 5px #ccc, inset 0 0 0 #000; }
 
-/* line 71, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 72, /Users/John/Dev/projects/storytime/public/css/main.scss */
 .fa {
   margin-right: 6px; }
 

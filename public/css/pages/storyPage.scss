@@ -1,0 +1,13 @@
+.story-page{
+  .story-text { padding: 15px;}
+  b{
+    color: blue;
+    min-width: 25px;
+    display: inline-block;
+    &:empty{
+      height: 10px;
+      opacity: .3;
+      background-color: grayLight;
+    }
+  }
+}

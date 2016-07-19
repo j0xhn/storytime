@@ -1,5 +1,5 @@
-<div ng-repeat="story in myStories" class='storyCard' href="#/myStories/{{story.id}}/{{story.title}}">
+<a ng-repeat="story in myStories" class='storyCard' href="#/story/{{story.id}}/{{story.title}}">
   <img class="story-item-image" ng-src='{{story.photoUrl}}'>
   <h2> {{story.title}} </h2>
   <p> {{story.desc}} </p>
-</div>
+</a>
