@@ -112,7 +112,16 @@ app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 /**
  * Primary app routes.
  */
-app.get('/', homeController.index);
+function homeRoute(req, res) {
+  if (req.isAuthenticated()) {
+      return res.render('shop/index');
+  }
+  res.render('home');
+}
+/**
+ * Primary app routes.
+ */
+app.get('/', homeRoute);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
@@ -133,7 +142,7 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
 /**
  * Angular routes.
  */
-app.get('/shop', angularPagesController.getPagesServedByAngular);
+app.get('/stories', angularPagesController.getPagesServedByAngular);
 
 /**
  * API examples routes.

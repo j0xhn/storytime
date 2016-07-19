@@ -2,7 +2,7 @@ angular.module('miniApp', ['ngRoute']);
 angular.module('miniApp').config(function ($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'views/test.html'
+            templateUrl: 'pages/landing/index.html'
         })
         .when('/detailTest', {
             templateUrl: 'views/detailTest.html'
