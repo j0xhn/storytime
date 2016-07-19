@@ -10,6 +10,8 @@
     "test": "mocha --reporter spec --timeout 5000"
   },
   "dependencies": {
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7",
     "async": "^2.0.0",
     "bcrypt-nodejs": "^0.0.3",
     "bitgo": "2.0.0",
