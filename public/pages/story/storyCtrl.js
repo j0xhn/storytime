@@ -1,6 +1,6 @@
 angular.module('miniApp.controllers', [])
-.controller('StoryCtrl', function($scope, $stateParams, $timeout, $compile, StoriesService) {
-  $scope.storyObj = StoriesService.getSingleStory($stateParams.storyId);
+.controller('StoryCtrl', function($scope, $routeParams, $timeout, $compile, StoriesService) {
+  $scope.storyObj = StoriesService.getSingleStory($routeParams.storyId);
   var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
   for (var i = 0, len = inputsArray.length; i < len; i++) {
       var inputRegex = new RegExp('"'+inputsArray[i]+'"','g');
