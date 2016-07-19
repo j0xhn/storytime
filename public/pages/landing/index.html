@@ -1,1 +1,5 @@
-<div>List of Stories goes here</div>
+<div ng-repeat="story in myStories" class='storyCard' href="#/myStories/{{story.id}}/{{story.title}}">
+  <img class="story-item-image" ng-src='{{story.photoUrl}}'>
+  <h2> {{story.title}} </h2>
+  <p> {{story.desc}} </p>
+</div>

@@ -1,0 +1,9 @@
+.storyCard{
+  & .story-item-image {
+    display: inline;
+    float: left;
+    height: 40px;
+    margin: 0 15px 0 0;
+    border-color: gray;
+  }
+}
