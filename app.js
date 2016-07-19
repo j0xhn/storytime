@@ -60,6 +60,9 @@ app.set('view engine', 'jade');
 app.use(compression());
 app.use(sass({
   src: path.join(__dirname, 'public'),
+  sourceComments: 'map',
+  sourceMap: 'sass',
+  outputStyle: 'nested',
   dest: path.join(__dirname, 'public')
 }));
 app.use(logger('dev'));
