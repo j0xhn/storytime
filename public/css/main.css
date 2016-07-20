@@ -1919,8 +1919,8 @@ pre {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 10px;
+  padding-right: 10px; }
   /* line 14, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_clearfix.scss */
   .container:before, .container:after {
     content: " ";
@@ -1931,22 +1931,22 @@ pre {
   @media (min-width: 768px) {
     /* line 10, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_grid.scss */
     .container {
-      width: 750px; } }
+      width: 740px; } }
   @media (min-width: 992px) {
     /* line 10, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_grid.scss */
     .container {
-      width: 970px; } }
+      width: 960px; } }
   @media (min-width: 1200px) {
     /* line 10, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_grid.scss */
     .container {
-      width: 1170px; } }
+      width: 1160px; } }
 
 /* line 30, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_grid.scss */
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 10px;
+  padding-right: 10px; }
   /* line 14, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_clearfix.scss */
   .container-fluid:before, .container-fluid:after {
     content: " ";
@@ -1957,8 +1957,8 @@ pre {
 
 /* line 39, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_grid.scss */
 .row {
-  margin-left: -15px;
-  margin-right: -15px; }
+  margin-left: -10px;
+  margin-right: -10px; }
   /* line 14, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_clearfix.scss */
   .row:before, .row:after {
     content: " ";
@@ -1971,8 +1971,8 @@ pre {
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 10px;
+  padding-right: 10px; }
 
 /* line 27, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_grid-framework.scss */
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
@@ -3517,8 +3517,8 @@ select[multiple].input-lg,
 
 /* line 575, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_forms.scss */
 .form-horizontal .form-group {
-  margin-left: -15px;
-  margin-right: -15px; }
+  margin-left: -10px;
+  margin-right: -10px; }
   /* line 14, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_clearfix.scss */
   .form-horizontal .form-group:before, .form-horizontal .form-group:after {
     content: " ";
@@ -3536,7 +3536,7 @@ select[multiple].input-lg,
 
 /* line 593, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_forms.scss */
 .form-horizontal .has-feedback .form-control-feedback {
-  right: 15px; }
+  right: 10px; }
 
 @media (min-width: 768px) {
   /* line 603, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_forms.scss */
@@ -4645,8 +4645,8 @@ tbody.collapse.in {
 /* line 50, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
 .navbar-collapse {
   overflow-x: visible;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch; }
@@ -4697,8 +4697,8 @@ tbody.collapse.in {
 .container > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px; }
+  margin-right: -10px;
+  margin-left: -10px; }
   @media (min-width: 768px) {
     /* line 108, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .container > .navbar-header,
@@ -4744,7 +4744,7 @@ tbody.collapse.in {
 /* line 163, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 15px 10px;
   font-size: 18px;
   line-height: 20px;
   height: 50px; }
@@ -4758,13 +4758,13 @@ tbody.collapse.in {
     /* line 180, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .navbar > .container .navbar-brand,
     .navbar > .container-fluid .navbar-brand {
-      margin-left: -15px; } }
+      margin-left: -10px; } }
 
 /* line 193, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
 .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: 15px;
+  margin-right: 10px;
   padding: 9px 10px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -4791,7 +4791,7 @@ tbody.collapse.in {
 
 /* line 232, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
 .navbar-nav {
-  margin: 7.5px -15px; }
+  margin: 7.5px -10px; }
   /* line 235, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
   .navbar-nav > li > a {
     padding-top: 10px;
@@ -4832,9 +4832,9 @@ tbody.collapse.in {
 
 /* line 286, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
 .navbar-form {
-  margin-left: -15px;
-  margin-right: -15px;
-  padding: 10px 15px;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 10px 10px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -4944,8 +4944,8 @@ tbody.collapse.in {
     /* line 359, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .navbar-text {
       float: left;
-      margin-left: 15px;
-      margin-right: 15px; } }
+      margin-left: 10px;
+      margin-right: 10px; } }
 
 @media (min-width: 768px) {
   /* line 379, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
@@ -4954,7 +4954,7 @@ tbody.collapse.in {
   /* line 382, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
   .navbar-right {
     float: right !important;
-    margin-right: -15px; }
+    margin-right: -10px; }
     /* line 386, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .navbar-right ~ .navbar-right {
       margin-right: 0; } }
@@ -5428,8 +5428,8 @@ a.badge:hover, a.badge:focus {
   .container .jumbotron,
   .container-fluid .jumbotron {
     border-radius: 6px;
-    padding-left: 15px;
-    padding-right: 15px; }
+    padding-left: 10px;
+    padding-right: 10px; }
   /* line 35, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_jumbotron.scss */
   .jumbotron .container {
     max-width: 100%; }
@@ -11035,13 +11035,23 @@ button.close {
 .fa-percent:before {
   content: ""; }
 
-/* line 2, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
-.storyCard .story-item-image {
-  display: inline;
-  float: left;
-  height: 40px;
-  margin: 0 15px 0 0;
-  border-color: gray; }
+/* line 1, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
+body {
+  background-color: #eee; }
+
+/* line 1, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
+.storyCard {
+  background-color: white;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px; }
+  /* line 6, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
+  .storyCard .story-item-image {
+    display: inline;
+    float: left;
+    height: 40px;
+    margin: 0 15px 0 0;
+    border-color: gray; }
 
 /* line 2, /Users/John/Dev/projects/storytime/public/css/pages/storyPage.scss */
 .story-page .story-text {
@@ -11094,48 +11104,48 @@ button.close {
     text-transform: uppercase;
     transition: all 0.2s linear; }
 
-/* line 15, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 18, /Users/John/Dev/projects/storytime/public/css/main.scss */
 html {
   position: relative;
   min-height: 100%; }
 
-/* line 20, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 23, /Users/John/Dev/projects/storytime/public/css/main.scss */
 body {
   padding-top: 60px;
   margin-bottom: 75px; }
 
-/* line 25, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 28, /Users/John/Dev/projects/storytime/public/css/main.scss */
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 45px;
   line-height: 45px; }
-  /* line 32, /Users/John/Dev/projects/storytime/public/css/main.scss */
+  /* line 35, /Users/John/Dev/projects/storytime/public/css/main.scss */
   footer p, footer ul {
     margin-bottom: 0; }
 
-/* line 40, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 43, /Users/John/Dev/projects/storytime/public/css/main.scss */
 textarea {
   resize: vertical; }
 
-/* line 47, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 50, /Users/John/Dev/projects/storytime/public/css/main.scss */
 .navbar-nav img {
   width: 30px;
   height: 30px;
   margin: -15px 15px -15px; }
 
-/* line 56, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 59, /Users/John/Dev/projects/storytime/public/css/main.scss */
 .alert {
   margin-top: 20px; }
 
-/* line 63, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 66, /Users/John/Dev/projects/storytime/public/css/main.scss */
 .thumbnail {
   padding: 0;
   border-radius: 0;
   box-shadow: 0 0 5px #ccc, inset 0 0 0 #000; }
 
-/* line 72, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 75, /Users/John/Dev/projects/storytime/public/css/main.scss */
 .fa {
   margin-right: 6px; }
 

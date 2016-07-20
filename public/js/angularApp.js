@@ -2,6 +2,7 @@ angular.module('miniApp', [
   'ngRoute',
   'miniApp.landingCtrl',
   'miniApp.services',
+  'miniApp.directives',
   'miniApp.controllers'
 ]);
 angular.module('miniApp').config(function ($routeProvider) {
