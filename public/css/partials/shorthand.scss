@@ -1,0 +1,14 @@
+.ellipsis{
+  // needs a set width
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  &.multiLine{
+    // how many lines determined with
+    // -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    word-break: break-word;
+  }
+}

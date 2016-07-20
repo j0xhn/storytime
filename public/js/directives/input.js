@@ -1,11 +1,11 @@
 angular.module('miniApp.directives', [])
-	.directive('storyCard', function () {
+	.directive('stInput', function () {
 		return {
 			restrict: 'E',
 			replace: true,
-			templateUrl: '/views/storycard.html',
+			templateUrl: '/views/input.html',
 			scope: {
-				story: '='
+				input: '='
 			}
 		}
 	}

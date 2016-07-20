@@ -2,6 +2,7 @@ angular.module('miniApp', [
   'ngRoute',
   'miniApp.landingCtrl',
   'miniApp.services',
+  'miniApp.filters',
   'miniApp.directives',
   'miniApp.controllers'
 ]);

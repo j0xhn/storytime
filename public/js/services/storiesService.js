@@ -6,6 +6,7 @@ angular.module('miniApp.services', [])
       desc: "Sunblock and hats save the day when Intense Sunlight is needed to fight off bad guys",
       photoUrl:"http://worldartsme.com/images/small-sun-clipart-1.jpg",
       author: 'Michelle Storey',
+      price: 1,
       tags: ['friend','vehicle','sunscreen','sunblock','darkness','sunlight'],
       id: 1,
       inputs:{
@@ -23,6 +24,7 @@ angular.module('miniApp.services', [])
       photoUrl:"http://screenshots.en.sftcdn.net/en/scrn/82000/82722/cars-rayo-mcqueen-5.jpg",
       author: 'Test Author',
       tags: ['friend','vehicle','test','travel','road rage'],
+      price: .99,
       id: 2,
       inputs:{
         first:   { title:"Temporary Variable", type: 'text'},
@@ -32,6 +34,7 @@ angular.module('miniApp.services', [])
     },
     3: {
       title: "A Special Surprise",
+      price: .25,
       desc: "Friends find a new puppy to play with... rabis?",
       photoUrl:"http://t2.uccdn.com/en/images/6/2/1/img_how_much_should_my_labrador_puppy_eat_126_100_square.jpg",
       author: 'Kerry Reynolds',

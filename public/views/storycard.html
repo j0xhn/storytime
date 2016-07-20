@@ -1,5 +1,8 @@
 <a class='storyCard' href="#/story/{{story.id}}/{{story.title}}">
-  <img class="story-item-image" ng-src='{{story.photoUrl}}'>
-  <h2> {{story.title}} </h2>
-  <p> {{story.desc}} </p>
+  <img class="image" ng-src='{{story.photoUrl}}'>
+  <div class="details">
+    <p class='price' ng-if="story.price" ng-model='price'> {{story.price | price }} </p>
+    <p class='title ellipsis'> {{story.title}} </p>
+    <p class='desc ellipsis multiLine'> {{story.desc}} </p>
+  </div>
 </a>

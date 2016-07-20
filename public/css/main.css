@@ -11035,39 +11035,6 @@ button.close {
 .fa-percent:before {
   content: ""; }
 
-/* line 1, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
-body {
-  background-color: #eee; }
-
-/* line 1, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
-.storyCard {
-  background-color: white;
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 10px; }
-  /* line 6, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
-  .storyCard .story-item-image {
-    display: inline;
-    float: left;
-    height: 40px;
-    margin: 0 15px 0 0;
-    border-color: gray; }
-
-/* line 2, /Users/John/Dev/projects/storytime/public/css/pages/storyPage.scss */
-.story-page .story-text {
-  padding: 15px; }
-
-/* line 3, /Users/John/Dev/projects/storytime/public/css/pages/storyPage.scss */
-.story-page b {
-  color: blue;
-  min-width: 25px;
-  display: inline-block; }
-  /* line 7, /Users/John/Dev/projects/storytime/public/css/pages/storyPage.scss */
-  .story-page b:empty {
-    height: 10px;
-    opacity: .3;
-    background-color: grayLight; }
-
 /* line 4, /Users/John/Dev/projects/storytime/public/css/themes/default/_default.scss */
 .btn {
   border-radius: 0;
@@ -11104,49 +11071,169 @@ body {
     text-transform: uppercase;
     transition: all 0.2s linear; }
 
-/* line 18, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 1, /Users/John/Dev/projects/storytime/public/css/partials/shorthand.scss */
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+  /* line 6, /Users/John/Dev/projects/storytime/public/css/partials/shorthand.scss */
+  .ellipsis.multiLine {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    word-break: break-word; }
+
+/* line 1, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
 html {
   position: relative;
   min-height: 100%; }
 
-/* line 23, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 6, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
 body {
-  padding-top: 60px;
-  margin-bottom: 75px; }
+  padding-top: 50px;
+  background-color: #eee; }
 
-/* line 28, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 11, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 45px;
   line-height: 45px; }
-  /* line 35, /Users/John/Dev/projects/storytime/public/css/main.scss */
+  /* line 18, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
   footer p, footer ul {
     margin-bottom: 0; }
 
-/* line 43, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 26, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
 textarea {
   resize: vertical; }
 
-/* line 50, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 33, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
 .navbar-nav img {
   width: 30px;
   height: 30px;
   margin: -15px 15px -15px; }
 
-/* line 59, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 42, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
 .alert {
   margin-top: 20px; }
 
-/* line 66, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 49, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
 .thumbnail {
   padding: 0;
   border-radius: 0;
   box-shadow: 0 0 5px #ccc, inset 0 0 0 #000; }
 
-/* line 75, /Users/John/Dev/projects/storytime/public/css/main.scss */
+/* line 58, /Users/John/Dev/projects/storytime/public/css/partials/base.scss */
 .fa {
   margin-right: 6px; }
+
+/* line 1, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
+.storyCard {
+  background-color: #fff;
+  display: block;
+  margin-bottom: 10px;
+  color: #999;
+  position: relative;
+  min-height: 75px;
+  box-shadow: 1px 1px 1px -1px #999; }
+  /* line 9, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
+  .storyCard:hover {
+    text-decoration: none;
+    color: #999; }
+  /* line 13, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
+  .storyCard .image {
+    display: inline;
+    float: left;
+    height: 75px;
+    width: 75px;
+    margin: 0 15px 0 0; }
+  /* line 20, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
+  .storyCard .details {
+    padding: 10px; }
+  /* line 23, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
+  .storyCard .title {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 0;
+    width: calc(100% - (30px + 75px)); }
+  /* line 29, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
+  .storyCard .price {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #00B145; }
+  /* line 35, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
+  .storyCard .desc {
+    font-size: 12px;
+    -webkit-line-clamp: 2;
+    margin: 0; }
+  /* line 40, /Users/John/Dev/projects/storytime/public/css/partials/storyCard.scss */
+  .storyCard .tags {
+    border: 1px solid #eee; }
+
+/*------------------------------------*
+#INPUTS & STATES (single-line etc...)
+
+\*------------------------------------*/
+/* line 6, /Users/John/Dev/projects/storytime/public/css/partials/input.scss */
+.inputWrapper {
+  position: relative;
+  height: 45px;
+  border: 1px solid #eee;
+  width: 100%;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  margin-bottom: 10px;
+  appearance: none;
+  /* gets rid of weird inner shadow on input fields */ }
+  /* line 17, /Users/John/Dev/projects/storytime/public/css/partials/input.scss */
+  .inputWrapper input {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    appearance: none;
+    padding: 0; }
+  /* line 29, /Users/John/Dev/projects/storytime/public/css/partials/input.scss */
+  .inputWrapper label {
+    color: #999; }
+  /* line 33, /Users/John/Dev/projects/storytime/public/css/partials/input.scss */
+  .inputWrapper label, .inputWrapper input {
+    /*keeps these lined up*/
+    transition: all 0.15s ease-in-out;
+    margin: 0;
+    padding: 0 5px;
+    font-weight: 300; }
+  /* line 40, /Users/John/Dev/projects/storytime/public/css/partials/input.scss */
+  .inputWrapper input:focus, .inputWrapper input.ng-not-empty {
+    /* when input is focused, or when has content (determined in $.placeholder.js ) */ }
+    /* line 41, /Users/John/Dev/projects/storytime/public/css/partials/input.scss */
+    .inputWrapper input:focus + label, .inputWrapper input.ng-not-empty + label {
+      background-color: #fff;
+      transform: translateY(-22px);
+      font-size: 12px;
+      z-index: 0; }
+
+/* line 1, /Users/John/Dev/projects/storytime/public/css/pages/storyPage.scss */
+.story-page {
+  background-color: #fff;
+  padding-top: 15px; }
+  /* line 4, /Users/John/Dev/projects/storytime/public/css/pages/storyPage.scss */
+  .story-page b {
+    color: blue;
+    min-width: 25px;
+    display: inline-block; }
+    /* line 8, /Users/John/Dev/projects/storytime/public/css/pages/storyPage.scss */
+    .story-page b:empty {
+      height: 10px;
+      opacity: .3;
+      background-color: #999; }
 
 /*# sourceMappingURL=../../sass */

@@ -1,5 +1,6 @@
 .story-page{
-  .story-text { padding: 15px;}
+  background-color: $white;
+  padding-top: 15px;
   b{
     color: blue;
     min-width: 25px;
@@ -7,7 +8,7 @@
     &:empty{
       height: 10px;
       opacity: .3;
-      background-color: grayLight;
+      background-color: $gray;
     }
   }
 }
