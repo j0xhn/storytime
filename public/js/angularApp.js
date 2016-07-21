@@ -7,9 +7,15 @@ angular.module('storytime', [
   'storyCardDirective',
   'inputDirective'
 ]);
-angular.module('storytime').config(function ($routeProvider) {
+angular.module('storytime').config(function ($routeProvider, $locationProvider) {
+  // use the HTML5 History API
+  $locationProvider.html5Mode(true);
   $routeProvider
   .when('/', {
+    templateUrl: 'pages/feed/feed.html',
+    controller: 'feedCtrl'
+  })
+  .when('/stories', {
     templateUrl: 'pages/feed/feed.html',
     controller: 'feedCtrl'
   })

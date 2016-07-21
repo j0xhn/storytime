@@ -110,11 +110,11 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 
 /**
- * Primary app routes.
+ * conditional.
  */
 function homeRoute(req, res) {
   if (req.isAuthenticated()) {
-      return res.render('shop/index');
+      return res.render('angular/index');
   }
   res.render('home');
 }
