@@ -3,7 +3,7 @@ angular.module('inputDirective', [])
 		return {
 			restrict: 'E',
 			replace: true,
-			templateUrl: '/partials/input.html',
+			templateUrl: '/partials/input/input.html',
 			scope: {
 				input: '='
 			}
