@@ -1,9 +1,9 @@
-angular.module('miniApp.directives', [])
+angular.module('inputDirective', [])
 	.directive('stInput', function () {
 		return {
 			restrict: 'E',
 			replace: true,
-			templateUrl: '/views/input.html',
+			templateUrl: '/partials/input.html',
 			scope: {
 				input: '='
 			}

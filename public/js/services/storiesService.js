@@ -1,4 +1,4 @@
-angular.module('miniApp.services', [])
+angular.module('storiesService', [])
 .service('StoriesService', function () {
   var allStories = {
     1: {

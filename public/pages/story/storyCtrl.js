@@ -1,4 +1,4 @@
-angular.module('miniApp.controllers', [])
+angular.module('storyCtrl', [])
 .controller('StoryCtrl', function($scope, $routeParams, $timeout, $compile, StoriesService) {
   $scope.storyObj = StoriesService.getSingleStory($routeParams.storyId);
   var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];

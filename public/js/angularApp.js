@@ -1,19 +1,20 @@
-angular.module('miniApp', [
+angular.module('storytime', [
   'ngRoute',
-  'miniApp.landingCtrl',
-  'miniApp.services',
-  'miniApp.filters',
-  'miniApp.directives',
-  'miniApp.controllers'
+  'priceFilter',
+  'storiesService',
+  'feedCtrl',
+  'storyCtrl',
+  'storyCardDirective',
+  'inputDirective'
 ]);
-angular.module('miniApp').config(function ($routeProvider) {
+angular.module('storytime').config(function ($routeProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: 'pages/landing/index.html',
-    controller: 'LandingCtrl'
+    templateUrl: 'pages/feed/feed.html',
+    controller: 'feedCtrl'
   })
   .when('/detailTest', {
-    templateUrl: 'views/detailTest.html'
+    templateUrl: 'partials/detailTest.html'
   })
   .when('/story/:storyId/:storyTitle', {
     templateUrl: 'pages/story/story.html',

@@ -556,7 +556,7 @@ When you download the ZIP file, it will come with *index.html*, *images*, *css* 
 integrate it with Hackathon Starter? Hackathon Starter uses Bootstrap CSS framework, but these templates do not.
 Trying to use both CSS files at the same time will likely result in undesired effects.
 
-**Note:** Using the custom templates approach, you should understand that you cannot reuse any of the views I have created: layout, home page, api browser, login, signup, account management, contact. Those views were built using Bootstrap grid and styles. You will have to manually update the grid using a different syntax provided in the template. **Having said that, you can mix and match if you want to do so: Use Bootstrap for main app interface, and a custom template for a landing page.**
+**Note:** Using the custom templates approach, you should understand that you cannot reuse any of the views I have created: layout, home page, api browser, login, signup, account management, contact. Those views were built using Bootstrap grid and styles. You will have to manually update the grid using a different syntax provided in the template. **Having said that, you can mix and match if you want to do so: Use Bootstrap for main app interface, and a custom template for a feed page.**
 
 Let's start from the beginning. For this example I will use [Escape Velocity](http://html5up.net/escape-velocity/) template:
 ![Alt](http://html5up.net/uploads/images/escape-velocity.jpg)
@@ -576,7 +576,7 @@ Let's see how it looks. Create a new controller **escapeVelocity** inside `contr
 ```js
 exports.escapeVelocity = (req, res) => {
   res.render('escape-velocity', {
-    title: 'Landing Page'
+    title: 'feed Page'
   });
 };
 ```

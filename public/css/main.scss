@@ -5,10 +5,12 @@
 @import "lib/font-awesome/font-awesome";
 @import "themes/default/default";
 
-@import "partials/variables";
-@import "partials/shorthand";
-@import "partials/base";
-@import "partials/storyCard";
-@import "partials/input";
+@import "base/variables";
+@import "base/shorthand";
+@import "base/base";
 
-@import "pages/storyPage";
+@import "../partials/storyCard/storyCard";
+@import "../partials/input/input";
+
+@import "../pages/story/storyPage";
+@import "../pages/feed/feedPage";

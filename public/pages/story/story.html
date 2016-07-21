@@ -1,8 +1,10 @@
-<div class='story-page container'>
-  <!-- <st-input ng-repeat="input in storyObj.inputs" input="{input"></st-input> -->
-  <div class="inputWrapper" ng-repeat="input in storyObj.inputs">
-    <input type="text" ng-model='input.value'>
-    <label>{{input.title}}</label>
+<div class='story-page'>
+  <div class='container'>
+    <!-- <st-input ng-repeat="input in storyObj.inputs" input="{input"></st-input> -->
+    <div class="inputWrapper" ng-repeat="input in storyObj.inputs">
+      <input type="text" ng-model='input.value'>
+      <label>{{input.title}}</label>
+    </div>
+    <div class='story-text' id='replace-with-html'>
   </div>
-  <div class='story-text' id='replace-with-html'>
 </div>

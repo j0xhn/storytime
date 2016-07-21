@@ -1,9 +1,9 @@
-angular.module('miniApp.directives', [])
+angular.module('storyCardDirective', [])
 	.directive('storyCard', function () {
 		return {
-			restrict: 'E',
+			restrict: 'EA',
 			replace: true,
-			templateUrl: '/views/storycard.html',
+			templateUrl: '/partials/storycard/storycard.html',
 			scope: {
 				story: '='
 			}
