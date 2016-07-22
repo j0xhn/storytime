@@ -3,7 +3,7 @@ angular.module('storyCardDirective', [])
 		return {
 			restrict: 'EA',
 			replace: true,
-			templateUrl: '/partials/storycard/storycard.html',
+			templateUrl: '/partials/storyCard/storycard.html',
 			scope: {
 				story: '='
 			}
