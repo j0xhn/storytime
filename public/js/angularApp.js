@@ -9,7 +9,7 @@ angular.module('storytime', [
 ]);
 angular.module('storytime').config(function ($routeProvider, $locationProvider) {
   // use the HTML5 History API
-  $locationProvider.html5Mode(true);
+  // $locationProvider.html5Mode(true);
   $routeProvider
   .when('/', {
     templateUrl: 'pages/feed/feed.html',

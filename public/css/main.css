@@ -5073,7 +5073,7 @@ tbody.collapse.in {
     border-color: transparent; }
     /* line 579, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-      background-color: #333; }
+      background-color: rgba(0, 0, 0, 0.1); }
     /* line 583, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .navbar-inverse .navbar-toggle .icon-bar {
       background-color: #fff; }
@@ -11072,11 +11072,23 @@ button.close {
     transition: all 0.2s linear; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.tar {
+  text-align: right !important; }
+
+/* line 2, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.tac {
+  text-align: center !important; }
+
+/* line 3, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.tal {
+  text-align: left !important; }
+
+/* line 5, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; }
-  /* line 6, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+  /* line 10, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
   .ellipsis.multiLine {
     display: -webkit-box;
     -webkit-box-orient: vertical;
