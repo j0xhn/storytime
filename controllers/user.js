@@ -120,6 +120,18 @@ exports.getAccount = (req, res) => {
 };
 
 /**
+ * GET /users
+ * List of All Users
+ */
+exports.getAllUsers = (req, res) => {
+  User.find({}).exec(function(err, users){
+    // res.send(users);
+    res.render('account/users', { users: users });
+
+  });
+};
+
+/**
  * POST /account/profile
  * Update profile information.
  */

@@ -2,6 +2,7 @@ angular.module('storytime', [
   'ngRoute',
   'priceFilter',
   'storiesService',
+  'userService',
   'feedCtrl',
   'storyCtrl',
   'storyCardDirective',
@@ -26,4 +27,8 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     templateUrl: 'pages/story/story.html',
     controller: 'StoryCtrl'
   })
+  .when('/users'){
+    templateUrl: '',
+    controller:''
+  }
 });
