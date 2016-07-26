@@ -143,7 +143,7 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
 /**
  * Angular routes.
  */
-app.get('/stories', angularPagesController.getPagesServedByAngular);
+app.get('*', angularPagesController.getPagesServedByAngular);
 
 /**
  * API examples routes.

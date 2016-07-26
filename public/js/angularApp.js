@@ -10,7 +10,9 @@ angular.module('storytime', [
 ]);
 angular.module('storytime').config(function ($routeProvider, $locationProvider) {
   // use the HTML5 History API
-  // $locationProvider.html5Mode(true);
+  // use target="_self" in href to trigger a whole page reload
+  // and hence the ability for express to handle route
+  $locationProvider.html5Mode(true);
   $routeProvider
   .when('/', {
     templateUrl: 'pages/feed/feed.html',
@@ -27,8 +29,8 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     templateUrl: 'pages/story/story.html',
     controller: 'StoryCtrl'
   })
-  .when('/users'){
+  .when('/users', {
     templateUrl: '',
     controller:''
-  }
+  })
 });

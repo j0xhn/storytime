@@ -6,7 +6,7 @@
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/')
+      a.navbar-brand(href='/' target="_self")
         i.fa.fa-cube
         | Storytime
     .collapse.navbar-collapse.tar
@@ -18,7 +18,7 @@
           a(href='/stories') Stories
         if !user
           li(class=(title == 'Signup') ? 'active' : undefined)
-            a(href='/signup') Signup
+            a(href='/signup' target="_self") Signup
         else
           li.dropdown(class=(title == 'Account Management') ? 'active' : undefined)
             a.dropdown-toggle(href='#', data-toggle='dropdown')
