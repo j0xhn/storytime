@@ -1,5 +1,5 @@
 angular.module('storiesService', [])
-.service('StoriesService', function () {
+.service('storiesService', function ($http) {
   var allStories = {
     1: {
       title: "Preperation for the Sun",
@@ -123,6 +123,13 @@ angular.module('storiesService', [])
     },
     getSingleStory: function(id) {
       return allStories[id]
+    },
+    postStory: function(storyObj) {
+      $http({
+        method: 'POST',
+        data: storyObj,
+        url: '/story/submit'
+      })
     }
   };
 });

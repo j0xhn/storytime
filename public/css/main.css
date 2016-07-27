@@ -11193,6 +11193,7 @@ textarea {
   position: relative;
   height: 45px;
   border: 1px solid #eee;
+  background-color: #fff;
   width: 100%;
   border-radius: 3px;
   display: flex;
@@ -11201,7 +11202,7 @@ textarea {
   margin-bottom: 10px;
   appearance: none;
   /* gets rid of weird inner shadow on input fields */ }
-  /* line 17, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+  /* line 18, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
   .inputWrapper input {
     height: 100%;
     background-color: transparent;
@@ -11213,20 +11214,20 @@ textarea {
     font-size: 16px;
     appearance: none;
     padding: 0; }
-  /* line 29, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+  /* line 30, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
   .inputWrapper label {
     color: #999; }
-  /* line 33, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+  /* line 34, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
   .inputWrapper label, .inputWrapper input {
     /*keeps these lined up*/
     transition: all 0.15s ease-in-out;
     margin: 0;
     padding: 0 5px;
     font-weight: 300; }
-  /* line 40, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+  /* line 41, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
   .inputWrapper input:focus, .inputWrapper input.ng-not-empty {
     /* when input is focused, or when has content (determined in $.placeholder.js ) */ }
-    /* line 41, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+    /* line 42, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
     .inputWrapper input:focus + label, .inputWrapper input.ng-not-empty + label {
       background-color: #fff;
       transform: translateY(-22px);
@@ -11251,5 +11252,10 @@ textarea {
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
 .feedPage {
   padding-top: 15px; }
+
+/* line 1, /Users/John/Dev/projects/storytime/public/pages/submit/submitPage.scss */
+.submit-page {
+  background-color: #fff;
+  padding: 15px 0; }
 
 /*# sourceMappingURL=../../sass */

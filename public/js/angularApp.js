@@ -5,6 +5,7 @@ angular.module('storytime', [
   'userService',
   'feedCtrl',
   'storyCtrl',
+  'storySubmitCtrl',
   'storyCardDirective',
   'inputDirective'
 ]);
@@ -22,8 +23,9 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     templateUrl: 'pages/feed/feed.html',
     controller: 'feedCtrl'
   })
-  .when('/detailTest', {
-    templateUrl: 'partials/detailTest.html'
+  .when('/submit', {
+    templateUrl: 'pages/submit/submit.html',
+    controller: 'storySubmitCtrl'
   })
   .when('/story/:storyId/:storyTitle', {
     templateUrl: 'pages/story/story.html',

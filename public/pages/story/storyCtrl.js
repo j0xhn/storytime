@@ -1,6 +1,6 @@
 angular.module('storyCtrl', [])
-.controller('StoryCtrl', function($scope, $routeParams, $timeout, $compile, StoriesService) {
-  $scope.storyObj = StoriesService.getSingleStory($routeParams.storyId);
+.controller('StoryCtrl', function($scope, $routeParams, $timeout, $compile, storiesService) {
+  $scope.storyObj = storiesService.getSingleStory($routeParams.storyId);
   var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
   for (var i = 0, len = inputsArray.length; i < len; i++) {
       var inputRegex = new RegExp('"'+inputsArray[i]+'"','g');
