@@ -125,7 +125,8 @@ angular.module('storiesService', [])
       return allStories[id]
     },
     postStory: function(storyObj) {
-      $http({
+      storyObj._csrf = window._csrf;
+      return $http({
         method: 'POST',
         data: storyObj,
         url: '/story/submit'
