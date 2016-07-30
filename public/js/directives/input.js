@@ -9,7 +9,7 @@ angular.module('inputDirective', [])
 				ngLabel: '='
 			},
 			link: function(scope, elm, attrs){
-				elm.find('label').html(scope.ngLabel || attrs.staticlabel)
+				elm.find('label').html(scope.ngLabel || attrs.label)
 			}
 		}
 	}
