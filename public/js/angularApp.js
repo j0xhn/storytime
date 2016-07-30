@@ -36,11 +36,9 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     templateUrl: '',
     controller:''
   })
-  // .run(function ($rootScope, $location) { //Insert in the function definition the dependencies you need.
-  //   //Do your $on in here, like this:
-  //   $rootScope.$on("$locationChangeStart", function(event, next, current){
-  //       //Do your things
-  //       debugger;
-  //   })
-  // })
+}).run(function ($rootScope, $location) { //Insert in the function definition the dependencies you need.
+  //Do your $on in here, like this:
+  $rootScope.$on("$locationChangeStart", function(event, next, current){
+      //Do your things
+  })
 });
