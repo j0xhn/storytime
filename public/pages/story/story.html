@@ -1,6 +1,6 @@
 <div class='story-page'>
   <div class='container'>
-    <text-input ng-repeat="input in storyObj.inputs" label="input.title" model="input.value"></text-input>
+    <text-input ng-repeat="input in storyObj.inputs" ng-label="input.title" ng-model="input.value"></text-input>
     <div class='story-text' id='replace-with-html'>
   </div>
 </div>

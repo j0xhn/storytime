@@ -5,11 +5,11 @@ angular.module('inputDirective', [])
 			replace: true,
 			templateUrl: '/partials/input/input.html',
 			scope: {
-				model: '=',
-				label: '='
+				ngModel: '=',
+				ngLabel: '='
 			},
 			link: function(scope, elm, attrs){
-				elm.find('label').html(scope.label || attrs.staticlabel)
+				elm.find('label').html(scope.ngLabel || attrs.staticlabel)
 			}
 		}
 	}
