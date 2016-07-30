@@ -7,7 +7,8 @@ angular.module('storytime', [
   'storyCtrl',
   'storySubmitCtrl',
   'storyCardDirective',
-  'inputDirective'
+  'inputDirective',
+  'textAreaDirective'
 ]);
 angular.module('storytime').config(function ($routeProvider, $locationProvider) {
   // use the HTML5 History API

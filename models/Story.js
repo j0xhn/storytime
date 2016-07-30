@@ -6,7 +6,7 @@ const storySchema = new mongoose.Schema({
   authorId: Number,
   authorName: String,
   title: String,
-  desc: String,
+  longDesc: String,
   shortDesc: String,
   photoUrl: String,
   price: Number,
