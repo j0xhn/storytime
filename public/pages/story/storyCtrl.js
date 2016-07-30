@@ -1,4 +1,4 @@
-angular.module('storyCtrl', [])
+angular.module('controllers')
 .controller('StoryCtrl', function($scope, $routeParams, $timeout, $compile, storiesService) {
   $scope.storyObj = storiesService.getSingleStory($routeParams.storyId);
   var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];

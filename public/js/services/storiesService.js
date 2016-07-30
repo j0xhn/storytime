@@ -1,4 +1,4 @@
-angular.module('storiesService', [])
+angular.module('services')
 .service('storiesService', function ($http) {
   var allStories = {
     1: {

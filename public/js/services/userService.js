@@ -1,5 +1,5 @@
-angular.module('userService', [])
-.service('UserService', function () {
+angular.module('services')
+.service('userService', function () {
 
   return {
     getAllUsers: function () {

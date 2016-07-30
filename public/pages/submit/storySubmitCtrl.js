@@ -1,4 +1,4 @@
-angular.module('storySubmitCtrl', [])
+angular.module('controllers')
 .controller('storySubmitCtrl', function($scope, storiesService) {
   $scope.submitStory = function(story){
     debugger;

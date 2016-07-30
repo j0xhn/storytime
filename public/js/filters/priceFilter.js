@@ -1,4 +1,4 @@
-angular.module('priceFilter', [])
+angular.module('filters')
 .filter('price', function () {
   return function(input, symbol, place){
     if(isNaN(input)){

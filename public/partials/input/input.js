@@ -1,4 +1,4 @@
-angular.module('inputDirective', [])
+angular.module('directives')
 	.directive('textInput', function () {
 		return {
 			restrict: 'E',

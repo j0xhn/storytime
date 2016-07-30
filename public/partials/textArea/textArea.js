@@ -1,4 +1,4 @@
-angular.module('textAreaDirective', [])
+angular.module('directives')
 	.directive('textArea', function () {
 		return {
 			restrict: 'E',

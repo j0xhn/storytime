@@ -1,15 +1,14 @@
 angular.module('storytime', [
   'ngRoute',
-  'priceFilter',
-  'storiesService',
-  'userService',
-  'feedCtrl',
-  'storyCtrl',
-  'storySubmitCtrl',
-  'storyCardDirective',
-  'inputDirective',
-  'textAreaDirective'
+  'filters',
+  'services',
+  'controllers',
+  'directives'
 ]);
+angular.module('filters',[]);
+angular.module('services',[]);
+angular.module('controllers',[]);
+angular.module('directives',[]);
 angular.module('storytime').config(function ($routeProvider, $locationProvider) {
   // use the HTML5 History API
   // use target="_self" in href to trigger a whole page reload

@@ -1,4 +1,4 @@
-angular.module('storyCardDirective', [])
+angular.module('directives')
 	.directive('storyCard', function () {
 		return {
 			restrict: 'EA',
