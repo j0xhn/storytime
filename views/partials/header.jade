@@ -16,6 +16,8 @@
       ul.nav.navbar-nav.navbar-right
         li(class=(title == 'Stories') ? 'active' : undefined)
           a(href='/stories') Stories
+        li(class=(title == 'Submit Story') ? 'active' : undefined)
+          a(href='/submit') Submit
         if !user
           li(class=(title == 'Signup') ? 'active' : undefined)
             a(href='/signup' target="_self") Signup

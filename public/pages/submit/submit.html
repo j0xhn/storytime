@@ -2,8 +2,8 @@
   <div class='container'>
     <h1>Submit A Story</h1>
     <form>
-      <st-input input="{title:'test input'}"></st-input>
+      <text-input staticLabel='Story Title' model='story.title'></text-input>
     </form>
-    <button ng-click="submitStory()"> submit </button>
+    <button ng-click="submitStory(story)"> submit </button>
   </div>
 </div>

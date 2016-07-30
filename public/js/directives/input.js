@@ -1,11 +1,15 @@
 angular.module('inputDirective', [])
-	.directive('stInput', function () {
+	.directive('textInput', function () {
 		return {
 			restrict: 'E',
 			replace: true,
 			templateUrl: '/partials/input/input.html',
 			scope: {
-				input: '='
+				model: '=',
+				label: '='
+			},
+			link: function(scope, elm, attrs){
+				elm.find('label').html(scope.label || attrs.staticlabel)
 			}
 		}
 	}
