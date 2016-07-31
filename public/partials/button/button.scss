@@ -1,0 +1,31 @@
+.button{
+  border: none;
+  cursor: pointer;
+  line-height: $input-height;
+  padding: 0 20px;
+  display: inline-block;
+  background-color: $green;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  color: $white;
+  box-shadow: 0 4px $darkGreen;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  border-radius: 5px;
+  margin-bottom: 4px;
+  &:hover{
+    box-shadow: 0 2px $darkGreen;
+    top: 2px;
+  }
+  &:active{
+    box-shadow: 0 0 $darkGreen;
+    top: 4px;
+  }
+}

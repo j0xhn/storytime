@@ -1,0 +1,24 @@
+table.text-divider {
+  // new style using tables that doesn't require background color
+	border-collapse: collapse;
+	margin: 0 auto;
+	width: 100%;
+
+	.text {
+		width: 1px;
+		white-space: nowrap;
+		font-weight: 300;
+		color: $gray-light;
+		font-size: 16px;
+		position: relative;
+		padding: 0 15px;
+	}
+
+	hr {
+		border-top: 1px solid $gray-lighter;
+	}
+
+	&.left{
+		td:first-of-type{ display: none; }
+	}
+}

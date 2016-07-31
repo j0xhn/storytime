@@ -9,9 +9,12 @@
 @import "base/shorthand";
 @import "base/base";
 
+@import "../partials/textDivider/textDivider";
 @import "../partials/storyCard/storyCard";
 @import "../partials/input/input";
 @import "../partials/textArea/textArea";
+@import "../partials/button/button";
+@import "../partials/forms/forms";
 
 @import "../pages/story/storyPage";
 @import "../pages/feed/feedPage";
