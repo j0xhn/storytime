@@ -9,7 +9,8 @@ angular.module('directives')
 				ngLabel: '='
 			},
 			link: function(scope, elm, attrs){
-				elm.find('label').html(scope.ngLabel || attrs.label)
+				if (attrs.resize === 'none') elm.find('textarea').css('resize', 'none');
+				elm.find('label').html(scope.ngLabel || attrs.label);
 			}
 		}
 	}

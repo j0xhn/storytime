@@ -1,49 +1,58 @@
 /*------------------------------------*\
 
 #INPUTS & STATES (single-line etc...)
+Textarea in seperate file but uses the
+"mimic-input" class defined here for
+continuity
 
 \*------------------------------------*/
+$input-padding: 15px;
+
 .inputWrapper {
+
   position: relative;
-  height: $input-height;
   border: 1px solid $lightGray;
   background-color: $white;
   width: 100%;
   border-radius: 3px;
   display: flex;
   align-items: center;
-  padding-left: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   appearance: none; /* gets rid of weird inner shadow on input fields */
-  input{
+  // shared styles to keep them similiar
+  label, input, .mimic-input {
+    transition: all 0.15s ease-in-out;
+    margin: 0;
+    font-weight: 300;
+    padding: 0 5px;
+  }
+
+  input, .mimic-input{
     height: 100%;
+    min-height: $input-height;
     background-color: transparent;
     border: none;
     z-index: 1;
-    position: absolute;
     width: 100%;
     outline: none;
     font-size: 16px;
     appearance: none;
-    padding: 0;
+    padding: 0 $input-padding;
   }
-  label{
+  label {
     color: $gray;
+    position: absolute;
+    left: $input-padding;
+    top: $input-label-content-distance;
   }
 
-  label, input { /*keeps these lined up*/
-    transition: all 0.15s ease-in-out;
-    margin: 0;
-    padding: 0 5px;
-    font-weight: 300;
-  }
 
-  input:focus, input.ng-not-empty { /* when input is focused, or when has content (determined in $.placeholder.js ) */
+  input:focus, input.ng-not-empty, .mimic-input:focus, .mimic-input.ng-not-empty { /* when input is focused, or when has content (determined in $.placeholder.js ) */
     & + label {
       background-color: $white;
-      transform: translateY(-22px);
       font-size: 12px;
       z-index: 0;
+      top: -10px;
     }
   }
 }

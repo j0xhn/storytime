@@ -1,9 +1,9 @@
 <div class='submit-page'>
   <div class='container'>
-    <h1>Submit A Story</h1>
-    <form>
+    <h1 class="pad20b">Submit A Story</h1>
+    <form class="story-form">
       <text-input label='Story Title' ng-model='story.title'></text-input>
-      <text-area label='Short Description' ng-model='story.shortDesc'></text-area>
+      <text-area label='Short Description - 160 characters' ng-model='story.shortDesc' resize='none' max-length='160'></text-area>
       <text-area label='Long Description' ng-model='story.longDesc'></text-area>
       <text-input label='Photo URL' ng-model='story.photoUrl'></text-input>
       <text-input label='Price' ng-model='story.price'></text-input>

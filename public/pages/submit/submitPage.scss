@@ -1,4 +1,7 @@
 .submit-page{
   background-color: $white;
   padding: 15px 0;
+  .story-form{
+    max-width: 600px;
+  }
 }

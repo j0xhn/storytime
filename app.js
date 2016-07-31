@@ -63,7 +63,6 @@ app.use(compression());
 app.use(sass({
   src: path.join(__dirname, 'public'),
   sourceComments: 'map',
-  sourceMap: 'sass',
   outputStyle: 'nested',
   dest: path.join(__dirname, 'public')
 }));
