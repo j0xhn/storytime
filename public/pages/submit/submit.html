@@ -5,12 +5,27 @@
       <text-input label='Story Title' ng-model='story.title'></text-input>
       <text-input label='Photo URL' ng-model='story.photoUrl'></text-input>
       <text-input label='Price' ng-model='story.price'></text-input>
-      <text-input label='Search Tags' ng-model='story.tags'></text-input>
-      <text-divider text='Content' align='left'></text-divider>
+      <text-input label='Search Tags - comma seperated' ng-model='story.tags'></text-input>
       <text-area label='Short Description - 160 characters' ng-model='story.shortDesc' resize='none' max-length='160'></text-area>
       <text-area label='Long Description' ng-model='story.longDesc'></text-area>
-      <text-area label='Story Text' ng-model='story.html'></text-area>
-      <div class="button mar20b" ng-click='addSearchTag()'> + Interactive Input</div>
+      <divider title='Story Text' align='left'></divider>
+      <textarea class='h300' ui-tinymce="tinymceOptions" ng-model="story.html"></textarea>
+      <div ng-repeat="input in story.inputs">
+        <input type="text" placeholder="{{input.questionPlaceholder}}" ng-model="input.question">
+        <input ng-class="{'blockInput': !input.inlineChecked}" type="text" placeholder="enter text..." ng-model="input.text">
+        <input type="checkbox" name="check" value="inline" ng-model="input.inlineChecked"> Inline
+      </div>
+      <button ng-click="add()">New Item</button>
+      <div class="btn-group">
+        <button type="button" class="button dropdown-toggle mar5b" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          + Interactive Input
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Text</a></li>
+          <li><a href="#">Male / Female</a></li>
+        </ul>
+      </div>
+      <divider class="mar0tb"></divider>
       <button ng-click="submitStory(story)" class="button"> submit </button>
     </form>
   </div>

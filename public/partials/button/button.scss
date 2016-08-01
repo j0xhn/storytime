@@ -14,18 +14,21 @@
   -moz-transition: all 0.3s;
   transition: all 0.3s;
   color: $white;
-  box-shadow: 0 4px $darkGreen;
+  box-shadow: 0 3px $darkGreen;
   -webkit-transition: none;
   -moz-transition: none;
   transition: none;
   border-radius: 5px;
   margin-bottom: 4px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  user-select: none;
   &:hover{
     box-shadow: 0 2px $darkGreen;
-    top: 2px;
+    background-color: darken($green, 2%);
+    top: 1px;
   }
   &:active{
     box-shadow: 0 0 $darkGreen;
-    top: 4px;
+    top: 3px;
   }
 }

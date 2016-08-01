@@ -11374,15 +11374,31 @@ button.close {
   margin-bottom: 50px !important; }
 
 /* line 75, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.h100 {
+  height: 100px; }
+
+/* line 76, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.h200 {
+  height: 200px; }
+
+/* line 77, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.h300 {
+  height: 300px; }
+
+/* line 78, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.h400 {
+  height: 400px; }
+
+/* line 80, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .italic {
   font-style: italic !important; }
 
-/* line 76, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 81, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; }
-  /* line 81, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+  /* line 86, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
   .ellipsis.multiLine {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -11397,7 +11413,7 @@ html {
 /* line 6, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 body {
   padding-top: 50px;
-  background-color: #eee; }
+  background-color: #ccc; }
 
 /* line 11, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 footer {
@@ -11434,26 +11450,35 @@ textarea {
 .fa {
   margin-right: 6px; }
 
-/* line 1, /Users/John/Dev/projects/storytime/public/partials/textDivider/textDivider.scss */
-table.text-divider {
+/* line 1, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
+table.divider {
   border-collapse: collapse;
   margin: 0 auto;
-  width: 100%; }
-  /* line 7, /Users/John/Dev/projects/storytime/public/partials/textDivider/textDivider.scss */
-  table.text-divider .text {
+  width: 100%;
+  float: none; }
+  /* line 8, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
+  table.divider .text {
     width: 1px;
     white-space: nowrap;
     font-weight: 300;
-    color: #777777;
+    color: #ccc;
     font-size: 16px;
     position: relative;
     padding: 0 15px; }
-  /* line 17, /Users/John/Dev/projects/storytime/public/partials/textDivider/textDivider.scss */
-  table.text-divider hr {
-    border-top: 1px solid #eeeeee; }
-  /* line 22, /Users/John/Dev/projects/storytime/public/partials/textDivider/textDivider.scss */
-  table.text-divider.left td:first-of-type {
+  /* line 18, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
+  table.divider .title {
+    font-size: 22px;
+    font-weight: 300;
+    color: #333; }
+  /* line 20, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
+  table.divider hr {
+    border-top: 1px solid #ccc; }
+  /* line 25, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
+  table.divider.left td:first-of-type {
     display: none; }
+  /* line 26, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
+  table.divider.left .text {
+    padding-left: 0; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
 .storyCard {
@@ -11497,7 +11522,7 @@ table.text-divider {
     margin: 0; }
   /* line 40, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
   .storyCard .tags {
-    border: 1px solid #eee; }
+    border: 1px solid #ccc; }
 
 /*------------------------------------*
 #INPUTS & STATES (single-line etc...)
@@ -11509,7 +11534,7 @@ continuity
 /* line 11, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
 .inputWrapper {
   position: relative;
-  border: 1px solid #999;
+  border: 1px solid #ccc;
   background-color: #fff;
   width: 100%;
   border-radius: 3px;
@@ -11581,27 +11606,31 @@ styles here
   -moz-transition: all 0.3s;
   transition: all 0.3s;
   color: #fff;
-  box-shadow: 0 4px #038e39;
+  box-shadow: 0 3px #038e39;
   -webkit-transition: none;
   -moz-transition: none;
   transition: none;
   border-radius: 5px;
-  margin-bottom: 4px; }
-  /* line 23, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  margin-bottom: 4px;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  user-select: none; }
+  /* line 25, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button:hover {
     box-shadow: 0 2px #038e39;
-    top: 2px; }
-  /* line 27, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+    background-color: #00a741;
+    top: 1px; }
+  /* line 30, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button:active {
     box-shadow: 0 0 #038e39;
-    top: 4px; }
+    top: 3px; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
 .form {
   max-width: 600px; }
   /* line 3, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
-  .form .inputWrapper, .form .button, .form .text-divider {
-    margin-bottom: 20px; }
+  .form .inputWrapper, .form .button, .form .divider {
+    margin: 20px 0; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/story/storyPage.scss */
 .story-page {

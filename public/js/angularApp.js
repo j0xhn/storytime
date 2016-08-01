@@ -1,5 +1,6 @@
 angular.module('storytime', [
   'ngRoute',
+  'ui.tinymce',
   'filters',
   'services',
   'controllers',
