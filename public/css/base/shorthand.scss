@@ -1,6 +1,10 @@
+.block{ display: block !important;}
 .tar { text-align: right !important;}
 .tac { text-align: center !important;}
 .tal { text-align: left !important;}
+
+.txt-gray { color: $gray;}
+.txt-lightGray { color: $lightGray;}
 
 .pad0		{ padding: 0 !important; }
 .pad0b		{ padding-bottom: 0 !important; }
