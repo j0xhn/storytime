@@ -11462,7 +11462,7 @@ table.divider {
     white-space: nowrap;
     font-weight: 300;
     color: #ccc;
-    font-size: 16px;
+    font-size: 12px;
     position: relative;
     padding: 0 15px; }
   /* line 18, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
@@ -11631,6 +11631,18 @@ styles here
   /* line 3, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
   .form .inputWrapper, .form .button, .form .divider {
     margin: 20px 0; }
+  /* line 4, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+  .form .input-group {
+    display: block;
+    border-bottom: 1px dashed #ccc; }
+  @media screen and (min-width: 600px) {
+    /* line 10, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+    .form .input-group {
+      display: flex;
+      justify-content: space-between; }
+      /* line 13, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+      .form .input-group .inputWrapper:first-of-type {
+        margin-right: 10px; } }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/story/storyPage.scss */
 .story-page {

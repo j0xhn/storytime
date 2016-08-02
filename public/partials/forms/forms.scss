@@ -1,6 +1,16 @@
 .form{
   max-width: 600px;
-  .inputWrapper, .button, .divider {
-    margin: 20px 0;
+  .inputWrapper, .button, .divider { margin: 20px 0; }
+  .input-group{
+    display: block;
+    border-bottom: 1px dashed $lightGray;
+  }
+
+  @media screen and (min-width: $small-width){
+    .input-group{
+      display: flex;
+      justify-content: space-between;
+      .inputWrapper:first-of-type{ margin-right: 10px;}
+    }
   }
 }

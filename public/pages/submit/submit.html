@@ -10,18 +10,16 @@
       <text-area label='Long Description' ng-model='story.longDesc'></text-area>
       <divider title='Story Text' align='left'></divider>
       <textarea class='h300' ui-tinymce="tinymceOptions" ng-model="story.html"></textarea>
-      <div ng-repeat="input in story.inputs">
-        <input type="text" placeholder="{{input.questionPlaceholder}}" ng-model="input.question">
-        <input ng-class="{'blockInput': !input.inlineChecked}" type="text" placeholder="enter text..." ng-model="input.text">
-        <input type="checkbox" name="check" value="inline" ng-model="input.inlineChecked"> Inline
+      <div ng-repeat="input in story.inputs" class='input-group half'>
+        <text-input label='Keyword' ng-model='input.keyword'></text-input>
+        <text-input label='Description' ng-model='input.title'></text-input>
       </div>
-      <button ng-click="add()">New Item</button>
       <div class="btn-group">
         <button type="button" class="button dropdown-toggle mar5b" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           + Interactive Input
         </button>
         <ul class="dropdown-menu">
-          <li><a href="#">Text</a></li>
+          <li><a ng-click='add()'>Text</a></li>
           <li><a href="#">Male / Female</a></li>
         </ul>
       </div>

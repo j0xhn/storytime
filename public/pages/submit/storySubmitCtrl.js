@@ -21,10 +21,7 @@ angular.module('controllers')
 
   $scope.add = function () {
     $scope.story.inputs.push({
-      inlineChecked: false,
-      question: "",
-      questionPlaceholder: "foo",
-      text: ""
+      title: ""
     });
   };
 });
