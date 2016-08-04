@@ -119,7 +119,10 @@ angular.module('services')
 
   return {
     getStories: function () {
-      return allStories;
+      return $http({
+        method: 'GET',
+        url: '/stories/all'
+      })
     },
     getSingleStory: function(id) {
       return allStories[id]

@@ -1,4 +1,6 @@
 angular.module('controllers', [])
 .controller('feedCtrl', function($scope, storiesService) {
-  $scope.myStories = storiesService.getStories();
+  storiesService.getStories().then(function(res) {
+    $scope.myStories = res.data.stories;
+  });
 })

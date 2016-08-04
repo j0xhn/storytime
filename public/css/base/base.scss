@@ -8,6 +8,10 @@ body {
   background-color: $lighterGray;
 }
 
+.container{
+  position: relative;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -20,12 +24,7 @@ footer {
   }
 }
 
-// Input Fields
-// -------------------------
 
-textarea {
-  resize: vertical;
-}
 
 // Navbar
 // -------------------------
