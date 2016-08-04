@@ -2,25 +2,20 @@ extends ../layout
 
 block content
   .container
-    form.form-horizontal.form.center(id='signup-form', method='POST')
+    form.form-horizontal.form.whiteBackground(id='signup-form', method='POST')
       input(type='hidden', name='_csrf', value=_csrf)
-      .form-group
-        .col-sm-offset-3.col-sm-7
-          a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
-            i.fa.fa-facebook
-            | Sign in with Facebook
-      .form-group
-        label.col-sm-3.control-label(for='email') Email
-        .col-sm-7
-          input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, required)
-      .form-group
-        label.col-sm-3.control-label(for='password') Password
-        .col-sm-7
-          input.form-control(type='password', name='password', id='password', placeholder='Password', required)
-      .form-group
-        label.col-sm-3.control-label(for='confirmPassword') Confirm Password
-        .col-sm-7
-          input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password', required)
+      a.button.block.facebook(href='/auth/facebook')
+        i.fa.fa-facebook
+        | Sign in with Facebook
+      .inputWrapper
+        input(type='email', name='email', id='email', autofocus, required, autocomplete="off")
+        label(for='email') Email
+      .inputWrapper
+        input(type='password', name='password', id='password', required, autocomplete="off")
+        label(for='password') Password
+      .inputWrapper
+        input(type='password', name='confirmPassword', id='confirmPassword', required, autocomplete="off")
+        label(for='confirmPassword') Confirm Password
       .form-group
         .col-sm-offset-3.col-sm-7
           button.btn.btn-success(type='submit')

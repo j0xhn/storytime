@@ -1,5 +1,6 @@
 .form{
   max-width: 600px;
+  &.whiteBackground{ background-color: $white; }
   .inputWrapper, .button, .divider { margin: 20px 0; }
   .input-group{
     display: block;
@@ -7,6 +8,12 @@
   }
 
   @media screen and (min-width: $small-width){
+    &.whiteBackground{
+      padding: 40px;
+      border: 1px solid $lightGray;
+      border-radius: 5px;
+      margin: 30px auto 0;
+    }
     .input-group{
       display: flex;
       justify-content: space-between;
