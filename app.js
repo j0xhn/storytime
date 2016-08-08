@@ -206,6 +206,7 @@ app.get('/auth/pinterest/callback', passport.authorize('pinterest', { failureRed
 */
 app.post('/story/submit', storiesController.postStory );
 app.get('/stories/all', storiesController.getAllStories );
+app.get('/stories/search', storiesController.searchStories );
 app.get('*', angularPagesController.getPagesServedByAngular);
 /**
  * Error Handler.

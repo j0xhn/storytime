@@ -11,10 +11,18 @@ angular.module('controllers')
   //  End WYSIWY
 
   $scope.submitStory = function(story){
-    var tagArray = story.tags.split(/[,]+/).filter(Boolean);
-    story.tags = tagArray.map(function(x){ return x.trim(); })
-    var newHtml = story.html.replace(/\[/g, '<b ng-bind="');
-    story.html = newHtml.replace(/\]/g, '"></b>');
+    if(story.tags){
+      var tagArray = story.tags.split(/[,]+/).filter(Boolean);
+      story.tags = tagArray.map(function(x){ return x.trim(); })
+      var newHtml = story.html.replace(/\[/g, '<b ng-bind="');
+      story.html = newHtml.replace(/\]/g, '"></b>');
+    }
+
+    if(story.inputs){
+      var inputsObj = {}
+      story.inputs.map(function(input){ inputsObj[input.keyword] = input})
+      story.inputs = inputsObj;
+    }
 
     storiesService.postStory(story).then(function(res){
       console.log(res)

@@ -3,6 +3,8 @@
 .tac { text-align: center !important;}
 .tal { text-align: left !important;}
 
+.logo-font { font-family: $logo-font; }
+
 .txt-gray { color: $gray;}
 .txt-lightGray { color: $lightGray;}
 
@@ -75,6 +77,16 @@
 .mar40tb	{ margin-bottom: 40px !important; margin-top: 40px !important; }
 .mar50t		{ margin-top: 50px !important; }
 .mar50b		{ margin-bottom: 50px !important; }
+
+.max300 { max-width: 300px !important; }
+.max400 { max-width: 400px !important; }
+.max500 { max-width: 500px !important; }
+.max600 { max-width: 600px !important; }
+
+.f12 { font-size: 12px !important; }
+.f14 { font-size: 14px !important; }
+.f16 { font-size: 16px !important; }
+.f18 { font-size: 18px !important; }
 
 .h100 { height: 100px;}
 .h200 { height: 200px;}

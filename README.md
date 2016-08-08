@@ -30,4 +30,8 @@
     2. Author
     [ ] get gender tags working
     [ ] navigate to submit page - authenticate
-    [ ] explained
+    [ ] validate all the fields
+      - that textarea is under 160
+      - all keywords that they've entered are also keywords in the storyDiv
+      - validate serverside that it fits the schema required
+      - catch errors on everything

@@ -124,8 +124,14 @@ angular.module('services')
         url: '/stories/all'
       })
     },
-    getSingleStory: function(id) {
-      return allStories[id]
+    searchStories: function(id) {
+      return $http({
+        method: 'GET',
+        url: '/stories/search',
+        params: {
+          id: id
+        }
+      })
     },
     postStory: function(storyObj) {
       storyObj._csrf = window._csrf;

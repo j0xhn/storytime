@@ -25,10 +25,13 @@ exports.postStory = (req, res, next) => {
 };
 
 exports.getAllStories = (req, res, next) => {
-  console.log('getting stories');
   Story.find({}).exec(function(err, stories){
-    console.log(stories)
     res.send({stories: stories});
-    // res.render('account/users', { users: users });
   });
 };
+
+exports.searchStories = (req,res,next) => {
+  Story.find({_id: req.query.id}).exec(function(err, stories){
+    res.send({stories});
+  });
+}

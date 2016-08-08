@@ -37,4 +37,8 @@
     background-color: $facebookBlue;
     box-shadow: none;
   }
+  &.block {
+    display: block;
+    width: 100%;
+  }
 }
