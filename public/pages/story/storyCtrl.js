@@ -1,5 +1,6 @@
 angular.module('controllers')
 .controller('StoryCtrl', function($scope, $routeParams, $timeout, $compile, storiesService) {
+  debugger;
   storiesService.searchStories($routeParams.storyId).then(function(res){
     $scope.storyObj = res.data.stories[0];
     var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];

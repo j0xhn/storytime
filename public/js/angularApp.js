@@ -33,14 +33,15 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     controller: 'StoryCtrl',
     resolve:{
       "hasPurchasedStory":function($location, $route, userService){
-        var user = userService.getCurrentUser().then(function(user){
-          debugger;
-          if( user.data.purchased.contains($route.current().params.storyId)){
-            //Do something
+        userService.getCurrentUser().then(function(res){
+          if( res.data.purchased.includes($route.current.params.storyId)){
+            // continue onto story
             console.log('has purchased')
+            return true;
           }else{
+            //redirect user to detail landing page.
             console.log('has not purchased');
-            $location.path('/detail/'+$route.current.params.storyId);    //redirect user to home.
+            $location.path('/detail/'+$route.current.params.storyId);
           }
         });
       }
