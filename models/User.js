@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
   linkedin: String,
   steam: String,
   tokens: Array,
-  purchased: { type: Array, default: [] }
+  purchased: { type: Array, default: [] },
 
   profile: {
     name: { type: String, default: '' },
