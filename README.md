@@ -35,3 +35,7 @@
       - all keywords that they've entered are also keywords in the storyDiv
       - validate serverside that it fits the schema required
       - catch errors on everything
+
+    3. Security
+    [ ] cache user
+        -- in angularApp.js route for individual stories

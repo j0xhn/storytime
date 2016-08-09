@@ -30,7 +30,25 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
   })
   .when('/story/:storyId/:storyTitle', {
     templateUrl: 'pages/story/story.html',
-    controller: 'StoryCtrl'
+    controller: 'StoryCtrl',
+    resolve:{
+      "hasPurchasedStory":function($location, $route, userService){
+        var user = userService.getCurrentUser().then(function(user){
+          debugger;
+          if( user.data.purchased.contains($route.current().params.storyId)){
+            //Do something
+            console.log('has purchased')
+          }else{
+            console.log('has not purchased');
+            $location.path('/detail/'+$route.current.params.storyId);    //redirect user to home.
+          }
+        });
+      }
+    }
+  })
+  .when('/detail/:storyId', {
+    templateUrl: 'pages/detail/detail.html',
+    controller: 'DetailCtrl'
   })
   .when('/users', {
     templateUrl: '',
@@ -42,3 +60,9 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
       //Do your things
   })
 });
+
+var checkForPurchase = function (storyId) {
+    // check user for if they've purchased
+    console.log('checking user for purchased story')
+    return false
+}

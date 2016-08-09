@@ -10,6 +10,7 @@
 @import "base/typography";
 @import "base/base";
 
+@import "../partials/header/header";
 @import "../partials/divider/divider";
 @import "../partials/storyCard/storyCard";
 @import "../partials/input/input";
@@ -20,3 +21,4 @@
 @import "../pages/story/storyPage";
 @import "../pages/feed/feedPage";
 @import "../pages/submit/submitPage";
+@import "../pages/detail/detailPage";

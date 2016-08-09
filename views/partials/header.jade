@@ -1,3 +1,8 @@
+script.
+    window._user = {};
+    _user.email =  '#{user.email}';
+    _user.purchased = '#{user.purchased}';
+  
 .navbar.navbar-inverse.navbar-fixed-top
   .container
     .navbar-header
@@ -7,20 +12,21 @@
         span.icon-bar
         span.icon-bar
       a.navbar-brand(href='/' target="_self")
-        //- i.fa.fa-cube
-        span.logo-font Storytime
-    .collapse.navbar-collapse.tar
+        | Storytime
+    .collapse.navbar-collapse.tar(data-toggle='collapse', data-target='.navbar-collapse')
       ul.nav.navbar-nav
         //- li(class=(title == 'Stories') ? 'active' : undefined)
         //-   a(href='/stories') Stories
       ul.nav.navbar-nav.navbar-right
         li(class=(title == 'Stories') ? 'active' : undefined)
-          a(href='/stories') Stories
-        li(class=(title == 'Submit Story') ? 'active' : undefined)
-          a(href='/submit') Submit
+          a(href='/stories') Find Stories
+        //- li(class=(title == 'Submit Story') ? 'active' : undefined)
+        //-   a(href='/submit') Submit
         if !user
           li(class=(title == 'Signup') ? 'active' : undefined)
             a(href='/signup' target="_self") Signup
+          li(class=(title == 'Login') ? 'active' : undefined)
+            a(href='/login' target="_self") Login
         else
           li.dropdown(class=(title == 'Account Management') ? 'active' : undefined)
             a.dropdown-toggle(href='#', data-toggle='dropdown')

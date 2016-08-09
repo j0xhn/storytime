@@ -16,13 +16,15 @@ const userSchema = new mongoose.Schema({
   linkedin: String,
   steam: String,
   tokens: Array,
+  purchased: { type: Array, default: [] }
 
   profile: {
     name: { type: String, default: '' },
+    email: { type: String, default: '' },
     gender: { type: String, default: '' },
     location: { type: String, default: '' },
     website: { type: String, default: '' },
-    picture: { type: String, default: '' }
+    picture: { type: String, default: '' },
   }
 }, { timestamps: true });
 

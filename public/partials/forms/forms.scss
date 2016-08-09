@@ -1,5 +1,6 @@
 .form{
   max-width: 600px;
+  padding: 20px;
   &.whiteBackground{ background-color: $white; }
   .inputWrapper, .button, .divider { margin: 20px 0; }
   .input-group{

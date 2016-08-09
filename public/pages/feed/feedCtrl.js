@@ -3,4 +3,7 @@ angular.module('controllers', [])
   storiesService.getStories().then(function(res) {
     $scope.myStories = res.data.stories;
   });
+  $scope.setAsSelectedStory = function(story){
+    storiesService.setSelectedStory(story);
+  }
 })

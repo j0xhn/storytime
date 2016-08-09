@@ -1,9 +1,9 @@
 extends ../layout
 
 block content
-  .container
-    form.form-horizontal.tac.form.whiteBackground.max400(id='signup-form', method='POST')
-      h1.logo-font.mar20b Storytime
+  .container.mar10t
+    form.form-horizontal.tac.form.whiteBackground.max400.mobile-full(id='signup-form', method='POST')
+      h1.logo-font.mar20tb Storytime
       p Signup to save your favorite stories
       input(type='hidden', name='_csrf', value=_csrf)
       a.button.block.facebook(href='/auth/facebook')
