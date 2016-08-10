@@ -14,6 +14,11 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
   // use the HTML5 History API
   // use target="_self" in href to trigger a whole page reload
   // and hence the ability for express to handle route
+  // debugger;
+  // var user;
+  // userService.getCurrentUser().then(function(res){
+  //   user = res.data;
+  // });
   $locationProvider.html5Mode(true);
   $routeProvider
   .when('/', {
@@ -32,18 +37,19 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     templateUrl: 'pages/story/story.html',
     controller: 'StoryCtrl',
     resolve:{
-      "hasPurchasedStory":function($location, $route, userService){
+      hasPurchasedStory:function($location, $route, $q, userService){
+        var deferred = $q.defer();
         userService.getCurrentUser().then(function(res){
           if( res.data.purchased.includes($route.current.params.storyId)){
             // continue onto story
-            console.log('has purchased')
-            return true;
+            debugger;
+            deferred.resolve(true)
           }else{
             //redirect user to detail landing page.
-            console.log('has not purchased');
-            $location.path('/detail/'+$route.current.params.storyId);
+            $location.path('/detail/'+$route.current.params.storyId).replace();
           }
-        });
+        })
+        return deferred.promise;
       }
     }
   })
@@ -55,15 +61,12 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     templateUrl: '',
     controller:''
   })
-}).run(function ($rootScope, $location) { //Insert in the function definition the dependencies you need.
+}).run(function ($rootScope, $location, userService) { //Insert in the function definition the dependencies you need.
   //Do your $on in here, like this:
-  $rootScope.$on("$locationChangeStart", function(event, next, current){
-      //Do your things
+  $rootScope.$on("$routeChangeStart", function(event, next, current){
+    //Do your things
+    // $rootScope.$evalAsync(function () {
+    //      $location.path('/login');
+    //  });
   })
 });
-
-var checkForPurchase = function (storyId) {
-    // check user for if they've purchased
-    console.log('checking user for purchased story')
-    return false
-}

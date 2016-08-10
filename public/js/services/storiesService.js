@@ -1,11 +1,13 @@
 angular.module('services')
 .service('storiesService', function ($http) {
-  var cachedStories = [],
-      selectedStory = {};
+  var cachedStories,
+      selectedStory
 
   return {
     cachedStories: cachedStories,
-    selectedStory: selectedStory,
+    selectedStory: function(){
+      return selectedStory
+    },
 
     setSelectedStory: function(story){
       selectedStory = story;

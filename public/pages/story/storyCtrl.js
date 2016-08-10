@@ -1,6 +1,10 @@
 angular.module('controllers')
 .controller('StoryCtrl', function($scope, $routeParams, $timeout, $compile, storiesService) {
-  debugger;
+  /*
+  All logic for if have purchased story is done in the routing
+  if they come to this view, it should be because it's been purchased
+  */
+  
   storiesService.searchStories($routeParams.storyId).then(function(res){
     $scope.storyObj = res.data.stories[0];
     var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
