@@ -11748,6 +11748,18 @@ styles here
       .form .input-group .inputWrapper:first-of-type {
         margin-right: 10px; } }
 
+/*------------------------------------*
+Search Tags for a story
+
+\*------------------------------------*/
+/* line 7, /Users/John/Dev/projects/storytime/public/partials/tags/tags.scss */
+.tags .tag {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #3b5998;
+  padding: 3px 8px;
+  margin-right: 5px; }
+
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/story/storyPage.scss */
 .story-page {
   background-color: #fff;
@@ -11777,14 +11789,20 @@ styles here
   background-color: white;
   padding: 15px 0; }
   /* line 4, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
-  .detailPage .purchase-button, .detailPage .title, .detailPage .price, .detailPage .desc {
+  .detailPage .title {
     margin-bottom: 10px; }
   /* line 5, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage .purchase-button, .detailPage .price, .detailPage .desc, .detailPage .section-title {
+    margin-bottom: 20px; }
+  /* line 6, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage .section-content {
+    margin-bottom: 40px; }
+  /* line 7, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .photo {
     max-width: 500px;
     width: 100%;
     margin: 0 auto 10px;
     display: block; }
-  /* line 11, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  /* line 13, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .price {
     color: #00B145; }

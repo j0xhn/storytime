@@ -4,7 +4,19 @@
     <h3 class="title">{{story.title}}</h3>
     <h3 class="price">{{story.price | price }}</h3>
     <p class="desc"> {{story.longDesc}} </p>
-    <div class="button full purchase-button"> Purchase </div>
+    <div class="button full purchase-button section-content"> Purchase </div>
     <h4 class="section-title">Details</h4>
+    <div class="detail-bullets section-content">
+      <li>{{story.author}}</li>
+      <li>{{story.ages}}</li>
+      <li>{{story.length}}</li>
+      <li>{{story.maleFemale}}</li>
+      <li>{{story.alternativeEndings}}</li>
+      <li>{{story.imageCount}}</li>
+      <li>{{story.inputs ? 'Interactive Inputs' : ''}}</li>
+      <li>{{story.createdDate}}</li>
+    </div>
+    <h4 class="section-title">Search Tags</h4>
+    <tags tags="story.tags" class="section-content">
   </div>
 </div>

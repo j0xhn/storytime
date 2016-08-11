@@ -1,7 +1,9 @@
 .detailPage{
   background-color: white;
   padding: 15px 0 ;
-  .purchase-button, .title, .price, .desc { margin-bottom: 10px;}
+  .title { margin-bottom: 10px;}
+  .purchase-button, .price, .desc, .section-title { margin-bottom: 20px;}
+  .section-content { margin-bottom: 40px;}
   .photo{
     max-width: 500px;
     width: 100%;

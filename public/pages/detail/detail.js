@@ -8,6 +8,7 @@ angular.module('directives')
          if (!$scope.story) {
            storiesService.searchStories($routeParams.storyId).then(function(res){
              $scope.story = res.data.stories[0];
+            //  debugger;
            })
          }
       },
