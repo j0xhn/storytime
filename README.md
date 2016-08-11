@@ -36,6 +36,7 @@
       - validate serverside that it fits the schema required
       - catch errors on everything
 
-    3. Security
-    [ ] cache user
-        -- in angularApp.js route for individual stories
+    3. Security & Performance
+    [ ] cache user - most likely in the userService used in
+        - angularApp.js route for individual stories
+        - setting right now to _user

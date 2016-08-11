@@ -1,3 +1,10 @@
 <div class="container detailPage">
-  detail page for {{story.title}}
+  <div class="container">
+    <img class="photo" ng-src="{{story.photoUrl}}" />
+    <h3 class="title">{{story.title}}</h3>
+    <h3 class="price">{{story.price | price }}</h3>
+    <p class="desc"> {{story.longDesc}} </p>
+    <div class="button full purchase-button"> Purchase </div>
+    <h4 class="section-title">Details</h4>
+  </div>
 </div>

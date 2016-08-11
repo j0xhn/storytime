@@ -40,9 +40,8 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
       hasPurchasedStory:function($location, $route, $q, userService){
         var deferred = $q.defer();
         userService.getCurrentUser().then(function(res){
-          if( res.data.purchased.includes($route.current.params.storyId)){
+          if(res.data && res.data.purchased.includes($route.current.params.storyId)){
             // continue onto story
-            debugger;
             deferred.resolve(true)
           }else{
             //redirect user to detail landing page.
@@ -54,8 +53,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     }
   })
   .when('/detail/:storyId', {
-    templateUrl: 'pages/detail/detail.html',
-    controller: 'DetailCtrl'
+    template: '<detail-page></detail-page>'
   })
   .when('/users', {
     templateUrl: '',

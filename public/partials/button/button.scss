@@ -37,8 +37,9 @@
     background-color: $facebookBlue;
     box-shadow: none;
   }
-  &.block {
+  &.full {
     display: block;
     width: 100%;
+    text-align: center;
   }
 }

@@ -11458,11 +11458,15 @@ button.close {
   font-style: normal; }
 
 /* line 20, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* line 21, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0; }
 
-/* line 21, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
+/* line 22, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
 p {
   color: #999; }
 
@@ -11710,9 +11714,10 @@ styles here
     background-color: #3b5998;
     box-shadow: none; }
   /* line 40, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
-  .button.block {
+  .button.full {
     display: block;
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
 .form {
@@ -11770,4 +11775,16 @@ styles here
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
 .detailPage {
   background-color: white;
-  margin-top: 20px; }
+  padding: 15px 0; }
+  /* line 4, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage .purchase-button, .detailPage .title, .detailPage .price, .detailPage .desc {
+    margin-bottom: 10px; }
+  /* line 5, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage .photo {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 10px;
+    display: block; }
+  /* line 11, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage .price {
+    color: #00B145; }
