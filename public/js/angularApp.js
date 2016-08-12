@@ -30,24 +30,23 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     controller: 'feedCtrl'
   })
   .when('/submit', {
-    templateUrl: 'pages/submit/submit.html',
-    controller: 'storySubmitCtrl'
+    template: '<story-submit></story-submit>',
   })
-  .when('/story/:storyId/:storyTitle', {
+  .when('/story/:storyId/:storyTitle?', {
     templateUrl: 'pages/story/story.html',
     controller: 'StoryCtrl',
     resolve:{
       hasPurchasedStory:function($location, $route, $q, userService){
         var deferred = $q.defer();
-        userService.getCurrentUser().then(function(res){
-          if(res.data && res.data.purchased.includes($route.current.params.storyId)){
-            // continue onto story
-            deferred.resolve(true)
-          }else{
-            //redirect user to detail landing page.
-            $location.path('/detail/'+$route.current.params.storyId).replace();
-          }
-        })
+        if(userService.user && userService.user.purchased.includes($route.current.params.storyId)){
+          // continue onto story
+          deferred.resolve(true)
+        }else{
+          debugger;
+          //redirect user to detail landing page.
+          $location.path('/detail/'+$route.current.params.storyId).replace();
+        }
+        debugger;
         return deferred.promise;
       }
     }

@@ -1,7 +1,7 @@
-console.log('user service loaded')
 angular.module('services')
 .service('userService', function ($http) {
-
+  var cachedUser = JSON.parse(user);
+  delete window.user;
   return {
     getAllUsers: function () {
       return $http({
@@ -9,11 +9,6 @@ angular.module('services')
         url: '/users/all'
       });
     },
-    getCurrentUser: function() {
-      return $http({
-        method: 'GET',
-        url: '/users/current'
-      })
-    }
+    user: cachedUser
   }
 });
