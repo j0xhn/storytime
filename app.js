@@ -94,6 +94,9 @@ app.use(lusca.xssProtection(true));
 app.use((req, res, next) => {
   res.locals.user = req.user;
   res.locals.userJson = JSON.stringify(req.user);
+  if(!req.user){
+    res.locals.userJson = JSON.stringify(userController.getEmptyUser())
+  }
   next();
 });
 app.use(function(req, res, next) {

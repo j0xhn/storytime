@@ -17,6 +17,13 @@ exports.getLogin = (req, res) => {
   });
 };
 
+exports.getEmptyUser = (req,res) => {
+  const user = new User({
+    type: 'guest'
+  });
+  return user;
+}
+
 /**
  * POST /login
  * Sign in using email and password.
