@@ -28,6 +28,11 @@ angular.module('directives')
           story.inputs = inputsObj;
         }
 
+        story.authorName = userService.user.profile.name,
+        story.authorId = userService.user._id;
+
+
+
         storiesService.postStory(story).then(function(res){
           console.log(res)
         })

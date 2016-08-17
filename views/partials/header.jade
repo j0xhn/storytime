@@ -13,7 +13,7 @@
         span.icon-bar
       a.navbar-brand(href='/' target="_self")
         | Storytime
-    .collapse.navbar-collapse.tar(data-toggle='collapse', data-target='.navbar-collapse')
+    .collapse.navbar-collapse(data-toggle='collapse', data-target='.navbar-collapse')
       ul.nav.navbar-nav
         //- li(class=(title == 'Stories') ? 'active' : undefined)
         //-   a(href='/stories') Stories
@@ -38,7 +38,7 @@
               i.caret
             ul.dropdown-menu
               li
-                a(href='/account') My Account
+                a(href='/account' target="_self") My Account
               li.divider
               li
-                a(href='/logout') Logout
+                a(href='/logout' target="_self") Logout

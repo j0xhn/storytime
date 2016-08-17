@@ -10,6 +10,7 @@
 
     [ ] Directed to signup
       - signup / login
+      - Fix Facebook singup to work if user is already found
       - account stuff
       - get side nav working correctly
 
