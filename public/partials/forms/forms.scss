@@ -2,6 +2,7 @@
   max-width: 600px;
   padding: 20px;
   &.whiteBackground{ background-color: $white; }
+  h1.form-title{ margin-bottom: 10px; }
   .inputWrapper, .button, .divider { margin: 20px 0; }
   .input-group{
     display: block;

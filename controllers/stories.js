@@ -16,10 +16,15 @@ exports.postStory = (req, res, next) => {
       res.send({error: 'Title already exists'})
     } else {
       story.save((err) => {
-        if (err) { return next(err); }
+        if (err) {
+          console.log('error: ', err);
+          res.send({error: err});
+          return next(err);
+        } else {
+          console.log('saved')
+          res.send({title: 'Story successfully saved!'})
+        }
       });
-      console.log('saved')
-      res.send({title: 'Story successfully saved!'})
     }
   })
 };

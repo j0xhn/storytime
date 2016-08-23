@@ -17,6 +17,8 @@ angular.module('services')
       method: 'POST',
       data: storyObj,
       url: '/story/submit'
+    }).catch(function(res){
+      console.error(res);
     })
   };
 
@@ -71,8 +73,6 @@ angular.module('services')
   ss.getCachedStories = function(){
     return ss.cachedStories;
   };
-
-
 
   return ss;
 });

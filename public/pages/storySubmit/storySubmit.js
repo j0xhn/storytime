@@ -3,7 +3,7 @@ angular.module('directives')
   return {
     restrict: 'EA',
     replace: true,
-    controller: function($scope, storiesService){
+    controller: function($scope, storiesService, userService){
       $scope.story = {};
       $scope.story.inputs = [];
       //  For WYSIWY
@@ -15,21 +15,25 @@ angular.module('directives')
       //  End WYSIWY
 
       $scope.submitStory = function(story){
-        if(story.tags){
+        story = story || $scope.story;
+        if(story.tags && !(typeof(story.tags) === 'object')){
           var tagArray = story.tags.split(/[,]+/).filter(Boolean);
           story.tags = tagArray.map(function(x){ return x.trim(); })
+        }
+
+        if(story.inputs.length){
+          var inputsObj = {}
+          story.inputs.map(function(input){ inputsObj[input.keyword] = input})
+          story.inputs = inputsObj;
           var newHtml = story.html.replace(/\[/g, '<b ng-bind="');
           story.html = newHtml.replace(/\]/g, '"></b>');
         }
 
-        if(story.inputs){
-          var inputsObj = {}
-          story.inputs.map(function(input){ inputsObj[input.keyword] = input})
-          story.inputs = inputsObj;
-        }
+        story.authorName = userService.user.type === 'guest' ? 'Guest Author' : userService.user.profile.name;
+        story.authorId = userService.user._id;
 
         storiesService.postStory(story).then(function(res){
-          console.log(res)
+          console.log(res.data);
         })
       }
 
@@ -39,7 +43,7 @@ angular.module('directives')
         });
       }
     },
-    templateUrl: '/pages/submit/storySubmit.html',
+    templateUrl: '/pages/storySubmit/storySubmit.html',
     scope: {}
   }
 });

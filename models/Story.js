@@ -3,13 +3,15 @@ const crypto = require('crypto');
 const mongoose = require('mongoose');
 
 const storySchema = new mongoose.Schema({
-  authorId: Number,
+  authorId: String,
   authorName: String,
   title: String,
   longDesc: String,
   shortDesc: String,
   photoUrl: String,
+  ages: String,
   price: Number,
+  length: Number,
   tags: Array,
   inputs: Object,
   html: String

@@ -11459,15 +11459,16 @@ button.close {
 
 /* line 20, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200; }
 
 /* line 21, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, .p {
   margin: 0;
   padding: 0; }
 
 /* line 22, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
-p {
+p, .p {
   color: #999; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
@@ -11727,24 +11728,27 @@ styles here
   .form.whiteBackground {
     background-color: #fff; }
   /* line 5, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+  .form h1.form-title {
+    margin-bottom: 10px; }
+  /* line 6, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
   .form .inputWrapper, .form .button, .form .divider {
     margin: 20px 0; }
-  /* line 6, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+  /* line 7, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
   .form .input-group {
     display: block;
     border-bottom: 1px dashed #ccc; }
   @media screen and (min-width: 600px) {
-    /* line 12, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+    /* line 13, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
     .form.whiteBackground {
       padding: 40px;
       border: 1px solid #ccc;
       border-radius: 5px;
       margin: 30px auto 0; }
-    /* line 18, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+    /* line 19, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
     .form .input-group {
       display: flex;
       justify-content: space-between; }
-      /* line 21, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+      /* line 22, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
       .form .input-group .inputWrapper:first-of-type {
         margin-right: 10px; } }
 
@@ -11786,23 +11790,19 @@ Search Tags for a story
 
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
 .detailPage {
-  background-color: white;
-  padding: 15px 0; }
-  /* line 4, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  background-color: white; }
+  /* line 3, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .title {
     margin-bottom: 10px; }
-  /* line 5, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
-  .detailPage .purchase-button, .detailPage .price, .detailPage .desc, .detailPage .section-title {
+  /* line 4, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage .purchase-button, .detailPage .desc, .detailPage .section-title {
     margin-bottom: 20px; }
-  /* line 6, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  /* line 5, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .section-content {
     margin-bottom: 40px; }
-  /* line 7, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  /* line 6, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .photo {
     max-width: 500px;
     width: 100%;
     margin: 0 auto 10px;
     display: block; }
-  /* line 13, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
-  .detailPage .price {
-    color: #00B145; }

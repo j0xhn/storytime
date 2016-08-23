@@ -20,7 +20,10 @@ html
     //- include partials/footer
     script(src='/js/lib/jquery-2.2.0.min.js')
     script(src='/js/lib/bootstrap.min.js')
-    script var user = '!{userJson}';
+    script.
+      var user = '!{userJson}';
+      var _csrf = "#{_csrf}";
+    
     block scriptSection
       
     // Google Analytics: change UA-XXXXX-X to be your site's ID

@@ -6,6 +6,7 @@ angular.module('directives')
       controller: function($scope, $routeParams, storiesService) {
          var promiseOfStory = storiesService.getSelectedStory($routeParams.storyId);
          promiseOfStory.then(function(res){
+           res.createdOn = moment(res.createdAt).format('MMM Do, YYYY');
            $scope.story = res;
          });
       },

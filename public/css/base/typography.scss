@@ -17,6 +17,6 @@
   font-style: normal;
 }
 
-h1,h2,h3,h4,h5,h6 { font-family: $primary-font; }
-h1,h2,h3,h4,h5,h6,p{ margin: 0; padding: 0; }
-p{ color: $gray; }
+h1,h2,h3,h4,h5,h6 { font-family: $primary-font; font-weight: 200;}
+h1,h2,h3,h4,h5,h6,p,.p{ margin: 0; padding: 0; }
+p, .p{ color: $gray; }

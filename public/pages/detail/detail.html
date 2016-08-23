@@ -1,21 +1,20 @@
-<div class="container detailPage">
+<div class="detailPage">
+  <img class="photo" ng-src="{{story.photoUrl}}" />
   <div class="container">
-    <img class="photo" ng-src="{{story.photoUrl}}" />
-    <h3 class="title">{{story.title}}</h3>
-    <h3 class="price">{{story.price | price }}</h3>
+    <h4 class="title">{{story.title}}</h4>
     <p class="desc"> {{story.longDesc}} </p>
     <div class="button full purchase-button section-content"> Download </div>
     <h4 class="section-title">Details</h4>
     <div class="detail-bullets section-content">
-      <li>{{story.authorName}}</li>
-      <li>{{story.authorId}}</li>
-      <li>{{story.ages}}</li>
-      <li>{{story.length}}</li>
+      <li class="price">{{story.price | price }}</li>
+      <li class="p">Written by {{story.authorName}}</li>
+      <li class="p">Ages {{story.ages}}</li>
+      <li class="p">{{story.length}} Minutes</li>
       <!-- <li>{{story.maleFemale}}</li> -->
       <!-- <li>{{story.alternativeEndings}}</li> -->
       <!-- <li>{{story.imageCount}}</li> -->
-      <li>{{story.inputs ? 'Interactive Inputs' : ''}}</li>
-      <li>{{story.updatedAt}}</li>
+      <li class="p">{{story.inputs ? 'Interactive Inputs' : ''}}</li>
+      <li class="p">Created on {{story.createdOn}}</li>
     </div>
     <h4 class="section-title">Search Tags</h4>
     <tags tags="story.tags" class="section-content">
