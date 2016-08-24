@@ -5041,8 +5041,8 @@ tbody.collapse.in {
 
 /* line 531, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
 .navbar-inverse {
-  background-color: #1b71fb;
-  border-color: #0458df; }
+  background-color: #17153B;
+  border-color: #080815; }
   /* line 535, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-brand {
     color: #fff; }
@@ -5063,7 +5063,7 @@ tbody.collapse.in {
   /* line 559, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     color: #fff;
-    background-color: #0458df; }
+    background-color: #080815; }
   /* line 567, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
     color: #444;
@@ -5080,18 +5080,18 @@ tbody.collapse.in {
   /* line 588, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-collapse,
   .navbar-inverse .navbar-form {
-    border-color: #045eee; }
+    border-color: #0d0c21; }
   /* line 596, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #0458df;
+    background-color: #080815;
     color: #fff; }
   @media (max-width: 767px) {
     /* line 607, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-      border-color: #0458df; }
+      border-color: #080815; }
     /* line 610, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-      background-color: #0458df; }
+      background-color: #080815; }
     /* line 613, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
       color: #fff; }
@@ -5102,7 +5102,7 @@ tbody.collapse.in {
     /* line 622, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
       color: #fff;
-      background-color: #0458df; }
+      background-color: #080815; }
     /* line 630, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #444;
@@ -11458,18 +11458,24 @@ button.close {
   font-style: normal; }
 
 /* line 20, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 200; }
+.bold {
+  font-weight: 500; }
 
 /* line 21, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  letter-spacing: .5px; }
+
+/* line 26, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
 h1, h2, h3, h4, h5, h6, p, .p {
   margin: 0;
   padding: 0; }
 
-/* line 22, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
+/* line 27, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
 p, .p {
-  color: #999; }
+  color: #999;
+  font-weight: 200; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 html {
@@ -11760,7 +11766,8 @@ Search Tags for a story
 .tags .tag {
   display: inline-block;
   border-radius: 5px;
-  border: 1px solid #3b5998;
+  color: #45618D;
+  border: 1px solid #ccc;
   padding: 3px 8px;
   margin: 0 5px 5px 0; }
 
@@ -11790,19 +11797,30 @@ Search Tags for a story
 
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
 .detailPage {
-  background-color: white; }
-  /* line 3, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
-  .detailPage .title {
-    margin-bottom: 10px; }
+  background-color: white;
+  padding-bottom: 50px; }
   /* line 4, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
-  .detailPage .purchase-button, .detailPage .desc, .detailPage .section-title {
-    margin-bottom: 20px; }
+  .detailPage .title {
+    font-weight: 500;
+    margin-bottom: 10px; }
   /* line 5, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage .desc, .detailPage .photo {
+    margin-bottom: 20px; }
+  /* line 6, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .section-content {
     margin-bottom: 40px; }
-  /* line 6, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  /* line 7, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .photo {
     max-width: 500px;
     width: 100%;
-    margin: 0 auto 10px;
     display: block; }
+  /* line 12, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage .button-wrapper {
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    padding: 10px; }
