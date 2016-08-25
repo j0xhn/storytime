@@ -19,9 +19,23 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
   // });
   $locationProvider.html5Mode(true);
   $routeProvider
-  .when('/',        { template: '<feed></feed>' })
+  .when('/',        {
+    template: '<feed></feed>',
+    resolve:{
+      user: function($q, $location, userService){
+        var deferred = $q.defer();
+        if (!userService.user.type === 'guest'){
+          deferred.resolve(true);
+        } else {
+          $location.path('/landing').replace();
+        }
+        return deferred.promise;
+      }
+    }
+  })
   .when('/stories', { template: '<feed></feed>' })
-  .when('/submit', { template: '<story-submit></story-submit>', })
+  .when('/submit',  { template: '<story-submit></story-submit>' })
+  .when('/landing',  { template: '<landing></landing>' })
   .when('/story/:storyId/:storyTitle?', {
     template: '<story-page></story-page>',
     resolve:{

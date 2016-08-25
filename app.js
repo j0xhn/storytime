@@ -116,16 +116,16 @@ app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 /**
  * conditional.
  */
-function homeRoute(req, res) {
-  if (req.isAuthenticated()) {
-      return res.render('angular/index');
-  }
-  res.render('home');
-}
+// function homeRoute(req, res) {
+//   if (req.isAuthenticated()) {
+//       return res.render('angular/index');
+//   }
+//   res.render('home');
+// }
 /**
  * Primary app routes.
  */
-app.get('/', homeRoute);
+app.get('/', angularPagesController.angularHandoff);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
@@ -212,7 +212,7 @@ app.get('/users/current', userController.getCurrentUser );
 app.post('/story/submit', storiesController.postStory );
 app.get('/stories/all', storiesController.getAllStories );
 app.get('/stories/search', storiesController.searchStories );
-app.get('*', angularPagesController.getPagesServedByAngular);
+app.get('*', angularPagesController.angularHandoff);
 /**
  * Error Handler.
  */

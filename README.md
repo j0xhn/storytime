@@ -19,7 +19,7 @@
       - searching
       - lazy load scroll
 
-    [ ] View Complete Story info
+    [x] View Complete Story info
       - Design page
 
     [ ] Checkout

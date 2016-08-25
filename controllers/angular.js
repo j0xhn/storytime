@@ -1,7 +1,5 @@
-exports.getPagesServedByAngular = function (req, res) {
-    res.render('angular/index', {
-        title: 'Entry point to AngularJS pages'
-    });
+exports.angularHandoff = function (req, res) {
+    res.render('angular/index');
 };
 exports.feedPage = function (req, res) {
     res.render('angular/index');

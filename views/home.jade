@@ -1,7 +1,5 @@
-extends layout
-
-block content
-  div.container
-    h1 Storytime
-    p Inspire, entertain, and shape young minds with interactive stories
-    a.btn.btn-default(href='/stories', role='button') See stories »
+extends angularLayout
+block content 
+    body(data-ng-app='storytime')    
+    div(data-ng-view)
+      include ../public/pages/landing/landing.html

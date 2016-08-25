@@ -11771,6 +11771,23 @@ Search Tags for a story
   padding: 3px 8px;
   margin: 0 5px 5px 0; }
 
+/* line 2, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+.landingPage .hero {
+  padding: 20px 10px;
+  text-align: center;
+  background-color: white; }
+
+/* line 7, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+.landingPage .title {
+  font-size: 24px;
+  margin-bottom: 10px; }
+
+/* line 11, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+.landingPage .subTitle {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px; }
+
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/story/storyPage.scss */
 .story-page {
   background-color: #fff;
@@ -11819,7 +11836,7 @@ Search Tags for a story
     position: fixed;
     bottom: 0;
     background-color: #fff;
-    border-top: 1px solid #ccc;
+    box-shadow: 0px 1px 18px 0px #ccc;
     position: fixed;
     width: 100%;
     left: 0;
