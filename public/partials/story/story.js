@@ -12,7 +12,6 @@ angular.module('directives')
 
         const storyId = $routeParams.storyId ? $routeParams.storyId : $scope.storyid
         storiesService.searchStories(storyId).then(function(res){
-          debugger;
           $scope.storyObj = res.data.stories[0];
           var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
           for (var i = 0, len = inputsArray.length; i < len; i++) {
