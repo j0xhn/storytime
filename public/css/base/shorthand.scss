@@ -6,7 +6,10 @@
 .logo-font { font-family: $logo-font; }
 
 .txt-gray { color: $gray;}
+.txt-white { color: $white; }
 .txt-lightGray { color: $lightGray;}
+
+.bgBlue { background-color: $blue;}
 
 .pad0		{ padding: 0 !important; }
 .pad0b		{ padding-bottom: 0 !important; }
@@ -92,6 +95,7 @@
 .h200 { height: 200px;}
 .h300 { height: 300px;}
 .h400 { height: 400px;}
+
 
 .italic{ font-style: italic !important;}
 .ellipsis{

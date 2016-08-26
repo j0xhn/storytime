@@ -7,6 +7,7 @@
   },
   "scripts": {
     "start": "nodemon app.js",
+    "debug": "nodemon --debug=5858 app.js",
     "test": "mocha --reporter spec --timeout 5000"
   },
   "dependencies": {
@@ -56,6 +57,7 @@
     "paypal-rest-sdk": "^1.6.9",
     "request": "^2.73.0",
     "stripe": "^4.7.0",
+    "theaterjs": "^3.0.0",
     "tinymce": "^4.4.1",
     "tumblr.js": "^1.0.0",
     "twilio": "^3.3.0-edge",

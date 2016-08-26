@@ -27,7 +27,6 @@ dotenv.load({ path: '.env.example' });
 /**
  * Controllers (route handlers).
  */
-const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
@@ -113,19 +112,10 @@ app.use(function(req, res, next) {
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 
-/**
- * conditional.
- */
-// function homeRoute(req, res) {
-//   if (req.isAuthenticated()) {
-//       return res.render('angular/index');
-//   }
-//   res.render('home');
-// }
+
 /**
  * Primary app routes.
  */
-app.get('/', angularPagesController.angularHandoff);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);

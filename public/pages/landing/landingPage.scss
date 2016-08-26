@@ -1,16 +1,25 @@
 .landingPage{
   .hero{
-    padding: 20px 10px;
+    padding: 20px 10px 40px;
     text-align: center;
-    background-color: white;
+    .title{ font-size: 24px;}
+  }
+  section{
+    padding: 40px 20px;
+    text-align: center;
   }
   .title{
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
   .subTitle{
     font-size: 14px;
     color: $gray;
+    margin-bottom: 20px;
+  }
+  .parentChildReading{
+    width: 100%;
+    max-width: 500px;
     margin-bottom: 20px;
   }
 }
