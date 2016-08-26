@@ -5,10 +5,15 @@
     margin:0;
     padding: 0;
     list-style: none;
+    margin-bottom: 5px;
+    color: inherit;
   }
   &.bullets{
     .item{
-      list-style: inherit;
+      display: block;
+      &:before {
+        content:"• ";
+      }
     }
   }
 }

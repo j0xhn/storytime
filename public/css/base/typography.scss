@@ -17,11 +17,15 @@
   font-style: normal;
 }
 
-.bold { font-weight: 500; }
-h1,h2,h3,h4,h5,h6 {
-  font-family: $primary-font;
-  font-weight: 200;
+html{
   letter-spacing: .5px;
+  font-weight: 200;
 }
-h1,h2,h3,h4,h5,h6,p,.p{ margin: 0; padding: 0; }
-p, .p{ color: $gray; font-weight: 200; }
+
+h1,h2,h3,h4,h5,h6,p,.p{
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 { font-family: $primary-font; }
+p, .p{ color: $gray; }

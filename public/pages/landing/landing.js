@@ -4,6 +4,7 @@ angular.module('directives')
 			restrict: 'EA',
 			replace: true,
       controller: function($scope, storiesService) {
+        // for dialoge in hero
          var theater = theaterJS();
          theater
            .addActor('values', { speed: 0.8, accuracy: 0.6 })
@@ -20,6 +21,7 @@ angular.module('directives')
            .addScene('values: it is really cool, give it a try!', 900)
            .addScene('values: get ready for your child to learn to', 900)
            .addScene(theater.replay.bind(theater))
+          // end dialog
       },
 			templateUrl: '/pages/landing/landing.html',
 			scope: {}
