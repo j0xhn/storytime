@@ -2,7 +2,13 @@
   .hero{
     padding: 20px 10px 40px;
     text-align: center;
-    .title{ font-size: 24px;}
+    .title{
+      font-size: 34px;
+      font-weight: 500;
+    }
+    .subTitle{
+      max-width: 500px;
+    }
   }
   section{
     padding: 40px 20px;
@@ -14,12 +20,35 @@
   }
   .subTitle{
     font-size: 14px;
-    color: $gray;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
   }
   .parentChildReading{
     width: 100%;
     max-width: 500px;
     margin-bottom: 20px;
+  }
+  .item{ margin-bottom: 10px;}
+  .innerContent{ max-width: 500px; margin: 0 auto;}
+
+  @-webkit-keyframes blink {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes blink {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  #values::after {
+    content: '|';
+    -webkit-animation: blink 500ms infinite;
+            animation: blink 500ms infinite;
   }
 }
