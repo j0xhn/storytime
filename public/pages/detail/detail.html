@@ -4,7 +4,7 @@
     <h4 class="title bold">{{story.title}}</h4>
     <p class="desc"> {{story.longDesc}} </p>
     <div class="button-wrapper">
-      <div class="button full purchase-button"> Download </div>
+      <div class="button full purchase-button" ng-click="startPurchase()"> Download </div>
     </div>
     <h4 class="title">Details</h4>
     <div class="detail-bullets section-content">
@@ -21,4 +21,3 @@
     <h4 class="title">Search Tags</h4>
     <tags tags="story.tags" class="section-content">
   </div>
-</div>
