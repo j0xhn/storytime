@@ -4,15 +4,9 @@ angular.module('directives')
 			restrict: 'E',
 			replace: true,
       controller:  function($scope, $routeParams, $timeout, $compile, storiesService) {
-        /*
-        All logic for if have purchased story is done in the routing
-        if they come to this view, it should be because it's been purchased,
-        or because I have specifically passed in the id of the story I want
-        */
-
-        const storyId = $routeParams.storyId ? $routeParams.storyId : $scope.storyid
-        storiesService.searchStories(storyId).then(function(res){
-          $scope.storyObj = res.data.stories[0];
+        var storyId = $scope.storyid ? $scope.storyid : $routeParams.storyId;
+        var applyStoryToView = function(storyObj){
+          $scope.storyObj = storyObj;
           var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
           for (var i = 0, len = inputsArray.length; i < len; i++) {
             var inputRegex = new RegExp('"'+inputsArray[i]+'"','g');
@@ -27,11 +21,23 @@ angular.module('directives')
             storyDiv.innerHTML = $scope.storyObj.html;
             $compile(storyDiv)($scope);
           },100);
-        });
+        };
+
+
+        if ($scope.storyobj){
+          applyStoryToView($scope.storyobj);
+        } else {
+          storiesService.searchStories(storyId).then(function(res){
+            applyStoryToView(res.data.stories[0]);
+          });
+        }
+
+
       },
 			templateUrl: '/partials/story/story.html',
 			scope: {
-        storyid: '@'
+        storyid: '=',
+        storyobj: '='
       }
 		}
 	}

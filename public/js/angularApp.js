@@ -40,8 +40,9 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     template: '<story-page></story-page>',
     resolve:{
       hasPurchasedStory:function($location, $route, $q, userService){
+        var storyId = $route.current.params.storyId;
         var deferred = $q.defer();
-        if(userService.user && userService.user.purchased.includes($route.current.params.storyId)){
+        if(userService.user.purchased.includes(storyId) || storyId === 'example'){
           deferred.resolve(true)
         }else{
           $location.path('/detail/'+$route.current.params.storyId).replace();
