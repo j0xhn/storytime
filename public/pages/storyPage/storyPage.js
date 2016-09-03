@@ -9,7 +9,6 @@ angular.module('directives')
         if they come to this view, it should be because it's been purchased,
         or because I have specifically passed in the id of the story I want
         */
-        debugger;
         $scope.storyId = $routeParams.storyId;
       },
 			templateUrl: '/pages/storyPage/storyPage.html',

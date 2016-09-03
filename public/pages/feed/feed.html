@@ -1,3 +1,14 @@
-<div class="container feedPage">
-  <div story-card class="storyCard" ng-repeat="story in myStories" story="story" ng-click="setAsSelectedStory(story)"></div>
+<div class="feedPage">
+  <div class="content feedWrapper">
+    <div class="searchBar">
+      <input type="search" ng-model="search.title" name="name" value="">
+    </div>
+    <div
+      story-card 
+      class="storyCard"
+      ng-repeat="story in myStories | filter:search "
+      story="story"
+      ng-click="setAsSelectedStory(story)">
+    </div>
+  </div>
 </div>

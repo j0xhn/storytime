@@ -4,7 +4,7 @@
 //-     _user.purchased = '#{user.purchased}';
   
 .navbar.navbar-inverse.navbar-fixed-top
-  .container
+  .content
     .navbar-header
       button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
         span.sr-only Toggle navigation
@@ -13,6 +13,7 @@
         span.icon-bar
       a.navbar-brand(href='/' target="_self")
         | Storytime
+      i.fa.fa-search.searchIcon
     .collapse.navbar-collapse(data-toggle='collapse', data-target='.navbar-collapse')
       ul.nav.navbar-nav
         //- li(class=(title == 'Stories') ? 'active' : undefined)

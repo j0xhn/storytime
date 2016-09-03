@@ -1,4 +1,4 @@
-html, .html {
+html, .pageWrapperNormalize {
   position: relative;
   min-height: 100%;
   height: 100%;
@@ -11,13 +11,19 @@ body {
   height: 100%;
 }
 
-.container{
-  position: relative;
-  @media screen and (max-width: $small-width){
-    &.mobile-full{
-      padding: 0;
-      margin: 0;
-    }
+.content{
+  max-width: $largest-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media (min-width: $small-width){ max-width: $small-width - 50; }
+  @media (min-width: $medium-width){ max-width: $medium-width - 50; }
+  @media (min-width: $large-width){ max-width: $large-width - 50; }
+  &.mobileFull{
+    padding-left: 0;
+    padding-right: 0;
+    @media (min-width: $small-width){ padding-left: 10px; padding-right: 10px; }
   }
 }
 

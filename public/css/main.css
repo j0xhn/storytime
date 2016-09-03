@@ -11496,7 +11496,7 @@ p, .p {
   color: #999; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
-html, .html {
+html, .pageWrapperNormalize {
   position: relative;
   min-height: 100%;
   height: 100%; }
@@ -11509,42 +11509,62 @@ body {
   height: 100%; }
 
 /* line 14, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
-.container {
-  position: relative; }
-  @media screen and (max-width: 600px) {
-    /* line 17, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
-    .container.mobile-full {
-      padding: 0;
-      margin: 0; } }
+.content {
+  max-width: 1340px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media (min-width: 600px) {
+    /* line 14, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+    .content {
+      max-width: 550px; } }
+  @media (min-width: 768px) {
+    /* line 14, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+    .content {
+      max-width: 718px; } }
+  @media (min-width: 1000px) {
+    /* line 14, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+    .content {
+      max-width: 950px; } }
+  /* line 23, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+  .content.mobileFull {
+    padding-left: 0;
+    padding-right: 0; }
+    @media (min-width: 600px) {
+      /* line 23, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+      .content.mobileFull {
+        padding-left: 10px;
+        padding-right: 10px; } }
 
-/* line 24, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+/* line 30, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 45px;
   line-height: 45px; }
-  /* line 31, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+  /* line 37, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
   footer p, footer ul {
     margin-bottom: 0; }
 
-/* line 41, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+/* line 47, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 .navbar-nav img {
   width: 30px;
   height: 30px;
   margin: -15px 15px -15px; }
 
-/* line 50, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+/* line 56, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 .alert {
   margin-top: 20px; }
 
-/* line 57, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+/* line 63, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 .thumbnail {
   padding: 0;
   border-radius: 0;
   box-shadow: 0 0 5px #ccc, inset 0 0 0 #000; }
 
-/* line 66, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+/* line 72, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 .fa {
   margin-right: 6px; }
 
@@ -11560,6 +11580,20 @@ footer {
 .navbar .navbar-toggle {
   position: absolute;
   left: 10px; }
+
+/* line 15, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+.navbar .searchIcon {
+  position: absolute;
+  top: 15px;
+  font-size: 20px;
+  color: white;
+  right: 10px;
+  font-weight: 100; }
+
+@media (min-width: 600px) {
+  /* line 25, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+  .navbar .searchIcon {
+    display: none; } }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
 table.divider {
@@ -11736,31 +11770,36 @@ styles here
   -webkit-transition: none;
   -moz-transition: none;
   transition: none;
+  text-align: center;
   border-radius: 5px;
   margin-bottom: 4px;
   -webkit-user-select: none;
   /* Chrome all / Safari all */
   user-select: none; }
-  /* line 25, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 26, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button:hover, .button:active {
     box-shadow: 0 2px #038e39;
     background-color: #00a741;
     color: #fff;
     text-decoration: none;
     top: 1px; }
-  /* line 32, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 33, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button:active {
     box-shadow: 0 0 #038e39;
     top: 3px; }
-  /* line 36, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 37, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button.facebook {
     background-color: #3b5998;
     box-shadow: none; }
-  /* line 40, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
-  .button.full {
+  /* line 41, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  .button.full, .button.mobileFull {
     display: block;
-    width: 100%;
-    text-align: center; }
+    width: 100%; }
+  @media (min-width: 600px) {
+    /* line 46, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+    .button.mobileFull {
+      display: inline-block;
+      width: auto; } }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
 .form {
@@ -11906,6 +11945,24 @@ Search Tags for a story
   min-height: 100%;
   height: 100%;
   background-color: #eee; }
+  /* line 6, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
+  .feedPage .feedWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  /* line 13, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
+  .feedPage .storyCard {
+    width: 100%; }
+  @media (min-width: 600px) {
+    /* line 1, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
+    .feedPage {
+      padding-top: 30px; }
+      /* line 16, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
+      .feedPage .storyCard {
+        width: calc(50% - 30px);
+        margin: 0 15px 30px; } }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/storySubmit/storySubmitPage.scss */
 .submit-page {
@@ -11915,23 +11972,24 @@ Search Tags for a story
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
 .detailPage {
   background-color: white;
-  padding-bottom: 50px; }
-  /* line 4, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  padding-bottom: 100px;
+  margin: 0 auto; }
+  /* line 5, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .title {
     font-weight: 500;
     margin-bottom: 10px; }
-  /* line 5, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
-  .detailPage .desc, .detailPage .photo {
-    margin-bottom: 20px; }
   /* line 6, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
-  .detailPage .section-content {
-    margin-bottom: 40px; }
+  .detailPage .photo {
+    margin-bottom: 20px; }
   /* line 7, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage .detail-bullets, .detailPage .desc {
+    margin-bottom: 40px; }
+  /* line 8, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .photo {
     max-width: 500px;
     width: 100%;
     display: block; }
-  /* line 12, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  /* line 13, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .button-wrapper {
     position: fixed;
     bottom: 0;
@@ -11941,3 +11999,27 @@ Search Tags for a story
     width: 100%;
     left: 0;
     padding: 10px; }
+  @media (min-width: 600px) {
+    /* line 1, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    .detailPage {
+      margin-top: 20px; }
+      /* line 25, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      .detailPage .photo {
+        margin-bottom: 0; }
+      /* line 26, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      .detailPage .photo, .detailPage .detail-bullets, .detailPage .left {
+        width: 300px;
+        float: left;
+        margin-right: 20px; }
+      /* line 32, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      .detailPage .detailSection {
+        border-top: 1px solid #eee;
+        margin-top: 40px;
+        padding-top: 40px; }
+      /* line 38, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      .detailPage .button-wrapper {
+        position: relative;
+        box-shadow: none;
+        width: auto;
+        padding: 0;
+        background-color: transparent; } }

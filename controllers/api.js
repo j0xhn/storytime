@@ -4,6 +4,14 @@ const async = require('async');
 const validator = require('validator');
 const request = require('request');
 const stripe = require('stripe')(process.env.STRIPE_SKEY);
+const braintree = require('braintree');
+
+var gateway = braintree.connect({
+  environment: braintree.Environment[process.env.NODE_ENV],
+  merchantId: process.env.BRAINTREE_MERCHANT_ID,
+  publicKey: process.env.BRAINTREE_PUB_KEY,
+  privateKey: process.env.BRAINTREE_PRI_KEY
+});
 
 /**
  * GET /api
@@ -44,35 +52,9 @@ exports.getFacebook = (req, res, next) => {
   });
 };
 
-/**
- * GET /api/stripe
- * Stripe API example.
- */
-exports.getStripe = (req, res) => {
-  res.render('api/stripe', {
-    title: 'Stripe API',
-    publishableKey: process.env.STRIPE_PKEY
-  });
-};
 
-/**
- * POST /api/stripe
- * Make a payment.
- */
-exports.postStripe = (req, res) => {
-  const stripeToken = req.body.stripeToken;
-  const stripeEmail = req.body.stripeEmail;
-  stripe.charges.create({
-    amount: 395,
-    currency: 'usd',
-    source: stripeToken,
-    description: stripeEmail
-  }, (err) => {
-    if (err && err.type === 'StripeCardError') {
-      req.flash('errors', { msg: 'Your card has been declined.' });
-      return res.redirect('/api/stripe');
-    }
-    req.flash('success', { msg: 'Your card has been successfully charged.' });
-    res.redirect('/api/stripe');
+exports.getBraintreeToken = (req, res) => {
+  gateway.clientToken.generate({}, function (err, response) {
+    res.send(response.clientToken);
   });
 };

@@ -18,6 +18,7 @@
   -webkit-transition: none;
   -moz-transition: none;
   transition: none;
+  text-align: center;
   border-radius: 5px;
   margin-bottom: 4px;
   -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -37,9 +38,14 @@
     background-color: $facebookBlue;
     box-shadow: none;
   }
-  &.full {
+  &.full, &.mobileFull {
     display: block;
     width: 100%;
-    text-align: center;
+  }
+  @media (min-width: $small-width){
+    &.mobileFull {
+      display: inline-block;
+      width: auto;
+    }
   }
 }

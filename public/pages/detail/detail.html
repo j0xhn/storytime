@@ -1,23 +1,37 @@
 <div class="detailPage">
-  <img class="photo" ng-src="{{story.photoUrl}}" />
-  <div class="container">
-    <h4 class="title bold">{{story.title}}</h4>
-    <p class="desc"> {{story.longDesc}} </p>
-    <div class="button-wrapper">
-      <div class="button full purchase-button" ng-click="startPurchase()"> Download </div>
+
+  <div class="topSection clearfix">
+    <div class="content mobileFull">
+      <img class="photo" ng-src="{{story.photoUrl}}" />
     </div>
-    <h4 class="title">Details</h4>
-    <div class="detail-bullets section-content">
-      <li class="p">Price of {{story.price | price }}</li>
-      <li class="p">Written by {{story.authorName}}</li>
-      <li class="p">Ages {{story.ages}}</li>
-      <li class="p">{{story.length}} Minutes</li>
-      <!-- <li>{{story.maleFemale}}</li> -->
-      <!-- <li>{{story.alternativeEndings}}</li> -->
-      <!-- <li>{{story.imageCount}}</li> -->
-      <li class="p">{{story.inputs ? 'Interactive Inputs' : ''}}</li>
-      <li class="p">Created on {{story.createdOn}}</li>
+    <div class="content">
+      <h4 class="title bold">{{story.title}}</h4>
+      <p class="desc"> {{story.longDesc}} </p>
+      <div class="button-wrapper">
+        <div class="button mobileFull purchase-button" ng-click="startPurchase()"> Download </div>
+      </div>
     </div>
-    <h4 class="title">Search Tags</h4>
-    <tags tags="story.tags" class="section-content">
   </div>
+
+  <div class="detailSection content">
+    <div class="left">
+      <h4 class="title">Details</h4>
+      <div class="detail-bullets">
+        <li class="p">Price of {{story.price | price }}</li>
+        <li class="p">Written by {{story.authorName}}</li>
+        <li class="p">Ages {{story.ages}}</li>
+        <li class="p">{{story.length}} Minutes</li>
+        <!-- <li>{{story.maleFemale}}</li> -->
+        <!-- <li>{{story.alternativeEndings}}</li> -->
+        <!-- <li>{{story.imageCount}}</li> -->
+        <li class="p">{{story.inputs ? 'Interactive Inputs' : ''}}</li>
+        <li class="p">Created on {{story.createdOn}}</li>
+      </div>
+    </div>
+    <div class="right">
+      <h4 class="title">Search Tags</h4>
+      <tags tags="story.tags" class="section-content">
+    </div>
+  </div>
+
+</div>
