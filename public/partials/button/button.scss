@@ -30,6 +30,13 @@
     text-decoration: none;
     top: 1px;
   }
+  &.outline {
+    background-color: transparent;
+    box-shadow: none;
+    color: $darkGreen;
+    border: 1px solid $darkGreen;
+  }
+  
   &:active{
     box-shadow: 0 0 $darkGreen;
     top: 3px;

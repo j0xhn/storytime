@@ -11602,7 +11602,7 @@ table.divider {
   width: 100%;
   float: none; }
   /* line 8, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
-  table.divider .text {
+  table.divider .d_textWrapper {
     width: 1px;
     white-space: nowrap;
     font-weight: 300;
@@ -11610,19 +11610,22 @@ table.divider {
     font-size: 12px;
     position: relative;
     padding: 0 15px; }
+  /* line 17, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
+  table.divider .d_text {
+    /*special text classes here*/ }
   /* line 18, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
-  table.divider .title {
+  table.divider .d_title {
     font-size: 22px;
     font-weight: 300;
     color: #333; }
   /* line 20, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
-  table.divider hr {
+  table.divider .d_hr {
     border-top: 1px solid #ccc; }
   /* line 25, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
-  table.divider.left td:first-of-type {
+  table.divider.d_left td:first-of-type {
     display: none; }
   /* line 26, /Users/John/Dev/projects/storytime/public/partials/divider/divider.scss */
-  table.divider.left .text {
+  table.divider.d_left .d_textWrapper {
     padding-left: 0; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
@@ -11784,19 +11787,25 @@ styles here
     text-decoration: none;
     top: 1px; }
   /* line 33, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  .button.outline {
+    background-color: transparent;
+    box-shadow: none;
+    color: #038e39;
+    border: 1px solid #038e39; }
+  /* line 40, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button:active {
     box-shadow: 0 0 #038e39;
     top: 3px; }
-  /* line 37, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 44, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button.facebook {
     background-color: #3b5998;
     box-shadow: none; }
-  /* line 41, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 48, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button.full, .button.mobileFull {
     display: block;
     width: 100%; }
   @media (min-width: 600px) {
-    /* line 46, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+    /* line 53, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
     .button.mobileFull {
       display: inline-block;
       width: auto; } }
@@ -11998,25 +12007,33 @@ Search Tags for a story
     position: fixed;
     width: 100%;
     left: 0;
-    padding: 10px; }
+    padding: 15px; }
+    /* line 23, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    .detailPage .button-wrapper.pickType .paymentType {
+      height: 90px; }
+  /* line 27, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage #form-field-wrapper, .detailPage .paymentType {
+    height: 0;
+    transition-duration: 300ms;
+    overflow: hidden; }
   @media (min-width: 600px) {
     /* line 1, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage {
       margin-top: 20px; }
-      /* line 25, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 35, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .photo {
         margin-bottom: 0; }
-      /* line 26, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 36, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .photo, .detailPage .detail-bullets, .detailPage .left {
         width: 300px;
         float: left;
         margin-right: 20px; }
-      /* line 32, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 42, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .detailSection {
         border-top: 1px solid #eee;
         margin-top: 40px;
         padding-top: 40px; }
-      /* line 38, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 48, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .button-wrapper {
         position: relative;
         box-shadow: none;

@@ -5,7 +5,7 @@ table.divider {
 	width: 100%;
 	float: none;
 
-	.text {
+	.d_textWrapper {
 		width: 1px;
 		white-space: nowrap;
 		font-weight: 300;
@@ -14,15 +14,15 @@ table.divider {
 		position: relative;
 		padding: 0 15px;
 	}
+  .d_text{ /*special text classes here*/ }
+  .d_title{ font-size: 22px; font-weight: 300; color: $darkGray}
 
-  .title{ font-size: 22px; font-weight: 300; color: $darkGray}
-
-	hr {
+	.d_hr {
 		border-top: 1px solid $lightGray;
 	}
 
-	&.left{
+	&.d_left{
 		td:first-of-type{ display: none; }
-    .text{ padding-left: 0;}
+    .d_textWrapper{ padding-left: 0;}
 	}
 }

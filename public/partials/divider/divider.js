@@ -3,7 +3,7 @@ angular.module('directives')
 		return {
 			restrict: 'E',
 			replace: true,
-			template: '<table class="divider {{align}}"><tbody><tr><td><hr></td><td class="text" ng-if="text || title">{{text}}<span class="title">{{title}}</span></td><td><hr></td></tr></tbody></table>',
+			template: '<table class="divider {{align}}"><tbody><tr><td><hr class="d_hr"></td><td class="d_textWrapper" ng-if="text || title"><span class="d_text" ng-if="text">{{text}}</span><span class="d_title" ng-if="title">{{title}}</span></td><td><hr class="d_hr"></td></tr></tbody></table>',
 			scope: {
 				text: '@',
 				title: '@',

@@ -9,6 +9,12 @@ const userSchema = new mongoose.Schema({
   passwordResetToken: String,
   passwordResetExpires: Date,
 
+  paymentInfo: {
+    autoPay: {type: Boolean, default: false },
+    credit: {type: Number },
+    customerId: {type: String }
+  },
+
   facebook: String,
   twitter: String,
   google: String,
