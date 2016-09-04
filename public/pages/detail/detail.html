@@ -9,13 +9,15 @@
       <p class="desc"> {{story.longDesc}} </p>
       <div class="button-wrapper" ng-class="paymentState">
         <div class="paymentType">
-          <div class="button mobileFull outline">Single Item Download {{story.price | price}}</div>
+          <div class="button full lightBlue" ng-click="showForm('single')">Single Item Download {{story.price | price}}</div>
           <divider text='or'></divider>
+          <button class="button full" ng-click="showForm('unlimited')"> Unlimited Downloads $3/mo </button>
         </div>
         <form name='storyPurchaseForm' id='storyPurchaseForm'>
-          <div id="form-field-wrapper"></div>
+          <div id="form-field-wrapper" class="mar20b"></div>
+          <button class="button full" type="submit">Purchase</button>
         </form>
-        <button class="button mobileFull purchase-button" ng-click="nextStep()"> {{primaryButtonText}} </button>
+        <button class="button full purchase-button" ng-click="nextStep()"> Download </button>
       </div>
     </div>
   </div>

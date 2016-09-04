@@ -19,15 +19,21 @@
     width: 100%;
     left: 0;
     padding: 15px;
+    max-width: $small-width;
+    transition-duration: 300ms;
     &.pickType{
-      .paymentType { height: 90px; }
+      .paymentType { display: block; }
+      .purchase-button { display: none; }
+    }
+    &.showForm{
+      .paymentType { display: none; }
+      .purchase-button { display: none; }
+      #storyPurchaseForm { display: block; }
     }
   }
 
-  #form-field-wrapper, .paymentType {
-    height: 0;
-    transition-duration: 300ms;
-    overflow: hidden;
+  #storyPurchaseForm, .paymentType {
+    display: none;
   }
 
   @media (min-width: $small-width){

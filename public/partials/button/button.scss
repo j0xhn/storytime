@@ -24,11 +24,9 @@
   -webkit-user-select: none;  /* Chrome all / Safari all */
   user-select: none;
   &:hover, &:active {
-    box-shadow: 0 2px $darkGreen;
     background-color: darken($green, 2%);
     color: $white;
     text-decoration: none;
-    top: 1px;
   }
   &.outline {
     background-color: transparent;
@@ -36,7 +34,11 @@
     color: $darkGreen;
     border: 1px solid $darkGreen;
   }
-  
+  &.lightBlue {
+    background-color: $lightBlue;
+    box-shadow: 0 3px darken($lightBlue, 5%);
+  }
+
   &:active{
     box-shadow: 0 0 $darkGreen;
     top: 3px;
