@@ -50,13 +50,11 @@ angular.module('services')
     })
   };
 
-  ss.searchStories = function(id) {
+  ss.searchStories = function(searchObj) {
     return $http({
       method: 'GET',
       url: '/stories/search',
-      params: {
-        id: id
-      }
+      params: searchObj
     })
   };
 
@@ -81,7 +79,7 @@ angular.module('services')
       }
     } else {
       // if no cached story, then lets do a request for it
-      ss.searchStories(id).then(function(res){
+      ss.searchStories({_id:id}).then(function(res){
         deferred.resolve(res.data.stories[0]);
       })
 

@@ -27,7 +27,7 @@ angular.module('directives')
         if ($scope.storyobj){
           applyStoryToView($scope.storyobj);
         } else {
-          storiesService.searchStories(storyId).then(function(res){
+          storiesService.searchStories({_id:storyId}).then(function(res){
             applyStoryToView(res.data.stories[0]);
           });
         }

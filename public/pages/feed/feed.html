@@ -4,11 +4,14 @@
       <input type="search" ng-model="search.title" name="name" value="">
     </div>
     <div
-      story-card 
+      story-card
       class="storyCard"
       ng-repeat="story in myStories | filter:search "
       story="story"
       ng-click="setAsSelectedStory(story)">
     </div>
+    <p ng-if="noResults">
+      No Results
+    </p>
   </div>
 </div>

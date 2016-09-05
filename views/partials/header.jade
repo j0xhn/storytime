@@ -13,14 +13,18 @@
         span.icon-bar
       a.navbar-brand(href='/' target="_self")
         | Storytime
-      i.fa.fa-search.searchIcon
-    .collapse.navbar-collapse(data-toggle='collapse', data-target='.navbar-collapse')
+      i.fa.fa-search.searchIcon(data-toggle='collapse', data-target='.navbar-collapse')
+    .collapse.navbar-collapse
       ul.nav.navbar-nav
         //- li(class=(title == 'Stories') ? 'active' : undefined)
         //-   a(href='/stories') Stories
       ul.nav.navbar-nav.navbar-right
+        li(class=(title == 'Search') ? 'active pad15' : 'pad15')
+          input(href='/stories' ng-model='search' placeholder='Search...' class='searchInput')
+          a.innerSearchIcon.txt-gray(ng-href='/stories?search={{search}}' data-toggle='collapse' data-target='.navbar-collapse')
+            i.fa.fa-search
         li(class=(title == 'Stories') ? 'active' : undefined)
-          a(href='/stories') Find Stories
+          a(href='/stories' data-toggle='collapse', data-target='.navbar-collapse') Find Stories
         //- li(class=(title == 'Submit Story') ? 'active' : undefined)
         //-   a(href='/submit') Submit
         if !user

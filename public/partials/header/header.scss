@@ -21,6 +21,22 @@
     font-weight: 100;
   }
 
+  .searchInput{
+    border-radius: 3px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+  }
+
+  .innerSearchIcon{
+    position: absolute;
+    right: 15px;
+    padding: 5px;
+    top: 49%;
+    transform: translateY(-50%);
+  }
+
   @media (min-width: $small-width){
     .searchIcon{
       display: none;

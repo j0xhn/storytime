@@ -7,10 +7,10 @@
 
 .logo-font { font-family: $logo-font; }
 
-.txt-gray { color: $gray;}
-.txt-white { color: $white; }
-.txt-lightGray { color: $lightGray;}
-.txt-darkGray { color: $darkGray;}
+.txt-gray { color: $gray !important;}
+.txt-white { color: $white !important;}
+.txt-lightGray { color: $lightGray !important;}
+.txt-darkGray { color: $darkGray !important;}
 
 .bgBlue { background-color: $blue;}
 
@@ -25,6 +25,13 @@
 .pad10lr 	{ padding-left: 10px !important; padding-right: 10px !important; }
 .pad10l 	{ padding-left: 10px !important; }
 .pad10r 	{ padding-right: 10px !important; }
+.pad15 		{ padding: 15px !important; }
+.pad15tb 	{ padding-top: 15px !important; padding-bottom: 15px !important; }
+.pad15t 	{ padding-top: 15px !important; }
+.pad15b 	{ padding-bottom: 15px !important; }
+.pad15lr 	{ padding-left: 15px !important; padding-right: 15px !important; }
+.pad15l 	{ padding-left: 15px !important; }
+.pad15r 	{ padding-right: 15px !important; }
 .pad20 		{ padding: 20px !important; }
 .pad20tb 	{ padding-top: 20px !important; padding-bottom: 20px !important; }
 .pad20t 	{ padding-top: 20px !important; }

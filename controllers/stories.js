@@ -36,7 +36,9 @@ exports.getAllStories = (req, res, next) => {
 };
 
 exports.searchStories = (req,res,next) => {
-  Story.find({_id: req.query.id}).exec(function(err, stories){
+  console.log('query: ',req.query);
+  Story.find(req.query).exec(function(err, stories){
+    console.log(stories)
     res.send({stories});
   });
 }
