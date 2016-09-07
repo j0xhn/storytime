@@ -3,6 +3,7 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const passport = require('passport');
 const Story = require('../models/Story');
+const StoryUtilities = require('../util/StoryUtilities');
 
 /**
 * POST /signup
@@ -36,9 +37,10 @@ exports.getAllStories = (req, res, next) => {
 };
 
 exports.searchStories = (req,res,next) => {
-  console.log('query: ',req.query);
-  Story.find(req.query).exec(function(err, stories){
-    console.log(stories)
+  // console.log('query: ',req.query);
+  const formatedQuery = StoryUtilities.getFormatedStoryQuery(req.query)
+  Story.find(formatedQuery).exec(function(err, stories){
+    // console.log('stories:', stories)
     res.send({stories});
   });
 }

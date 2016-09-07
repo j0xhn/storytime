@@ -14,6 +14,7 @@ const storySchema = new mongoose.Schema({
   length: Number,
   tags: Array,
   inputs: Object,
+  paymentInfo: Object,
   html: String
 }, { timestamps: true });
 
