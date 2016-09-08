@@ -12,29 +12,53 @@
     left: 10px;
   }
 
+  .searchWrapper{
+    margin: 0 15px 15px;
+    border-radius: 3px;
+    overflow: hidden;
+    @media (min-width: $medium-width){
+      padding: 0;
+      margin-top: 6px;
+    }
+  }
+
   .searchIcon{
     position: absolute;
     top: 15px;
     font-size: 20px;
     color: white;
-    right: 10px;
+    right: 8px;
     font-weight: 100;
+    @media (min-width: $medium-width){
+      display: none;
+    }
   }
 
   .searchInput{
-    border-radius: 3px;
     width: 100%;
     border: none;
     outline: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
   }
 
   .innerSearchIcon{
     position: absolute;
-    right: 15px;
-    padding: 5px;
-    top: 49%;
-    transform: translateY(-50%);
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 30px;
+    background-color: $lightGray;
+    .fa-search{
+      color: $white;
+      position: absolute;
+      margin: 0;
+      right: 10px;
+      top: 49%;
+      transform: translateY(-50%);
+    }
+    // @media (min-width: $small-width){
+    //   display: none;
+    // }
   }
 
   @media (min-width: $small-width){
