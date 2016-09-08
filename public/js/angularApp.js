@@ -59,5 +59,11 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     // $rootScope.$evalAsync(function () {
     //      $location.path('/login');
     //  });
+  });
+  // some global search stuff:
+  document.getElementById('globalSearch').addEventListener("keyup", function(e, $location){
+    if (e.keyCode == 13) {
+      location.href = '/stories?search=' + e.target.value;
+    }
   })
 });

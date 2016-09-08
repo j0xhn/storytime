@@ -4,8 +4,10 @@ angular.module('directives')
 			restrict: 'EA',
 			replace: true,
       controller: function($scope, storiesService, $routeParams, $route) {
-        var searchObj = {
-          title: $routeParams.search,
+        var searchTerm = $routeParams.search;
+
+        $scope.search = {
+          general: searchTerm
         }
 
         var searchStories = function (searchObj){
@@ -21,7 +23,7 @@ angular.module('directives')
           storiesService.setSelectedStory(story);
         }
 
-        searchStories(searchObj);
+        searchStories($scope.search);
       },
 			templateUrl: '/pages/feed/feed.html',
 			scope: {}

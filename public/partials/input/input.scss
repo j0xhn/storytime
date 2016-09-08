@@ -19,14 +19,17 @@ $input-padding: 15px;
   align-items: center;
   appearance: none; /* gets rid of weird inner shadow on input fields */
   // shared styles to keep them similiar
-  label, input, .mimic-input {
+  .label, .input, .mimic-input {
     transition: all 0.15s ease-in-out;
     margin: 0;
     font-weight: 300;
     padding: 0 5px;
+    // fights bootstrap
+    font-size: 100%;
+    line-height: normal;
   }
 
-  input, .mimic-input{
+  .input, .mimic-input{
     height: 100%;
     min-height: $input-height;
     background-color: transparent;
@@ -38,7 +41,7 @@ $input-padding: 15px;
     appearance: none;
     padding: 0 $input-padding;
   }
-  label {
+  .label {
     color: $gray;
     position: absolute;
     left: $input-padding;
@@ -46,8 +49,8 @@ $input-padding: 15px;
   }
 
 
-  input:focus, input.ng-not-empty, .mimic-input:focus, .mimic-input.ng-not-empty { /* when input is focused, or when has content (determined in $.placeholder.js ) */
-    & + label {
+  .input:focus, .input.ng-not-empty, .mimic-input:focus, .mimic-input.ng-not-empty { /* when input is focused, or when has content (determined in $.placeholder.js ) */
+    & + .label {
       background-color: $white;
       font-size: 12px;
       z-index: 0;

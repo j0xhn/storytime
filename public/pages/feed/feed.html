@@ -1,12 +1,11 @@
 <div class="feedPage">
   <div class="content feedWrapper">
-    <div class="searchBar">
-      <input type="search" ng-model="search.title" name="name" value="">
-    </div>
+    <!-- <div class="searchBar"> <text-input type="search" ng-model='search.general'></text-input> </div> -->
+    <h4 class="mar10b" ng-if="search.general">Results for <strong>{{search.general}}</strong></h4>
     <div
       story-card
       class="storyCard"
-      ng-repeat="story in myStories | filter:search "
+      ng-repeat="story in myStories"
       story="story"
       ng-click="setAsSelectedStory(story)">
     </div>
