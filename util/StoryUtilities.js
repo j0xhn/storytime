@@ -10,9 +10,10 @@ StoryUtilities.getFormatedStoryQuery = function(query){
   if (Object.keys(query).length === 0){
     returnedQuery = Story.find({})
   } else {
-    // formatedQuery.title = new RegExp(query.general, "i");
-    formatedQuery.tags = { "$in" : [query.general]};
-    returnedQuery = Story.aggregate({$match: formatedQuery})
+    // db.stories.aggregate({$match: {$or: [{tags: "first"},{title: "Test Story Title"}]}})
+    const titleQuery = {title: new RegExp(query.general, "i")};
+    const tagQuery = {tags: query.general};
+    returnedQuery = Story.aggregate({$match: {$or:[titleQuery, tagQuery]}});
   }
   // console.log('ending query:', returnedQuery);
   return returnedQuery;
