@@ -12,7 +12,7 @@ const storySchema = new mongoose.Schema({
   ages: String,
   price: Number,
   length: Number,
-  tags: Array,
+  tags: [String],
   inputs: Object,
   paymentInfo: Object,
   html: String

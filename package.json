@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "nodemon app.js",
-    "debug": "node --inspect app.js",
+    "debug": "nodemon --inspect app.js",
     "test": "mocha --reporter spec --timeout 5000"
   },
   "dependencies": {
