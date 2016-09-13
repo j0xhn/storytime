@@ -2,7 +2,7 @@ const Story = require('../models/Story');
 
 const StoryUtilities = {};
 StoryUtilities.getFormatedStoryQuery = function(query){
-  console.log('starting query:', query);
+  // console.log('starting query:', query);
 
   const formatedQuery = {};
   let returnedQuery;

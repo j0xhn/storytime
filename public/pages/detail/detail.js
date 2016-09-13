@@ -15,20 +15,6 @@ angular.module('directives')
 
       paymentService.tokenRequest().then(function(res){
         $scope.token = res.data;
-        const formName = 'form-field-wrapper'
-        braintree.setup($scope.token, 'dropin', {
-          container: formName,
-          paypal: {
-            singleUse: true,
-            amount: 10.00,
-            currency: 'USD'
-          },
-          onPaymentMethodReceived: function (result) {
-            // do logic here to send back to our server
-            // store user as being in vault and set autoPay
-            // as true on their user
-          }
-        });
       })
 
       $scope.nextStep = function (e) {
@@ -41,6 +27,36 @@ angular.module('directives')
 
       $scope.showForm = function (paymentType) {
         $scope.paymentState = 'showForm'
+        const formName = 'form-field-wrapper'
+        var amount,
+            singleUseValue;
+
+        if (paymentType === 'single'){
+          amount = $scope.story.price;
+          debugger;
+          singleUseValue = true;
+        } else {
+          amount = 3.00
+          singleUseValue = false;
+        }
+        braintree.setup($scope.token, 'dropin', {
+          container: formName,
+          paypal: {
+            singleUse: singleUseValue,
+            amount: amount,
+            currency: 'USD'
+          },
+          onPaymentMethodReceived: function (result) {
+            debugger;
+            $scope.paymentState = 'processing';
+            paymentService.paymentPromise(result).then(function(res){
+              // do logic here to send back to our server
+              // proceed to next step in checkout
+              // store user as being in vault and set autoPay
+              // as true on their user
+            })
+          }
+        });
       }
     },
     templateUrl: '/pages/detail/detail.html',

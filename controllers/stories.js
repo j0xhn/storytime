@@ -39,9 +39,9 @@ exports.getAllStories = (req, res, next) => {
 exports.searchStories = (req,res,next) => {
   // console.log('query: ',req.query);
   const finalQuery = StoryUtilities.getFormatedStoryQuery(req.query);
-  console.log('final query:', finalQuery);
+  // console.log('final query:', finalQuery);
   finalQuery.exec(function(err, stories){
-    console.log('stories:', stories)
+    // console.log('stories:', stories)
     res.send({stories});
   });
 }
