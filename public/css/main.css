@@ -11544,7 +11544,8 @@ body {
   margin-right: auto;
   margin-left: auto;
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  position: relative; }
   @media (min-width: 600px) {
     /* line 14, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
     .content {
@@ -11557,72 +11558,79 @@ body {
     /* line 14, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
     .content {
       max-width: 950px; } }
-  /* line 23, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+  /* line 24, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
   .content.mobileFull {
     padding-left: 0;
     padding-right: 0; }
     @media (min-width: 600px) {
-      /* line 23, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+      /* line 24, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
       .content.mobileFull {
         padding-left: 10px;
         padding-right: 10px; } }
 
-/* line 30, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+/* line 31, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 45px;
   line-height: 45px; }
-  /* line 37, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+  /* line 38, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
   footer p, footer ul {
     margin-bottom: 0; }
 
-/* line 47, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+/* line 48, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 .navbar-nav img {
   width: 30px;
   height: 30px;
   margin: -15px 15px -15px; }
 
-/* line 56, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+/* line 57, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 .alert {
   margin-top: 20px; }
 
-/* line 63, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+/* line 64, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 .thumbnail {
   padding: 0;
   border-radius: 0;
   box-shadow: 0 0 5px #ccc, inset 0 0 0 #000; }
 
-/* line 72, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
+/* line 73, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 .fa {
   margin-right: 6px; }
 
 /* line 2, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
-.navbar .navbar-brand {
+.navbar .logo {
+  color: #fff;
   font-family: "HennyPenny";
   text-align: center;
-  margin: 0 auto;
   width: 100%;
-  z-index: -1; }
+  z-index: -1;
+  max-width: 300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
 
-/* line 10, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+/* line 15, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
 .navbar .navbar-toggle {
   position: absolute;
   left: 10px; }
 
-/* line 15, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+/* line 20, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
 .navbar .searchWrapper {
   margin: 0 15px 15px;
   border-radius: 3px;
   overflow: hidden; }
   @media (min-width: 768px) {
-    /* line 15, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+    /* line 20, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
     .navbar .searchWrapper {
       padding: 0;
-      margin-top: 6px; } }
+      margin: 6px 0 0;
+      position: absolute;
+      left: 0; } }
 
-/* line 25, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+/* line 32, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
 .navbar .searchIcon {
   position: absolute;
   top: 15px;
@@ -11631,26 +11639,26 @@ footer {
   right: 8px;
   font-weight: 100; }
   @media (min-width: 768px) {
-    /* line 25, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+    /* line 32, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
     .navbar .searchIcon {
       display: none; } }
 
-/* line 37, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+/* line 44, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
 .navbar .searchInput {
   width: 100%;
   border: none;
   outline: none;
   padding: 10px 15px; }
 
-/* line 44, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+/* line 51, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
 .navbar .innerSearchIcon {
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
-  width: 30px;
+  width: 35px;
   background-color: #ccc; }
-  /* line 51, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+  /* line 58, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
   .navbar .innerSearchIcon .fa-search {
     color: #fff;
     position: absolute;
@@ -11659,8 +11667,8 @@ footer {
     top: 49%;
     transform: translateY(-50%); }
 
-@media (min-width: 600px) {
-  /* line 65, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+@media (min-width: 768px) {
+  /* line 72, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
   .navbar .searchIcon {
     display: none; } }
 
@@ -11829,6 +11837,7 @@ styles here
   cursor: pointer;
   line-height: 45px;
   padding: 0 20px;
+  font-size: 13px;
   display: inline-block;
   background-color: #00B145;
   text-transform: uppercase;
@@ -11850,35 +11859,59 @@ styles here
   -webkit-user-select: none;
   /* Chrome all / Safari all */
   user-select: none; }
-  /* line 26, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 27, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  .button .displayContent {
+    opacity: 1;
+    transition: opacity 300ms ease; }
+  /* line 28, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  .button .ispinner {
+    opacity: 0;
+    transition: opacity 300ms ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%); }
+  /* line 39, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button:hover, .button:active {
     background-color: #00a741;
     color: #fff;
     text-decoration: none; }
-  /* line 31, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 44, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  .button:disabled {
+    opacity: .6; }
+  /* line 48, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  .button.loading .ispinner {
+    opacity: 1; }
+  /* line 49, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  .button.loading .displayContent {
+    opacity: 0; }
+  /* line 51, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button.outline {
     background-color: transparent;
     box-shadow: none;
     color: #038e39;
     border: 1px solid #038e39; }
-  /* line 37, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 57, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button.lightBlue {
     background-color: #7da3f3;
     box-shadow: 0 3px #6692f1; }
-  /* line 42, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 62, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button:active {
     box-shadow: 0 0 #038e39;
     top: 3px; }
-  /* line 46, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 66, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button.facebook {
     background-color: #3b5998;
     box-shadow: none; }
-  /* line 50, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 70, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button.full, .button.mobileFull {
     display: block;
     width: 100%; }
   @media (min-width: 600px) {
-    /* line 55, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+    /* line 75, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
     .button.mobileFull {
       display: inline-block;
       width: auto; } }
@@ -11946,9 +11979,152 @@ Search Tags for a story
     .listWrapper.bullets .item:before {
       content: "• "; }
 
+/* line 1, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner {
+  position: relative;
+  width: 20px;
+  height: 20px; }
+
+/* line 5, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade {
+  position: absolute;
+  left: 44.5%;
+  top: 37%;
+  width: 10%;
+  height: 25%;
+  border-radius: 50%/20%;
+  -webkit-animation: ispinner__blade--fade 1s linear infinite;
+  animation: ispinner__blade--fade 1s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused; }
+
+/* line 16, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(1) {
+  -webkit-animation-delay: -1.66667s;
+  animation-delay: -1.66667s;
+  -webkit-transform: rotate(30deg) translate(0, -150%);
+  transform: rotate(30deg) translate(0, -150%); }
+
+/* line 21, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(2) {
+  -webkit-animation-delay: -1.58333s;
+  animation-delay: -1.58333s;
+  -webkit-transform: rotate(60deg) translate(0, -150%);
+  transform: rotate(60deg) translate(0, -150%); }
+
+/* line 26, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(3) {
+  -webkit-animation-delay: -1.5s;
+  animation-delay: -1.5s;
+  -webkit-transform: rotate(90deg) translate(0, -150%);
+  transform: rotate(90deg) translate(0, -150%); }
+
+/* line 31, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(4) {
+  -webkit-animation-delay: -1.41667s;
+  animation-delay: -1.41667s;
+  -webkit-transform: rotate(120deg) translate(0, -150%);
+  transform: rotate(120deg) translate(0, -150%); }
+
+/* line 36, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(5) {
+  -webkit-animation-delay: -1.33333s;
+  animation-delay: -1.33333s;
+  -webkit-transform: rotate(150deg) translate(0, -150%);
+  transform: rotate(150deg) translate(0, -150%); }
+
+/* line 41, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(6) {
+  -webkit-animation-delay: -1.25s;
+  animation-delay: -1.25s;
+  -webkit-transform: rotate(180deg) translate(0, -150%);
+  transform: rotate(180deg) translate(0, -150%); }
+
+/* line 46, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(7) {
+  -webkit-animation-delay: -1.16667s;
+  animation-delay: -1.16667s;
+  -webkit-transform: rotate(210deg) translate(0, -150%);
+  transform: rotate(210deg) translate(0, -150%); }
+
+/* line 51, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(8) {
+  -webkit-animation-delay: -1.08333s;
+  animation-delay: -1.08333s;
+  -webkit-transform: rotate(240deg) translate(0, -150%);
+  transform: rotate(240deg) translate(0, -150%); }
+
+/* line 56, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(9) {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+  -webkit-transform: rotate(270deg) translate(0, -150%);
+  transform: rotate(270deg) translate(0, -150%); }
+
+/* line 61, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(10) {
+  -webkit-animation-delay: -0.91667s;
+  animation-delay: -0.91667s;
+  -webkit-transform: rotate(300deg) translate(0, -150%);
+  transform: rotate(300deg) translate(0, -150%); }
+
+/* line 66, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(11) {
+  -webkit-animation-delay: -0.83333s;
+  animation-delay: -0.83333s;
+  -webkit-transform: rotate(330deg) translate(0, -150%);
+  transform: rotate(330deg) translate(0, -150%); }
+
+/* line 71, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner .ispinner__blade:nth-child(12) {
+  -webkit-animation-delay: -0.75s;
+  animation-delay: -0.75s;
+  -webkit-transform: rotate(360deg) translate(0, -150%);
+  transform: rotate(360deg) translate(0, -150%); }
+
+/* line 76, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner.ispinner--animating .ispinner__blade {
+  -webkit-animation-play-state: running;
+  animation-play-state: running; }
+
+/* line 79, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner.ispinner--white .ispinner__blade {
+  background-color: white; }
+
+/* line 81, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner.ispinner--gray .ispinner__blade {
+  background-color: #8C8C8C; }
+
+/* line 83, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner.ispinner--large {
+  width: 35px;
+  height: 35px; }
+
+/* line 86, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+.ispinner.ispinner--large .ispinner__blade {
+  width: 8.57143%;
+  height: 25.71429%;
+  border-radius: 50%/16.67%; }
+
+@-webkit-keyframes ispinner__blade--fade {
+  0% {
+    opacity: 0.85; }
+  50% {
+    opacity: 0.25; }
+  100% {
+    opacity: 0.25; } }
+
+@keyframes ispinner__blade--fade {
+  0% {
+    opacity: 0.85; }
+  50% {
+    opacity: 0.25; }
+  100% {
+    opacity: 0.25; } }
+
 /* line 2, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .hero {
-  padding: 20px 10px 40px;
+  padding: 40px 10px;
   text-align: center; }
   /* line 5, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .hero .title {
@@ -12081,6 +12257,7 @@ Search Tags for a story
   /* line 13, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .button-wrapper {
     position: fixed;
+    z-index: 1;
     bottom: 0;
     background-color: #fff;
     box-shadow: 0px 1px 18px 0px #ccc;
@@ -12090,42 +12267,42 @@ Search Tags for a story
     padding: 15px;
     max-width: 600px;
     transition-duration: 300ms; }
-    /* line 25, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 26, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .button-wrapper.pickType .paymentType {
       display: block; }
-    /* line 26, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 27, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .button-wrapper.pickType .purchase-button {
       display: none; }
-    /* line 29, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 30, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .button-wrapper.showForm .paymentType {
       display: none; }
-    /* line 30, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 31, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .button-wrapper.showForm .purchase-button {
       display: none; }
-    /* line 31, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 32, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .button-wrapper.showForm #storyPurchaseForm {
       display: block; }
-  /* line 35, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  /* line 36, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage #storyPurchaseForm, .detailPage .paymentType {
     display: none; }
   @media (min-width: 600px) {
     /* line 1, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage {
       margin-top: 20px; }
-      /* line 41, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 42, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .photo {
         margin-bottom: 0; }
-      /* line 42, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 43, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .photo, .detailPage .detail-bullets, .detailPage .left {
         width: 300px;
         float: left;
         margin-right: 20px; }
-      /* line 48, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 49, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .detailSection {
         border-top: 1px solid #eee;
         margin-top: 40px;
         padding-top: 40px; }
-      /* line 54, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 55, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .button-wrapper {
         position: relative;
         box-shadow: none;

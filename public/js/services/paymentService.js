@@ -10,8 +10,10 @@ angular.module('services')
 
     paymentPromise: function(paymentDetails){
       return $http({
+        method: 'POST',
+        url: '/braintree/process',
+        data: paymentDetails
       })
-      // send info to API to do the actual processing
     }
 
   }

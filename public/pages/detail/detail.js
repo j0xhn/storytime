@@ -3,7 +3,7 @@ angular.module('directives')
   return {
     restrict: 'EA',
     replace: true,
-    controller: function($scope, $routeParams, $rootScope, storiesService, paymentService, userService) {
+    controller: function($scope, $routeParams, $q, $timeout, $rootScope, storiesService, paymentService, userService) {
       var promiseOfStory = storiesService.getSelectedStory($routeParams.storyId);
       $scope.primaryButtonText = 'Download';
 
@@ -25,11 +25,20 @@ angular.module('directives')
         }
       }
 
+      $scope.promiseTest = function(){
+        var deferred = $q.defer();
+        $timeout(function(){
+          deferred.resolve(true);
+        }, 3000)
+        return deferred.promise;
+      };
       $scope.showForm = function (paymentType) {
-        $scope.paymentState = 'showForm'
+
         const formName = 'form-field-wrapper'
         var amount,
             singleUseValue;
+
+        $scope.paymentState = 'showForm'
 
         if (paymentType === 'single'){
           amount = $scope.story.price;
@@ -39,6 +48,8 @@ angular.module('directives')
           amount = 3.00
           singleUseValue = false;
         }
+
+        var deferred = $q.defer();
         braintree.setup($scope.token, 'dropin', {
           container: formName,
           paypal: {
@@ -46,17 +57,27 @@ angular.module('directives')
             amount: amount,
             currency: 'USD'
           },
-          onPaymentMethodReceived: function (result) {
+          onReady: function() {
             debugger;
+          },
+          onPaymentMethodReceived: function (result) {
             $scope.paymentState = 'processing';
             paymentService.paymentPromise(result).then(function(res){
-              // do logic here to send back to our server
-              // proceed to next step in checkout
-              // store user as being in vault and set autoPay
-              // as true on their user
+              debugger;
+              deferred.resolve(res);
+              /*
+              do logic here to send back to our server
+              proceed to next step in checkout
+              store user as being in vault and set autoPay:
+              https://developers.braintreepayments.com/guides/payment-methods/node
+              https://developers.braintreepayments.com/guides/recurring-billing/overview
+              as true on their user
+              */
             })
           }
         });
+
+        return deferred.promise;
       }
     },
     templateUrl: '/pages/detail/detail.html',

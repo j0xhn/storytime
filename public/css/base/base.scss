@@ -17,6 +17,7 @@ body {
   margin-left: auto;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
   @media (min-width: $small-width){ max-width: $small-width - 50; }
   @media (min-width: $medium-width){ max-width: $medium-width - 50; }
   @media (min-width: $large-width){ max-width: $large-width - 50; }
