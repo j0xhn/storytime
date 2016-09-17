@@ -4,14 +4,6 @@ const async = require('async');
 const validator = require('validator');
 const request = require('request');
 const stripe = require('stripe')(process.env.STRIPE_SKEY);
-const braintree = require('braintree');
-
-var gateway = braintree.connect({
-  environment: braintree.Environment[process.env.NODE_ENV],
-  merchantId: process.env.BRAINTREE_MERCHANT_ID,
-  publicKey: process.env.BRAINTREE_PUB_KEY,
-  privateKey: process.env.BRAINTREE_PRI_KEY
-});
 
 /**
  * GET /api
@@ -49,12 +41,5 @@ exports.getFacebook = (req, res, next) => {
       me: results.getMyProfile,
       friends: results.getMyFriends
     });
-  });
-};
-
-
-exports.getBraintreeToken = (req, res) => {
-  gateway.clientToken.generate({}, function (err, response) {
-    res.send(response.clientToken);
   });
 };

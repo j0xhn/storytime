@@ -1,6 +1,4 @@
 <div class="detailPage">
-    <button promise-button ng-click="promiseTest()">Test</button>
-    <button promise-button ng-click="promiseTest()"><span>Span Test</span></button>
   <div class="topSection clearfix">
     <div class="content mobileFull">
       <img class="photo" ng-src="{{story.photoUrl}}" />
@@ -10,13 +8,13 @@
       <p class="desc"> {{story.longDesc}} </p>
       <div class="button-wrapper" ng-class="paymentState">
         <div class="paymentType">
-          <button class="full lightBlue" loading="disableButtons" ng-click="showForm('single')">Single Item Download {{story.price | price}}</st-button>
+          <button promise-button class="full lightBlue" ng-click="showForm('single')">Single Item Download {{story.price | price}}</button>
           <divider text='or'></divider>
-          <promise-button class="button full" ng-click="showForm('unlimited')"> Unlimited Downloads $3/mo </st-button>
+          <promise-button class="button full" ng-click="showForm('unlimited')"> Unlimited Downloads $3/mo </promise-button>
         </div>
         <form name='storyPurchaseForm' id='storyPurchaseForm'>
           <div id="form-field-wrapper" class="mar20b"></div>
-          <button class="button full" type="submit">Purchase</button>
+          <button promise-button class="full" type="submit" ng-class="{loading: !paymentState === 'formReady'}" ng-click="purchase()">Purchase</button>
         </form>
         <promise-button class="full purchase-button" ng-click="nextStep()">Download</promise-button>
       </div>

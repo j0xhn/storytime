@@ -27,6 +27,7 @@ dotenv.load({ path: 'config/.env.example' });
 /**
  * Controllers (route handlers).
  */
+const paymentsController = require('./controllers/payments');
 const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
@@ -139,7 +140,8 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
  * API examples routes.
  */
 app.get('/api', apiController.getApi);
-app.get('/braintree/token', apiController.getBraintreeToken)
+app.get('/braintree/token', paymentsController.getBraintreeToken)
+app.post('/braintree/process', paymentsController.processPayment)
 app.get('/api/facebook', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getFacebook);
 
 /**
