@@ -15,5 +15,22 @@ exports.getBraintreeToken = (req, res) => {
 };
 
 exports.processPayment = (req, res) => {
-    console.log('process payment: ', req);
+  console.log('process payment: ', req);
+  const {amount, repeating, nonceFromTheClient } = req.data;
+  gateway.transaction.sale({
+    amount: "10.00",
+    paymentMethodNonce: nonceFromTheClient,
+    descriptor: {
+      name: "OPEN APPARATUS LLC",
+      phone: "2082273646",
+      url: "storytime.com"
+    }
+  }, function (err, result) {
+    result.transaction.descriptor.name;
+    // "company*my production"
+    result.transaction.descriptor.phone;
+    // "3125551212"
+    res.send(result)
+  });
+
 };

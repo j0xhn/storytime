@@ -5,6 +5,7 @@ angular.module('directives')
     replace: true,
     controller: function($scope, $routeParams, $q, $timeout, $rootScope, storiesService, paymentService, userService) {
       var promiseOfStory = storiesService.getSelectedStory($routeParams.storyId);
+      $scope.paymentData = {};
 
       promiseOfStory.then(function(res){
         res.createdOn = moment(res.createdAt).format('MMM Do, YYYY');
@@ -37,11 +38,9 @@ angular.module('directives')
       }
 
       $scope.purchase = function(){
-        return paymentService.paymentPromise(result).then(function(res){
-          debugger;
+        return paymentService.paymentPromise($scope.paymentData).then(function(res){
           /*
-          do logic here to send back to our server
-          proceed to next step in checkout
+          show success screen
           store user as being in vault and set autoPay:
           https://developers.braintreepayments.com/guides/payment-methods/node
           https://developers.braintreepayments.com/guides/recurring-billing/overview
