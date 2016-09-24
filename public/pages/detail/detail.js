@@ -7,9 +7,11 @@ angular.module('directives')
       var promiseOfStory = storiesService.getSelectedStory($routeParams.storyId);
       $scope.paymentData = {};
 
+
       promiseOfStory.then(function(res){
         res.createdOn = moment(res.createdAt).format('MMM Do, YYYY');
         $scope.story = res;
+        $scope.paymentData.amount = res.price;
       });
 
 
@@ -24,7 +26,8 @@ angular.module('directives')
           },
           onPaymentMethodReceived: function (result) {
             $scope.paymentState = 'processing';
-            $scope.paymentData = result;
+            $scope.paymentData = Object.assign($scope.paymentData,result);
+            $scope.purchase($scope.paymentData);
           }
         });
       })
@@ -37,8 +40,9 @@ angular.module('directives')
         }
       }
 
-      $scope.purchase = function(){
-        return paymentService.paymentPromise($scope.paymentData).then(function(res){
+      $scope.purchase = function(payload){
+        return paymentService.paymentPromise(payload).then(function(res){
+          console.log("response: ", res);
           /*
           show success screen
           store user as being in vault and set autoPay:
@@ -54,10 +58,12 @@ angular.module('directives')
             singleUseValue;
 
         if (paymentType === 'single'){
-          amount = $scope.story.price;
+          $scope.paymentData.amount = $scope.story.price;
+          $scope.paymentData.repeating = false;
           singleUseValue = true;
         } else {
           amount = 3.00
+          $scope.paymentData.repeating = true;
           singleUseValue = false;
         }
 
