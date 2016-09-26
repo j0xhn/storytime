@@ -12,6 +12,7 @@ angular.module('directives')
         res.createdOn = moment(res.createdAt).format('MMM Do, YYYY');
         $scope.story = res;
         $scope.paymentData.amount = res.price;
+        $scope.paymentData.storyId = res._id;
       });
 
 
@@ -35,6 +36,8 @@ angular.module('directives')
       $scope.nextStep = function (e) {
         if(userService.user.autoPay){
           // download and take from autoPay
+        } else if(userService.user.type === 'guest') {
+          $scope.paymentState = 'createAccount'
         } else {
           $scope.paymentState = 'pickType';
         }
@@ -42,6 +45,7 @@ angular.module('directives')
 
       $scope.purchase = function(payload){
         return paymentService.paymentPromise(payload).then(function(res){
+          $scope.paymentState = 'success';
           console.log("response: ", res);
           /*
           show success screen

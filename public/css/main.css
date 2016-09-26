@@ -11889,29 +11889,36 @@ styles here
   .button.loading .displayContent {
     opacity: 0; }
   /* line 51, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  .button.lightBlue {
+    background-color: #7da3f3;
+    box-shadow: 0 3px #6692f1; }
+    /* line 54, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+    .button.lightBlue.outline {
+      color: #45618D;
+      border-color: #45618D; }
+  /* line 57, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button.outline {
     background-color: transparent;
     box-shadow: none;
     color: #038e39;
     border: 1px solid #038e39; }
-  /* line 57, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
-  .button.lightBlue {
-    background-color: #7da3f3;
-    box-shadow: 0 3px #6692f1; }
-  /* line 62, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+    /* line 62, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+    .button.outline:active {
+      top: 0; }
+  /* line 65, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button:active {
     box-shadow: 0 0 #038e39;
     top: 3px; }
-  /* line 66, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 69, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button.facebook {
     background-color: #3b5998;
     box-shadow: none; }
-  /* line 70, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+  /* line 73, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
   .button.full, .button.mobileFull {
     display: block;
     width: 100%; }
   @media (min-width: 600px) {
-    /* line 75, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
+    /* line 78, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
     .button.mobileFull {
       display: inline-block;
       width: auto; } }
@@ -12267,42 +12274,48 @@ Search Tags for a story
     padding: 15px;
     max-width: 600px;
     transition-duration: 300ms; }
-    /* line 26, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 27, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .button-wrapper.pickType .paymentType {
       display: block; }
-    /* line 27, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 28, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .button-wrapper.pickType .purchase-button {
       display: none; }
-    /* line 30, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 32, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .button-wrapper.showForm .paymentType {
       display: none; }
-    /* line 31, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 33, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .button-wrapper.showForm .purchase-button {
       display: none; }
-    /* line 32, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 34, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .button-wrapper.showForm #storyPurchaseForm {
       display: block; }
-  /* line 36, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
-  .detailPage #storyPurchaseForm, .detailPage .paymentType {
+    /* line 38, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    .detailPage .button-wrapper.createAccount .createAccountSection {
+      display: block; }
+    /* line 39, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    .detailPage .button-wrapper.createAccount .purchase-button {
+      display: none; }
+  /* line 43, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  .detailPage #storyPurchaseForm, .detailPage .paymentType, .detailPage .createAccountSection {
     display: none; }
   @media (min-width: 600px) {
     /* line 1, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage {
       margin-top: 20px; }
-      /* line 42, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 49, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .photo {
         margin-bottom: 0; }
-      /* line 43, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 50, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .photo, .detailPage .detail-bullets, .detailPage .left {
         width: 300px;
         float: left;
         margin-right: 20px; }
-      /* line 49, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 56, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .detailSection {
         border-top: 1px solid #eee;
         margin-top: 40px;
         padding-top: 40px; }
-      /* line 55, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 62, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .button-wrapper {
         position: relative;
         box-shadow: none;

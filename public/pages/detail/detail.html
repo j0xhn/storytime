@@ -6,17 +6,33 @@
     <div class="content">
       <h4 class="title bold">{{story.title}}</h4>
       <p class="desc"> {{story.longDesc}} </p>
+
       <div class="button-wrapper" ng-class="paymentState">
+
+        <!-- 1. CTA -->
+        <promise-button class="full purchase-button" ng-click="nextStep()">Download</promise-button>
+        <!-- 1.5 Account -->
+        <div class="createAccountSection tac">
+          <h3 class="mar10b">Create Account</h3>
+          <p class='mar20b'>You need an account to download this story</p>
+          <a class="button outline lightBlue full" href="/signup" target="_self">Signup</a>
+          <divider text='or'></divider>
+          <a class="button outline full" href="/login" target="_self">Login</a>
+        </div>
+      <!-- 2. Pick Payment Type -->
         <div class="paymentType">
           <button promise-button class="full lightBlue" ng-click="showForm('single')">Single Item Download {{story.price | price}}</button>
           <divider text='or'></divider>
           <promise-button class="button full" ng-click="showForm('unlimited')"> Unlimited Downloads $3/mo </promise-button>
         </div>
+
+        <!-- 3. Fill Form -->
         <form name='storyPurchaseForm' id='storyPurchaseForm'>
           <div id="form-field-wrapper" class="mar20b"></div>
           <button promise-button class="full" type="submit" ng-class="{loading: !paymentState === 'formReady'}">Submit</button>
         </form>
-        <promise-button class="full purchase-button" ng-click="nextStep()">Download</promise-button>
+
+
         <!-- <button promise-button class="full" type="submit" ng-class="{loading: !paymentState === 'formReady'}" ng-click="purchase()">Purchase</button> -->
       </div>
     </div>

@@ -24,6 +24,14 @@ exports.getEmptyUser = (req,res) => {
   return user;
 }
 
+exports.setStoryAsPurchased = (req,res) => {
+  if (req.user) {
+    return res.redirect('/');
+  } else {
+    return {error: 'User not logged in.'}
+  }
+}
+
 /**
  * POST /login
  * Sign in using email and password.

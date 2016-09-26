@@ -48,15 +48,18 @@
     .ispinner{ opacity: 1; }
     .displayContent{ opacity: 0; }
   }
+  &.lightBlue {
+    background-color: $lightBlue;
+    box-shadow: 0 3px darken($lightBlue, 5%);
+    &.outline {color: $darkBlue; border-color: $darkBlue;}
+  }
+
   &.outline {
     background-color: transparent;
     box-shadow: none;
     color: $darkGreen;
     border: 1px solid $darkGreen;
-  }
-  &.lightBlue {
-    background-color: $lightBlue;
-    box-shadow: 0 3px darken($lightBlue, 5%);
+    &:active{ top: 0; }
   }
 
   &:active{

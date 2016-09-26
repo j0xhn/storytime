@@ -1,31 +1,26 @@
 extends ../layout
-
 block content
-  .content
-    .page-header
-      h3 Sign in
-    form.form-horizontal(method='POST')
+  .content.mar10t
+    form.form-horizontal.tac.form.whiteBackground.max400.mobile-full(method='POST')
+      h1.logo-font.mar20tb Storytime
+      p Login to access your favorite stories
       input(type='hidden', name='_csrf', value=_csrf)
-      .form-group
-        .col-sm-offset-3.col-sm-7
-          a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
-            i.fa.fa-facebook
-            | Sign in with Facebook
-      .form-group
-        label.col-sm-3.control-label(for='email') Email
-        .col-sm-7
-          input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, required)
-      .form-group
-        label.col-sm-3.control-label(for='password') Password
-        .col-sm-7
-          input.form-control(type='password', name='password', id='password', placeholder='Password', required)
-      .form-group
-        .col-sm-offset-3.col-sm-7
-          button.button(type='submit')
-            i.fa.fa-user
-            | Login
-          a.btn.btn-link(href='/forgot') Forgot your password?
-      .form-group
-        .col-sm-offset-3.col-sm-7
-          hr
-    
+      a.button.block.facebook(href='/auth/facebook')
+        i.fa.fa-facebook
+        | Sign in with Facebook
+      table.divider
+        tbody 
+          tr
+            td
+              hr.d_hr
+            td.d_textWrapper or
+            td 
+              hr.d_hr
+      .inputWrapper
+        input(type='email', name='email', id='email', autofocus, required, autocomplete="off", class="input")
+        label(for='email', class='label') Email
+      .inputWrapper
+        input(type='password', name='password', id='password', required, class="input", autocomplete="off")
+        label(for='password', class='label') Password
+      button.button.full(type='submit')
+        | Login  

@@ -1,5 +1,6 @@
 'use strict';
 const braintree = require('braintree');
+const User = require('../models/User');
 
 var gateway = braintree.connect({
   environment: braintree.Environment[process.env.NODE_ENV],
@@ -16,7 +17,7 @@ exports.getBraintreeToken = (req, res) => {
 
 exports.processPayment = (req, res) => {
   // console.log('process payment: ', req);
-  const {amount, repeating, nonce } = req.body;
+  const {amount, repeating, nonce, storyId } = req.body;
   debugger;
   gateway.transaction.sale({
     amount: amount,
@@ -26,7 +27,25 @@ exports.processPayment = (req, res) => {
     }
   }, function (err, result) {
     console.log('result: ',result);
-    res.send(result)
+    if(err){
+      res.send(err)
+    } else {
+      debugger;
+      if (!req.user) res.send({error: 'No User'})
+      console.log(req);
+      // User.findById(req.user.id, (err, user) => {
+      //   if (err) { return next(err); }
+      //   user.purchased.push()
+      //   user.save((err) => {
+      //     if (err) {
+      //       return next(err);
+      //     }
+      //     req.flash('success', { msg: 'Profile information has been updated.' });
+      //     res.redirect('/story/');
+      //   });
+      // })
+      res.send(result)
+    }
   });
 
 };

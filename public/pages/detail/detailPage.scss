@@ -22,18 +22,25 @@
     padding: 15px;
     max-width: $small-width;
     transition-duration: 300ms;
+
     &.pickType{
       .paymentType { display: block; }
       .purchase-button { display: none; }
     }
+
     &.showForm{
       .paymentType { display: none; }
       .purchase-button { display: none; }
       #storyPurchaseForm { display: block; }
     }
+
+    &.createAccount{
+      .createAccountSection { display: block; }
+      .purchase-button { display: none; }
+    }
   }
 
-  #storyPurchaseForm, .paymentType {
+  #storyPurchaseForm, .paymentType, .createAccountSection {
     display: none;
   }
 

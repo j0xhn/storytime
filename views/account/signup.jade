@@ -13,18 +13,18 @@ block content
         tbody 
           tr
             td
-              hr
-            td.text.f16 or
+              hr.d_hr
+            td.d_textWrapper or
             td 
-              hr
+              hr.d_hr
       .inputWrapper
-        input(type='email', name='email', id='email', autofocus, required, autocomplete="off")
-        label(for='email') Email
+        input(type='email', name='email', id='email', autofocus, required, autocomplete="off", class="input")
+        label(for='email', class='label') Email
       .inputWrapper
-        input(type='password', name='password', id='password', required, autocomplete="off")
-        label(for='password') Password
+        input(type='password', name='password', id='password', required, class="input", autocomplete="off")
+        label(for='password', class='label') Password
       .inputWrapper
-        input(type='password', name='confirmPassword', id='confirmPassword', required, autocomplete="off")
-        label(for='confirmPassword') Confirm Password
-      button.button.block(type='submit')
+        input(type='password', class='input', name='confirmPassword', id='confirmPassword', required, autocomplete="off")
+        label(for='confirmPassword', class='label') Confirm Password
+      button.button.full(type='submit')
         | Signup
