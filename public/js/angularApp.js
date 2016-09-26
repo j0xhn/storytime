@@ -24,7 +24,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     resolve:{
       user: function($q, $location, userService){
         var deferred = $q.defer();
-        if (!userService.user.type === 'guest'){
+        if (!(userService.user.type === 'guest')){
           deferred.resolve(true);
         } else {
           $location.path('/landing').replace();

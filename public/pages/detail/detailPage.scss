@@ -3,13 +3,8 @@
   padding-bottom: 100px; // makes room for button
   margin: 0 auto;
   .title { font-weight: 500; margin-bottom: 10px;}
-  .photo { margin-bottom: 20px;}
+  .story-image { margin-bottom: 20px;}
   .detail-bullets, .desc { margin-bottom: 40px;}
-  .photo{
-    max-width: 500px;
-    width: 100%;
-    display: block;
-  }
   .button-wrapper{
     position: fixed;
     z-index: 1;
@@ -46,8 +41,8 @@
 
   @media (min-width: $small-width){
     margin-top: 20px;
-    .photo{ margin-bottom: 0; }
-    .photo, .detail-bullets, .left {
+    .story-image{ margin-bottom: 0; }
+    .story-image, .detail-bullets, .left {
       width: 300px;
       float: left;
       margin-right: 20px;

@@ -11,8 +11,7 @@
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      div.navbar-brand
-        a.logo(href='/' target="_self") Storytime
+      a.logo.navbar-brand(href='/' target="_self") Storytime
       i.fa.fa-search.searchIcon(data-toggle='collapse', data-target='.navbar-collapse')
     .collapse.navbar-collapse
       ul.nav.navbar-nav
@@ -39,7 +38,7 @@
                 img(src='#{user.profile.picture}')
               else
                 img(src='#{user.gravatar(60)}')
-              | #{user.profile.name || user.email || user.id}&nbsp;
+              | #{user.profile.name || 'Account' }&nbsp;
               i.caret
             ul.dropdown-menu
               li

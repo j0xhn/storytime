@@ -1,4 +1,9 @@
-<div class='content form'>
-  <text-input ng-repeat="input in storyObj.inputs" ng-label="input.title" ng-model="input.value"></text-input>
-  <div class='story-text' id='replace-with-html'>
+<div class='story-in-detail'>
+  <div class='story-image-wrapper'>
+    <img ng-src="{{storyObj.photoUrl}}" alt="Story Image" class='story-image'/>
+  </div>
+  <div class='content form'>
+    <text-input ng-repeat="input in storyObj.inputs" ng-label="input.title" ng-model="input.value"></text-input>
+    <div class='story-text' id='replace-with-html'>
+  </div>
 </div>
