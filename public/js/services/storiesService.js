@@ -80,7 +80,7 @@ angular.module('services')
     } else {
       // if no cached story, then lets do a request for it
       ss.searchStories({_id:id}).then(function(res){
-        deferred.resolve(res.data.stories[0]);
+        deferred.resolve(res.data);
       })
 
     }

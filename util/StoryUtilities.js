@@ -6,9 +6,11 @@ StoryUtilities.getFormatedStoryQuery = function(query){
 
   const formatedQuery = {};
   let returnedQuery;
-
-  if (Object.keys(query).length === 0){
-    returnedQuery = Story.find({})
+  const queryLength = Object.keys(query).length;
+  if (queryLength === 0){
+    returnedQuery = Story.find({});
+  } else if (queryLength === 1 && query._id) {
+    returnedQuery = Story.findOne({_id: query._id});
   } else {
     // db.stories.aggregate({$match: {$or: [{tags: "first"},{title: "Test Story Title"}]}})
     const titleQuery = {title: new RegExp(query.general, "i")};

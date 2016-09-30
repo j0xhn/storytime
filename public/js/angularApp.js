@@ -45,7 +45,9 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
         if(userService.user.purchased.includes(storyId) || storyId === 'example'){
           deferred.resolve(true)
         }else{
-          $location.path('/detail/'+$route.current.params.storyId).replace();
+          // TODO: just swap out these lines for purchase info
+          deferred.resolve(true)
+          // $location.path('/detail/'+$route.current.params.storyId).replace();
         }
         return deferred.promise;
       }

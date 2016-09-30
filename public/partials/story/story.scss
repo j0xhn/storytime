@@ -1,17 +1,3 @@
-$imageWidth: 500px;
-
-.story-in-detail {
-  .story-image-wrapper{
-    padding-top: 100%;
-    background-color: $lightestGray;
-    position: relative;
-    max-width: $imageWidth;
-  }
-  .story-image {
-      max-width: $imageWidth;
-      width: 100%;
-      display: block;
-      position: absolute;
-      top: 0;
-  }
+.story-in-detail{
+  .story-image{ max-width: 100%; width: 100%; }
 }

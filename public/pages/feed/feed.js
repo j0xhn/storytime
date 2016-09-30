@@ -12,7 +12,7 @@ angular.module('directives')
 
         var searchStories = function (searchObj){
           storiesService.searchStories(searchObj).then(function(res) {
-            $scope.myStories = res.data.stories;
+            $scope.myStories = res.data;
             if(!$scope.myStories){
               $scope.noResults = true;
             }

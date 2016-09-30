@@ -42,6 +42,6 @@ exports.searchStories = (req,res,next) => {
   // console.log('final query:', finalQuery);
   finalQuery.exec(function(err, stories){
     // console.log('stories:', stories)
-    res.send({stories});
+    res.json(stories);
   });
 }

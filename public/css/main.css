@@ -11618,19 +11618,23 @@ footer {
   left: 10px; }
 
 /* line 20, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+.navbar .profile-image {
+  border-radius: 50%; }
+
+/* line 22, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
 .navbar .searchWrapper {
   margin: 0 15px 15px;
   border-radius: 3px;
   overflow: hidden; }
   @media (min-width: 768px) {
-    /* line 20, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+    /* line 22, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
     .navbar .searchWrapper {
       padding: 0;
       margin: 6px 0 0;
       position: absolute;
       left: 0; } }
 
-/* line 32, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+/* line 34, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
 .navbar .searchIcon {
   position: absolute;
   top: 15px;
@@ -11639,18 +11643,18 @@ footer {
   right: 8px;
   font-weight: 100; }
   @media (min-width: 768px) {
-    /* line 32, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+    /* line 34, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
     .navbar .searchIcon {
       display: none; } }
 
-/* line 44, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+/* line 46, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
 .navbar .searchInput {
   width: 100%;
   border: none;
   outline: none;
   padding: 10px 15px; }
 
-/* line 51, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+/* line 53, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
 .navbar .innerSearchIcon {
   position: absolute;
   right: 0;
@@ -11658,7 +11662,7 @@ footer {
   height: 100%;
   width: 35px;
   background-color: #ccc; }
-  /* line 58, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+  /* line 60, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
   .navbar .innerSearchIcon .fa-search {
     color: #fff;
     position: absolute;
@@ -11668,7 +11672,7 @@ footer {
     transform: translateY(-50%); }
 
 @media (min-width: 768px) {
-  /* line 72, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+  /* line 74, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
   .navbar .searchIcon {
     display: none; } }
 
@@ -11749,20 +11753,10 @@ table.divider {
   .storyCard .tags {
     border: 1px solid #ccc; }
 
-/* line 4, /Users/John/Dev/projects/storytime/public/partials/story/story.scss */
-.story-in-detail .story-image-wrapper {
-  padding-top: 100%;
-  background-color: #e5e5e5;
-  position: relative;
-  max-width: 500px; }
-
-/* line 10, /Users/John/Dev/projects/storytime/public/partials/story/story.scss */
+/* line 2, /Users/John/Dev/projects/storytime/public/partials/story/story.scss */
 .story-in-detail .story-image {
-  max-width: 500px;
-  width: 100%;
-  display: block;
-  position: absolute;
-  top: 0; }
+  max-width: 100%;
+  width: 100%; }
 
 /*------------------------------------*
 #INPUTS & STATES (single-line etc...)

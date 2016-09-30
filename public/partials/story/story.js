@@ -28,7 +28,7 @@ angular.module('directives')
           applyStoryToView($scope.storyobj);
         } else {
           storiesService.searchStories({_id:storyId}).then(function(res){
-            applyStoryToView(res.data.stories[0]);
+            applyStoryToView(res.data);
           });
         }
 
@@ -37,7 +37,8 @@ angular.module('directives')
 			templateUrl: '/partials/story/story.html',
 			scope: {
         storyid: '=',
-        storyobj: '='
+        storyobj: '=',
+        excludeimage: '@'
       }
 		}
 	}
