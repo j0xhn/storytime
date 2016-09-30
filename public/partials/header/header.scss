@@ -6,30 +6,15 @@
   box-shadow: 0 -3px 13px 0 $darkGray;
   z-index: $z-header;
   max-width: 100%;
+  background-color: $white;
 
   .topNav{
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $white;
 
-    .menuIcon {
-      position: relative;
-      padding-left: 1.25em;
-    }
-    .menuIcon:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 5px;
-      width: 12px;
-      height: 1px;
-      background: black;
-      box-shadow:
-      0 0.25em 0 0 black,
-      0 0.5em 0 0 black;
-    }
+    .searchIcon { cursor: pointer; }
 
     .logo{
       color: $darkPurple;
@@ -55,45 +40,11 @@
     top: 0;
     bottom: 0;
     .sideNavWrapper{
-      padding: 30px;
+      padding: 50px 20px;
       position: relative;
       overflow: auto;
       height: 100%;
       width: 100%;
-    }
-    .searchInput{
-      width: 100%;
-      border: none;
-      outline: none;
-      padding: 10px 15px;
-    }
-    .searchWrapper{
-      border-radius: 3px;
-      overflow: hidden;
-      position: relative;
-      @media (min-width: $medium-width){
-        padding: 0;
-        margin: 6px 0 0;
-        position: absolute;
-        left: 0;
-      }
-    }
-
-    .innerSearchIcon{
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      width: 35px;
-      background-color: $lightGray;
-      .fa-search{
-        color: $white;
-        position: absolute;
-        margin: 0;
-        right: 10px;
-        top: 49%;
-        transform: translateY(-50%);
-      }
     }
 
     .closeIcon{
@@ -111,38 +62,6 @@
 
     &.open{
       left: 0;
-    }
-  }
-}
-
-// legacy
-.navbar{
-
-  .navbar-toggle{
-    position: absolute;
-    left: 10px;
-  }
-
-  .profile-image{ border-radius: 50%; }
-
-
-
-  .searchIcon{
-    position: absolute;
-    top: 15px;
-    font-size: 20px;
-    color: white;
-    right: 8px;
-    font-weight: 100;
-    @media (min-width: $medium-width){
-      display: none;
-    }
-  }
-
-
-  @media (min-width: $medium-width){
-    .searchIcon{
-      display: none;
     }
   }
 }

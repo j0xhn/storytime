@@ -57,6 +57,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
 }).run(function ($rootScope, $location, userService) { //Insert in the function definition the dependencies you need.
   //Do your $on in here, like this:
   $rootScope.$on("$routeChangeStart", function(event, next, current){
+    navigation.toggleSideNav(false);
     //Do your things
     // $rootScope.$evalAsync(function () {
     //      $location.path('/login');

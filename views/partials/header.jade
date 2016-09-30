@@ -8,14 +8,14 @@
       span.menuIcon(onclick="navigation.toggleSideNav()") Menu
     a.logo(href='/' target='_self') Storytime
     .right
-      i.fa.fa-search.searchIcon
+      i.fa.fa-search.searchIcon(onclick="navigation.toggleSideNav()")
 
   #sideNav
     div.sideNavWrapper
       i.closeIcon(onclick="navigation.toggleSideNav()")
       li.searchWrapper
         input(href='/stories' ng-model='search' placeholder='Search...' class='searchInput' id='globalSearch')
-        a.innerSearchIcon.txt-gray(ng-href='/stories?search={{search}}' data-toggle='collapse' data-target='.navbar-collapse')
+        a.innerSearchIcon.txt-gray(ng-href='/stories?search={{search}}')
           i.fa.fa-search
 //- .navbar.navbar-inverse.navbar-fixed-top
 //-   .content

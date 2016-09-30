@@ -5,12 +5,15 @@
 @import "lib/font-awesome/font-awesome";
 @import "themes/default/default";
 
+@import "base/mixins";
 @import "base/variables";
 @import "base/shorthand";
+@import "base/elements";
 @import "base/typography";
 @import "base/base";
 
 @import "../partials/header/header";
+@import "../partials/searchInput/searchInput";
 @import "../partials/divider/divider";
 @import "../partials/storyCard/storyCard";
 @import "../partials/story/story";

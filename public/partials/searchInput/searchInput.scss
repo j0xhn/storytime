@@ -1,0 +1,35 @@
+.searchWrapper{
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  height: 40px;
+
+  .searchInput{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .innerSearchIcon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 35px;
+    background-color: $lightGray;
+    .fa-search{
+      color: $white;
+      position: absolute;
+      margin: 0;
+      right: 10px;
+      top: 49%;
+      transform: translateY(-50%);
+    }
+  }
+}
