@@ -53,6 +53,11 @@
     box-shadow: 0 3px darken($lightBlue, 5%);
     &.outline {color: $darkBlue; border-color: $darkBlue;}
   }
+  &.white {
+    background-color: $white;
+    box-shadow: 0 3px darken($white, 5%);
+    &.outline {color: $white; border-color: $white;}
+  }
 
   &.outline {
     background-color: transparent;
@@ -60,6 +65,10 @@
     color: $darkGreen;
     border: 1px solid $darkGreen;
     &:active{ top: 0; }
+  }
+  &.small {
+    line-height: normal;
+    padding: 7px;
   }
 
   &:active{

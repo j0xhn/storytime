@@ -16,6 +16,9 @@
     if(force){document.body.classList.toggle('lock');}
     else{document.body.classList.toggle('lock', force);}
   }
+  navigation.clear = function(){
+    navigation.toggleSideNav(false);
+  }
 
   document.getElementById('globalSearch').addEventListener("keyup", function(e){
     if (e.keyCode == 13) {

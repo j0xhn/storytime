@@ -1,58 +1,14 @@
-//- script.
-//-     window._user = {};
-//-     _user.email =  '#{user.email}';
-//-     _user.purchased = '#{user.purchased}';
 .navigation
   .topNav.content
     .left
       span.menuIcon(onclick="navigation.toggleSideNav()") Menu
     a.logo(href='/' target='_self') Storytime
     .right
-      i.fa.fa-search.searchIcon(onclick="navigation.toggleSideNav()")
-
-  #sideNav
-    div.sideNavWrapper
-      i.closeIcon(onclick="navigation.toggleSideNav()")
-      li.searchWrapper
-        input(href='/stories' ng-model='search' placeholder='Search...' class='searchInput' id='globalSearch')
-        a.innerSearchIcon.txt-gray(ng-href='/stories?search={{search}}')
-          i.fa.fa-search
-//- .navbar.navbar-inverse.navbar-fixed-top
-//-   .content
-//-     .navbar-header
-//-       button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-//-         span.sr-only Toggle navigation
-//-         span.icon-bar
-//-         span.icon-bar
-//-         span.icon-bar
-//-       a.logo.navbar-brand(href='/' target="_self") Storytime
-//-       i.fa.fa-search.searchIcon(data-toggle='collapse', data-target='.navbar-collapse')
-    //- .collapse.navbar-collapse
-    //-   ul.nav.navbar-nav
-    //-     //- li(class=(title == 'Stories') ? 'active' : undefined)
-    //-     //-   a(href='/stories') Stories
-    //-   ul.nav.navbar-nav.navbar-right
-    //-     li(class=(title == 'Stories') ? 'active' : undefined)
-    //-       a(href='/stories' data-toggle='collapse', data-target='.navbar-collapse') Find Stories
-    //-     //- li(class=(title == 'Submit Story') ? 'active' : undefined)
-    //-     //-   a(href='/submit') Submit
-    //-     if !user
-    //-       li(class=(title == 'Signup') ? 'active' : undefined)
-    //-         a(href='/signup' target="_self") Signup
-    //-       li(class=(title == 'Login') ? 'active' : undefined)
-    //-         a(href='/login' target="_self") Login
-    //-     else
-    //-       li.dropdown(class=(title == 'Account Management') ? 'active' : undefined)
-    //-         a.dropdown-toggle(href='#', data-toggle='dropdown')
-    //-           if user.profile.picture
-    //-             img.profile-image(src='#{user.profile.picture}')
-    //-           else
-    //-             img(src='#{user.gravatar(60)}')
-    //-           | #{user.profile.name || 'Account' }&nbsp;
-    //-           i.caret
-    //-         ul.dropdown-menu
-    //-           li
-    //-             a(href='/account' target="_self") My Account
-    //-           li.divider
-    //-           li
-    //-             a(href='/logout' target="_self") Logout
+      div.searchIconWrapper
+        i.searchIcon.txt-black(onclick="navigation.toggleSideNav()")
+      if user
+        a.profile-image(href='/account' target='_self')
+          if user.profile.picture
+              img(src='#{user.profile.picture}')
+            else
+              img(src='#{user.gravatar(60)}')

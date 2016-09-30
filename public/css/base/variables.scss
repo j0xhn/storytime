@@ -1,4 +1,5 @@
 $white: #fff;
+$black: #000;
 $lightestGray: #e5e5e5;
 $lighterGray: #eee;
 $lightGray: #ccc;
@@ -25,7 +26,10 @@ $medium-width: 768px;
 $large-width: 1000px;
 $largest-width: 1340px;
 
+$z-backdrop-inactive: -1;
 $z-header: 1;
+$z-backdrop-active: 1;
+$z-sidenav: 2;
 
 $logo-font: 'HennyPenny';
 $primary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;

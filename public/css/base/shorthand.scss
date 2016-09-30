@@ -9,9 +9,15 @@
 .relative{position: relative;}
 
 .logo-font { font-family: $logo-font; }
-
+.no-border {
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
 
 .txt-gray { color: $gray !important;}
+.txt-black { color: $black !important;}
 .txt-white { color: $white !important;}
 .txt-lightGray { color: $lightGray !important;}
 .txt-darkGray { color: $darkGray !important;}

@@ -1,0 +1,47 @@
+#sideNav{
+  position: fixed;
+  z-index: $z-sidenav;
+  width: $sidenav-width;
+  left: -$sidenav-width;
+  transition: left 200ms cubic-bezier(.53,.02,.64,.99);
+  background-color: $darkGray;
+  top: 0;
+  bottom: 0;
+
+  .searchWrapper{ margin: 0 20px 10px; }
+  .profile-image{ img{ width: 40px; border-radius: 50%; margin-right: 10px;}}
+
+  .sideNavWrapper{
+    position: relative;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+  }
+
+  .closeIcon{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: $white;
+  }
+
+  .item{
+    color: white;
+    display: block;
+    overflow: auto;
+    padding: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid $gray;
+    &.atypical{
+      border-bottom: none;
+      &:hover{ background-color: transparent;}
+    }
+    &:hover{
+      background-color: $gray;
+    }
+  }
+
+  &.open{
+    left: 0;
+  }
+}

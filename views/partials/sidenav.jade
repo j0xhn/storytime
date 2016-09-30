@@ -1,0 +1,22 @@
+#sideNav
+  div.sideNavWrapper
+    i.closeIcon(onclick="navigation.toggleSideNav()")
+    div.item.atypical
+      if !user
+        a(class='button outline white small mar20r' href='/signup' target="_self") Signup 
+        a(class='button outline white small' href='/login' target="_self") Login
+      else
+        a.profile-image(href='/account' target='_self')
+          if user.profile.picture
+              img(src='#{user.profile.picture}')
+            else
+              img(src='#{user.gravatar(60)}')
+            | #{user.profile.name || 'Settings'}
+    span.searchWrapper.item.atypical
+      input(href='/stories' ng-model='search' placeholder='Search...' class='searchInput txt-black' id='globalSearch')
+      a.innerSearchIcon.txt-gray(ng-href='/stories?search={{search}}')
+        i.fa.fa-search
+    a.item(href='/stories') Browse Stories
+    a.item(href='/submit') Submit Your Story
+    if user
+      a.item(href='/', target="_self") Logout

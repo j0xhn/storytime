@@ -13,8 +13,9 @@ html
 
   body
     include partials/header
-    //- include partials/sidenav
+    include partials/sidenav
     include partials/flash
+    .backdrop(onclick="navigation.clear()")
     block content
 
     //- include partials/footer

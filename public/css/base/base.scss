@@ -4,6 +4,16 @@ html, .pageWrapperNormalize {
   height: 100%;
 }
 
+.backdrop{
+  background-color: inherit;
+  z-index: $z-backdrop-inactive;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 body {
   padding-top: $navbar-height;
   background-color: $white;
@@ -11,6 +21,12 @@ body {
   height: 100%;
   &.lock{
     overflow: hidden;
+    .backdrop{
+      transition: background-color 200ms ease;
+      background-color: $black;
+      z-index: $z-backdrop-active;
+      opacity: .4;
+    }
   }
 }
 
@@ -40,6 +56,14 @@ footer {
 
   p, ul {
     margin-bottom: 0;
+  }
+}
+
+a{
+  color: inherit;
+  &:hover, &:focus {
+    text-decoration: none;
+    color: inherit;
   }
 }
 

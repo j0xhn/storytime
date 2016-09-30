@@ -14,7 +14,24 @@
     justify-content: space-between;
     align-items: center;
 
-    .searchIcon { cursor: pointer; }
+    .right{
+      display: flex;
+      align-items: center;
+    }
+    .searchIconWrapper{
+      transform: scale(.6);
+    }
+    .searchIcon { cursor: pointer;}
+    .profile-image{
+      cursor: pointer;
+      img{
+        width: 25px;
+        height: 25px;
+        background-color: $lightGray;
+        border-radius: 50%;
+        margin-left: 5px;
+      }
+    }
 
     .logo{
       color: $darkPurple;
@@ -28,40 +45,6 @@
       text-align: center;
       text-decoration: none;
       &:hover{text-decoration: none;}
-    }
-  }
-
-  #sideNav{
-    position: fixed;
-    width: $sidenav-width;
-    left: -$sidenav-width;
-    transition: left 200ms cubic-bezier(.53,.02,.64,.99);
-    background-color: $darkGray;
-    top: 0;
-    bottom: 0;
-    .sideNavWrapper{
-      padding: 50px 20px;
-      position: relative;
-      overflow: auto;
-      height: 100%;
-      width: 100%;
-    }
-
-    .closeIcon{
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      color: $white;
-    }
-
-    .item{
-      color: white;
-      display: block;
-      margin-bottom: 20px;
-    }
-
-    &.open{
-      left: 0;
     }
   }
 }
