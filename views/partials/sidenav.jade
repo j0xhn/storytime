@@ -8,9 +8,9 @@
       else
         a.profile-image(href='/account' target='_self')
           if user.profile.picture
-              img(src='#{user.profile.picture}')
+              img.img(src='#{user.profile.picture}')
             else
-              img(src='#{user.gravatar(60)}')
+              img.img(src='#{user.gravatar(60)}')
             | #{user.profile.name || 'Settings'}
     span.searchWrapper.item.atypical
       input(href='/stories' ng-model='search' placeholder='Search...' class='searchInput txt-black' id='globalSearch')

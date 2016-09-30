@@ -11760,7 +11760,7 @@ a {
     .navigation .topNav .profile-image {
       cursor: pointer; }
       /* line 27, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
-      .navigation .topNav .profile-image img {
+      .navigation .topNav .profile-image .img {
         width: 25px;
         height: 25px;
         background-color: #ccc;
@@ -11795,24 +11795,24 @@ a {
   /* line 11, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
   #sideNav .searchWrapper {
     margin: 0 20px 10px; }
-  /* line 12, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
-  #sideNav .profile-image img {
+  /* line 13, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+  #sideNav .profile-image .img {
     width: 40px;
     border-radius: 50%;
     margin-right: 10px; }
-  /* line 14, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+  /* line 20, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
   #sideNav .sideNavWrapper {
     position: relative;
     overflow: auto;
     height: 100%;
     width: 100%; }
-  /* line 21, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+  /* line 27, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
   #sideNav .closeIcon {
     position: absolute;
     top: 25px;
     right: 25px;
     color: #fff; }
-  /* line 28, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+  /* line 34, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
   #sideNav .item {
     color: white;
     display: block;
@@ -11820,16 +11820,16 @@ a {
     padding: 20px;
     font-size: 18px;
     border-bottom: 1px solid #999; }
-    /* line 35, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+    /* line 41, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
     #sideNav .item.atypical {
       border-bottom: none; }
-      /* line 37, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+      /* line 42, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
       #sideNav .item.atypical:hover {
         background-color: transparent; }
-    /* line 39, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+    /* line 44, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
     #sideNav .item:hover {
       background-color: #999; }
-  /* line 44, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+  /* line 47, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
   #sideNav.open {
     left: 0; }
 

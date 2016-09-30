@@ -9,7 +9,13 @@
   bottom: 0;
 
   .searchWrapper{ margin: 0 20px 10px; }
-  .profile-image{ img{ width: 40px; border-radius: 50%; margin-right: 10px;}}
+  .profile-image{
+    .img {
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
 
   .sideNavWrapper{
     position: relative;
@@ -32,16 +38,11 @@
     padding: 20px;
     font-size: 18px;
     border-bottom: 1px solid $gray;
-    &.atypical{
-      border-bottom: none;
+    &.atypical{ border-bottom: none;
       &:hover{ background-color: transparent;}
     }
-    &:hover{
-      background-color: $gray;
-    }
+    &:hover{ background-color: $gray; }
   }
 
-  &.open{
-    left: 0;
-  }
+  &.open{ left: 0; }
 }
