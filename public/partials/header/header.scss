@@ -1,16 +1,122 @@
-.navbar{
-  .logo{
-    color: $white;
-    font-family: $logo-font;
-    text-align: center;
-    width: 100%;
-    z-index: -1;
-    max-width: 300px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+.navigation{
+  height: $navbar-height;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 -3px 13px 0 $darkGray;
+  z-index: $z-header;
+  max-width: 100%;
+
+  .topNav{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+
+    .menuIcon {
+      position: relative;
+      padding-left: 1.25em;
+    }
+    .menuIcon:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 12px;
+      height: 1px;
+      background: black;
+      box-shadow:
+      0 0.25em 0 0 black,
+      0 0.5em 0 0 black;
+    }
+
+    .logo{
+      color: $darkPurple;
+      font-family: $logo-font;
+      position: absolute;
+      left: 0;
+      right: 0;
+      font-size: 22px;
+      margin: 0 auto;
+      width: 150px;
+      text-align: center;
+      text-decoration: none;
+      &:hover{text-decoration: none;}
+    }
   }
+
+  #sideNav{
+    position: fixed;
+    width: $sidenav-width;
+    left: -$sidenav-width;
+    transition: left 200ms cubic-bezier(.53,.02,.64,.99);
+    background-color: $darkGray;
+    top: 0;
+    bottom: 0;
+    .sideNavWrapper{
+      padding: 30px;
+      position: relative;
+      overflow: auto;
+      height: 100%;
+      width: 100%;
+    }
+    .searchInput{
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 10px 15px;
+    }
+    .searchWrapper{
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+      @media (min-width: $medium-width){
+        padding: 0;
+        margin: 6px 0 0;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    .innerSearchIcon{
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 35px;
+      background-color: $lightGray;
+      .fa-search{
+        color: $white;
+        position: absolute;
+        margin: 0;
+        right: 10px;
+        top: 49%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .closeIcon{
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: $white;
+    }
+
+    .item{
+      color: white;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    &.open{
+      left: 0;
+    }
+  }
+}
+
+// legacy
+.navbar{
 
   .navbar-toggle{
     position: absolute;
@@ -19,17 +125,7 @@
 
   .profile-image{ border-radius: 50%; }
 
-  .searchWrapper{
-    margin: 0 15px 15px;
-    border-radius: 3px;
-    overflow: hidden;
-    @media (min-width: $medium-width){
-      padding: 0;
-      margin: 6px 0 0;
-      position: absolute;
-      left: 0;
-    }
-  }
+
 
   .searchIcon{
     position: absolute;
@@ -43,32 +139,6 @@
     }
   }
 
-  .searchInput{
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: 10px 15px;
-  }
-
-  .innerSearchIcon{
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 35px;
-    background-color: $lightGray;
-    .fa-search{
-      color: $white;
-      position: absolute;
-      margin: 0;
-      right: 10px;
-      top: 49%;
-      transform: translateY(-50%);
-    }
-    // @media (min-width: $small-width){
-    //   display: none;
-    // }
-  }
 
   @media (min-width: $medium-width){
     .searchIcon{

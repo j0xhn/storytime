@@ -1,0 +1,3 @@
+@mixin transition-default(){
+  @include transition(all 300ms cubic-bezier(.53,.02,.64,.99));
+}

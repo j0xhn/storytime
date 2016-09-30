@@ -5,7 +5,10 @@
 .underline { text-decoration: underline; }
 .bold { font-weight: 500; }
 
+.relative{position: relative;}
+
 .logo-font { font-family: $logo-font; }
+
 
 .txt-gray { color: $gray !important;}
 .txt-white { color: $white !important;}
@@ -120,5 +123,33 @@
     -webkit-box-orient: vertical;
     white-space: normal;
     word-break: break-word;
+  }
+}
+
+.closeIcon{
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: $gray;
+  }
+  &.white{ background: $white; }
+  &.gray{ background: $gray;}
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
   }
 }
