@@ -4,7 +4,6 @@ const nodemailer = require('nodemailer');
 const passport = require('passport');
 const Story = require('../models/Story');
 const StoryUtilities = require('../util/StoryUtilities');
-
 /**
 * POST /signup
 * Create a new local account.
@@ -22,8 +21,10 @@ exports.postStory = (req, res, next) => {
           res.send({error: err});
           return next(err);
         } else {
-          console.log('saved')
-          res.send({title: 'Story successfully saved!'})
+          res.json({
+            message: 'Story successfully saved!',
+            success: true
+          })
         }
       });
     }

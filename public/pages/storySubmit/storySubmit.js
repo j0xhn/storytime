@@ -10,7 +10,8 @@ angular.module('directives')
       $scope.story.html= 'Write your story here.  Include your interactive keywords with square brackets like such: [keyword]';
       $scope.tinymceOptions = {
         plugins: 'link image code',
-        toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+        toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code',
+        image_dimensions: false
       };
       //  End WYSIWY
 
@@ -33,7 +34,12 @@ angular.module('directives')
         story.authorId = userService.user._id;
 
         storiesService.postStory(story).then(function(res){
-          console.log(res.data);
+          if(res.data.success){
+            // show success modal - on close take to their account page or home
+            // generate edit URL
+            //
+          };
+
         })
       }
 

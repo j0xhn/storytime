@@ -2,6 +2,7 @@ html, .pageWrapperNormalize {
   position: relative;
   min-height: 100%;
   height: 100%;
+  z-index: $z-base;
 }
 
 .backdrop{

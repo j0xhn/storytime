@@ -58,6 +58,11 @@
     box-shadow: 0 3px darken($white, 5%);
     &.outline {color: $white; border-color: $white;}
   }
+  &.red{
+    background-color: $red;
+    box-shadow: 0 3px darken($red, 5%);
+    &.outline {color: $red; border-color: $red;}
+  }
 
   &.outline {
     background-color: transparent;

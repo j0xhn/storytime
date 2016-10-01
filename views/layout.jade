@@ -16,7 +16,8 @@ html
     include partials/sidenav
     include partials/flash
     .backdrop(onclick="navigation.clear()")
-    block content
+    .pageWrapperNormalize
+      block content
 
     //- include partials/footer
     script(src='/js/lib/jquery-2.2.0.min.js')

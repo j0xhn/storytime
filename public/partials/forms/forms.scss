@@ -1,9 +1,10 @@
 .form{
   max-width: 600px;
   padding: 20px;
+  margin: 0 auto;
   &.whiteBackground{ background-color: $white; }
   h1.form-title{ margin-bottom: 10px; }
-  .inputWrapper, .button, .divider { margin: 20px 0; }
+  .inputWrapper, .button, .divider, .formGroup { margin: 20px 0; }
   .input-group{
     display: block;
     border-bottom: 1px dashed $lightGray;

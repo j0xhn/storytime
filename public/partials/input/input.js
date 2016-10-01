@@ -6,7 +6,8 @@ angular.module('directives')
     templateUrl: '/partials/input/input.html',
     scope: {
       ngModel: '=',
-      ngLabel: '='
+      ngLabel: '=',
+      type: '@'
     },
     link: function(scope, elm, attrs){
       elm.find('label').html(scope.ngLabel || attrs.label)

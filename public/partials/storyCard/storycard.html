@@ -1,7 +1,7 @@
 <a class='storyCard' href="/story/{{story._id}}/{{story.title}}">
   <img class="image" ng-src='{{story.photoUrl}}'>
   <div class="details">
-    <p class='price' ng-if="story.price" ng-model='price'> {{story.price | price }} </p>
+    <!-- <p class='price' ng-if="story.price" ng-model='price'> {{story.price | price }} </p> -->
     <p class='title ellipsis'> {{story.title}} </p>
     <p class='desc ellipsis multiLine'> {{story.shortDesc}} </p>
   </div>
