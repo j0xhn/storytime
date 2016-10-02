@@ -1,10 +1,9 @@
 .accountPage{
   padding-top: 10px;
-  .page-title {
-    margin-bottom: 30px;
-  }
-  .gender-options{
-    padding: 0 30px;
+  .page-title { margin-bottom: 30px; }
+  .gender-options{ padding: 0 30px; }
+  .gender-section{
+    .gender-title, .gender-options{ font-weight: 300; color: $darkGray; }
   }
   .form{margin-bottom: 30px;}
   .link-section .outline { margin: 10px 0;}

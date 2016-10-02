@@ -7,10 +7,8 @@ angular.module('directives')
       listArray: '=',
     },
     link: function(scope, elm, attrs){
-      debugger;
       var listArray = attrs.listarray;
       listArray.map(function(item){
-        debugger;
         elm.appendChild('<p>'+item+'</p>');
       });
     }

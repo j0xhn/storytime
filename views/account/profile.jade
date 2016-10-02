@@ -12,18 +12,15 @@ block content
       .inputWrapper
         input(type='text', name='name', id='name', value='#{user.profile.name}', class='input')
         label(class='label', for='name') Name
-      .form-group
-        label.col-sm-3.control-label(for='gender') Gender
-        .col-sm-6.gender-options
-          label.radio.col-sm-3
+      .form-group.gender-section.mar30b
+        label.gender-title(for='gender') Gender
+        .gender-options
+          label.radio
             input(type='radio', checked=user.profile.gender=='male', name='gender', value='male', data-toggle='radio')
             span Male
-          label.radio.col-sm-3
+          label.radio
             input(type='radio', checked=user.profile.gender=='female', name='gender', value='female', data-toggle='radio')
             span Female
-          label.radio.col-sm-3
-            input(type='radio', checked=user.profile.gender=='other', name='gender', value='other', data-toggle='radio')
-            span Other
       .inputWrapper
         input.input(type='text', name='location', id='location', value='#{user.profile.location}')
         label.label(for='location') Location

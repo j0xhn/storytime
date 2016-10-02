@@ -4,11 +4,15 @@
   width: $sidenav-width;
   left: -$sidenav-width;
   transition-duration: 100ms;
-  background-color: $darkGray;
+  background-color: $white;
   top: 0;
   bottom: 0;
 
-  .searchWrapper{ margin: 0 20px 10px; }
+  .searchWrapper{
+    border: 1px solid $lightGray;
+    margin: 0 20px 10px;
+  }
+
   .profile-image{
     .img {
       width: 40px;
@@ -28,24 +32,22 @@
     position: absolute;
     top: 25px;
     right: 25px;
-    color: $white;
   }
 
   .item{
-    color: white;
+    color: $darkGray;
     display: block;
     overflow: auto;
     padding: 20px;
     font-size: 18px;
-    border-bottom: 1px solid $gray;
-    &.atypical{ border-bottom: none;
-      &:hover{ background-color: transparent;}
-    }
-    &:hover{ background-color: $gray; }
+    // border-bottom: 1px solid $gray;
+    &.atypical{ &:hover{ background-color: transparent;} }
+    &:hover{ background-color: $lightGray; }
   }
 
   &.open{
     left: 0;
+    box-shadow: -3px 0 20px 0 $lightGray;
     transition: left 200ms cubic-bezier(.53,.02,.64,.99);
   }
 }

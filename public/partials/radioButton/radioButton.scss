@@ -1,0 +1,97 @@
+.btn-radio {
+	$radio-margin: 3px;
+	$radio-height: 35px;
+	$radio-width: 70px;
+
+	cursor: pointer;
+	height: $radio-height;
+	width: $radio-width;
+	border-radius: 3px;
+	color: white;
+	position: relative;
+	background-color: $lightGray;
+	font-size: 10px;
+	transition: background-color 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+
+
+	.option {
+		width: $radio-width / 2 - $radio-margin;
+		text-align: center;
+		line-height: $radio-height;
+		position: absolute;
+
+		&.on {
+			left: $radio-margin;
+			color: $white;
+		}
+
+		&.off {
+			right: $radio-margin;
+			color: $gray;
+		}
+	}
+
+	.switch {
+		background-color: $white;
+		border-radius: 3px;
+		position: absolute;
+		top: $radio-margin;
+		left: $radio-margin;
+		height: $radio-height - 2*$radio-margin;
+		width: $radio-height - 2*$radio-margin;
+		transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1);
+
+		.state {
+			width: 46px;
+			height: 46px;
+			opacity: 1;
+			position: absolute;
+			opacity: 0;
+			top: 50%;
+			left: 50%;
+			margin-top: -23px;
+			margin-left: -23px;
+
+			transform: scale(0.2);
+			transition: all 400ms cubic-bezier(0.215, 0.610, 0.355, 1);
+		}
+
+		.success {
+			.fa {
+				font-size: 16px;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: 0;
+				width: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: -8px;
+				text-align: center;
+			}
+		}
+
+		&.successful {
+			& > span {
+				@include scale(1.4);
+				opacity: 0;
+			}
+
+			.success {
+				opacity: 1;
+
+				@include scale(1);
+			}
+
+		}
+	}
+
+	&.active {
+		box-shadow: inset 0px 5px 20px -15px $black;
+		background-color: $blue;
+
+		.switch {
+			left: $radio-margin + $radio-width / 2;
+		}
+	}
+}

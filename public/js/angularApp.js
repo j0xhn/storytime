@@ -24,7 +24,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     resolve:{
       user: function($q, $location, userService){
         var deferred = $q.defer();
-        if (!(userService.user.type === 'guest')){
+        if (userService.isLoggedIn()){
           deferred.resolve(true);
         } else {
           $location.path('/landing').replace();
@@ -34,7 +34,20 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     }
   })
   .when('/stories', { template: '<feed></feed>' })
-  .when('/submit',  { template: '<story-submit></story-submit>' })
+  .when('/submit/:storyId?',  {
+    template: '<story-submit></story-submit>',
+    resolve: {
+      user: function($q, $window, userService){
+        var deferred = $q.defer();
+        if (userService.isLoggedIn()){
+          deferred.resolve(true);
+        } else {
+          $window.location = '/login';
+        }
+        return deferred.promise;
+      }
+    }
+  })
   .when('/landing',  { template: '<landing></landing>' })
   .when('/story/:storyId/:storyTitle?', {
     template: '<story-page></story-page>',

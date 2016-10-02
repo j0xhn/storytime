@@ -24,9 +24,9 @@ body {
     overflow: hidden;
     .backdrop{
       transition: background-color 200ms ease;
-      background-color: $black;
+      background-color: $lightGray;
       z-index: $z-backdrop-active;
-      opacity: .4;
+      opacity: .5;
     }
   }
 }

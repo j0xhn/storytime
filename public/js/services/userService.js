@@ -16,6 +16,9 @@ angular.module('services')
         url: '/users/all'
       });
     },
-    user: cachedUser
+    user: cachedUser,
+    isLoggedIn: function() {
+      return cachedUser.type === 'customer';
+    }
   }
 });

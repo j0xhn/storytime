@@ -3,17 +3,34 @@ angular.module('directives')
   return {
     restrict: 'EA',
     replace: true,
-    controller: function($scope, storiesService, userService){
-      $scope.story = {};
-      $scope.story.inputs = [];
+    controller: function($scope, storiesService, userService, $routeParams, $q){
       //  For WYSIWY
-      $scope.story.html= 'Write your story here.  Include your interactive keywords with square brackets like such: [keyword]';
       $scope.tinymceOptions = {
         plugins: 'link image code',
         toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code',
         image_dimensions: false
       };
-      //  End WYSIWY
+      const storyPromise = $q(function(resolve, reject){
+        if($routeParams.storyId){
+          storiesService.searchStories({_id:$routeParams.storyId}).then(function(res){
+            // handle empty response
+            if(res.data){
+              // check to see if they have permission
+              resolve(res.data);
+            } else {
+              $scope.pageErrorMessage = `Story not found.  Check the id in the URL and contact support if you continue to have problems`;
+            }
+          })
+        } else {
+          // default values
+          resolve({
+            inputs: [],
+            html: 'Write your story here.  Include your interactive keywords with square brackets like such: [keyword]'
+          })
+        }
+      }).then(function(story) {
+          $scope.story = story;
+      })
 
       $scope.submitStory = function(story){
         story = story || $scope.story;
