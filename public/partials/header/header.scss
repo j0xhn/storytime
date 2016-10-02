@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  box-shadow: 0 -3px 13px 0 $darkGray;
+  box-shadow: 0 -5px 13px 0 $darkGray;
   z-index: $z-header;
   max-width: 100%;
   background-color: $white;
@@ -37,6 +37,8 @@
       color: $darkPurple;
       font-family: $logo-font;
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       left: 0;
       right: 0;
       font-size: 22px;

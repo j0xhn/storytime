@@ -3,7 +3,7 @@
   z-index: $z-sidenav;
   width: $sidenav-width;
   left: -$sidenav-width;
-  transition: left 200ms cubic-bezier(.53,.02,.64,.99);
+  transition-duration: 100ms;
   background-color: $darkGray;
   top: 0;
   bottom: 0;
@@ -44,5 +44,8 @@
     &:hover{ background-color: $gray; }
   }
 
-  &.open{ left: 0; }
+  &.open{
+    left: 0;
+    transition: left 200ms cubic-bezier(.53,.02,.64,.99);
+  }
 }

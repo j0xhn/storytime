@@ -1,6 +1,7 @@
 const async = require('async');
 const crypto = require('crypto');
-const nodemailer = require('nodemailer');
+const sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+const helper = require('sendgrid').mail;
 const passport = require('passport');
 const User = require('../models/User');
 
@@ -307,22 +308,26 @@ exports.postReset = (req, res, next) => {
         });
     },
     function (user, done) {
-      const transporter = nodemailer.createTransport({
-        service: 'SendGrid',
-        auth: {
-          user: process.env.SENDGRID_USER,
-          pass: process.env.SENDGRID_PASSWORD
-        }
+      const to_email = new helper.Email(user.email);
+      const from_email = new helper.Email('donotreply@storytime.com');
+      const subject = 'Your password has been changed';
+      const content = new helper.Content('text/plain', `Hello,\n\nThis is a confirmation that the password for your account ${user.email} has just been changed.\n`);
+      const mail = new helper.Mail(from_email, subject, to_email, content);
+
+      const request = sg.emptyRequest({
+        method: 'POST',
+        path: '/v3/mail/send',
+        body: mail.toJSON(),
       });
-      const mailOptions = {
-        to: user.email,
-        from: 'hackathon@starter.com',
-        subject: 'Your Hackathon Starter password has been changed',
-        text: `Hello,\n\nThis is a confirmation that the password for your account ${user.email} has just been changed.\n`
-      };
-      transporter.sendMail(mailOptions, (err) => {
-        req.flash('success', { msg: 'Success! Your password has been changed.' });
-        done(err);
+
+      sg.API(request, function(error, response) {
+        if(error){
+          req.flash('info', { msg: `An error occured.` });
+          done(error);
+        } else {
+          req.flash('success', { msg: 'Success! Your password has been changed.' });
+          done(error);
+        }
       });
     }
   ], (err) => {
@@ -380,25 +385,30 @@ exports.postForgot = (req, res, next) => {
       });
     },
     function (token, user, done) {
-      const transporter = nodemailer.createTransport({
-        service: 'SendGrid',
-        auth: {
-          user: process.env.SENDGRID_USER,
-          pass: process.env.SENDGRID_PASSWORD
-        }
+      const to_email = new helper.Email(user.email);
+      const from_email = new helper.Email('donotreply@storytime.com');
+      const subject = 'Reset your password';
+      const content = new helper.Content('text/plain',
+        `You are receiving this email because you (or someone else) have requested the reset of the password for your account.\n\n
+        Please click on the following link, or paste this into your browser to complete the process:\n\n
+        http://${req.headers.host}/reset/${token}\n\n
+        If you did not request this, please ignore this email and your password will remain unchanged.\n`);
+      const mail = new helper.Mail(from_email, subject, to_email, content);
+
+      const request = sg.emptyRequest({
+        method: 'POST',
+        path: '/v3/mail/send',
+        body: mail.toJSON(),
       });
-      const mailOptions = {
-        to: user.email,
-        from: 'hackathon@starter.com',
-        subject: 'Reset your password on Hackathon Starter',
-        text: `You are receiving this email because you (or someone else) have requested the reset of the password for your account.\n\n
-          Please click on the following link, or paste this into your browser to complete the process:\n\n
-          http://${req.headers.host}/reset/${token}\n\n
-          If you did not request this, please ignore this email and your password will remain unchanged.\n`
-      };
-      transporter.sendMail(mailOptions, (err) => {
-        req.flash('info', { msg: `An e-mail has been sent to ${user.email} with further instructions.` });
-        done(err);
+
+      sg.API(request, function(error, response) {
+        if(error){
+          req.flash('info', { msg: `An error occured.` });
+          done(error);
+        } else {
+          req.flash('info', { msg: `An e-mail has been sent to ${user.email} with further instructions.` });
+          done(error);
+        }
       });
     }
   ], (err) => {

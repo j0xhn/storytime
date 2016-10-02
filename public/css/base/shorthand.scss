@@ -3,7 +3,7 @@
 .tar { text-align: right !important;}
 .tac { text-align: center !important;}
 .tal { text-align: left !important;}
-.underline { text-decoration: underline; }
+.underline { text-decoration: underline !important; }
 .bold { font-weight: 500; }
 
 .relative{position: relative;}
@@ -21,6 +21,7 @@
 .txt-white { color: $white !important;}
 .txt-lightGray { color: $lightGray !important;}
 .txt-darkGray { color: $darkGray !important;}
+.txt-blue { color: $blue !important;}
 
 .bgBlue { background-color: $blue;}
 

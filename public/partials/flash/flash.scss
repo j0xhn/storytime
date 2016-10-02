@@ -1,0 +1,11 @@
+.flash-message{
+  .alert{
+    margin: 0;
+    border: none;
+  }
+  .closeIcon{
+    width: 20px;
+    height: 20px;
+    &:before, &:after {background: $black; }
+  }
+}
