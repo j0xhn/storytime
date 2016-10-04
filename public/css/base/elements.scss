@@ -81,3 +81,64 @@
     pointer-events: none;
   }
 }
+
+.checkmark{
+  $checkmark-size: 12px;
+  display:inline-block;
+  width: $checkmark-size;
+  height: $checkmark-size;
+  position: relative;
+
+  &:before{
+    /*Add another block-level blank space*/
+    content: '';
+    display: block;
+
+    /*Make it a small rectangle so the border will create an L-shape*/
+    width: $checkmark-size / 2;
+    height: $checkmark-size;
+
+    /*Add a white border on the bottom and left, creating that 'L' */
+    border: solid $black;
+    border-width: 0 1px 1px 0;
+    /*Rotate the L 45 degrees to turn it into a checkmark*/
+    transform: rotate(45deg);
+  }
+  &.circle{
+    width: $checkmark-size * 3;
+    height: $checkmark-size * 3;
+    &:before{
+      position: absolute;
+      top: 30%;
+      left: 44%;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      height: $checkmark-size * 3;
+      width: $checkmark-size * 3;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      border: 1px solid $black;
+    }
+  }
+
+  &.big{
+    width: $checkmark-size / 2 * 3;
+    height: $checkmark-size * 3;
+    border-width: 0 2px 2px 0;
+    &:before {
+      width: $checkmark-size / 2 * 3;
+      height: $checkmark-size * 3;
+      border-width: 0 2px 2px 0;
+    }
+    &.circle, &:after{
+      height: $checkmark-size * 3 * 3;
+      width: $checkmark-size * 3 * 3;
+    }
+  }
+  &.green:before, &.green:after{ border-color: $green; }
+  &.white:before, &.white:after{ border-color: $white; }
+
+}

@@ -9,6 +9,7 @@
     display: block;
     border-bottom: 1px dashed $lightGray;
   }
+  .form-error{ color: $red; }
 
   @media screen and (min-width: $small-width){
     &.whiteBackground{

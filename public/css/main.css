@@ -11601,6 +11601,65 @@ button.close {
     content: '';
     pointer-events: none; }
 
+/* line 85, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+.checkmark {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  position: relative; }
+  /* line 92, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  .checkmark:before {
+    /*Add another block-level blank space*/
+    content: '';
+    display: block;
+    /*Make it a small rectangle so the border will create an L-shape*/
+    width: 6px;
+    height: 12px;
+    /*Add a white border on the bottom and left, creating that 'L' */
+    border: solid #000;
+    border-width: 0 1px 1px 0;
+    /*Rotate the L 45 degrees to turn it into a checkmark*/
+    transform: rotate(45deg); }
+  /* line 107, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  .checkmark.circle {
+    width: 36px;
+    height: 36px; }
+    /* line 110, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    .checkmark.circle:before {
+      position: absolute;
+      top: 30%;
+      left: 44%; }
+    /* line 115, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    .checkmark.circle:after {
+      content: '';
+      position: absolute;
+      height: 36px;
+      width: 36px;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      border: 1px solid #000; }
+  /* line 127, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  .checkmark.big {
+    width: 18px;
+    height: 36px;
+    border-width: 0 2px 2px 0; }
+    /* line 131, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    .checkmark.big:before {
+      width: 18px;
+      height: 36px;
+      border-width: 0 2px 2px 0; }
+    /* line 136, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    .checkmark.big.circle, .checkmark.big:after {
+      height: 108px;
+      width: 108px; }
+  /* line 141, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  .checkmark.green:before, .checkmark.green:after {
+    border-color: #00B145; }
+  /* line 142, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  .checkmark.white:before, .checkmark.white:after {
+    border-color: #fff; }
+
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome-webfont.eot?v=4.5.0");
@@ -11843,7 +11902,7 @@ a {
       background-color: transparent; }
     /* line 45, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
     #sideNav .item:hover {
-      background-color: #ccc; }
+      background-color: #e5e5e5; }
   /* line 48, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
   #sideNav.open {
     left: 0;
@@ -11968,7 +12027,8 @@ table.divider {
 
 /* line 3, /Users/John/Dev/projects/storytime/public/partials/story/story.scss */
 .story-in-detail .story-title {
-  margin-bottom: 10px; }
+  margin-bottom: 20px;
+  text-align: center; }
 
 /*------------------------------------*
 #INPUTS & STATES (single-line etc...)
@@ -12167,18 +12227,21 @@ styles here
   .form .input-group {
     display: block;
     border-bottom: 1px dashed #ccc; }
+  /* line 12, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+  .form .form-error {
+    color: #f16464; }
   @media screen and (min-width: 600px) {
-    /* line 14, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+    /* line 15, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
     .form.whiteBackground {
       padding: 40px;
       border: 1px solid #ccc;
       border-radius: 5px;
       margin: 30px auto 0; }
-    /* line 20, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+    /* line 21, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
     .form .input-group {
       display: flex;
       justify-content: space-between; }
-      /* line 23, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+      /* line 24, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
       .form .input-group .inputWrapper:first-of-type {
         margin-right: 10px; } }
 
@@ -12563,3 +12626,10 @@ Search Tags for a story
   /* line 9, /Users/John/Dev/projects/storytime/public/pages/account/accountPage.scss */
   .accountPage .link-section .outline {
     margin: 10px 0; }
+
+/* line 1, /Users/John/Dev/projects/storytime/public/pages/success/successPage.scss */
+.successPage {
+  text-align: center; }
+  /* line 3, /Users/John/Dev/projects/storytime/public/pages/success/successPage.scss */
+  .successPage .checkmark {
+    margin: 20px auto; }

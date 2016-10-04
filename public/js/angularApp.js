@@ -34,6 +34,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     }
   })
   .when('/stories', { template: '<feed></feed>' })
+  .when('/success/:type?', { template: '<success-page></success-page>' })
   .when('/submit/:storyId?',  {
     template: '<story-submit></story-submit>',
     resolve: {
@@ -49,7 +50,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     }
   })
   .when('/landing',  { template: '<landing></landing>' })
-  .when('/story/:storyId/:storyTitle?', {
+  .when('/story/:storyId', {
     template: '<story-page></story-page>',
     resolve:{
       hasPurchasedStory:function($location, $route, $q, userService){
@@ -71,6 +72,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
   //Do your $on in here, like this:
   $rootScope.$on("$routeChangeStart", function(event, next, current){
     navigation.toggleSideNav(false);
+    console.log("nav");
     //Do your things
     // $rootScope.$evalAsync(function () {
     //      $location.path('/login');

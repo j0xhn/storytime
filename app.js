@@ -201,7 +201,6 @@ app.get('/auth/pinterest/callback', passport.authorize('pinterest', { failureRed
 */
 app.get('/users/current', userController.getCurrentUser );
 app.post('/story/submit', passportConfig.isAuthenticated, storiesController.postStory );
-app.get('/stories/all', storiesController.getAllStories );
 app.get('/stories/search', storiesController.searchStories );
 app.get('*', angularPagesController.angularHandoff);
 /**

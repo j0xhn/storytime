@@ -42,7 +42,7 @@
     font-size: 18px;
     // border-bottom: 1px solid $gray;
     &.atypical{ &:hover{ background-color: transparent;} }
-    &:hover{ background-color: $lightGray; }
+    &:hover{ background-color: $lightestGray; }
   }
 
   &.open{

@@ -22,7 +22,6 @@ angular.module('directives')
            .addScene('values: get ready for your child to learn to', 900)
            .addScene(theater.replay.bind(theater))
           // end dialog
-          $scope.exampleStory = storiesService.exampleStory;
       },
 			templateUrl: '/pages/landing/landing.html',
 			scope: {}

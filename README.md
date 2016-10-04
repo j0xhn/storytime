@@ -11,16 +11,17 @@
     [ ] Directed to signup
       - signup / login
       - Fix Facebook singup to work if user is already found
-      - account stuff
-      - get side nav working correctly
 
     [ ] Browse stories
-      - tag filtering
-      - searching
       - lazy load scroll
 
-    [x] View Complete Story info
+    [ ] Story Page
+      - Get "no story found" state
+
+
+    [ ] View Complete Story info
       - Design page
+      - No story found page
 
     [ ] Checkout
       - Single click checkout from Stripe
@@ -36,6 +37,11 @@
       - all keywords that they've entered are also keywords in the storyDiv
       - validate serverside that it fits the schema required
       - catch errors on everything
+
+    [ ] Improve Story Submit
+      - add "edit" button if being viewed by author
+      - get "male / female" working
+      - create "example" form to point people to
 
     3. Security & Performance
     [ ] cache user - most likely in the userService used in

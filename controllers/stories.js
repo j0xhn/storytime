@@ -9,40 +9,47 @@ const StoryUtilities = require('../util/StoryUtilities');
 * Create a new local account.
 */
 exports.postStory = (req, res, next) => {
-  const story = new Story(req.body);
-  Story.findOne({ title: story.title }, (err, existingStory) => {
-    if (existingStory) {
-      console.log('error')
-      res.send({error: 'Title already exists'})
-    } else {
-      story.save((err) => {
+  let story = req.body;
+  debugger;
+  if ( story._id && (req.user.id === story.authorId)){
+    console.log("duplicate story");
+    // handle editing of existing story,
+    // that the id's of the client and the story match
+    // check to see if user id's match
+    Story.update( { _id: story._id }, story, { upsert: true },
+      function (err, result) {
         if (err) {
-          console.log('error: ', err);
-          res.send({error: err});
-          return next(err);
-        } else {
-          res.json({
-            message: 'Story successfully saved!',
-            success: true
-          })
+          res.send({ error: err, })
+          throw err;
         }
+        res.send({savedStoryId: result.id, success: true});
       });
+    } else {
+      // check for existing story with conflicting attributes
+      // new stories should make it here
+      Story.findOne({ title: story.title }, (err, existingStory) => {
+        if (existingStory) {
+          console.log('error');
+          res.send({error: 'Title already exists'});
+        } else {
+          new Story(story).save((err, story) => {
+            if (err) {
+              res.send({error: err});
+              throw err;
+            } else {
+              res.send({savedStoryId: story.id, success: true});
+            }
+          });
+        }
+      })
     }
-  })
-};
+  }
 
-exports.getAllStories = (req, res, next) => {
-  Story.find({}).exec(function(err, stories){
-    res.send({stories: stories});
-  });
-};
-
-exports.searchStories = (req,res,next) => {
-  // console.log('query: ',req.query);
-  const finalQuery = StoryUtilities.getFormatedStoryQuery(req.query);
-  // console.log('final query:', finalQuery);
-  finalQuery.exec(function(err, stories){
-    // console.log('stories:', stories)
-    res.json(stories);
-  });
-}
+  exports.searchStories = (req,res,next) => {
+    // console.log('query: ',req.query);
+    const finalQuery = StoryUtilities.getFormatedStoryQuery(req.query);
+    // console.log('final query:', finalQuery);
+    finalQuery.exec(function(err, stories){
+      res.json(stories);
+    });
+  }
