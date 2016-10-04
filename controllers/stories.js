@@ -22,7 +22,8 @@ exports.postStory = (req, res, next) => {
           res.send({ error: err, })
           throw err;
         }
-        res.send({savedStoryId: result.id, success: true});
+        debugger;
+        res.send({savedStoryId: false, success: true});
       });
     } else {
       // check for existing story with conflicting attributes

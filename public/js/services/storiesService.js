@@ -28,8 +28,8 @@ angular.module('services')
   };
 
   ss.bindKeywords = function(storyString, bind){
-    const sp = [ '\\[','<b ng-bind="'];
-    const ep = ['\\]','"></b>'];
+    const sp = [ '{','<b ng-bind="'];
+    const ep = ['}','"></b>'];
     return storyString
       .replace(new RegExp( bind ? sp[0] : sp[1], 'g'), bind ? sp[1] : sp[0])
       .replace(new RegExp( bind ? ep[0] : ep[1], 'g'), bind ? ep[1] : ep[0])

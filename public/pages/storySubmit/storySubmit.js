@@ -11,7 +11,7 @@ angular.module('directives')
         image_dimensions: false
       };
       $scope.handleSuccess = function(id){
-        $location.path('/success/edit-story').search({d:id});
+        $location.path('/success/edit-story').search({d:id || $routeParams.storyId});
       }
       const storyPromise = $q(function(resolve, reject){
         if($routeParams.storyId){
@@ -32,7 +32,7 @@ angular.module('directives')
           // default values
           resolve({
             inputs: {},
-            html: 'Write your story here.  Include your interactive keywords with square brackets like such: [keyword]'
+            html: 'Write your story here.  Include your interactive keywords with curly brackets like such: {keyword}'
           })
         }
       }).then(function(story) {
