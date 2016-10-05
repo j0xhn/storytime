@@ -51,8 +51,15 @@
   &.lightBlue {
     background-color: $lightBlue;
     box-shadow: 0 3px darken($lightBlue, 5%);
-    &.outline {color: $darkBlue; border-color: $darkBlue;}
+    &.outline {color: $lightBlue; border-color: $lightBlue;}
   }
+  
+  &.blue{
+    background-color: $blue;
+    box-shadow: 0 3px darken($blue, 5%);
+    &.outline {color: $blue; border-color: $blue;}
+  }
+
   &.white {
     background-color: $white;
     box-shadow: 0 3px darken($white, 5%);

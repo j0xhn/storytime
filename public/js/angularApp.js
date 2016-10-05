@@ -19,6 +19,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
   // });
   $locationProvider.html5Mode(true);
   $routeProvider
+  .when('/_=_', {redirectTo: '/'}) // facebook ugliness
   .when('/',        {
     template: '<feed></feed>',
     resolve:{
@@ -72,7 +73,13 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
   //Do your $on in here, like this:
   $rootScope.$on("$routeChangeStart", function(event, next, current){
     navigation.toggleSideNav(false);
-    console.log("nav");
+    // checks for facebook ungliness
+    if (window.location.hash == '#_=_'){
+      console.log("Facebook ugly detected");
+      history.replaceState
+      ? history.replaceState(null, null, window.location.href.split('#')[0])
+      : window.location.hash = '';
+    }
     //Do your things
     // $rootScope.$evalAsync(function () {
     //      $location.path('/login');
