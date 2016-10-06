@@ -1,4 +1,3 @@
-console.log("loaded");
 angular.module('directives')
 	.directive('successPage', function () {
 		return {

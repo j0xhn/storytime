@@ -27,5 +27,5 @@ h1,h2,h3,h4,h5,h6,p,.p{
   padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6 { font-family: $primary-font; }
-p, .p{ color: $darkGray; }
+h1,h2,h3,h4,h5,h6 { font-family: $primary-font;letter-spacing: 2px; }
+p, .p{ color: $darkGray;letter-spacing: .5px; }

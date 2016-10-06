@@ -3,8 +3,27 @@ angular.module('directives')
 		return {
 			restrict: 'EA',
 			replace: true,
-      controller: function($scope, storiesService) {
+      controller: function($scope, storiesService, $rootScope) {
 				$scope.exampleStoryId = '57ee7ef2002a8c317ffe5c30';
+				$scope.pictureArray = [
+					'cactus',
+					'cloud-1',
+					'crown',
+					'cylinder_hat',
+					'fish-1',
+					'girl-1',
+					'girl-4'
+				];
+
+				const animationInterval = setInterval(function () {
+					const girlImage = document.querySelector('.girl-4');
+					girlImage.classList.toggle('move');
+				}, 6000);
+
+				$rootScope.$on("$routeChangeStart", function(event, next, current){
+					clearInterval(animationInterval);
+				});
+
         // for dialoge in hero
          var theater = theaterJS();
          theater

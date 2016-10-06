@@ -70,7 +70,6 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
   })
   .when('/detail/:storyId', { template: '<detail-page></detail-page>' })
 }).run(function ($rootScope, $location, userService) { //Insert in the function definition the dependencies you need.
-  //Do your $on in here, like this:
   $rootScope.$on("$routeChangeStart", function(event, next, current){
     navigation.toggleSideNav(false);
     // checks for facebook ungliness
@@ -80,9 +79,5 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
       ? history.replaceState(null, null, window.location.href.split('#')[0])
       : window.location.hash = '';
     }
-    //Do your things
-    // $rootScope.$evalAsync(function () {
-    //      $location.path('/login');
-    //  });
   });
 });
