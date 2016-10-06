@@ -42,20 +42,22 @@ angular.module('services')
   story requested if not in cached
   */
   ss.getSelectedStory = function(id){
-
     var deferred = $q.defer();
     if (ss.selectedStory){
       // if looking for something particular
       // then needs to match locally or possibly in cache
       if (id){
+        analyticService.event('cache', 'specific id asked for in cache', id);
         if (ss.selectedStory._id === id) deferred.resolve(ss.selectedStory);
         if (-1 < ss.cachedStories.indexOf(id)) deferred.resolve(ss.cachedStories[ss.cachedStories.indexOf(id)]);
       } else {
         // if exists cached Story, then just return that
+        analyticService.event('cache', 'default cached story returned', ss.selectedStory._id);
         return ss.selectedStory
       }
     } else {
       // if no cached story, then lets do a request for it
+      analyticService.event('cache', 'not cached, needing api call', id);
       ss.searchStories({_id:id}).then(function(res){
         deferred.resolve(res.data);
       })

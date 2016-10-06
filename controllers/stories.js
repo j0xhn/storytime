@@ -12,7 +12,7 @@ exports.postStory = (req, res, next) => {
   let story = req.body;
   debugger;
   if ( story._id && (req.user.id === story.authorId)){
-    console.log("duplicate story");
+    console.log("user is editing existing story");
     // handle editing of existing story,
     // that the id's of the client and the story match
     // check to see if user id's match

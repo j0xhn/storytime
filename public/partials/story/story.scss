@@ -1,4 +1,16 @@
 .story-in-detail{
   img{ max-width: 100%; width: 100%; }
+  .story-image{ margin-bottom: 10px; }
   .story-title{ margin-bottom: 20px; text-align: center; }
+  .story-text{ text-align: left; }
+  b{
+    color: blue;
+    min-width: 25px;
+    display: inline-block;
+    &:empty{
+      height: 10px;
+      opacity: .3;
+      background-color: $gray;
+    }
+  }
 }

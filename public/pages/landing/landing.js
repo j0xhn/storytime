@@ -4,6 +4,7 @@ angular.module('directives')
 			restrict: 'EA',
 			replace: true,
       controller: function($scope, storiesService) {
+				$scope.exampleStoryId = '57ee7ef2002a8c317ffe5c30';
         // for dialoge in hero
          var theater = theaterJS();
          theater

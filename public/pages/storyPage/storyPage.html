@@ -1,3 +1,4 @@
 <div class='story-page'>
-  <story storyid="storyId"></story>
+  <a ng-href='/submit/{{story._id}}' ng-if="authorIsViewing" class="edit-button underline txt-blue mar10t"><i class='fa fa-pencil'></i>Edit as Author</a>
+  <story storyobj="story"></story>
 </div>

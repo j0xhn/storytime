@@ -7,6 +7,8 @@
       - brief explination
       - try it out
       - testimonials
+      - design reset password & welcome & marketing emails
+      - create a "feedback" form - hookup to another service?
 
     [ ] Directed to signup
       - signup / login

@@ -3,10 +3,18 @@ angular.module('directives')
 		return {
 			restrict: 'E',
 			replace: true,
-      controller:  function($scope, $routeParams, $timeout, $compile, storiesService) {
+      controller:  function($scope, $routeParams, $timeout, $compile, storiesService, $location) {
         var storyId = $scope.storyid ? $scope.storyid : $routeParams.storyId;
+
+        var shouldSetAsSelected = function(storyObj){
+          if($location.$$path.indexOf('/story/') === 0) { // checks for if on "story" page
+            storiesService.setSelectedStory(storyObj);
+          }
+        }
         var applyStoryToView = function(storyObj){
           $scope.storyObj = storyObj;
+
+          // binds keywords to the html placeholders
           var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
           for (var i = 0, len = inputsArray.length; i < len; i++) {
             var inputRegex = new RegExp('"'+inputsArray[i]+'"','g');
@@ -26,17 +34,20 @@ angular.module('directives')
 
         if ($scope.storyobj){
           applyStoryToView($scope.storyobj);
-        } else {
+        } else if(storyId) {
           storiesService.searchStories({_id:storyId}).then(function(res){
+            shouldSetAsSelected(res.data);
             applyStoryToView(res.data);
           });
+        } else {
+          console.error('No storyObject, or storyId was supplied to story directive')
         }
 
 
       },
 			templateUrl: '/partials/story/story.html',
 			scope: {
-        storyid: '@',
+        storyid: '=', // using = so always pass it in as a variable
         storyobj: '=',
         excludeimage: '@'
       }
