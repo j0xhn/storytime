@@ -1,4 +1,11 @@
-<div class="inputWrapper">
+<div class="inputWrapper" ng-class="{'inputButton': buttonText}">
   <input class="input" type="{{type || 'text'}}" ng-model='ngModel'></input>
   <label class="label"><!-- text set in text-input directive --></label>
+  <div
+    class="inputButtonElement"
+    ng-class="buttonClass"
+    ng-if="buttonText || buttonClass || buttonClick"
+    ng-click="buttonClick(ngModel)">
+      {{buttonText}}
+  </div>
 </div>

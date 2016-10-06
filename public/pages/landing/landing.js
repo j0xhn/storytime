@@ -22,6 +22,10 @@ angular.module('directives')
            .addScene('values: get ready for your child to learn to', 900)
            .addScene(theater.replay.bind(theater))
           // end dialog
+          $scope.subscribeButtonClick = function(email){
+            console.log("made it here");
+            debugger;
+          }
       },
 			templateUrl: '/pages/landing/landing.html',
 			scope: {}

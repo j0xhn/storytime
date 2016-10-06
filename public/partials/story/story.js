@@ -36,7 +36,7 @@ angular.module('directives')
       },
 			templateUrl: '/partials/story/story.html',
 			scope: {
-        storyid: '=',
+        storyid: '@',
         storyobj: '=',
         excludeimage: '@'
       }
