@@ -22,7 +22,6 @@ exports.postStory = (req, res, next) => {
           res.send({ error: err, })
           throw err;
         }
-        debugger;
         res.send({savedStoryId: false, success: true});
       });
     } else {

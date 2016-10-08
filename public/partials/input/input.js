@@ -9,6 +9,7 @@ angular.module('directives')
       ngLabel: '=?',
       type: '@',
       buttonText: '@',
+      error: '=?',
       buttonClick: '=?'
     },
     controller: function($scope){

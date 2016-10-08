@@ -7,6 +7,8 @@
   .closeIcon{
     width: 20px;
     height: 20px;
+    position: absolute;
+    padding-left: 10px;
     &:before, &:after {background: $black; }
   }
 }

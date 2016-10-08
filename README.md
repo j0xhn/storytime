@@ -9,6 +9,7 @@
       - testimonials
       - design reset password & welcome & marketing emails
       - create a "feedback" form - hookup to another service?
+      - possibly a blinking cursor in inputs or auto select?
 
     [ ] Directed to signup
       - signup / login
@@ -45,7 +46,8 @@
       - get "male / female" working
       - create "example" form to point people to
 
-    3. Security & Performance
+    3. Security, Performance, Technical
     [ ] cache user - most likely in the userService used in
         - angularApp.js route for individual stories
-        - setting right now to _user
+        - make all our email services the official 'send grid' (like contact) contact which uses nodemailer implementation of sendgrid.
+        -

@@ -11851,8 +11851,10 @@ a {
 /* line 7, /Users/John/Dev/projects/storytime/public/partials/flash/flash.scss */
 .flash-message .closeIcon {
   width: 20px;
-  height: 20px; }
-  /* line 10, /Users/John/Dev/projects/storytime/public/partials/flash/flash.scss */
+  height: 20px;
+  position: absolute;
+  padding-left: 10px; }
+  /* line 12, /Users/John/Dev/projects/storytime/public/partials/flash/flash.scss */
   .flash-message .closeIcon:before, .flash-message .closeIcon:after {
     background: #000; }
 
@@ -12052,7 +12054,7 @@ Textarea in seperate file but uses the
 continuity
 
 \*------------------------------------*/
-/* line 11, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+/* line 12, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
 .inputWrapper {
   position: relative;
   border: 1px solid #ccc;
@@ -12063,7 +12065,7 @@ continuity
   align-items: center;
   appearance: none;
   /* gets rid of weird inner shadow on input fields */ }
-  /* line 21, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+  /* line 22, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
   .inputWrapper .label, .inputWrapper .input, .inputWrapper .mimic-input {
     transition: all 0.15s ease-in-out;
     margin: 0;
@@ -12071,7 +12073,7 @@ continuity
     padding: 0 5px;
     font-size: 100%;
     line-height: normal; }
-  /* line 31, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+  /* line 32, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
   .inputWrapper .input, .inputWrapper .mimic-input {
     height: 100%;
     min-height: 45px;
@@ -12083,22 +12085,33 @@ continuity
     font-size: 16px;
     appearance: none;
     padding: 0 15px; }
-  /* line 43, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+  /* line 44, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
   .inputWrapper .label {
     color: #999;
     position: absolute;
     left: 15px;
     top: 13px; }
   /* line 51, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+  .inputWrapper .error-text {
+    color: #f16464;
+    width: 100%;
+    position: absolute;
+    bottom: -25px;
+    text-align: left; }
+  /* line 59, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
   .inputWrapper .input:focus, .inputWrapper .input.ng-not-empty, .inputWrapper .mimic-input:focus, .inputWrapper .mimic-input.ng-not-empty {
     /* when input is focused, or when has content (determined in $.placeholder.js ) */ }
-    /* line 52, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+    /* line 60, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
     .inputWrapper .input:focus + .label, .inputWrapper .input.ng-not-empty + .label, .inputWrapper .mimic-input:focus + .label, .inputWrapper .mimic-input.ng-not-empty + .label {
       background-color: #fff;
       font-size: 12px;
       z-index: 0;
       top: -10px; }
-  /* line 61, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+  /* line 68, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
+  .inputWrapper.error {
+    border-color: #f16464;
+    margin-bottom: 25px; }
+  /* line 74, /Users/John/Dev/projects/storytime/public/partials/input/input.scss */
   .inputWrapper.inputButton .inputButtonElement {
     background-color: #00B145;
     position: absolute;
@@ -12109,6 +12122,7 @@ continuity
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     color: #fff;
     padding: 0 10px; }
@@ -12456,30 +12470,24 @@ Search Tags for a story
   100% {
     opacity: 0.25; } }
 
-/* line 3, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 4, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .hero {
   padding: 60px 10px 80px;
   text-align: center;
   max-width: 770px;
   margin: 0 auto; }
-  /* line 9, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 10, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .hero .subTitle {
     max-width: 400px;
     margin-bottom: 30px; }
 
-/* line 15, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 16, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .teaser-picture {
   position: absolute;
   max-width: 200px;
   max-height: 200px;
   z-index: -1; }
-  /* line 20, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
-  .landingPage .teaser-picture.backpack {
-    display: none; }
   /* line 21, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
-  .landingPage .teaser-picture.bird {
-    display: none; }
-  /* line 22, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.cactus {
     display: block;
     max-height: 100px;
@@ -12487,38 +12495,87 @@ Search Tags for a story
     top: -67px;
     opacity: .5;
     transform: rotate(192deg); }
-  /* line 30, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 29, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.cloud-1 {
-    display: none; }
-  /* line 31, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    top: -25px;
+    left: 135px;
+    width: 49px; }
+  /* line 34, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.crown {
     display: none; }
-  /* line 32, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    @media (min-width: 650px) {
+      /* line 34, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      .landingPage .teaser-picture.crown {
+        display: block;
+        bottom: 58px;
+        left: -20px;
+        width: 100px;
+        opacity: .5; } }
+  /* line 44, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.cylinder_hat {
     display: none; }
-  /* line 33, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    @media (min-width: 650px) {
+      /* line 44, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      .landingPage .teaser-picture.cylinder_hat {
+        display: block;
+        top: 122px;
+        right: -56px;
+        width: 87px;
+        opacity: .4;
+        transform: rotate(-40deg); } }
+  /* line 55, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.fish-1 {
     display: block;
     top: 12px;
     left: 40px;
     max-width: 50px;
     opacity: 0.3; }
-  /* line 40, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    @media (min-width: 650px) {
+      /* line 55, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      .landingPage .teaser-picture.fish-1 {
+        top: 47px; } }
+  /* line 63, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.fish-2 {
+    bottom: -86px;
+    left: 0;
+    right: 100px;
+    margin: 0 auto;
+    opacity: .6;
+    margin: 0 auto;
+    transform: rotate(40deg); }
+    @media (min-width: 650px) {
+      /* line 63, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      .landingPage .teaser-picture.fish-2 {
+        bottom: -70px;
+        transform: rotate(22deg);
+        opacity: .4; } }
+  /* line 77, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  .landingPage .teaser-picture.snake-tail {
     display: none; }
-  /* line 41, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    @media (min-width: 650px) {
+      /* line 77, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      .landingPage .teaser-picture.snake-tail {
+        top: -16px;
+        display: block;
+        left: 150px;
+        opacity: .2;
+        max-width: 300px;
+        right: 0;
+        margin: 0 auto;
+        transform: rotate(3deg); } }
+  /* line 90, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.girl-1 {
     display: none; }
-  /* line 42, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 91, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.girl-4 {
     display: block;
     right: 10px;
     bottom: -155px; }
-    /* line 46, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    /* line 95, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
     .landingPage .teaser-picture.girl-4.move {
       animation: MoveUpDown 3s cubic-bezier(0.53, 0.02, 0.64, 0.99); }
 
-/* line 52, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 101, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .four-squares {
   display: flex;
   align-items: center;
@@ -12526,81 +12583,81 @@ Search Tags for a story
   flex-flow: row wrap;
   max-width: 1000px;
   margin: 0 auto; }
-  /* line 59, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 108, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .four-squares .square {
     max-width: 450px;
     margin: 0 auto;
     padding: 30px; }
-  /* line 65, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 113, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .four-squares .img {
     border-radius: 50%;
+    width: 150px;
     box-shadow: 5px 5px 10px -5px black;
     margin-bottom: 20px; }
-  /* line 70, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 119, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .four-squares .text {
     color: white;
     margin-bottom: 10px;
     font-size: 18px; }
-  /* line 71, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 120, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .four-squares .link {
     text-decoration: underline;
     opacity: .7;
     font-size: 12px; }
-    /* line 75, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    /* line 124, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
     .landingPage .four-squares .link .fa {
       margin-left: 5px;
       position: relative;
       top: 2px; }
   @media (min-width: 600px) {
-    /* line 52, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    /* line 101, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
     .landingPage .four-squares {
       align-items: initial; }
-      /* line 83, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      /* line 132, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
       .landingPage .four-squares .square {
-        width: 40%;
-        min-height: 450px; } }
+        width: 40%; } }
   @media (min-width: 1000px) {
-    /* line 90, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    /* line 138, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
     .landingPage .four-squares .square {
       width: 25%;
       min-height: auto; }
-    /* line 91, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    /* line 139, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
     .landingPage .four-squares .img {
       width: 150px; } }
 
-/* line 95, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 143, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage section {
   padding: 40px 20px;
   text-align: center;
   position: relative; }
 
-/* line 101, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 149, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .title {
   margin-bottom: 30px;
   font-size: 34px;
   font-weight: 500; }
 
-/* line 107, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 155, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .subTitle {
   font-size: 14px;
   margin: 0 auto 20px; }
 
-/* line 112, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 160, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .parentChildReading {
   width: 100%;
   max-width: 500px;
   margin-bottom: 20px; }
 
-/* line 118, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 166, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .exampleStory .content {
   border: 1px solid #ccc;
   border-radius: 5px; }
 
-/* line 123, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 171, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .item {
   margin-bottom: 10px; }
 
-/* line 124, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 172, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .innerContent {
   max-width: 500px;
   margin: 0 auto; }
@@ -12611,7 +12668,7 @@ Search Tags for a story
   to {
     opacity: 1; } }
 
-/* line 127, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 175, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage #values::after {
   content: '|';
   -webkit-animation: blink 500ms infinite;

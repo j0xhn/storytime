@@ -3,7 +3,7 @@ angular.module('directives')
 		return {
 			restrict: 'EA',
 			replace: true,
-      controller: function($scope, storiesService, $rootScope) {
+      controller: function($scope, storiesService, $rootScope, userService, utilityService) {
 				$scope.exampleStoryId = '57ee7ef2002a8c317ffe5c30';
 				$scope.pictureArray = [
 					'cactus',
@@ -11,6 +11,8 @@ angular.module('directives')
 					'crown',
 					'cylinder_hat',
 					'fish-1',
+					'fish-2',
+					'snake-tail',
 					'girl-1',
 					'girl-4'
 				];
@@ -43,8 +45,24 @@ angular.module('directives')
            .addScene(theater.replay.bind(theater))
           // end dialog
           $scope.subscribeButtonClick = function(email){
-            console.log("made it here");
-            debugger;
+            if(utilityService.validateEmail(email)){
+              const currentUser = userService.user;
+              if(currentUser.email === email){
+                debugger;
+                // take them to their account page to manage their subscriptions
+              } else {
+                userService.setUserInfo({email: email}).then(function(res){
+                  if(res.data.error){
+                    // display error
+                  } else {
+                    // say congrats and
+                    // ask to create password
+                  }
+                });
+              }
+            } else {
+              $scope.emailError = 'Please enter a valid email address';
+            }
           }
       },
 			templateUrl: '/pages/landing/landing.html',

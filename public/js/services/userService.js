@@ -10,6 +10,16 @@ angular.module('services')
   //   cachedUser = { guest: true };
   // }
   return {
+    setUserInfo: function (userInfo) {
+      const newUser = Object.assign(cachedUser, userInfo)
+      newUser._csrf = window._csrf;
+        console.log("made it into user service");
+      return $http({
+        method: 'POST',
+        url: '/account/updateorcreate',
+        data: newUser
+      })
+    },
     getAllUsers: function () {
       return $http({
         method: 'GET',
@@ -19,6 +29,6 @@ angular.module('services')
     user: cachedUser,
     isLoggedIn: function() {
       return cachedUser.type === 'customer';
-    }
+    },
   }
 });

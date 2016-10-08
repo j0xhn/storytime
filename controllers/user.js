@@ -158,6 +158,7 @@ exports.getCurrentUser = (req, res) => {
  * Update profile information.
  */
 exports.postUpdateProfile = (req, res, next) => {
+  console.log("made it server side");
   req.assert('email', 'Please enter a valid email address.').isEmail();
   req.sanitize('email').normalizeEmail({ remove_dots: false });
 
@@ -188,6 +189,23 @@ exports.postUpdateProfile = (req, res, next) => {
     });
   });
 };
+
+/**
+ * POST /account/password
+ * Update current password.
+ */
+exports.postUpdateOrCreate = (req, res, next) => {
+  const user = req.body;
+  User.update( { _id: user._id }, user, { upsert: true },
+    function (err, result) {
+      if (err) {
+        res.send({ error: err, })
+        throw err;
+      }
+      debugger;
+      res.send({success: true});
+    });
+}
 
 /**
  * POST /account/password

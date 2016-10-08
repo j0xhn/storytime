@@ -1,4 +1,4 @@
-<div class="inputWrapper" ng-class="{'inputButton': buttonText}">
+<div class="inputWrapper" ng-class="{'inputButton': buttonText, 'error': error}">
   <input class="input" type="{{type || 'text'}}" ng-model='ngModel'></input>
   <label class="label"><!-- text set in text-input directive --></label>
   <div
@@ -8,4 +8,5 @@
     ng-click="buttonClick(ngModel)">
       {{buttonText}}
   </div>
+  <p class='error-text' ng-if="error">{{error}}</p>
 </div>

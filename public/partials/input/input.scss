@@ -7,6 +7,7 @@ continuity
 
 \*------------------------------------*/
 $input-padding: 15px;
+$error-offset: 19px;
 
 .inputWrapper {
   position: relative;
@@ -47,6 +48,14 @@ $input-padding: 15px;
     top: $input-label-content-distance;
   }
 
+  .error-text{
+    color: $red;
+    width: 100%;
+    position: absolute;
+    bottom: -$error-offset;
+    font-size: 12px;
+    text-align: left;
+  }
 
   .input:focus, .input.ng-not-empty, .mimic-input:focus, .mimic-input.ng-not-empty { /* when input is focused, or when has content (determined in $.placeholder.js ) */
     & + .label {
@@ -55,6 +64,11 @@ $input-padding: 15px;
       z-index: 0;
       top: -10px;
     }
+  }
+
+  &.error{
+    border-color: $red;
+    margin-bottom: $error-offset;
   }
 
   &.inputButton{
@@ -68,6 +82,7 @@ $input-padding: 15px;
       border-bottom-right-radius: 3px;
       border-top-right-radius: 3px;
       display: flex;
+      cursor: pointer;
       align-items: center;
       color: $white;
       padding: 0 10px;

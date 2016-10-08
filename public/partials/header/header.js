@@ -1,28 +1,25 @@
-(function () {
-  'use strict';
-  window.navigation = {};
+window.navigation = {};
 
-  navigation.toggleSideNav = function(force){
-    const isForced = typeof force === 'boolean';
-    if (isForced){
-      document.getElementById('sideNav').classList.toggle('open', force);
-      navigation.toggleScreenLock(force);
-    } else {
-      document.getElementById('sideNav').classList.toggle('open');
-      navigation.toggleScreenLock();
-    }
+navigation.toggleSideNav = function(force){
+  const isForced = typeof force === 'boolean';
+  if (isForced){
+    document.getElementById('sideNav').classList.toggle('open', force);
+    navigation.toggleScreenLock(force);
+  } else {
+    document.getElementById('sideNav').classList.toggle('open');
+    navigation.toggleScreenLock();
   }
-  navigation.toggleScreenLock = function(force){
-    if(force){document.body.classList.toggle('lock');}
-    else{document.body.classList.toggle('lock', force);}
-  }
-  navigation.clear = function(){
-    navigation.toggleSideNav(false);
-  }
+}
+navigation.toggleScreenLock = function(force){
+  if(force){document.body.classList.toggle('lock');}
+  else{document.body.classList.toggle('lock', force);}
+}
+navigation.clear = function(){
+  navigation.toggleSideNav(false);
+}
 
-  document.getElementById('globalSearch').addEventListener("keyup", function(e){
-    if (e.keyCode == 13) {
-      location.href = '/stories?search=' + e.target.value;
-    }
-  })
-})()
+document.getElementById('globalSearch').addEventListener("keyup", function(e){
+  if (e.keyCode == 13) {
+    location.href = '/stories?search=' + e.target.value;
+  }
+})

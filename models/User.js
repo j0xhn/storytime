@@ -32,6 +32,7 @@ const userSchema = new mongoose.Schema({
     location: { type: String, default: '' },
     website: { type: String, default: '' },
     picture: { type: String, default: '' },
+    notifications: {type: Object, default: {bedtime: 2}}
   }
 }, { timestamps: true });
 
