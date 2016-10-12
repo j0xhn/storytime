@@ -4,7 +4,7 @@
       .content
         for error in messages.errors
           div
-            error.msg
+            span= error.msg
             button.close(type='button', data-dismiss='alert')
               i.closeIcon
   if messages.info
@@ -12,14 +12,14 @@
       .content
         for info in messages.info
           div
+            span= info.msg
             button.close(type='button', data-dismiss='alert')
               i.closeIcon
-            info.msg
   if messages.success
     .alert.alert-success.fade.in
       .content
         for success in messages.success
           div
-            success.msg
+            span= success.msg
             button.close(type='button', data-dismiss='alert')
               i.closeIcon

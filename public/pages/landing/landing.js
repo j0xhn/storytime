@@ -3,7 +3,7 @@ angular.module('directives')
 		return {
 			restrict: 'EA',
 			replace: true,
-      controller: function($scope, storiesService, $rootScope, userService, utilityService) {
+      controller: function($scope, storiesService, $rootScope, userService, utilityService, analyticService, $location) {
 				$scope.exampleStoryId = '57ee7ef2002a8c317ffe5c30';
 				$scope.pictureArray = [
 					'cactus',
@@ -44,24 +44,27 @@ angular.module('directives')
            .addScene('values: get ready for your child to learn to', 900)
            .addScene(theater.replay.bind(theater))
           // end dialog
+					$scope.isLoggedIn = userService.user.email;
           $scope.subscribeButtonClick = function(email){
             if(utilityService.validateEmail(email)){
               const currentUser = userService.user;
               if(currentUser.email === email){
-                debugger;
+								$scope.emailError = 'Email already exists'
                 // take them to their account page to manage their subscriptions
               } else {
                 userService.setUserInfo({email: email}).then(function(res){
                   if(res.data.error){
-                    // display error
+										analyticService.error('landing email', res.data.error)
+										$scope.emailError = res.data.error
                   } else {
-                    // say congrats and
-                    // ask to create password
+										$scope.isLoggedIn = true;
+										$scope.emailSuccess = true;
                   }
                 });
               }
             } else {
               $scope.emailError = 'Please enter a valid email address';
+							$scope.$apply();
             }
           }
       },

@@ -10,6 +10,10 @@
       - design reset password & welcome & marketing emails
       - create a "feedback" form - hookup to another service?
       - possibly a blinking cursor in inputs or auto select?
+      - create a "create account" link on login page
+      - login returns a message rather than a redirect if wrong
+      - share story on facebook - on success page, and at end of story
+      - figure out why flash isn't working on login / signup attempt
 
     [ ] Directed to signup
       - signup / login

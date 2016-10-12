@@ -64,7 +64,7 @@ angular.module('directives')
           story.html = storiesService.bindKeywords(story.html, true)
         }
 
-        story.authorName = userService.user.type === 'guest' ? 'Guest Author' : userService.user.profile.name;
+        story.authorName = userService.isLoggedIn() ? 'Guest Author' : userService.user.profile.name;
         story.authorId = userService.user._id;
 
         storiesService.postStory(story).then(function(res){

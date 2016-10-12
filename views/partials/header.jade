@@ -9,6 +9,8 @@
       if user
         a.profile-image(href='/account' target='_self')
           if user.profile.picture
-              img.img(src='#{user.profile.picture || user.gravatar(60)}')
+            img.img(src="#{user.profile.picture")
+          else
+            i.img.fa.fa-user.txt-white
       else
         a(href='/login' target='_self') Login

@@ -36,7 +36,7 @@ angular.module('directives')
       $scope.nextStep = function (e) {
         if(userService.user.autoPay){
           // download and take from autoPay
-        } else if(userService.user.type === 'guest') {
+        } else if(userService.isLoggedIn()) {
           $scope.paymentState = 'createAccount'
         } else {
           $scope.paymentState = 'pickType';

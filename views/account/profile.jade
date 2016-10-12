@@ -2,8 +2,8 @@ extends ../layout
 
 block content
   .content.accountPage
-  
     form.form(action='/account/profile', method='POST')
+      a.button.outline.mobileFull.mar0t(href="/logout" target="_self") Logout
       h3.page-title Profile Information
       input(type='hidden', name='_csrf', value=_csrf)
       .inputWrapper

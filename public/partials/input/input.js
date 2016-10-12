@@ -24,7 +24,7 @@ angular.module('directives')
         const input = elm.find('.input')[0];
         scope.buttonClick = scope.buttonClick.bind(input);
         input.addEventListener('keyup', function(e){
-          if(e.keyCode === 13){ scope.buttonClick(); }
+          if(e.keyCode === 13){ scope.buttonClick(this.value); }
         })
       }
     }

@@ -11,6 +11,7 @@ angular.module('services')
       });
     },
     error: function(action, label){
+      console.error(category, action, label)
       ga('send', {
         hitType: 'event',
         eventCategory: 'error',

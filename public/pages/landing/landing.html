@@ -7,15 +7,29 @@
     <div class="subTitle">
       <p class="mar10b">Interactive stories that strengthen the bond between parent and child all the while preparing them how to:</p>
       <strong id="values" class="txt-darkGray block mar20b"></strong>
-      <p> Get a short story sent every-other night right to your email.  Easy Peasy :) </p>
     </div>
-    <text-input
+    <div ng-if="!isLoggedIn">
+      <p class='mar20b'> Get a short story sent every-other night right to your email.  Easy Peasy :) </p>
+      <text-input
       label="Email"
       button-text='Send'
       button-click="subscribeButtonClick"
-      class="max400 mar0auto"
+      class="max400 mar0a"
       error="emailError"
-    ></text-input>
+      ></text-input>
+    </div>
+    <div ng-if="emailSuccess" class='successMessage'>
+        <div class='checkmark circle mar10b'></div>
+        <p class="mar20b">Nice!  Now that's what i'm talking about! <br>
+          <!-- Now create a password to save your preferences and complete the signup process</p>
+          <text-input
+          label="Password"
+          button-text='Create Account'
+          button-click="passwordSend"
+          class="max400 mar0a"
+          error="passwordError"
+          ></text-input> -->
+    </div>
     <img ng-repeat="picture in pictureArray" ng-class="picture" class="teaser-picture" ng-src="images/landing/{{picture}}.jpg"></img>
     </p>
   </section>

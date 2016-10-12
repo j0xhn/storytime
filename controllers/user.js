@@ -19,9 +19,7 @@ exports.getLogin = (req, res) => {
 };
 
 exports.getEmptyUser = (req,res) => {
-  const user = new User({
-    type: 'guest'
-  });
+  const user = new User();
   return user;
 }
 
@@ -52,14 +50,36 @@ exports.postLogin = (req, res, next) => {
   passport.authenticate('local', (err, user, info) => {
     if (err) { return next(err); }
     if (!user) {
-      req.flash('errors', info);
-      return res.redirect('/login');
+      // checks for guest user
+      User.findOne({ email: req.body.email }, (err, user) => {
+        if (err) {
+          console.log("error in find query");
+          req.flash('errors', info);
+          return res.redirect('/login');
+        }
+        if (user.password){
+          req.flash('errors', info)
+          return res.redirect('/login');
+        } else {
+          user.password = req.body.password;
+          user.save((err) => {
+            if (err) { return next(err); }
+            req.logIn(user, (err) => {
+              if (err) { return next(err); }
+              console.log("login after user set");
+              res.redirect(req.session.returnTo || '/');
+            });
+          });
+        }
+      });
+    } else {
+      req.logIn(user, (err) => {
+        if (err) { return next(err); }
+        console.log("normal login");
+        const returnUrl = req.session.returnTo.indexOf('/search') > -1 ? '/' : req.session.returnTo
+        res.redirect(returnUrl);
+      });
     }
-    req.logIn(user, (err) => {
-      if (err) { return next(err); }
-      req.flash('success', { msg: 'Success! You are logged in.' });
-      res.redirect(req.session.returnTo || '/');
-    });
   })(req, res, next);
 };
 
@@ -158,7 +178,6 @@ exports.getCurrentUser = (req, res) => {
  * Update profile information.
  */
 exports.postUpdateProfile = (req, res, next) => {
-  console.log("made it server side");
   req.assert('email', 'Please enter a valid email address.').isEmail();
   req.sanitize('email').normalizeEmail({ remove_dots: false });
 
@@ -166,7 +185,7 @@ exports.postUpdateProfile = (req, res, next) => {
 
   if (errors) {
     req.flash('errors', errors);
-    return res.redirect('/account');
+    return res.redirect('/');
   }
 
   User.findById(req.user.id, (err, user) => {
@@ -178,9 +197,10 @@ exports.postUpdateProfile = (req, res, next) => {
     user.profile.website = req.body.website || '';
     user.save((err) => {
       if (err) {
+        console.log(err);
         if (err.code === 11000) {
           req.flash('errors', { msg: 'The email address you have entered is already associated with an account.' });
-          return res.redirect('/account');
+          return res.redirect('/login');
         }
         return next(err);
       }
@@ -200,9 +220,8 @@ exports.postUpdateOrCreate = (req, res, next) => {
     function (err, result) {
       if (err) {
         res.send({ error: err, })
-        throw err;
+        debugger;
       }
-      debugger;
       res.send({success: true});
     });
 }
