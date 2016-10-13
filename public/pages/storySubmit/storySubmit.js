@@ -10,6 +10,10 @@ angular.module('directives')
         toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code',
         image_dimensions: false
       };
+
+      $scope.exampleId = '57ee7ef2002a8c317ffe5c30';
+      if ($routeParams.storyId == $scope.exampleId) $scope.exampleStory = true;
+
       $scope.handleSuccess = function(id){
         $location.path('/success/edit-story').search({d:id || $routeParams.storyId});
       }
@@ -45,7 +49,7 @@ angular.module('directives')
           var tagArray = story.tags.split(/[,]+/).filter(Boolean);
           story.tags = tagArray.map(function(x){ return x.trim(); })
         }
-        let inputs = story.inputs;
+        let inputs = story.inputs || {};
         if(Object.keys(inputs).length){
           const objectToCombine = {};
           for (var k in inputs){

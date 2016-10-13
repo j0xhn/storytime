@@ -1,4 +1,6 @@
 .flash-message{
+  position: relative;
+  z-index: $z-flash-message;
   .alert{
     margin: 0;
     border: none;

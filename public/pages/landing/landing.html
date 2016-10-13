@@ -11,6 +11,7 @@
     <div ng-if="!isLoggedIn">
       <p class='mar20b'> Get a short story sent every-other night right to your email.  Easy Peasy :) </p>
       <text-input
+      id='subscribeEmail'
       label="Email"
       button-text='Send'
       button-click="subscribeButtonClick"
@@ -19,19 +20,10 @@
       ></text-input>
     </div>
     <div ng-if="emailSuccess" class='successMessage'>
-        <div class='checkmark circle mar10b'></div>
-        <p class="mar20b">Nice!  Now that's what i'm talking about! <br>
-          <!-- Now create a password to save your preferences and complete the signup process</p>
-          <text-input
-          label="Password"
-          button-text='Create Account'
-          button-click="passwordSend"
-          class="max400 mar0a"
-          error="passwordError"
-          ></text-input> -->
+        <span class='checkmark green'></span>
+        <span class="mar20b">Nice! Now that's what i'm talking about! </p>
     </div>
     <img ng-repeat="picture in pictureArray" ng-class="picture" class="teaser-picture" ng-src="images/landing/{{picture}}.jpg"></img>
-    </p>
   </section>
   <section class="bgBlue txt-white">
     <div class="innerContent">
@@ -70,11 +62,28 @@
   </section>
   <section>
     <h1 class="title">Try It Out</h1>
+    <a href="/stories" class='button'>Check Out Stories</a>
+    <divider text='or'></divider>
     <p class="subTitle">
         Fill in the sample inputs below see how it affects the story!
     </p>
     <div class="exampleStory">
       <story storyid="exampleStoryId"></story>
+    </div>
+    <div ng-if="!isLoggedIn">
+      <p class='mar20tb'> Get a short story just like this sent every-other night to your email.  Easy Peasy :) </p>
+      <text-input
+      id='subscribeEmail'
+      label="Email"
+      button-text='Send'
+      button-click="subscribeButtonClick"
+      class="max400 mar0a"
+      error="emailError"
+      ></text-input>
+    </div>
+    <div ng-if="emailSuccess" class='successMessage'>
+        <span class='checkmark green'></span>
+        <span class="mar20b">Nice! Now that's what i'm talking about! </p>
     </div>
   </section>
 </div>

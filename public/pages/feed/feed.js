@@ -12,8 +12,9 @@ angular.module('directives')
 
         var searchStories = function (searchObj){
           storiesService.searchStories(searchObj).then(function(res) {
+            if (!res) analyticService.error('searchStories', 'no response - server is fouling up')
             $scope.myStories = res.data;
-            if(!$scope.myStories){
+            if(!$scope.myStories || $scope.myStories.length === 0){
               $scope.noResults = true;
             }
           });

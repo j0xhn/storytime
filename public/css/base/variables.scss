@@ -28,9 +28,10 @@ $largest-width: 1340px;
 
 $z-base: 0;
 $z-backdrop-inactive: $z-base - 1;
-$z-header: $z-base + 1;
-$z-backdrop-active: $z-base + 1;
-$z-sidenav: $z-base + 2;
+$z-flash-message: $z-base + 1;
+$z-header: $z-base + 2;
+$z-backdrop-active: $z-base + 2;
+$z-sidenav: $z-base + 3;
 
 $logo-font: 'HennyPenny';
 $primary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;

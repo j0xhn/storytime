@@ -5,7 +5,8 @@
   </div>
   <div ng-if="!pageErrorMessage" class='content'>
     <form class="form">
-      <h1 class="form-title">{{story._id ? 'Edit Story' : 'Submit A Story'}}</h1>
+      <h1 class="form-title">{{(story._id && !exampleStory) ? 'Edit Story' : 'Submit A Story'}}</h1>
+      <p ng-if="!exampleStory"> To see an example story submital form, <a href='/submit/57ee7ef2002a8c317ffe5c30' class='underline txt-blue'>click here</a> </p>
       <text-input label='Story Title' ng-model='story.title'></text-input>
       <text-input label='Photo URL' ng-model='story.photoUrl'></text-input>
       <!-- <text-input label='Price' type='number' ng-model='story.price'></text-input> -->
@@ -19,23 +20,23 @@
         <text-input label='Keyword' ng-model='input.keyword'></text-input>
         <text-input label='Description' ng-model='input.title'></text-input>
       </div>
-      <div class="btn-group">
+      <div class="btn-group" ng-if="!exampleStory">
         <button type="button" ng-click='add()' class="button dropdown-toggle mar5b" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          + Interactive Input
+          Add Interactive Input
         </button>
         <!-- <ul class="dropdown-menu">
           <li><a ng-click='add()'>Text</a></li>
           <li><a href="#">Male / Female</a></li>
         </ul> -->
+        <small class='block formGroup mar10t'> Interactive inputs allow the reader to insert their name,
+          favorite character, gender, or other applicable item into a story.  The "keyword"
+          is a single word (no special characters) used in the story text with curly
+          brackets around it as such {keyword}.  The "description" will appear inside the input as a
+          placeholder and helper for a user. To see an example of how this should be utilized <a href='/submit/57ee7ef2002a8c317ffe5c30' class='underline txt-blue'>click here</a>
+        </small>
       </div>
-      <small class='block txt-gray formGroup mar10t'> Interactive inputs allow the reader to insert their name,
-        favorite character, gender, or other applicable item into a story.  The "keyword"
-        is a single word (no special characters) used in the story text with curly
-        brackets around it as such {keyword}.  The "description" will appear inside the input as a
-        placeholder and helper for a user.
-      </small>
       <textarea class='h300' ui-tinymce="tinymceOptions" ng-model="story.html"></textarea>
-      <button ng-click="submitStory(story)" class="button"> submit </button>
+      <button ng-click="submitStory(story)" class="button" ng-if="!exampleStory"> submit </button>
       <div class='form-error'>{{globalErrorMessage}}</div>
     </form>
   </div>

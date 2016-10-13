@@ -10,6 +10,14 @@
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    .resultsHeader{
+      margin: 0 auto 10px;
+      width: 100%;
+      display: block;
+      @media (min-width: $small-width){
+        margin: 0 0 10px 20px;
+      }
+    }
   }
   .searchBar{
     width: 100%;

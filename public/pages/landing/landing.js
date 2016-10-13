@@ -57,8 +57,8 @@ angular.module('directives')
 										analyticService.error('landing email', res.data.error)
 										$scope.emailError = res.data.error
                   } else {
-										$scope.isLoggedIn = true;
 										$scope.emailSuccess = true;
+                    angular.element('#subscribeEmail .input').val('');
                   }
                 });
               }
