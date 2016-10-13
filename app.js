@@ -105,8 +105,8 @@ app.use(function(req, res, next) {
       req.path !== '/login' &&
       req.path !== '/signup' &&
       req.path !== '/landing' &&
+      req.path !== '/stories/search' &&
       !req.path.match(/^\/auth/) &&
-      !req.path.match(/^\/search/) &&
       !req.path.match(/^\/account/) &&
       !req.path.match(/\./)) {
     req.session.returnTo = req.path;
