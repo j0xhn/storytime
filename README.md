@@ -5,7 +5,6 @@
     [ ] Greeted with Landing Page
       - get page titles working
       - brief explination
-      - try it out
       - testimonials
       - design reset password & welcome & marketing emails
       - create a "feedback" form - hookup to another service?
@@ -14,6 +13,7 @@
       - login returns a message rather than a redirect if wrong
       - share story on facebook - on success page, and at end of story
       - figure out why flash isn't working on login / signup attempt
+      - delete stories by sending them to another collection called "deleted" or something
 
     [ ] Directed to signup
       - signup / login

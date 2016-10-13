@@ -219,10 +219,11 @@ exports.postUpdateOrCreate = (req, res, next) => {
   User.update( { _id: user._id }, user, { upsert: true },
     function (err, result) {
       if (err) {
-        res.send({ error: err, })
-        debugger;
+        console.error(err);
+        res.send({ error: 'Email already exists', })
+      } else {
+        res.send({success: true});
       }
-      res.send({success: true});
     });
 }
 

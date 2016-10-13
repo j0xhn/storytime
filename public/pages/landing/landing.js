@@ -56,8 +56,10 @@ angular.module('directives')
                   if(res.data.error){
 										analyticService.error('landing email', res.data.error)
 										$scope.emailError = res.data.error
+                    $scope.emailSuccess = null;
                   } else {
 										$scope.emailSuccess = true;
+                    $scope.emailError = null;
                     angular.element('#subscribeEmail .input').val('');
                   }
                 });
