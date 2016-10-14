@@ -55,3 +55,4 @@
         - angularApp.js route for individual stories
         - make all our email services the official 'send grid' (like contact) contact which uses nodemailer implementation of sendgrid.
         - think through "example stories" better, how to use on main landing, also on story submital form helper
+        - create 'indexes' in DB to help speed up searches

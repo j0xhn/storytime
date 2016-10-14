@@ -13,7 +13,7 @@ StoryUtilities.getFormatedStoryQuery = function(query){
     returnedQuery = Story.findOne({_id: query._id});
   } else {
     const titleQuery = {title: new RegExp(query.general, "i")};
-    const tagQuery = {tags: query.general};
+    const tagQuery = {tags: new RegExp(query.general, "i")};
     returnedQuery = Story.aggregate({$match: {$or:[titleQuery, tagQuery]}});
   }
   // console.log('ending query:', returnedQuery);
