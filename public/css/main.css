@@ -12255,28 +12255,29 @@ Search Tags for a story
 .landingPage .title {
   margin-bottom: 20px;
   font-size: 34px;
+  line-height: 42px;
   font-weight: bold; }
 
-/* line 164, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 165, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .subTitle {
   margin: 0 auto 20px; }
 
-/* line 168, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 169, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .parentChildReading {
   width: 100%;
   max-width: 500px;
   margin-bottom: 20px; }
 
-/* line 174, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 175, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .exampleStory .content {
   border: 1px solid #ccc;
   border-radius: 5px; }
 
-/* line 179, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 180, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .item {
   margin-bottom: 10px; }
 
-/* line 180, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 181, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .innerContent {
   max-width: 500px;
   margin: 0 auto; }
@@ -12287,7 +12288,7 @@ Search Tags for a story
   to {
     opacity: 1; } }
 
-/* line 183, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 184, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage #values::after {
   content: '|';
   -webkit-animation: blink 500ms infinite;
