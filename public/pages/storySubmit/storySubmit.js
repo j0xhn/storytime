@@ -15,7 +15,7 @@ angular.module('directives')
       if ($routeParams.storyId == $scope.exampleId) $scope.exampleStory = true;
 
       $scope.handleSuccess = function(id){
-        $location.path('/success/edit-story').search({d:id || $routeParams.storyId});
+        $location.path('/success/save-story').search({d:id || $routeParams.storyId});
       }
       const storyPromise = $q(function(resolve, reject){
         if($routeParams.storyId){

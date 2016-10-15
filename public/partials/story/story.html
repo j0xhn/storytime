@@ -1,6 +1,6 @@
 <div class='story-in-detail'>
   <div class='content form'>
-    <h4 class='story-title'>{{storyObj.title}}</h4>
+    <h2 class='story-title'>{{storyObj.title}}</h2>
     <img ng-if="!excludeimage" ng-src="{{storyObj.photoUrl}}" alt="Story Image" class='story-image'/>
     <text-input ng-repeat="input in storyObj.inputs" ng-label="input.title" ng-model="input.value"></text-input>
     <div class='story-text' id='replace-with-html'></div>
