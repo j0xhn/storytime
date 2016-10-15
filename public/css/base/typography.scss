@@ -17,9 +17,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Alegreya';
+  src: url('#{$fa-font-path}/alegreya-sans/AlegreyaSans-Medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html{
   letter-spacing: .5px;
-  font-weight: 200;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: $secondary-font;
 }
 
 h1,h2,h3,h4,h5,h6,p,.p{
@@ -28,4 +39,4 @@ h1,h2,h3,h4,h5,h6,p,.p{
 }
 
 h1,h2,h3,h4,h5,h6 { font-family: $primary-font;letter-spacing: 2px; }
-p, .p{ color: $darkGray;letter-spacing: .5px; }
+p, .p{ color: $darkGray;}

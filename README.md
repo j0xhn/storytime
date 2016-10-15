@@ -14,6 +14,8 @@
       - share story on facebook - on success page, and at end of story
       - figure out why flash isn't working on login / signup attempt
       - delete stories by sending them to another collection called "deleted" or something
+      - change title font to Alegreya Sans
+      - change text font to "europa"
 
     [ ] Directed to signup
       - signup / login

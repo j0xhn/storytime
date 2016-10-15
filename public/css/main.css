@@ -1372,19 +1372,6 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 22, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_scaffolding.scss */
-html {
-  font-size: 10px;
-  -webkit-tap-highlight-color: transparent; }
-
-/* line 27, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_scaffolding.scss */
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857;
-  color: #333333;
-  background-color: #fff; }
-
 /* line 36, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_scaffolding.scss */
 input,
 button,
@@ -1474,389 +1461,6 @@ hr {
 /* line 159, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_scaffolding.scss */
 [role="button"] {
   cursor: pointer; }
-
-/* line 9, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit; }
-  /* line 16, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  h1 small,
-  h1 .small, h2 small,
-  h2 .small, h3 small,
-  h3 .small, h4 small,
-  h4 .small, h5 small,
-  h5 .small, h6 small,
-  h6 .small,
-  .h1 small,
-  .h1 .small, .h2 small,
-  .h2 .small, .h3 small,
-  .h3 .small, .h4 small,
-  .h4 .small, .h5 small,
-  .h5 .small, .h6 small,
-  .h6 .small {
-    font-weight: normal;
-    line-height: 1;
-    color: #777777; }
-
-/* line 24, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-h1, .h1,
-h2, .h2,
-h3, .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px; }
-  /* line 30, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  h1 small,
-  h1 .small, .h1 small,
-  .h1 .small,
-  h2 small,
-  h2 .small, .h2 small,
-  .h2 .small,
-  h3 small,
-  h3 .small, .h3 small,
-  .h3 .small {
-    font-size: 65%; }
-
-/* line 35, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  margin-top: 10px;
-  margin-bottom: 10px; }
-  /* line 41, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  h4 small,
-  h4 .small, .h4 small,
-  .h4 .small,
-  h5 small,
-  h5 .small, .h5 small,
-  .h5 .small,
-  h6 small,
-  h6 .small, .h6 small,
-  .h6 .small {
-    font-size: 75%; }
-
-/* line 47, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-h1, .h1 {
-  font-size: 36px; }
-
-/* line 48, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-h2, .h2 {
-  font-size: 30px; }
-
-/* line 49, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-h3, .h3 {
-  font-size: 24px; }
-
-/* line 50, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-h4, .h4 {
-  font-size: 18px; }
-
-/* line 51, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-h5, .h5 {
-  font-size: 14px; }
-
-/* line 52, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-h6, .h6 {
-  font-size: 12px; }
-
-/* line 58, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-p {
-  margin: 0 0 10px; }
-
-/* line 62, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.lead {
-  margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.4; }
-  @media (min-width: 768px) {
-    /* line 62, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-    .lead {
-      font-size: 21px; } }
-
-/* line 78, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-small,
-.small {
-  font-size: 85%; }
-
-/* line 83, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-mark,
-.mark {
-  background-color: #fdf8e2;
-  padding: .2em; }
-
-/* line 90, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.text-left {
-  text-align: left; }
-
-/* line 91, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.text-right {
-  text-align: right; }
-
-/* line 92, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.text-center {
-  text-align: center; }
-
-/* line 93, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.text-justify {
-  text-align: justify; }
-
-/* line 94, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.text-nowrap {
-  white-space: nowrap; }
-
-/* line 97, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.text-lowercase {
-  text-transform: lowercase; }
-
-/* line 98, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.text-uppercase, .initialism {
-  text-transform: uppercase; }
-
-/* line 99, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.text-capitalize {
-  text-transform: capitalize; }
-
-/* line 102, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.text-muted {
-  color: #777777; }
-
-/* line 5, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_text-emphasis.scss */
-.text-primary {
-  color: #4d90fc; }
-
-/* line 8, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_text-emphasis.scss */
-a.text-primary:hover,
-a.text-primary:focus {
-  color: #1b71fb; }
-
-/* line 5, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_text-emphasis.scss */
-.text-success {
-  color: #569845; }
-
-/* line 8, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_text-emphasis.scss */
-a.text-success:hover,
-a.text-success:focus {
-  color: #427535; }
-
-/* line 5, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_text-emphasis.scss */
-.text-info {
-  color: #3a87ad; }
-
-/* line 8, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_text-emphasis.scss */
-a.text-info:hover,
-a.text-info:focus {
-  color: #2d6987; }
-
-/* line 5, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_text-emphasis.scss */
-.text-warning {
-  color: #bf9853; }
-
-/* line 8, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_text-emphasis.scss */
-a.text-warning:hover,
-a.text-warning:focus {
-  color: #a37e3c; }
-
-/* line 5, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_text-emphasis.scss */
-.text-danger {
-  color: #b94a48; }
-
-/* line 8, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_text-emphasis.scss */
-a.text-danger:hover,
-a.text-danger:focus {
-  color: #953b39; }
-
-/* line 119, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.bg-primary {
-  color: #fff; }
-
-/* line 5, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_background-variant.scss */
-.bg-primary {
-  background-color: #4d90fc; }
-
-/* line 8, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_background-variant.scss */
-a.bg-primary:hover,
-a.bg-primary:focus {
-  background-color: #1b71fb; }
-
-/* line 5, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_background-variant.scss */
-.bg-success {
-  background-color: #dbf5d3; }
-
-/* line 8, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_background-variant.scss */
-a.bg-success:hover,
-a.bg-success:focus {
-  background-color: #b9eca9; }
-
-/* line 5, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_background-variant.scss */
-.bg-info {
-  background-color: #d9edf7; }
-
-/* line 8, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_background-variant.scss */
-a.bg-info:hover,
-a.bg-info:focus {
-  background-color: #afd9ee; }
-
-/* line 5, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_background-variant.scss */
-.bg-warning {
-  background-color: #fdf8e2; }
-
-/* line 8, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_background-variant.scss */
-a.bg-warning:hover,
-a.bg-warning:focus {
-  background-color: #faecb2; }
-
-/* line 5, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_background-variant.scss */
-.bg-danger {
-  background-color: #f2dede; }
-
-/* line 8, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_background-variant.scss */
-a.bg-danger:hover,
-a.bg-danger:focus {
-  background-color: #e4b9b9; }
-
-/* line 138, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee; }
-
-/* line 149, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 10px; }
-  /* line 153, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  ul ul,
-  ul ol,
-  ol ul,
-  ol ol {
-    margin-bottom: 0; }
-
-/* line 167, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.list-unstyled {
-  padding-left: 0;
-  list-style: none; }
-
-/* line 173, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.list-inline {
-  padding-left: 0;
-  list-style: none;
-  margin-left: -5px; }
-  /* line 177, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  .list-inline > li {
-    display: inline-block;
-    padding-left: 5px;
-    padding-right: 5px; }
-
-/* line 185, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-dl {
-  margin-top: 0;
-  margin-bottom: 20px; }
-
-/* line 189, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-dt,
-dd {
-  line-height: 1.42857; }
-
-/* line 193, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-dt {
-  font-weight: bold; }
-
-/* line 196, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-dd {
-  margin-left: 0; }
-
-/* line 14, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_clearfix.scss */
-.dl-horizontal dd:before, .dl-horizontal dd:after {
-  content: " ";
-  display: table; }
-
-/* line 19, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/mixins/_clearfix.scss */
-.dl-horizontal dd:after {
-  clear: both; }
-
-@media (min-width: 768px) {
-  /* line 211, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  .dl-horizontal dt {
-    float: left;
-    width: 160px;
-    clear: left;
-    text-align: right;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; }
-  /* line 218, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  .dl-horizontal dd {
-    margin-left: 180px; } }
-
-/* line 229, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-abbr[title],
-abbr[data-original-title] {
-  cursor: help;
-  border-bottom: 1px dotted #777777; }
-
-/* line 235, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.initialism {
-  font-size: 90%; }
-
-/* line 241, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
-  font-size: 17.5px;
-  border-left: 5px solid #eeeeee; }
-  /* line 250, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  blockquote p:last-child,
-  blockquote ul:last-child,
-  blockquote ol:last-child {
-    margin-bottom: 0; }
-  /* line 257, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  blockquote footer,
-  blockquote small,
-  blockquote .small {
-    display: block;
-    font-size: 80%;
-    line-height: 1.42857;
-    color: #777777; }
-    /* line 265, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-    blockquote footer:before,
-    blockquote small:before,
-    blockquote .small:before {
-      content: '\2014 \00A0'; }
-
-/* line 274, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-.blockquote-reverse,
-blockquote.pull-right {
-  padding-right: 15px;
-  padding-left: 0;
-  border-right: 5px solid #eeeeee;
-  border-left: 0;
-  text-align: right; }
-  /* line 286, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  .blockquote-reverse footer:before,
-  .blockquote-reverse small:before,
-  .blockquote-reverse .small:before,
-  blockquote.pull-right footer:before,
-  blockquote.pull-right small:before,
-  blockquote.pull-right .small:before {
-    content: ''; }
-  /* line 287, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-  .blockquote-reverse footer:after,
-  .blockquote-reverse small:after,
-  .blockquote-reverse .small:after,
-  blockquote.pull-right footer:after,
-  blockquote.pull-right small:after,
-  blockquote.pull-right .small:after {
-    content: '\00A0 \2014'; }
-
-/* line 294, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_type.scss */
-address {
-  margin-bottom: 20px;
-  font-style: normal;
-  line-height: 1.42857; }
 
 /* line 7, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_code.scss */
 code,
@@ -11087,7 +10691,7 @@ button.close {
 
 /* line 7, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .bold {
-  font-weight: 500; }
+  font-weight: bold; }
 
 /* line 9, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .relative {
@@ -11673,25 +11277,34 @@ button.close {
   font-weight: normal;
   font-style: normal; }
 
-/* line 20, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
+@font-face {
+  font-family: 'Alegreya';
+  src: url("../fonts/alegreya-sans/AlegreyaSans-Medium.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 27, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
 html {
   letter-spacing: .5px;
-  font-weight: 200; }
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-/* line 25, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
+/* line 36, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
 h1, h2, h3, h4, h5, h6, p, .p {
   margin: 0;
   padding: 0; }
 
-/* line 30, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
+/* line 41, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Alegreya", Helvetica, Arial, sans-serif;
   letter-spacing: 2px; }
 
-/* line 31, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
+/* line 42, /Users/John/Dev/projects/storytime/public/css/base/typography.scss */
 p, .p {
-  color: #333;
-  letter-spacing: .5px; }
+  color: #333; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 html, .pageWrapperNormalize {
@@ -12640,31 +12253,30 @@ Search Tags for a story
 
 /* line 158, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .title {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 34px;
-  font-weight: 500; }
+  font-weight: bold; }
 
 /* line 164, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .subTitle {
-  font-size: 14px;
   margin: 0 auto 20px; }
 
-/* line 169, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 168, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .parentChildReading {
   width: 100%;
   max-width: 500px;
   margin-bottom: 20px; }
 
-/* line 175, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 174, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .exampleStory .content {
   border: 1px solid #ccc;
   border-radius: 5px; }
 
-/* line 180, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 179, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .item {
   margin-bottom: 10px; }
 
-/* line 181, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 180, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .innerContent {
   max-width: 500px;
   margin: 0 auto; }
@@ -12675,7 +12287,7 @@ Search Tags for a story
   to {
     opacity: 1; } }
 
-/* line 184, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 183, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage #values::after {
   content: '|';
   -webkit-animation: blink 500ms infinite;
