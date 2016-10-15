@@ -76,8 +76,7 @@ exports.postLogin = (req, res, next) => {
       req.logIn(user, (err) => {
         if (err) { return next(err); }
         console.log("normal login");
-        const returnUrl = req.session.returnTo.indexOf('/search') > -1 ? '/' : req.session.returnTo
-        res.redirect(returnUrl);
+        res.redirect(req.session.returnTo || '/');
       });
     }
   })(req, res, next);
