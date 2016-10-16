@@ -11587,45 +11587,50 @@ table.divider {
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
 .storyCard {
+  display: flex;
+  align-items: center;
   background-color: #fff;
-  display: block;
   margin-bottom: 10px;
   color: #999;
   position: relative;
   min-height: 75px;
-  box-shadow: 1px 1px 1px -1px #999; }
-  /* line 9, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
+  box-shadow: 1px 1px 1px -1px #999;
+  max-width: 400px; }
+  /* line 11, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
   .storyCard:hover {
     text-decoration: none;
     color: #999; }
-  /* line 13, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
+  /* line 15, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
   .storyCard .image {
     display: inline;
     float: left;
     height: 75px;
     width: 75px;
-    margin: 0 15px 0 0; }
-  /* line 20, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
+    min-width: 75px; }
+  /* line 22, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
   .storyCard .details {
-    padding: 10px; }
-  /* line 23, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
+    margin: 10px 10px 10px 20px;
+    width: 100%; }
+  /* line 26, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
   .storyCard .title {
     font-size: 14px;
+    line-height: 18px;
     color: #333;
     margin-bottom: 0;
-    width: calc(100% - (30px + 75px)); }
-  /* line 29, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
+    width: calc(100% - 5px); }
+  /* line 33, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
   .storyCard .price {
     position: absolute;
     top: 10px;
     right: 10px;
     color: #00B145; }
-  /* line 35, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
+  /* line 39, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
   .storyCard .desc {
     font-size: 12px;
+    line-height: 15px;
     -webkit-line-clamp: 2;
     margin: 0; }
-  /* line 40, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
+  /* line 45, /Users/John/Dev/projects/storytime/public/partials/storyCard/storyCard.scss */
   .storyCard .tags {
     border: 1px solid #ccc; }
 
@@ -11648,11 +11653,15 @@ table.divider {
   text-align: left; }
 
 /* line 6, /Users/John/Dev/projects/storytime/public/partials/story/story.scss */
+.story-in-detail p {
+  margin-bottom: 20px; }
+
+/* line 7, /Users/John/Dev/projects/storytime/public/partials/story/story.scss */
 .story-in-detail b {
-  color: blue;
+  color: #3b5998;
   min-width: 25px;
   display: inline-block; }
-  /* line 10, /Users/John/Dev/projects/storytime/public/partials/story/story.scss */
+  /* line 11, /Users/John/Dev/projects/storytime/public/partials/story/story.scss */
   .story-in-detail b:empty {
     height: 10px;
     opacity: .3;
@@ -11750,7 +11759,8 @@ styles here
 .inputWrapper.textarea .textareaElement {
   margin: 13px 0 0 0;
   padding-bottom: 13px;
-  min-height: 100px; }
+  min-height: 100px;
+  line-height: 24px; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
 .button {
@@ -12312,43 +12322,40 @@ Search Tags for a story
 
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
 .feedPage {
-  padding-top: 15px;
+  padding: 15px 0 30px;
   min-height: 100%;
   height: 100%;
   overflow: auto;
   background-color: #eee; }
-  /* line 7, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
+  /* line 8, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
   .feedPage .feedWrapper {
     display: flex;
     flex-flow: row wrap;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start; }
-    /* line 13, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
+    justify-content: center; }
+    /* line 14, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
     .feedPage .feedWrapper .resultsHeader {
-      margin: 0 auto 10px;
       width: 100%;
-      display: block; }
-      @media (min-width: 600px) {
-        /* line 13, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
-        .feedPage .feedWrapper .resultsHeader {
-          margin: 0 0 10px 20px; } }
-  /* line 22, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
+      display: block;
+      text-align: center;
+      margin-bottom: 20px; }
+  /* line 21, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
   .feedPage .searchBar {
     width: 100%;
     margin-bottom: 10px; }
-  /* line 26, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
+  /* line 25, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
   .feedPage .storyCard {
     width: 100%; }
-  @media (min-width: 600px) {
+  @media (min-width: 660px) {
     /* line 1, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
     .feedPage {
       padding-top: 30px; }
-      /* line 29, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
+      /* line 28, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
       .feedPage .storyCard {
         width: calc(50% - 30px);
         margin: 0 15px 30px; } }
-  /* line 34, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
+  /* line 33, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
   .feedPage .emptyFeed {
     display: block; }
 

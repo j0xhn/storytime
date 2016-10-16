@@ -1,11 +1,13 @@
 .storyCard{
+  display: flex;
+  align-items: center;
   background-color: $white;
-  display: block;
   margin-bottom: 10px;
   color: $gray;
   position: relative;
   min-height: $story-card-height;
   box-shadow: 1px 1px 1px -1px $gray;
+  max-width: 400px;
   &:hover{
     text-decoration: none;
     color: $gray;
@@ -15,16 +17,18 @@
     float: left;
     height: $story-card-height;
     width: $story-card-height;
-    margin: 0 15px 0 0;
+    min-width: $story-card-height;
   }
   .details {
-    padding: 10px;
+    margin: 10px 10px 10px 20px;
+    width: 100%;
   }
   .title{
     font-size: 14px;
+    line-height: 18px;
     color: $darkGray;
     margin-bottom: 0;
-    width: calc(100% - (30px + 75px))
+    width: calc(100% - 5px)
   }
   .price{
     position: absolute;

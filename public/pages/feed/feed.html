@@ -1,8 +1,8 @@
 <div class="feedPage">
   <div class="content feedWrapper">
-    <!-- <div class="searchBar"> <text-input type="search" ng-model='search.general'></text-input> </div> -->
     <h4 class="resultsHeader" ng-if="search.general">
-      <span ng-if="noResults">No r</span><span ng-if="!noResults">R</span>esults for "<strong>{{search.general}}</strong>"</h4>
+      <span ng-if="noResults">No r</span><span ng-if="!noResults">R</span>esults for "<strong>{{search.general}}</strong>"
+    </h4>
     <div
       story-card
       class="storyCard"
@@ -10,5 +10,9 @@
       story="story"
       ng-click="setAsSelectedStory(story)">
     </div>
+  </div>
+  <div class="resultsFooter tac" ng-if="search.general">
+    <p class='mar20b'> Not finding what you want?  Submit your story today! </p>
+    <a class="button" href="/submit">Create Your Story</a>
   </div>
 </div>
