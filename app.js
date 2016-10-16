@@ -91,6 +91,7 @@ app.use((req, res, next) => {
 });
 app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
+app.locals.env = process.env.NODE_ENV
 app.use((req, res, next) => {
   res.locals.user = req.user;
   res.locals.userJson = JSON.stringify(req.user);

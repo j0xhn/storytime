@@ -11885,7 +11885,7 @@ styles here
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
 .form {
   max-width: 600px;
-  padding: 20px;
+  padding: 10px;
   margin: 0 auto; }
   /* line 5, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
   .form.whiteBackground {
@@ -11904,19 +11904,22 @@ styles here
   .form .form-error {
     color: #f16464; }
   @media screen and (min-width: 600px) {
-    /* line 15, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
-    .form.whiteBackground {
-      padding: 40px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin: 30px auto 0; }
-    /* line 21, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
-    .form .input-group {
-      display: flex;
-      justify-content: space-between; }
-      /* line 24, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
-      .form .input-group .inputWrapper:first-of-type {
-        margin-right: 10px; } }
+    /* line 1, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+    .form {
+      padding: 20px; }
+      /* line 16, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+      .form.whiteBackground {
+        padding: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 30px auto 0; }
+      /* line 22, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+      .form .input-group {
+        display: flex;
+        justify-content: space-between; }
+        /* line 25, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+        .form .input-group .inputWrapper:first-of-type {
+          margin-right: 10px; } }
 
 /*------------------------------------*
 Search Tags for a story
@@ -12091,6 +12094,18 @@ Search Tags for a story
     opacity: 0.25; }
   100% {
     opacity: 0.25; } }
+
+/* line 1, /Users/John/Dev/projects/storytime/public/partials/feedback/feedback.scss */
+.feedbackButton {
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  background-color: #7da3f3;
+  color: white;
+  padding: 3px 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-weight: 400; }
 
 /* line 4, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .hero {

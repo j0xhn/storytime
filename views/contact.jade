@@ -13,6 +13,13 @@ block content
         label(for='email', class='label') Email
       .inputWrapper.textarea
         textarea(type='body', name='body', id='body', class='mimic-input textareaElement')
-        label(for='email', class='label') Body
+        label(for='email', class='label') Message
       button.button(type='submit')
         | Send
+  script.
+    var titleElm = document.getElementsByClassName('page-title')[0];
+    if (window.location.search.indexOf('feedback') > -1){
+      titleElm.innerText = 'How Can We Improve the Site?'
+    } else {
+      titleElm.innerText = 'Drop Us A Line'
+    }
