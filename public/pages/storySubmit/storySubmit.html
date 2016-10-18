@@ -16,7 +16,7 @@
       <text-area label='Short Description' ng-model='story.shortDesc' resize='none' max-length='160'></text-area>
       <!-- <text-area label='Long Description' ng-model='story.longDesc'></text-area> -->
       <divider title='Story Text' align='left' class='mar0b'></divider>
-      <div ng-repeat="input in story.inputs" class='input-group half'>
+      <div ng-repeat="input in story.inputs | toArray | orderBy: 'index'" class='input-group half'>
         <text-input label='Keyword' ng-model='input.keyword'></text-input>
         <text-input label='Description' ng-model='input.title'></text-input>
       </div>

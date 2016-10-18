@@ -4,6 +4,7 @@ const sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 const helper = require('sendgrid').mail;
 const passport = require('passport');
 const User = require('../models/User');
+// import { welcomeEmailPromise } from '../util/MessagingUtil'
 
 /**
  * GET /login

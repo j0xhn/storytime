@@ -51,18 +51,19 @@ angular.module('directives')
         }
         let inputs = story.inputs || {};
         if(Object.keys(inputs).length){
-          const objectToCombine = {};
+          let index = 0;
           for (var k in inputs){
+
+            // temporary for re-ordering legacy stories
+            if (!inputs[k].index) { inputs[k].index = index; index++; }
+            // end of temporary
+
             let input = inputs[k];
+            if (!input.keyword || !input.title ){ delete inputs[k] }
             if (inputs.hasOwnProperty(k) && input.hasOwnProperty('temporary') ) {
-              // if empty delete
-              if (!input.keyword){
-                delete inputs[k];
-              } else{
-                delete input.temporary;
-                inputs[input.keyword] = input;
-                delete inputs[k];
-              }
+              delete input.temporary;
+              inputs[input.keyword] = input;
+              delete inputs[k];
             }
           }
           story.html = storiesService.bindKeywords(story.html, true)
@@ -84,7 +85,10 @@ angular.module('directives')
 
       $scope.add = function () {
         const length = Object.keys($scope.story.inputs).length;
-        $scope.story.inputs[length] = { temporary: true };
+        $scope.story.inputs[length] = {
+          index: length,
+          temporary: true
+        };
       }
     },
     templateUrl: '/pages/storySubmit/storySubmit.html',
