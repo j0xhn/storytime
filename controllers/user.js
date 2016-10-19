@@ -423,21 +423,21 @@ exports.postUpdateOrCreate = (req, res, next) => {
         });
       },
       function (token, user, done) {
-        const subs = [
-          {
-            text:'-resetUrl-',
-            value: `${req.headers.host}/reset/${token}`
+        const subs = { '-resetUrl-':`${req.headers.host}/reset/${token}`, }
+        const handleResponse = function(res){
+          if(res.error){
+            req.flash('info', { msg: `An error occured.` });
+            console.error('MessageUtil returned error sending password reset');
+            done(res.error);
+          } else {
+            req.flash('info', { msg: `An reset e-mail has been sent to ${user.email}` });
+            done();
           }
-        ]
-        MessagingUtil.sendTemplatePromise('resetPassword', user.email, subs).then(function(res){
-          console.log("made it here", res);
-          req.flash('info', { msg: `An e-mail has been sent to ${user.email} with further instructions.` });
-          done(error);
-        }).catch(function(err){
-          if (err) { return next(err); }
-        })
-      }
-    ], (err) => {
+        }
+        MessagingUtil.sendTemplate('resetPassword', user.email, subs, handleResponse)
+    }
+  ], (err) => {
+      debugger;
       if (err) { return next(err); }
       res.redirect('/forgot');
     });

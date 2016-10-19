@@ -2,8 +2,11 @@ const sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 const helper = require('sendgrid').mail;
 const messagingUtil = {};
 
-messagingUtil.sendTemplatePromise = function(template, email, _subs){
-  let templateId, subject;
+messagingUtil.sendTemplate = function(template, email, _subs, callback){
+  let templateId,
+      subject,
+      from_email = 'donotreply@'+process.env.DOMAIN;
+
   const subs = _subs;
 
   if(template === 'welcome'){
@@ -16,35 +19,41 @@ messagingUtil.sendTemplatePromise = function(template, email, _subs){
     subject = 'Reset Your Password';
   }
 
-  return new Promise(function (fulfill, reject){
-    const to_email = new helper.Email(email);
-    const from_email = new helper.Email('donotreply@storytime.com');
-    const mail = new helper.Mail(from_email, subject, to_email);
-    const personalization = new helper.Personalization()
-
-    // apply template and template data
-    mail.setTemplateId(templateId);
-    if(subs){
-      subs.map(function(sub){
-        mail.addPersonalization(new helper.Substitution(sub.text, sub.value))
-      });
-    }
+    // const from_email = new helper.Email('donotreply@storytime.com');
+    // const mail = new helper.Mail(from_email, subject, to_email);
+    // const personalization = new helper.Personalization()
+    //
+    // // apply template and template data
+    // mail.setTemplateId(templateId);
+    // if(subs){
+    //   subs.map(function(sub){
+    //     mail.addPersonalization(new helper.Substitution(sub.text, sub.value))
+    //   });
+    // }
 
     const request = sg.emptyRequest({
       method: 'POST',
       path: '/v3/mail/send',
-      body: mail.toJSON(),
+      body: {
+       personalizations: [
+         {
+           to: [ { email: email, }, ],
+           'substitutions': subs,
+           'subject': subject,
+         },
+       ],
+       from: { email: from_email, },
+       'template_id': templateId,
+     },
     });
-    
+
     sg.API(request, function(error, response) {
-      debugger;
       if(error){
-        reject(error);
+        callback(error)
       } else {
-        fulfill(response);
+        callback(response)
       }
     });
-  });
 }
 
 module.exports = messagingUtil;
