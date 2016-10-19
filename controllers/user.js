@@ -423,12 +423,14 @@ exports.postUpdateOrCreate = (req, res, next) => {
         });
       },
       function (token, user, done) {
-        const data = {
-          to_email: user.email,
-          from_email: 'donotreply@storytimebedtime.com',
-          subject: 'Reset Your Password'
-        }
-        messagingUtil.sendTemplatePromise('resetPassword', data).success(function(res){
+        const subs = [
+          {
+            text:'-resetUrl-',
+            value: `${req.headers.host}/reset/${token}`
+          }
+        ]
+        MessagingUtil.sendTemplatePromise('resetPassword', user.email, subs).then(function(res){
+          console.log("made it here", res);
           req.flash('info', { msg: `An e-mail has been sent to ${user.email} with further instructions.` });
           done(error);
         }).catch(function(err){
