@@ -343,29 +343,6 @@ exports.postUpdateOrCreate = (req, res, next) => {
             });
           });
         });
-      },
-      function (user, done) {
-        const to_email = new helper.Email(user.email);
-        const from_email = new helper.Email('donotreply@storytime.com');
-        const subject = 'Your password has been changed';
-        const content = new helper.Content('text/plain', `Hello,\n\nThis is a confirmation that the password for your account ${user.email} has just been changed.\n`);
-        const mail = new helper.Mail(from_email, subject, to_email, content);
-
-        const request = sg.emptyRequest({
-          method: 'POST',
-          path: '/v3/mail/send',
-          body: mail.toJSON(),
-        });
-
-        sg.API(request, function(error, response) {
-          if(error){
-            req.flash('info', { msg: `An error occured.` });
-            done(error);
-          } else {
-            req.flash('success', { msg: 'Success! Your password has been changed.' });
-            done(error);
-          }
-        });
       }
     ], (err) => {
       if (err) { return next(err); }
