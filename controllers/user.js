@@ -132,13 +132,24 @@ exports.postSignup = (req, res, next) => {
       req.flash('errors', { msg: 'Account with that email address already exists.' });
       return res.redirect('/signup');
     }
+
+    const handleResponse = function(response){
+      if(response.error){
+        req.flash('info', { msg: `An error occured.` });
+        console.error('MessageUtil returned error sending welcome email');
+      } else {
+        //TODO: google analytics success log 
+      }
+      res.redirect('/');
+    }
+
     user.save((err) => {
       if (err) { return next(err); }
       req.logIn(user, (err) => {
         if (err) {
           return next(err);
         }
-        res.redirect('/');
+        MessagingUtil.sendTemplate('welcome', user.email, null, handleResponse)
       });
     });
   });
@@ -216,13 +227,20 @@ exports.postUpdateProfile = (req, res, next) => {
 */
 exports.postUpdateOrCreate = (req, res, next) => {
   const user = req.body;
+  const handleResponse = function(res){
+    if(res.error){
+      console.error('MessageUtil returned error sending welcome email');
+    } else {
+      res.send({success: true});
+    }
+  }
   User.update( { _id: user._id }, user, { upsert: true },
     function (err, result) {
       if (err) {
         console.error(err);
         res.send({ error: 'Email already exists', })
       } else {
-        res.send({success: true});
+        MessagingUtil.sendTemplate('welcome', user.email, null, handleResponse)
       }
     });
   }

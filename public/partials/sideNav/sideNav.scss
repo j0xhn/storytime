@@ -41,8 +41,10 @@
     overflow: auto;
     padding: 20px;
     font-size: 18px;
-    // border-bottom: 1px solid $gray;
-    &.atypical{ &:hover{ background-color: transparent;} }
+    &.atypical{
+      line-height: 36px;
+      &:hover{ background-color: transparent;}
+    }
     &:hover{ background-color: $lightestGray; }
   }
 

@@ -11507,12 +11507,15 @@ a {
     padding: 20px;
     font-size: 18px; }
     /* line 45, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
-    #sideNav .item.atypical:hover {
-      background-color: transparent; }
-    /* line 46, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+    #sideNav .item.atypical {
+      line-height: 36px; }
+      /* line 47, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+      #sideNav .item.atypical:hover {
+        background-color: transparent; }
+    /* line 49, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
     #sideNav .item:hover {
       background-color: #e5e5e5; }
-  /* line 49, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+  /* line 52, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
   #sideNav.open {
     left: 0;
     box-shadow: -3px 0 20px 0 #ccc;
@@ -12329,8 +12332,9 @@ Search Tags for a story
 
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/storyPage/storyPage.scss */
 .story-page {
-  background-color: #fff; }
-  /* line 3, /Users/John/Dev/projects/storytime/public/pages/storyPage/storyPage.scss */
+  background-color: #fff;
+  padding-top: 10px; }
+  /* line 4, /Users/John/Dev/projects/storytime/public/pages/storyPage/storyPage.scss */
   .story-page .edit-button {
     display: block;
     text-align: center; }
