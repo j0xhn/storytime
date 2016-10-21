@@ -11,7 +11,7 @@ angular.module('directives')
         image_dimensions: false
       };
 
-      $scope.exampleId = '57ee7ef2002a8c317ffe5c30';
+      $scope.exampleId = window.env === 'Sandbox' ? null : '57ee7ef2002a8c317ffe5c30';
       if ($routeParams.storyId == $scope.exampleId) $scope.exampleStory = true;
 
       $scope.handleSuccess = function(id){
@@ -53,9 +53,11 @@ angular.module('directives')
         if(Object.keys(inputs).length){
           let index = 0;
           for (var k in inputs){
-
-            // temporary for re-ordering legacy stories
+            // TEMPORARY - get legacy up to date 
+            // for re-ordering legacy stories
             if (!inputs[k].index) { inputs[k].index = index; index++; }
+            // for adding type of input
+            if (!inputs[k].type){ inputs[k].type = 'text'}
             // end of temporary
 
             let input = inputs[k];
@@ -83,11 +85,12 @@ angular.module('directives')
         });
       }
 
-      $scope.add = function () {
+      $scope.add = function (type) {
         const length = Object.keys($scope.story.inputs).length;
         $scope.story.inputs[length] = {
           index: length,
-          temporary: true
+          temporary: true,
+          type: type
         };
       }
     },

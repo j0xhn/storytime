@@ -16,9 +16,14 @@ angular.module('directives')
 
           // binds keywords to the html placeholders
           var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
+          debugger;
           for (var i = 0, len = inputsArray.length; i < len; i++) {
-            var inputRegex = new RegExp('"'+inputsArray[i]+'"','g');
-            $scope.storyObj.html = $scope.storyObj.html.replace(inputRegex,'"storyObj.inputs.'+inputsArray[i]+'.value"')
+            const input = inputsArray[i];
+            if(input.type === 'text'){
+              var inputRegex = new RegExp('"'+input+'"','g');
+              $scope.storyObj.html = $scope.storyObj.html.replace(inputRegex,'"storyObj.inputs.'+inputsArray[i]+'.value"')
+            } else if(input){}
+
           }
           $timeout(function(){
             // TODO: un-hack this

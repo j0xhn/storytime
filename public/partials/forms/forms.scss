@@ -8,6 +8,7 @@
   .input-group{
     display: block;
     border-bottom: 1px dashed $lightGray;
+    &.last{ border-bottom: none; }
   }
   .form-error{ color: $red; }
 

@@ -15,25 +15,21 @@
       <text-input label='Search Tags - comma seperated' ng-model='story.tags'></text-input>
       <text-area label='Short Description' ng-model='story.shortDesc' resize='none' max-length='160'></text-area>
       <!-- <text-area label='Long Description' ng-model='story.longDesc'></text-area> -->
-      <divider title='Story Text' align='left' class='mar0b'></divider>
-      <div ng-repeat="input in story.inputs | toArray | orderBy: 'index'" class='input-group half'>
-        <text-input label='Keyword' ng-model='input.keyword'></text-input>
-        <text-input label='Description' ng-model='input.title'></text-input>
+      <divider title='Interactive Inputs' align='left' class='mar0b'></divider>
+      <small class='block formGroup mar0'> Interactive inputs allow the reader to insert their name,
+        favorite character, gender, or other applicable item into a story.  The "keyword"
+        is a single word (no special characters) used in the story text with curly
+        brackets around it as such {keyword}.  The "description" will appear inside the input as a
+        placeholder and helper for a user. To see an example of how this should be utilized <a href='/submit/57ee7ef2002a8c317ffe5c30' class='underline txt-blue'>click here</a>
+      </small>
+      <div class="btn-group mar10b" ng-if="!exampleStory">
+        <button type="button" ng-click='add("text")' class="button mar0"> Add Text Input </button>
+        <button type="button" name="button" class="button lightBlue" ng-click='add("toggle")'>Add Toggle Button</button>
       </div>
-      <div class="btn-group" ng-if="!exampleStory">
-        <button type="button" ng-click='add()' class="button dropdown-toggle mar5b" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Add Interactive Input
-        </button>
-        <!-- <ul class="dropdown-menu">
-          <li><a ng-click='add()'>Text</a></li>
-          <li><a href="#">Male / Female</a></li>
-        </ul> -->
-        <small class='block formGroup mar10t'> Interactive inputs allow the reader to insert their name,
-          favorite character, gender, or other applicable item into a story.  The "keyword"
-          is a single word (no special characters) used in the story text with curly
-          brackets around it as such {keyword}.  The "description" will appear inside the input as a
-          placeholder and helper for a user. To see an example of how this should be utilized <a href='/submit/57ee7ef2002a8c317ffe5c30' class='underline txt-blue'>click here</a>
-        </small>
+      <div ng-repeat="input in story.inputs | toArray | orderBy: 'index'" class='input-group half' ng-class="{'last': $last}">
+          <text-input label='Keyword' ng-model='input.keyword' ng-if="input.type === 'text' || !input.type"></text-input>
+          <text-input label='Description' ng-model='input.title' ng-if="input.type === 'text' || !input.type"></text-input>
+          <toggle-input input="input" ng-if="input.type === 'toggle'"></toggle-input>
       </div>
       <textarea class='h300' ui-tinymce="tinymceOptions" ng-model="story.html"></textarea>
       <button ng-click="submitStory(story)" class="button" ng-if="!exampleStory"> submit </button>

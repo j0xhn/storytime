@@ -11506,16 +11506,16 @@ a {
     overflow: auto;
     padding: 20px;
     font-size: 18px; }
-    /* line 45, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+    /* line 44, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
     #sideNav .item.atypical {
       line-height: 36px; }
-      /* line 47, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+      /* line 46, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
       #sideNav .item.atypical:hover {
         background-color: transparent; }
-    /* line 49, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+    /* line 48, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
     #sideNav .item:hover {
       background-color: #e5e5e5; }
-  /* line 52, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
+  /* line 51, /Users/John/Dev/projects/storytime/public/partials/sideNav/sideNav.scss */
   #sideNav.open {
     left: 0;
     box-shadow: -3px 0 20px 0 #ccc;
@@ -11765,6 +11765,17 @@ styles here
   min-height: 100px;
   line-height: 24px; }
 
+/*------------------------------------*
+#INPUTS & STATES (single-line etc...)
+Textarea in seperate file but uses the
+"mimic-input" class defined here for
+continuity
+
+\*------------------------------------*/
+/* line 10, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+.toggleInputWrapper {
+  background-color: blue; }
+
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
 .button {
   border: none;
@@ -11903,24 +11914,27 @@ styles here
   .form .input-group {
     display: block;
     border-bottom: 1px dashed #ccc; }
-  /* line 12, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+    /* line 11, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+    .form .input-group.last {
+      border-bottom: none; }
+  /* line 13, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
   .form .form-error {
     color: #f16464; }
   @media screen and (min-width: 600px) {
     /* line 1, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
     .form {
       padding: 20px; }
-      /* line 16, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+      /* line 17, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
       .form.whiteBackground {
         padding: 40px;
         border: 1px solid #ccc;
         border-radius: 5px;
         margin: 30px auto 0; }
-      /* line 22, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+      /* line 23, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
       .form .input-group {
         display: flex;
         justify-content: space-between; }
-        /* line 25, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+        /* line 26, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
         .form .input-group .inputWrapper:first-of-type {
           margin-right: 10px; } }
 
