@@ -11766,15 +11766,22 @@ styles here
   line-height: 24px; }
 
 /*------------------------------------*
-#INPUTS & STATES (single-line etc...)
-Textarea in seperate file but uses the
-"mimic-input" class defined here for
-continuity
+Toggle button
 
 \*------------------------------------*/
-/* line 10, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
-.toggleInputWrapper {
-  background-color: blue; }
+@media screen and (min-width: 600px) {
+  /* line 10, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+  .toggleInputWrapper .editSection, .toggleInputWrapper .displaySection {
+    display: flex;
+    justify-content: space-between; } }
+
+/* line 13, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+.toggleInputWrapper.editMode .input {
+  display: inline; }
+
+/* line 14, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+.toggleInputWrapper.editMode .displaySection {
+  display: none; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/button/button.scss */
 .button {
@@ -11936,7 +11943,10 @@ continuity
         justify-content: space-between; }
         /* line 26, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
         .form .input-group .inputWrapper:first-of-type {
-          margin-right: 10px; } }
+          margin-right: 10px; }
+        /* line 27, /Users/John/Dev/projects/storytime/public/partials/forms/forms.scss */
+        .form .input-group .inputWrapper:nth-of-type(3) {
+          margin-left: 10px; } }
 
 /*------------------------------------*
 Search Tags for a story
@@ -12396,6 +12406,12 @@ Search Tags for a story
 .submit-page {
   background-color: #fff;
   padding: 15px 0; }
+  /* line 6, /Users/John/Dev/projects/storytime/public/pages/storySubmit/storySubmitPage.scss */
+  .submit-page .btn-group:first-child {
+    margin-bottom: 10px; }
+  /* line 7, /Users/John/Dev/projects/storytime/public/pages/storySubmit/storySubmitPage.scss */
+  .submit-page .btn-group:last-child {
+    margin: 0; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
 .detailPage {

@@ -1,3 +1,10 @@
-<div class="toggleInputWrapper formGroup">
-  This is a toggle input
+<div class="toggleInputWrapper" ng-class="{'editMode': editMode}">
+  <div class="editSection">
+      <text-input ng-model="ngModel.keyword" label='Keyword'></text-input>
+      <text-input ng-model="ngModel.option1" label='Option 1'></text-input>
+      <text-input ng-model="ngModel.option2" label='Option 2'></text-input>
+  </div>
+  <div class="displaySection">
+    This is a toggle display
+  </div>
 </div>

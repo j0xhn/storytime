@@ -11,8 +11,8 @@ angular.module('directives')
         image_dimensions: false
       };
 
-      $scope.exampleId = window.env === 'Sandbox' ? null : '57ee7ef2002a8c317ffe5c30';
-      if ($routeParams.storyId == $scope.exampleId) $scope.exampleStory = true;
+      $scope.exampleId = '57ee7ef2002a8c317ffe5c30';
+      if ($routeParams.storyId == $scope.exampleId && window.env != 'Sandbox') $scope.exampleStory = true;
 
       $scope.handleSuccess = function(id){
         $location.path('/success/save-story').search({d:id || $routeParams.storyId});
@@ -53,7 +53,7 @@ angular.module('directives')
         if(Object.keys(inputs).length){
           let index = 0;
           for (var k in inputs){
-            // TEMPORARY - get legacy up to date 
+            // TEMPORARY - get legacy up to date
             // for re-ordering legacy stories
             if (!inputs[k].index) { inputs[k].index = index; index++; }
             // for adding type of input
@@ -61,13 +61,14 @@ angular.module('directives')
             // end of temporary
 
             let input = inputs[k];
-            if (!input.keyword || !input.title ){ delete inputs[k] }
+            if (!input.keyword ){ delete inputs[k] }
             if (inputs.hasOwnProperty(k) && input.hasOwnProperty('temporary') ) {
               delete input.temporary;
               inputs[input.keyword] = input;
               delete inputs[k];
             }
           }
+          debugger;
           story.html = storiesService.bindKeywords(story.html, true)
         }
 

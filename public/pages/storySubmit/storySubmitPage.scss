@@ -1,4 +1,9 @@
 .submit-page{
   background-color: $white;
   padding: 15px 0;
+
+  .btn-group{
+    &:first-child{ margin-bottom: 10px;}
+    &:last-child{ margin: 0;}
+  }
 }

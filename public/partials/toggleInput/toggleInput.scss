@@ -1,12 +1,16 @@
 /*------------------------------------*\
 
-#INPUTS & STATES (single-line etc...)
-Textarea in seperate file but uses the
-"mimic-input" class defined here for
-continuity
+Toggle button
 
 \*------------------------------------*/
 
 .toggleInputWrapper{
-  background-color: blue;
+
+  @media screen and (min-width: $small-width){
+    .editSection, .displaySection { display: flex; justify-content: space-between;}
+  }
+  &.editMode{
+    .input{ display: inline; }
+    .displaySection { display: none;}
+  }
 }
