@@ -30,7 +30,7 @@
       </small>
       <div class="btn-group formGroup" ng-if="!exampleStory">
         <button type="button" ng-click='add("text")' class="button mar10b mar0t"> Add Text Input </button>
-        <button type="button" name="button" class="button lightBlue mar0" ng-click='add("toggle")'>Add Toggle Button</button>
+        <button type="button" name="button" class="button lightBlue mar0" ng-click='add("toggle")'>Add Toggle Input</button>
       </div>
       <div ng-repeat="input in story.inputs | toArray | orderBy: 'index'" class='input-group'
            ng-class="{'last': $last, 'half': input.type === 'text', 'thirds': input.type === 'toggle'}">

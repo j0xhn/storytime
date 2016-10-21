@@ -5,6 +5,10 @@
       <text-input ng-model="ngModel.option2" label='Option 2'></text-input>
   </div>
   <div class="displaySection">
-    This is a toggle display
+    <span>{{ngLabel}}</span>
+    <form class="">
+      <input type="checkbox" name="option1" ng-click="toggleModel()" />
+    </form>
+    {{ngModel.value}}
   </div>
 </div>

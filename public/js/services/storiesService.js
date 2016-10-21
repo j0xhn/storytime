@@ -27,12 +27,79 @@ angular.module('services')
     })
   };
 
-  ss.bindKeywords = function(storyString, bind){
-    const sp = [ '{','<b ng-bind="'];
-    const ep = ['}','"></b>'];
-    return storyString
+  ss.getKeywordArrayWithType = function(inputArray, type){
+    const response = [];
+    for (key in inputArray) {
+        if (inputArray[key].type === type) { response.push(inputArray[key].keyword)}
+    }
+    if (response.length === 0) { return null }
+    else { return response }
+
+  }
+  ss.bindToggleKeywords = function(htmlString, bind) {
+    let response;
+
+    function replaceToggle(htmlString){
+      const regex = /\[(.*?)\]/;
+      const toggleSections = regex.exec(htmlString);
+      if(!toggleSections) {
+        response = htmlString;
+        return;
+      }
+      // if a new section is found continue
+      const sections = toggleSections[1].split(',');
+      const obj = {}
+      const parts = sections.map(function(section){
+        const ta = section.split(':');
+        if (ta[0].trim() === 'k'){ obj.keyword = ta[1]}
+        else if (ta[0].trim() === '1'){ obj.option1 = ta[1]}
+        else if (ta[0].trim() === '2'){ obj.option2 = ta[1]}
+      })
+      const element1 = document.createElement('span');
+      element1.innerHTML = obj.option1;
+      element1.setAttribute('ng-hide',obj.keyword)
+
+      const element2 = document.createElement('span');
+      element2.innerHTML = obj.option2;
+      element2.setAttribute('ng-show',obj.keyword)
+
+      const wrapper = document.createElement('span');
+      wrapper.appendChild(element1);
+      wrapper.appendChild(element2);
+
+      replaceToggle(htmlString.replace(toggleSections[0], wrapper.innerHTML));
+    }
+
+    const reverseToggle = function(htmlString){
+      debugger
+    }
+
+    if (bind) { replaceToggle(htmlString) }
+    else { reverseToggle(htmlString) }
+    return response;
+  }
+
+  ss.bindTextKeywords = function(storyString, keywordArray, type, bind){
+    // setting bind to true or false is binding or unbinding
+      const sp = [ '{','<b ng-bind="'];
+      const ep = ['}','"></b>'];
+      return storyString
       .replace(new RegExp( bind ? sp[0] : sp[1], 'g'), bind ? sp[1] : sp[0])
       .replace(new RegExp( bind ? ep[0] : ep[1], 'g'), bind ? ep[1] : ep[0])
+  }
+
+  ss.replaceTextValues = function(htmlString, textInputArray){
+    if (textInputArray.length === 0) return
+    for (var i = 0, len = textInputArray.length; i < len; i++) {
+      const input = textInputArray[i];
+        var inputRegex = new RegExp('"'+input+'"','g');
+        htmlString = htmlString.replace(inputRegex,'"storyObj.inputs.'+textInputArray[i]+'.value"')
+    }
+    return htmlString;
+  }
+
+  ss.bindToggleValues = function(htmlString, toggleInputArray){
+    console.log('made it here with array:', toggleInputArray)
   }
 
   /*

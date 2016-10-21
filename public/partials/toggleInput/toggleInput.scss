@@ -9,6 +9,7 @@ Toggle button
   @media screen and (min-width: $small-width){
     .editSection, .displaySection { display: flex; justify-content: space-between;}
   }
+  .editSection { display: none; }
   &.editMode{
     .input{ display: inline; }
     .displaySection { display: none;}

@@ -13,18 +13,16 @@ angular.module('directives')
         }
         var applyStoryToView = function(storyObj){
           $scope.storyObj = storyObj;
+					const inputs = storyObj.inputs;
 
-          // binds keywords to the html placeholders
-          var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
-          debugger;
-          for (var i = 0, len = inputsArray.length; i < len; i++) {
-            const input = inputsArray[i];
-            if(input.type === 'text'){
-              var inputRegex = new RegExp('"'+input+'"','g');
-              $scope.storyObj.html = $scope.storyObj.html.replace(inputRegex,'"storyObj.inputs.'+inputsArray[i]+'.value"')
-            } else if(input){}
+         var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
+					if (inputsArray.length === 0) return
+					for (var i = 0, len = inputsArray.length; i < len; i++) {
+						const input = inputsArray[i];
+							var inputRegex = new RegExp('"'+input+'"','g');
+							$scope.storyObj.html = $scope.storyObj.html.replace(inputRegex,'"storyObj.inputs.'+inputsArray[i]+'.value"')
+					}
 
-          }
           $timeout(function(){
             // TODO: un-hack this
             // done because angular strips out attributes on span

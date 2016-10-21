@@ -7,6 +7,7 @@
 - delete stories by sending them to another collection called "deleted" or something
 - create an "needs approval" collection
 - change text font to "europa"
+- make a global input directive to handle text, and toggle inputs
 
 [ ] Directed to signup
 - Fix Facebook singup to work if user is already found

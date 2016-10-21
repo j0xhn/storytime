@@ -26,7 +26,8 @@ angular.module('directives')
               if(!userService.user._id === story.authorId){
                 $scope.pageErrorMessage = 'You do not have permission to edit this story.  Please try logging in under the account that authored this story.'
               }
-              story.html = storiesService.bindKeywords(story.html, false);
+              story.html = storiesService.bindTextKeywords(story.html, false);
+              // story.html = storiesService.bindToggleKeywords(story.html, false);
               resolve(res.data);
             } else {
               $scope.pageErrorMessage = `Story not found.  Check the id in the URL and contact support if you continue to have problems`;
@@ -68,8 +69,13 @@ angular.module('directives')
               delete inputs[k];
             }
           }
-          debugger;
-          story.html = storiesService.bindKeywords(story.html, true)
+
+          const textKeywordArray = storiesService.getKeywordArrayWithType(inputs, 'text');
+          const toggleKeywordArray = storiesService.getKeywordArrayWithType(inputs, 'toggle');
+
+          story.html = storiesService.bindTextKeywords(story.html, textKeywordArray, 'text', true);
+          story.html = storiesService.bindToggleKeywords(story.html, toggleKeywordArray, 'toggle', true);
+          debugger
         }
 
         story.authorName = userService.isLoggedIn() ? 'Guest Author' : userService.user.profile.name;

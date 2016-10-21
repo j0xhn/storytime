@@ -11775,11 +11775,15 @@ Toggle button
     display: flex;
     justify-content: space-between; } }
 
-/* line 13, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+/* line 12, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+.toggleInputWrapper .editSection {
+  display: none; }
+
+/* line 14, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
 .toggleInputWrapper.editMode .input {
   display: inline; }
 
-/* line 14, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+/* line 15, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
 .toggleInputWrapper.editMode .displaySection {
   display: none; }
 
