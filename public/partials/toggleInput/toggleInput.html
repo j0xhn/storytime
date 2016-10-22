@@ -1,14 +1,19 @@
-<div class="toggleInputWrapper" ng-class="{'editMode': editMode}">
+<div class="toggleInputWrapper formGroup" ng-class="{'editMode': editMode}">
   <div class="editSection">
       <text-input ng-model="ngModel.keyword" label='Keyword'></text-input>
       <text-input ng-model="ngModel.option1" label='Option 1'></text-input>
       <text-input ng-model="ngModel.option2" label='Option 2'></text-input>
   </div>
   <div class="displaySection">
-    <span>{{ngLabel}}</span>
-    <form class="">
-      <input type="checkbox" name="option1" ng-click="toggleModel()" />
-    </form>
-    {{ngModel.value}}
+    <span class='toggleLabel'>{{ngLabel}}</span>
+    <div class="toggleInput" ng-class="status" ng-click="toggleModel()">
+      <span class="option on">{{input.option1}}</span>
+      <span class="option off">{{input.option2}}</span>
+      <span class="switch">
+        <span class="state success">
+          <span class="checkmark"></span>
+        </span>
+      </span>
+    </span>
   </div>
 </div>

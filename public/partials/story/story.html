@@ -3,7 +3,8 @@
     <h2 class='story-title'>{{storyObj.title}}</h2>
     <img ng-if="!excludeimage" ng-src="{{storyObj.photoUrl}}" alt="Story Image" class='story-image'/>
     <text-input ng-repeat="input in storyObj.inputs | toArray | orderBy: 'index' | filter: {type: 'text'}" ng-label="input.title" ng-model="input.value"></text-input>
-    <toggle-input ng-repeat="input in storyObj.inputs | toArray | orderBy: 'index' | filter: {type: 'toggle'}" ng-label="input.keyword" ng-model="input.value"></toggle-input>
+    <toggle-input ng-repeat="input in storyObj.inputs | toArray | orderBy: 'index' | filter: {type: 'toggle'}" ng-label="input.keyword" ng-model="input.value" input="input"></toggle-input>
+    <divider></divider>
     <div class='story-text' id='replace-with-html'></div>
   </div>
 </div>
