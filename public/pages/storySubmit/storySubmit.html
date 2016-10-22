@@ -34,8 +34,8 @@
       </div>
       <div ng-repeat="input in story.inputs | toArray | orderBy: 'index'" class='input-group'
            ng-class="{'last': $last, 'half': input.type === 'text', 'thirds': input.type === 'toggle'}">
-          <text-input label='Keyword' ng-model='input.keyword' ng-if="input.type === 'text' || !input.type"></text-input>
-          <text-input label='Description' ng-model='input.title' ng-if="input.type === 'text' || !input.type"></text-input>
+          <text-input label='Keyword' ng-model='input.keyword' ng-if="input.type === 'text'"></text-input>
+          <text-input label='Description' ng-model='input.title' ng-if="input.type === 'text'"></text-input>
           <toggle-input ng-model='input' input="input" ng-if="input.type === 'toggle'" edit-mode="true"></toggle-input>
       </div>
       <textarea class='h300' ui-tinymce="tinymceOptions" ng-model="story.html"></textarea>

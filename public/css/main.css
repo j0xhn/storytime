@@ -11775,31 +11775,34 @@ Toggle button
   align-items: center;
   justify-content: flex-start; }
 
-@media screen and (min-width: 600px) {
-  /* line 10, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
-  .toggleInputWrapper .editSection {
-    display: flex;
-    justify-content: space-between; } }
-
-/* line 12, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+/* line 9, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
 .toggleInputWrapper .editSection {
   display: none; }
 
-/* line 14, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+/* line 11, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
 .toggleInputWrapper.editMode .input {
   display: inline; }
 
-/* line 15, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+/* line 12, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+.toggleInputWrapper.editMode .editSection {
+  display: block; }
+  @media screen and (min-width: 600px) {
+    /* line 12, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+    .toggleInputWrapper.editMode .editSection {
+      display: flex;
+      justify-content: space-between; } }
+
+/* line 18, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
 .toggleInputWrapper.editMode .displaySection {
   display: none; }
 
-/* line 18, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+/* line 21, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
 .toggleInputWrapper .toggleLabel {
   text-transform: capitalize;
   margin-right: 15px;
   color: #333; }
 
-/* line 29, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+/* line 32, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
 .toggleInputWrapper .toggleInput {
   background-color: #7da3f3;
   border-radius: 3px;
@@ -11813,45 +11816,45 @@ Toggle button
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  /* line 42, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+  /* line 45, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
   .toggleInputWrapper .toggleInput .option {
     line-height: 40px;
     text-align: center;
     color: #fff;
     transition: opacity 200ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-    /* line 47, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+    /* line 50, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
     .toggleInputWrapper .toggleInput .option.on {
       margin-right: 5px;
       opacity: 0; }
-    /* line 48, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+    /* line 51, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
     .toggleInputWrapper .toggleInput .option.off {
       margin-left: 5px;
       opacity: 1; }
-  /* line 51, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+  /* line 54, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
   .toggleInputWrapper .toggleInput.loading {
     opacity: .5; }
-  /* line 53, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+  /* line 56, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
   .toggleInputWrapper .toggleInput.successful .switch i {
     opacity: 1; }
-  /* line 55, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+  /* line 58, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
   .toggleInputWrapper .toggleInput.successful .switch .success {
     opacity: 1;
     transform: scale(1); }
-  /* line 60, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+  /* line 63, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
   .toggleInputWrapper .toggleInput.active {
     background-color: #36C6B1;
     box-shadow: inset 0px 5px 20px -15px #000000; }
-    /* line 63, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+    /* line 66, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
     .toggleInputWrapper .toggleInput.active .on {
       opacity: 1; }
-    /* line 64, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+    /* line 67, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
     .toggleInputWrapper .toggleInput.active .off {
       opacity: 0; }
-  /* line 68, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+  /* line 71, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
   .toggleInputWrapper .toggleInput.active .switch {
     left: 60%; }
 
-/* line 73, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+/* line 76, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
 .toggleInputWrapper .switch {
   background-color: #fff;
   border-radius: 3px;
@@ -11861,7 +11864,7 @@ Toggle button
   position: absolute;
   top: 5px;
   transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-  /* line 83, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+  /* line 86, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
   .toggleInputWrapper .switch .state {
     height: 46px;
     left: 50%;
@@ -11873,7 +11876,7 @@ Toggle button
     transform: scale(0.2);
     transition: 400ms cubic-bezier(0.215, 0.61, 0.355, 1) all;
     width: 46px; }
-    /* line 95, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
+    /* line 98, /Users/John/Dev/projects/storytime/public/partials/toggleInput/toggleInput.scss */
     .toggleInputWrapper .switch .state.success i {
       color: #36C6B1;
       left: 0;

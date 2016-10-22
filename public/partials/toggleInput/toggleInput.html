@@ -1,4 +1,5 @@
-<div class="toggleInputWrapper formGroup" ng-class="{'editMode': editMode}">
+<div class="toggleInputWrapper" ng-class="{'editMode': editMode, 'formGroup': !editMode}">
+  <!-- formGroup class is for proper spacing when in non-edit form -->
   <div class="editSection">
       <text-input ng-model="ngModel.keyword" label='Keyword'></text-input>
       <text-input ng-model="ngModel.option1" label='Option 1'></text-input>

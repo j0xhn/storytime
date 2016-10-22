@@ -6,12 +6,15 @@ Toggle button
 
 .toggleInputWrapper{
   .displaySection { display: flex; align-items: center; justify-content: flex-start; }
-  @media screen and (min-width: $small-width){
-    .editSection { display: flex; justify-content: space-between;}
-  }
   .editSection { display: none; }
   &.editMode{
     .input{ display: inline; }
+    .editSection {
+      display: block;
+      @media screen and (min-width: $small-width){
+        display: flex; justify-content: space-between;
+      }
+    }
     .displaySection { display: none;}
   }
 
