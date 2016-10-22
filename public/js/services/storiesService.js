@@ -38,8 +38,12 @@ angular.module('services')
   }
   ss.bindToggleKeywords = function(htmlString, bind) {
     let response;
+    const o1phrase = 'ng-hide';
+    const o2phrase = 'ng-show';
+    const kphrase = 'data-keyword';
 
-    function replaceToggle(htmlString){
+
+    function replaceToggle(htmlString, o1phrase, o2phrase){
       const regex = /\[(.*?)\]/;
       const toggleSections = regex.exec(htmlString);
       if(!toggleSections) {
@@ -57,25 +61,56 @@ angular.module('services')
       })
       const element1 = document.createElement('span');
       element1.innerHTML = obj.option1;
-      element1.setAttribute('ng-hide',obj.keyword)
+      element1.setAttribute(o1phrase, obj.keyword)
 
       const element2 = document.createElement('span');
       element2.innerHTML = obj.option2;
-      element2.setAttribute('ng-show',obj.keyword)
+      element2.setAttribute(o2phrase, obj.keyword)
 
       const wrapper = document.createElement('span');
+      wrapper.setAttribute(kphrase, obj.keyword);
       wrapper.appendChild(element1);
       wrapper.appendChild(element2);
 
-      replaceToggle(htmlString.replace(toggleSections[0], wrapper.innerHTML));
+      const tempWrap = document.createElement('span');
+      tempWrap.appendChild(wrapper);
+
+      replaceToggle(htmlString.replace(toggleSections[0], tempWrap.innerHTML));
     }
 
-    const reverseToggle = function(htmlString){
-      debugger
+    function reverseToggle(htmlString, o1phrase, o2phrase, kphrase){
+      const toggleInputs = {};
+      const searchElm = document.createElement('span');
+      searchElm.innerHTML = htmlString;
+
+      const option1Arr = searchElm.querySelectorAll(`span [${o1phrase}]`);
+      const option2Arr = searchElm.querySelectorAll(`span [${o2phrase}]`);
+      const keywordArr = searchElm.querySelectorAll(`span [${kphrase}]`);
+
+
+      option1Arr.forEach(function(elm){
+        const keyword = elm.getAttribute(o1phrase);
+        const option1 = elm.innerHTML;
+        toggleInputs[keyword] = {keyword: keyword, option1: option1.trim() }
+      })
+
+      option2Arr.forEach(function(elm){
+        const keyword = elm.getAttribute(o2phrase);
+        const option2 = elm.innerHTML;
+        toggleInputs[keyword].option2 = option2.trim();
+      })
+
+      keywordArr.forEach(function(elm){
+        const keyword = elm.getAttribute(kphrase);
+        elm.insertAdjacentText('beforeBegin', `[k:${keyword}, 1:${toggleInputs[keyword].option1}, 2: ${toggleInputs[keyword].option2}]`);
+        elm.remove();
+      })
+
+      response = searchElm.innerHTML;
     }
 
-    if (bind) { replaceToggle(htmlString) }
-    else { reverseToggle(htmlString) }
+    if (bind) { replaceToggle(htmlString, o1phrase, o2phrase, kphrase) }
+    else { reverseToggle(htmlString, o1phrase, o2phrase, kphrase) }
     return response;
   }
 

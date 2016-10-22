@@ -27,7 +27,7 @@ angular.module('directives')
                 $scope.pageErrorMessage = 'You do not have permission to edit this story.  Please try logging in under the account that authored this story.'
               }
               story.html = storiesService.bindTextKeywords(story.html, false);
-              // story.html = storiesService.bindToggleKeywords(story.html, false);
+              story.html = storiesService.bindToggleKeywords(story.html, false);
               resolve(res.data);
             } else {
               $scope.pageErrorMessage = `Story not found.  Check the id in the URL and contact support if you continue to have problems`;
@@ -75,7 +75,6 @@ angular.module('directives')
 
           story.html = storiesService.bindTextKeywords(story.html, textKeywordArray, 'text', true);
           story.html = storiesService.bindToggleKeywords(story.html, toggleKeywordArray, 'toggle', true);
-          debugger
         }
 
         story.authorName = userService.isLoggedIn() ? 'Guest Author' : userService.user.profile.name;
