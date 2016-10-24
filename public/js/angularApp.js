@@ -25,7 +25,6 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     resolve:{
       user: function($q, $location, userService){
         var deferred = $q.defer();
-        console.log(userService.user);
         if (userService.isLoggedIn()){
           deferred.resolve(true);
         } else {

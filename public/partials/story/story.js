@@ -3,7 +3,7 @@ angular.module('directives')
 		return {
 			restrict: 'E',
 			replace: true,
-      controller:  function($scope, $routeParams, $timeout, $compile, storiesService, $location) {
+      controller:  function($scope, $routeParams, $timeout, $compile, storiesService, inputService, $location) {
         var storyId = $scope.storyid ? $scope.storyid : $routeParams.storyId;
 
         var shouldSetAsSelected = function(storyObj){
@@ -15,7 +15,7 @@ angular.module('directives')
           $scope.storyObj = storyObj;
 					const inputs = storyObj.inputs;
 
-         var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
+          var inputsArray = $scope.storyObj.inputs ? Object.keys($scope.storyObj.inputs) : [];
 					if (inputsArray.length === 0) return
 					for (var i = 0, len = inputsArray.length; i < len; i++) {
 						const input = inputsArray[i];

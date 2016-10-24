@@ -10,8 +10,8 @@ angular.module('filters')
       return Object.keys(obj).map(function (key) {
         var value = obj[key];
         return angular.isObject(value) ?
-          Object.defineProperty(value, '$key', { enumerable: false, value: key}) :
-          { $key: key, $value: value };
+          Object.defineProperty(value, '$k', { enumerable: false, value: key}) :
+          { $k: key, $value: value };
       });
     }
   };
