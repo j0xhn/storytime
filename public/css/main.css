@@ -11089,31 +11089,55 @@ button.close {
   font-size: 18px !important; }
 
 /* line 115, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.fw100 {
+  font-weight: 100; }
+
+/* line 116, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.fw200 {
+  font-weight: 200; }
+
+/* line 117, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.fw300 {
+  font-weight: 300; }
+
+/* line 118, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.fw400 {
+  font-weight: 400; }
+
+/* line 119, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.fw500 {
+  font-weight: 500; }
+
+/* line 120, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.fw600 {
+  font-weight: 600; }
+
+/* line 123, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h100 {
   height: 100px; }
 
-/* line 116, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 124, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h200 {
   height: 200px; }
 
-/* line 117, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 125, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h300 {
   height: 300px; }
 
-/* line 118, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 126, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h400 {
   height: 400px; }
 
-/* line 121, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 129, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .italic {
   font-style: italic !important; }
 
-/* line 122, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 130, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; }
-  /* line 127, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+  /* line 135, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
   .ellipsis.multiLine {
     display: -webkit-box;
     -webkit-box-orient: vertical;

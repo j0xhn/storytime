@@ -62,7 +62,11 @@ angular.module('directives')
             // end of temporary
 
             let input = inputs[k];
-            if (!input.keyword ){ delete inputs[k] }
+            // if changed / updated
+            if (input.keyword != k){ inputs[input.keyword] = input; delete inputs[k]; }
+            // if empty
+            if (!input.keyword){ delete inputs[k] }
+            // if added new
             if (inputs.hasOwnProperty(k) && input.hasOwnProperty('temporary') ) {
               delete input.temporary;
               inputs[input.keyword] = input;

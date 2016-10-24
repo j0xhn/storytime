@@ -21,10 +21,9 @@ angular.module('services')
     function bindInputs(htmlString, o1phrase, o2phrase, kphrase){
       const regex = /\[(.*?)\]/;
       const toggleSections = regex.exec(htmlString);
-      debugger
+
       if(!toggleSections) {
         response = htmlString;
-        debugger
         return;
       }
       // if a new section is found continue
@@ -62,7 +61,7 @@ angular.module('services')
       const option1Arr = searchElm.querySelectorAll(`span [${o1phrase}]`);
       const option2Arr = searchElm.querySelectorAll(`span [${o2phrase}]`);
       const keywordArr = searchElm.querySelectorAll(`span [${kphrase}]`);
-debugger
+
       option1Arr.forEach(function(elm){
         const keyword = elm.getAttribute(o1phrase);
         const option1 = elm.innerHTML;
