@@ -4,7 +4,7 @@ angular.module('directives')
 			restrict: 'EA',
 			replace: true,
       controller: function($scope, storiesService, $rootScope, userService, utilityService, analyticService, $location) {
-				$scope.exampleStoryId = '57ee7ef2002a8c317ffe5c30';
+				$scope.exampleStory = storiesService.exampleStory;
 				$scope.pictureArray = [
 					'cactus',
 					'cloud-1',

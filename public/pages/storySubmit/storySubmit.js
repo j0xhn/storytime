@@ -11,24 +11,17 @@ angular.module('directives')
         image_dimensions: false
       };
 
-      $scope.exampleId = '57ee7ef2002a8c317ffe5c30';
-      if ($routeParams.storyId == $scope.exampleId && window.env != 'Sandbox') $scope.exampleStory = true;
-
-      $scope.handleSuccess = function(id){
-        $location.path('/success/save-story').search({d:id || $routeParams.storyId});
-      }
       const storyPromise = $q(function(resolve, reject){
-        if($routeParams.storyId){
+        if($routeParams.storyId === 'example'){
+          $scope.exampleStory = true;
+          resolve(storiesService.exampleStory)
+        } else if ($routeParams.storyId) {
+          // handle empty response, mis-match ids, and success
           storiesService.searchStories({_id:$routeParams.storyId}).then(function(res){
-            // handle empty response, mis-match ids, and success
             if(res.data){
               const story = res.data;
-              if(!userService.user._id === story.authorId){
-                $scope.pageErrorMessage = 'You do not have permission to edit this story.  Please try logging in under the account that authored this story.'
-              }
-              story.html = inputService.bindTextKeywords(story.html, false);
-              story.html = inputService.bindToggleKeywords(story.html, false);
-              resolve(res.data);
+              if(!userService.user._id === story.authorId){ $scope.pageErrorMessage = 'You do not have permission to edit this story.  Please try logging in under the account that authored this story.' }
+              resolve(story);
             } else {
               $scope.pageErrorMessage = `Story not found.  Check the id in the URL and contact support if you continue to have problems`;
             }
@@ -41,7 +34,9 @@ angular.module('directives')
           })
         }
       }).then(function(story) {
-          $scope.story = story;
+        story.html = inputService.bindTextKeywords(story.html, false);
+        story.html = inputService.bindToggleKeywords(story.html, false);
+        $scope.story = story;
       })
 
       $scope.submitStory = function(story){
