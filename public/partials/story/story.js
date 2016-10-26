@@ -19,8 +19,11 @@ angular.module('directives')
 					if (inputsArray.length === 0) return
 					for (var i = 0, len = inputsArray.length; i < len; i++) {
 						const input = inputsArray[i];
-							var inputRegex = new RegExp('"'+input+'"','g');
-							$scope.storyObj.html = $scope.storyObj.html.replace(inputRegex,'"storyObj.inputs.'+inputsArray[i]+'.value"')
+						// temporary while not all 13 stories have "type"
+						inputs[input].type = inputs[input].type || 'text';
+						// end temporary
+						var inputRegex = new RegExp('"'+input+'"','g');
+						$scope.storyObj.html = $scope.storyObj.html.replace(inputRegex,'"storyObj.inputs.'+inputsArray[i]+'.value"')
 					}
 
           $timeout(function(){
