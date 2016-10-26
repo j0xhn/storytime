@@ -6,7 +6,7 @@
     <div
       story-card
       class="storyCard"
-      ng-repeat="story in myStories"
+      ng-repeat="story in myStories | orderBy: 'createdAt': 'desc'"
       story="story"
       ng-click="setAsSelectedStory(story)">
     </div>

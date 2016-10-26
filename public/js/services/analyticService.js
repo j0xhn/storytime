@@ -1,5 +1,5 @@
 angular.module('services')
-.service('analyticService', function () {
+.service('analyticService', function (userService) {
   // load google analytics on layout.jade
   return {
     event: function(category, action, label){
