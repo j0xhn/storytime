@@ -80,13 +80,13 @@ angular.module('services')
         "type" : "text",
         "title" : "Favorite Activity with Verb",
         "keyword" : "activity",
-        "index" : 0
+        "index" : 4
       },
       "hero" : {
         "type" : "text",
         "title" : "Favorite Superhero / Princess",
         "keyword" : "hero",
-        "index" : 1
+        "index" : 3
       },
       "parent" : {
         "type" : "text",
@@ -98,10 +98,10 @@ angular.module('services')
         "type" : "text",
         "title" : "Child's Name",
         "keyword" : "child",
-        "index" : 3
+        "index" : 0
       },
       "gender" : {
-        "index" : 4,
+        "index" : 1,
         "type" : "toggle",
         "keyword" : "gender",
         "option1" : "boy",

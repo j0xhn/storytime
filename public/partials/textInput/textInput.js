@@ -3,7 +3,7 @@ angular.module('directives')
   return {
     restrict: 'E',
     replace: true,
-    templateUrl: '/partials/input/input.html',
+    templateUrl: '/partials/textInput/textInput.html',
     scope: {
       ngModel: '=?',
       ngLabel: '=?',
