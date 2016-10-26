@@ -59,6 +59,7 @@
     "passport-twitter": "^1.0.4",
     "paypal-rest-sdk": "^1.6.9",
     "request": "^2.73.0",
+    "s3": "^4.4.0",
     "sendgrid": "^4.4.0",
     "stripe": "^4.7.0",
     "theaterjs": "^3.0.0",
