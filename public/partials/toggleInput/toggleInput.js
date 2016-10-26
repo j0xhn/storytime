@@ -8,7 +8,7 @@ angular.module('directives')
       ngModel: '=?',
       ngLabel: '=?',
       input: '=',
-      editMode: '@'
+      editMode: '='
     },
     controller: function($scope){
       // incase a model isn't passed in, just creates a temporary one
@@ -19,10 +19,6 @@ angular.module('directives')
         $scope.ngModel = !$scope.ngModel;
         $scope.status = $scope.status === 'active' ? '' : 'active';
       }
-
-    },
-    link: function(scope, elm, attrs){
-      //
     }
   }
 })

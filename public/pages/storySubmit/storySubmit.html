@@ -31,17 +31,17 @@
 
         <span ng-if="!exampleStory">To see an example of how these can be utilized <a href='/submit/example' class='underline txt-blue'>click here</a></span>
       </small>
-      <div class="btn-group formGroup" ng-if="!exampleStory">
+      <div class="btn-group formGroup mar0b" ng-if="!exampleStory">
         <button type="button" ng-click='add("text")' class="button mar10b mar0t"> Add Text Input </button>
         <button type="button" name="button" class="button lightBlue mar0" ng-click='add("toggle")'>Add Toggle Input</button>
       </div>
-      <div ng-repeat="input in story.inputs | toArray | orderBy: 'index'" class='input-group'
-           ng-class="{'last': $last, 'half': input.type === 'text', 'thirds': input.type === 'toggle'}">
-          <text-input label='Keyword' ng-model='input.keyword' ng-if="input.type === 'text'"></text-input>
-          <text-input label='Description' ng-model='input.title' ng-if="input.type === 'text'"></text-input>
-          <toggle-input ng-model='input' input="input" ng-if="input.type === 'toggle'" edit-mode="true"></toggle-input>
-      </div>
-      <textarea class='h300' ui-tinymce="tinymceOptions" ng-model="story.html"></textarea>
+      <input-mapper
+        ng-repeat="input in story.inputs | toArray | orderBy: 'index'" class='input-group'
+        ng-class="{'last': $last, 'half': input.type === 'text', 'thirds': input.type === 'toggle'}"
+        input="input"
+        editable="true"
+      ></input-mapper>
+      <div class="mar20t"><textarea class="h300" ui-tinymce="tinymceOptions" ng-model="story.html"></textarea></div>
       <button ng-click="submitStory(story)" class="button" ng-if="!exampleStory"> submit </button>
       <div class='form-error'>{{globalErrorMessage}}</div>
     </form>

@@ -11,6 +11,10 @@ angular.module('directives')
         image_dimensions: false
       };
 
+      $scope.handleSuccess = function(id){
+        $location.path('/success/save-story').search({d:id || $routeParams.storyId});
+      };
+
       const storyPromise = $q(function(resolve, reject){
         if($routeParams.storyId === 'example'){
           $scope.exampleStory = true;
