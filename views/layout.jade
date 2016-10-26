@@ -25,7 +25,7 @@ html
     script(src='/js/lib/non-angular-inputs.js')
     script(src='/partials/header/header.js')
     script.
-      var user = '!{userJson}';
+      var user = JSON.parse('!{userJson}');
       var _csrf = "#{_csrf}";
       var env = "#{env}";
     

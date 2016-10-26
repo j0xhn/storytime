@@ -83,7 +83,6 @@ angular.module('directives')
         storiesService.postStory(story).then(function(res){
           if(!res.data || res.data.error){
             $scope.globalErrorMessage = res.data.error || 'An error occured.  If problems continue contact support';
-            console.error(res || 'error occured');
             analyticService.error('error posting story' , $scope.globalErrorMessage)
           } else {
             analyticService.event('Post Story', 'success posting story', res.data.savedStoryId )

@@ -1,7 +1,6 @@
 angular.module('services')
 .service('userService', function ($http) {
-  var cachedUser = JSON.parse(user);
-  cachedUser.purchased.push('57bb0e1d71cccefeccc6dfda');
+  var cachedUser = user;
   delete window.user;
   // if ( user ){
   //   cachedUser = JSON.parse(user);

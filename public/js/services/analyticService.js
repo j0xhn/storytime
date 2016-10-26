@@ -7,7 +7,8 @@ angular.module('services')
         hitType: 'event',
         eventCategory: category,
         eventAction: action,
-        eventLabel: label
+        eventLabel: label,
+        userId: userService.user ? userService.user._id : null
       });
     },
     error: function(action, label){
@@ -16,7 +17,8 @@ angular.module('services')
         hitType: 'event',
         eventCategory: 'error',
         eventAction: action,
-        eventLabel: label
+        eventLabel: label,
+        userId: userService.user ? userService.user._id : null
       });
     }
   }
