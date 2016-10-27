@@ -10,7 +10,6 @@ const StoryUtilities = require('../util/StoryUtilities');
 */
 exports.postStory = (req, res, next) => {
   let story = req.body;
-  debugger;
   if ( story._id && (req.user.id === story.authorId)){
     console.log("user is editing existing story");
     // handle editing of existing story,
