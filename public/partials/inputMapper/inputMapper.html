@@ -1,7 +1,7 @@
 <div>
-    <text-input ng-label="input.title" ng-model="input.value" ng-if="input.type === 'text' && !editable"> </text-input>
-    <text-input label='Keyword' ng-model='input.keyword' ng-if="input.type === 'text' && editable"> </text-input>
-    <text-input label='Description' ng-model='input.title' ng-if="input.type === 'text' && editable"> </text-input>
+    <text-input ng-label="input.title" ng-model="input.value" ng-if="input.type != 'toggle' && !editable"> </text-input>
+    <text-input label='Keyword' ng-model='input.keyword' ng-if="input.type != 'toggle' && editable"> </text-input>
+    <text-input label='Description' ng-model='input.title' ng-if="input.type != 'toggle' && editable"> </text-input>
     <toggle-input
       ng-label="input.keyword"
       ng-model="input.value"

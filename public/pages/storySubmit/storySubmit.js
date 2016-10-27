@@ -24,8 +24,11 @@ angular.module('directives')
           storiesService.searchStories({_id:$routeParams.storyId}).then(function(res){
             if(res.data){
               const story = res.data;
-              if(!userService.user._id === story.authorId){ $scope.pageErrorMessage = 'You do not have permission to edit this story.  Please try logging in under the account that authored this story.' }
-              resolve(story);
+              if(!userService.user._id === story.authorId && !userService.isAdmin()){
+                $scope.pageErrorMessage = 'You do not have permission to edit this story.  Please try logging in under the account that authored this story.'
+              } else {
+                resolve(story);
+              }
             } else {
               $scope.pageErrorMessage = `Story not found.  Check the id in the URL and contact support if you continue to have problems`;
             }
