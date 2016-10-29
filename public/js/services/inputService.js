@@ -58,9 +58,13 @@ angular.module('services')
       const searchElm = document.createElement('span');
       searchElm.innerHTML = htmlString;
 
-      const option1Arr = searchElm.querySelectorAll(`span [${o1phrase}]`);
-      const option2Arr = searchElm.querySelectorAll(`span [${o2phrase}]`);
-      const keywordArr = searchElm.querySelectorAll(`span [${kphrase}]`);
+      const getElementArrayFor = function(searchElm, query){
+        return Array.prototype.slice.call(searchElm.querySelectorAll(query))
+      }
+
+      const option1Arr = getElementArrayFor(searchElm, `span [${o1phrase}]`);
+      const option2Arr = getElementArrayFor(searchElm, `span [${o2phrase}]`);
+      const keywordArr = getElementArrayFor(searchElm, `span [${kphrase}]`);
 
       option1Arr.forEach(function(elm){
         const keyword = elm.getAttribute(o1phrase);
