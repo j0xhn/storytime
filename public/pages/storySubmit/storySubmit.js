@@ -41,8 +41,10 @@ angular.module('directives')
           })
         }
       }).then(function(story) {
+        // defaults and altering
         story.html = inputService.bindTextKeywords(story.html, false);
         story.html = inputService.bindToggleKeywords(story.html, false);
+        story.inputs = story.inputs || {};
         $scope.story = story;
       })
 
@@ -52,30 +54,11 @@ angular.module('directives')
           var tagArray = story.tags.split(/[,]+/).filter(Boolean);
           story.tags = tagArray.map(function(x){ return x.trim(); })
         }
+
+
         let inputs = story.inputs || {};
         if(Object.keys(inputs).length){
-          let index = 0;
-          for (var k in inputs){
-            // TEMPORARY - get legacy up to date
-            // for re-ordering legacy stories
-            if (!inputs[k].index) { inputs[k].index = index; index++; }
-            // for adding type of input
-            if (!inputs[k].type){ inputs[k].type = 'text'}
-            // end of temporary
-
-            let input = inputs[k];
-            // if changed / updated
-            if (input.keyword != k){ inputs[input.keyword] = input; delete inputs[k]; }
-            // if empty
-            if (!input.keyword){ delete inputs[k] }
-            // if added new
-            if (inputs.hasOwnProperty(k) && input.hasOwnProperty('temporary') ) {
-              delete input.temporary;
-              inputs[input.keyword] = input;
-              delete inputs[k];
-            }
-          }
-
+          story.inputs = inputService.cleanInputs(story.inputs);
           story.html = inputService.bindTextKeywords(story.html, true);
           story.html = inputService.bindToggleKeywords(story.html, true);
         }
