@@ -115,27 +115,25 @@ angular.module('services')
     let index = 0;
     for (var k in inputs){
       let input = inputs[k];
-      debugger
+
       // TEMPORARY - get legacy up to date
       // for re-ordering legacy stories
-      if (!input.hasOwnProperty('index')) { debugger; input.index = index; index++; }
+      if (!input.hasOwnProperty('index')) { input.index = index; index++; }
       // for adding type of input
-      if (!input.hasOwnProperty('type')){ debugger; input.type = 'text'}
+      if (!input.hasOwnProperty('type')){ input.type = 'text'}
       // end of temporary
 
       // if changed / updated
-      if (input.keyword && input.keyword != k && !input.temporary){ debugger; inputs[input.keyword] = input; delete inputs[k]; }
+      if (input.keyword && input.keyword != k && !input.temporary){ inputs[input.keyword] = input; delete inputs[k]; }
       // if empty
-      if (!input.keyword){ debugger; delete inputs[k] }
+      if (!input.keyword){ delete inputs[k] }
       // if added new
       if (input.hasOwnProperty('temporary') ) {
-        debugger;
         delete input.temporary;
         inputs[input.keyword] = input;
         delete inputs[k];
       }
     }
-    console.log(inputs);
     return inputs
   }
 
