@@ -64,7 +64,7 @@ angular.module('directives')
         }
 
         story.authorName = userService.isLoggedIn() ? 'Guest Author' : userService.user.profile.name;
-        story.authorId = userService.user._id;
+        story.authorId = story.authorId || userService.user._id;
 
         storiesService.postStory(story).then(function(res){
           if(!res.data || res.data.error){
