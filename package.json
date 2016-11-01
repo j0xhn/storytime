@@ -39,7 +39,7 @@
     "lodash": "^4.13.1",
     "lusca": "^1.4.1",
     "moment": "^2.14.1",
-    "mongoose": "^4.5.4",
+    "mongoose": "^4.6.5",
     "morgan": "^1.7.0",
     "multer": "^1.1.0",
     "node-foursquare": "^0.3.0",
@@ -73,6 +73,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3",
+    "selenium-webdriver": "^3.0.0-beta-3",
     "supertest": "^1.2.0"
   },
   "engines": {
