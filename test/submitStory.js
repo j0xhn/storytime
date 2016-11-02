@@ -11,5 +11,6 @@ const webdriver = require('selenium-webdriver'),
         }).build();
         driver.get('http://www.google.com');
         driver.quit();
+        done();
       });
     });
