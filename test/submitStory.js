@@ -9,8 +9,13 @@ const webdriver = require('selenium-webdriver'),
         withCapabilities({
           'browserName': 'chrome',
         }).build();
-        driver.get('http://www.google.com');
-        driver.quit();
-        done();
+        driver.get('http://www.google.com/ncr');
+        driver.findElement(By.name('q')).sendKeys('webdriver');
+        driver.findElement(By.name('btnG')).click();
+        console.log('before wait');
+        driver.wait(until.titleIs('webdriver - Google Search'), 5000).then(function(){
+          console.log('after wait');
+          done();
+        });
       });
     });
