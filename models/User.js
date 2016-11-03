@@ -10,7 +10,8 @@ const userSchema = new mongoose.Schema({
 
   paymentInfo: {
     autoPay: {type: Boolean, default: false },
-    credit: {type: Number },
+    coins: {type: Number, default: 25 },
+    freeStories: {type: Number, defualt: 0},
     customerId: {type: String }
   },
 

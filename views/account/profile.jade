@@ -3,9 +3,9 @@ extends ../layout
 block content
   .content.accountPage
     form.form(action='/account/profile', method='POST')
-      a.button.outline.mobileFull.mar0t(href="/logout" target="_self") Logout
-      h3.page-title Profile Information
+      h2.page-title Profile Information
       input(type='hidden', name='_csrf', value=_csrf)
+      p coins: #{user.paymentInfo.coins}
       .inputWrapper
         input(type='email', name='email', id='email', value='#{user.email}', class='input')
         label(for='email', class='label') Email
@@ -32,7 +32,7 @@ block content
         | Save Profile
 
     form.form(action='/account/password', method='POST')
-      h3.page-title Change Password
+      h2.page-title Change Password
       input(type='hidden', name='_csrf', value=_csrf)
       .inputWrapper
         input.input(type='password', name='password', id='password')
@@ -43,15 +43,10 @@ block content
       button.button(type='submit')
         | Change Password
 
-    form.form(action='/account/delete', method='POST')
-      h3.page-title Delete Account
-      p.p You can delete your account, but keep in mind this action is irreversible.
-      input(type='hidden', name='_csrf', value=_csrf)
-      button.button.outline.red(type='submit')
-        | Delete Account
+  
 
     .form.link-section
-      h3.page-title Linked Accounts
+      h2.page-title Linked Accounts
       if user.instagram
         p: a.button.small.outline.red(href='/account/unlink/instagram') Unlink Instagram
       else
@@ -76,3 +71,12 @@ block content
         p: a.button.small.outline.red(href='/account/unlink/linkedin') Unlink LinkedIn
       else
         p: a.button.small.outline(href='/auth/linkedin') Link Your LinkedIn
+        
+    form.form(action='/account/delete', method='POST')
+      //- h2.page-title Delete Account
+      //- p.p You can delete your account, but keep in mind this action is irreversible.
+      //- input(type='hidden', name='_csrf', value=_csrf)
+      //- button.button.outline.red.block(type='submit')
+      //-   | Delete Account
+
+      a.button.outline.mobileFull.mar0t(href="/logout" target="_self") Logout
