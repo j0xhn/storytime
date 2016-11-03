@@ -1,4 +1,4 @@
-.feedPage{
+.feedDirective{
   $feed-page-spacing: 30px;
   padding: $feed-page-spacing / 2 0 $feed-page-spacing;
   min-height: 100%;
@@ -11,7 +11,7 @@
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: center;
-    .resultsHeader{
+    .header{
       width: 100%;
       display: block;
       text-align: center;

@@ -11128,16 +11128,32 @@ button.close {
 .h400 {
   height: 400px; }
 
+/* line 128, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.max100 {
+  max-width: 100px; }
+
 /* line 129, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.max200 {
+  max-width: 200px; }
+
+/* line 130, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.max300 {
+  max-width: 300px; }
+
+/* line 131, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.max400 {
+  max-width: 400px; }
+
+/* line 134, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .italic {
   font-style: italic !important; }
 
-/* line 130, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 135, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; }
-  /* line 135, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+  /* line 140, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
   .ellipsis.multiLine {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -12264,6 +12280,45 @@ Search Tags for a story
   border-top-right-radius: 5px;
   font-weight: 400; }
 
+/* line 1, /Users/John/Dev/projects/storytime/public/partials/feed/feed.scss */
+.feedDirective {
+  padding: 15px 0 30px;
+  min-height: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #eee; }
+  /* line 8, /Users/John/Dev/projects/storytime/public/partials/feed/feed.scss */
+  .feedDirective .feedWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: center; }
+    /* line 14, /Users/John/Dev/projects/storytime/public/partials/feed/feed.scss */
+    .feedDirective .feedWrapper .header {
+      width: 100%;
+      display: block;
+      text-align: center;
+      margin-bottom: 20px; }
+  /* line 21, /Users/John/Dev/projects/storytime/public/partials/feed/feed.scss */
+  .feedDirective .searchBar {
+    width: 100%;
+    margin-bottom: 10px; }
+  /* line 25, /Users/John/Dev/projects/storytime/public/partials/feed/feed.scss */
+  .feedDirective .storyCard {
+    width: 100%; }
+  @media (min-width: 660px) {
+    /* line 1, /Users/John/Dev/projects/storytime/public/partials/feed/feed.scss */
+    .feedDirective {
+      padding-top: 30px; }
+      /* line 28, /Users/John/Dev/projects/storytime/public/partials/feed/feed.scss */
+      .feedDirective .storyCard {
+        width: calc(50% - 30px);
+        margin: 0 15px 30px; } }
+  /* line 33, /Users/John/Dev/projects/storytime/public/partials/feed/feed.scss */
+  .feedDirective .emptyFeed {
+    display: block; }
+
 /* line 4, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .hero {
   padding: 60px 10px 80px;
@@ -12492,45 +12547,6 @@ Search Tags for a story
   .story-page .edit-button {
     display: block;
     text-align: center; }
-
-/* line 1, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
-.feedPage {
-  padding: 15px 0 30px;
-  min-height: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: #eee; }
-  /* line 8, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
-  .feedPage .feedWrapper {
-    display: flex;
-    flex-flow: row wrap;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: center; }
-    /* line 14, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
-    .feedPage .feedWrapper .resultsHeader {
-      width: 100%;
-      display: block;
-      text-align: center;
-      margin-bottom: 20px; }
-  /* line 21, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
-  .feedPage .searchBar {
-    width: 100%;
-    margin-bottom: 10px; }
-  /* line 25, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
-  .feedPage .storyCard {
-    width: 100%; }
-  @media (min-width: 660px) {
-    /* line 1, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
-    .feedPage {
-      padding-top: 30px; }
-      /* line 28, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
-      .feedPage .storyCard {
-        width: calc(50% - 30px);
-        margin: 0 15px 30px; } }
-  /* line 33, /Users/John/Dev/projects/storytime/public/pages/feed/feedPage.scss */
-  .feedPage .emptyFeed {
-    display: block; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/storySubmit/storySubmitPage.scss */
 .submit-page {

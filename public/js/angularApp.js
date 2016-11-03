@@ -70,6 +70,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     }
   })
   .when('/detail/:storyId', { template: '<detail-page></detail-page>' })
+  .otherwise({ redirectTo: '/' })
 }).run(function ($rootScope, $location, userService) { //Insert in the function definition the dependencies you need.
   $rootScope.$on("$routeChangeStart", function(event, next, current){
     navigation.toggleSideNav(false);

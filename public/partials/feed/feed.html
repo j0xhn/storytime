@@ -1,8 +1,10 @@
 <div class="feedDirective">
   <div class="content feedWrapper">
-    <span>{{header}}</span>
-    <h4 class="resultsHeader" ng-if="search.general || header">
-      <span ng-if="noResults">No r</span><span ng-if="!noResults">R</span>esults for "<strong>{{search.general}}</strong>"
+    <h4 class="header" ng-if="search.general || header">
+      <span>{{header}}</span>
+      <span ng-if="noResults && search.general">
+        <span ng-if="noResults">No r</span><span ng-if="!noResults">R</span>esults for "<strong>{{search.general}}</strong>"
+      </span>
     </h4>
     <div
       story-card

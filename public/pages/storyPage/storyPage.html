@@ -1,4 +1,12 @@
-<div class='story-page'>
-  <a ng-href='/submit/{{story._id}}' ng-if="authorIsViewing" class="edit-button underline txt-blue mar10t"><i class='fa fa-pencil'></i>Edit as Author</a>
-  <story storyobj="story"></story>
+<div>
+  <div class='story-page'>
+    <a ng-href='/submit/{{story._id}}' ng-if="authorIsViewing" class="edit-button underline txt-blue mar10t"><i class='fa fa-pencil'></i>Edit as Author</a>
+    <story storyobj="story" ng-if="story"></story>
+  </div>
+  <div ng-if="!story" class='tac pad20'>
+    <h2>Story Not Found</h2>
+    <p ng-if="!story" class='pad20'>Looks like that story isn't here, check out our other stories below or submit your own</p>
+    <a class='button' href='/submit'>Write Your Own Story</a>
+  </div>
+  <feed header="Other Stories"></feed>
 </div>

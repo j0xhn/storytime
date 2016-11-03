@@ -5,10 +5,10 @@ angular.module('directives')
 			replace: true,
       controller: function($scope, storiesService, $routeParams, $route) {
         var searchTerm = $routeParams.search;
-
         $scope.search = {
           general: searchTerm
         }
+
 
         var searchStories = function (searchObj){
           storiesService.searchStories(searchObj).then(function(res) {
@@ -26,8 +26,10 @@ angular.module('directives')
 
         searchStories($scope.search);
       },
-			templateUrl: '/pages/feed/feed.html',
-			scope: {}
+			templateUrl: '/partials/feed/feed.html',
+			scope: {
+        header: '@',
+      }
 		}
 	}
 )
