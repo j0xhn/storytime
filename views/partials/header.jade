@@ -8,8 +8,9 @@
       a.logo(href='/' target='_self') Storytime
       
     .right
-      div.notification
-        | #{user.paymentInfo.coins}
+      div.coinBadge
+        div.coinIcon
+        span.amount #{user.paymentInfo.coins}
       if user
         a.profile-image(href='/account' target='_self')
               

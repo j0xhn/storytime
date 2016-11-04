@@ -5,6 +5,7 @@
 .tal { text-align: left !important;}
 .underline { text-decoration: underline !important; }
 .bold { font-weight: bold; }
+.break-word {word-wrap: break-word;}
 
 .relative{position: relative;}
 
@@ -70,16 +71,22 @@
 .pad40r 	{ padding-right: 40px !important; }
 .pad60t 	{ padding-top: 60px !important; }
 
-.mar0		{ margin: 0 !important; }
+.mar0a		{ margin: 0 auto !important; }
+.mara		  { margin-left: auto !important; margin-right: auto !important;}
+.mar0		  { margin: 0 !important; }
 .mar0l		{ margin-left: 0 !important; }
 .mar0r		{ margin-right: 0 !important; }
 .mar0b		{ margin-bottom: 0 !important; }
 .mar0lr		{ margin-left: 0 !important; margin-right: 0 !important; }
 .mar0tb		{ margin-top: 0 !important; margin-bottom: 0 !important; }
 .mar0t		{ margin-top: 0 !important; }
-.mar0a		{ margin: 0 auto !important; }
-.mara		{ margin-left: auto !important; margin-right: auto !important;}
-.mar5b		{margin-bottom: 5px !important; }
+.mar5		  { margin: 5 !important; }
+.mar5l		{ margin-left: 5 !important; }
+.mar5r		{ margin-right: 5 !important; }
+.mar5b		{ margin-bottom: 5 !important; }
+.mar5lr		{ margin-left: 5 !important; margin-right: 5 !important; }
+.mar5tb		{ margin-top: 5 !important; margin-bottom: 5 !important; }
+.mar5t		{ margin-top: 5 !important; }
 .mar10 		{ margin: 10px !important; }
 .mar10tb 	{ margin-top: 10px !important; margin-bottom: 10px !important; }
 .mar10t		{ margin-top: 10px !important; }

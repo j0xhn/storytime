@@ -1,0 +1,15 @@
+.coinBadge {
+  font-size: 11px;
+  border: 1px solid $gold;
+  color: $darkGray;
+  line-height: initial;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-weight: 400;
+  position: relative;
+  &:before{
+    height: 14px;
+    width: 14px;
+    background: url(/images/coin.svg);  
+  }
+}

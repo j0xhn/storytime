@@ -11463,47 +11463,48 @@ a {
   max-width: 100%;
   background-color: #fff; }
   /* line 11, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
-  .navigation .notification {
+  .navigation .coinBadge {
     font-size: 11px;
-    border: 1px solid #ebda2f;
-    color: #e1cd08;
+    border: 1px solid #e1cd08;
+    color: #333;
     line-height: initial;
     padding: 3px 5px;
     border-radius: 5px;
-    font-weight: 500; }
-  /* line 21, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+    font-weight: 500;
+    position: relative; }
+  /* line 31, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
   .navigation .topNav {
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    /* line 27, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+    /* line 37, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
     .navigation .topNav .right {
       display: flex;
       align-items: center; }
-    /* line 31, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+    /* line 41, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
     .navigation .topNav .searchIconWrapper {
       transform: scale(0.6); }
-    /* line 34, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+    /* line 44, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
     .navigation .topNav .searchIcon {
       cursor: pointer; }
-    /* line 35, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+    /* line 45, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
     .navigation .topNav .profile-image {
       cursor: pointer;
       position: relative; }
-      /* line 38, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+      /* line 48, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
       .navigation .topNav .profile-image .img {
         width: 25px;
         height: 25px;
         background-color: #ccc;
         border-radius: 50%;
         margin-left: 10px; }
-        /* line 44, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+        /* line 54, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
         .navigation .topNav .profile-image .img.fa-user {
           display: flex;
           align-items: center;
           justify-content: center; }
-    /* line 52, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+    /* line 62, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
     .navigation .topNav .logo {
       color: #17153B;
       font-family: "HennyPenny";
@@ -11517,7 +11518,7 @@ a {
       width: 150px;
       text-align: center;
       text-decoration: none; }
-      /* line 65, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
+      /* line 75, /Users/John/Dev/projects/storytime/public/partials/header/header.scss */
       .navigation .topNav .logo:hover {
         text-decoration: none; }
 
