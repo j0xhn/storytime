@@ -16,6 +16,10 @@
   border-right: none !important;
 }
 
+.fac { display: flex; align-items: center; }
+.fjc { display: flex; justify-content: center; }
+.fjac { display: flex; justify-content: center; align-items: center; }
+
 .txt-gray { color: $gray !important;}
 .txt-black { color: $black !important;}
 .txt-white { color: $white !important;}

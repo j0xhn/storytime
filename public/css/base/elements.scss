@@ -1,20 +1,26 @@
-.menuIcon {
-  position: relative;
-  padding-left: 1.25em;
-  cursor: pointer;
+.coinIcon {
+  height: 14px;
+  width: 14px;
+  background: url(/images/coin.svg);
 }
 
-.menuIcon:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 4px;
-  width: 12px;
-  height: 1px;
-  background: black;
-  box-shadow:
-  0 4px 0 0 black,
-  0 8px 0 0 black;
+.menuIcon {
+  height: 12px;
+  padding-left: 15px;
+  position: relative;
+  cursor: pointer;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 1px;
+    background: black;
+    box-shadow:
+    0 5px 0 0 black,
+    0 10px 0 0 black;
+  }
 }
 
 .closeIcon{

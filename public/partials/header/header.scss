@@ -8,6 +8,16 @@
   max-width: 100%;
   background-color: $white;
 
+  .notification {
+    font-size: 11px;
+    border: 1px solid $gold;
+    color: $darkGold;
+    line-height: initial;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+
   .topNav{
     height: 100%;
     display: flex;
@@ -24,12 +34,13 @@
     .searchIcon { cursor: pointer;}
     .profile-image{
       cursor: pointer;
+      position: relative;
       .img{
         width: 25px;
         height: 25px;
         background-color: $lightGray;
         border-radius: 50%;
-        margin-left: 5px;
+        margin-left: 10px;
         &.fa-user{
           display: flex;
           align-items: center;

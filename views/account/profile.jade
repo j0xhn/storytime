@@ -5,7 +5,6 @@ block content
     form.form(action='/account/profile', method='POST')
       h2.page-title Profile Information
       input(type='hidden', name='_csrf', value=_csrf)
-      p coins: #{user.paymentInfo.coins}
       .inputWrapper
         input(type='email', name='email', id='email', value='#{user.email}', class='input')
         label(for='email', class='label') Email
