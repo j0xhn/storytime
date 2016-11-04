@@ -27,7 +27,7 @@ angular.module('services')
         return;
       }
       // if a new section is found continue
-      const sections = toggleSections[1].split(',');
+      const sections = toggleSections[1].split('#');
       const obj = {}
       const parts = sections.map(function(section){
         const ta = section.split(':');
@@ -80,7 +80,7 @@ angular.module('services')
 
       keywordArr.forEach(function(elm){
         const keyword = elm.getAttribute(kphrase);
-        elm.insertAdjacentText('beforeBegin', `[k:${keyword}, 1:${toggleInputs[keyword].option1}, 2:${toggleInputs[keyword].option2}]`);
+        elm.insertAdjacentText('beforeBegin', `[k:${keyword} #1:${toggleInputs[keyword].option1} #2:${toggleInputs[keyword].option2}]`);
         elm.remove();
       })
 
