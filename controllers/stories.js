@@ -4,13 +4,14 @@ const nodemailer = require('nodemailer');
 const passport = require('passport');
 const Story = require('../models/Story');
 const StoryUtilities = require('../util/StoryUtilities');
+const UserUtil = require('../util/UserUtil');
 /**
 * POST /signup
 * Create a new local account.
 */
 exports.postStory = (req, res, next) => {
   let story = req.body;
-  if ( story._id && (req.user.id === story.authorId)){
+  if ( story._id && (req.user.id === story.authorId || UserUtil.isAdmin(req.user))){
     console.log("user is editing existing story");
     // handle editing of existing story,
     // that the id's of the client and the story match
