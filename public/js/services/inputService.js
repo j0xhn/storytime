@@ -31,9 +31,9 @@ angular.module('services')
       const obj = {}
       const parts = sections.map(function(section){
         const ta = section.split(':');
-        if (ta[0].trim() === 'k'){ obj.keyword = ta[1]}
-        else if (ta[0].trim() === '1'){ obj.option1 = ta[1]}
-        else if (ta[0].trim() === '2'){ obj.option2 = ta[1]}
+        if (ta[0].trim() === 'k'){ obj.keyword = ta[1].trim()}
+        else if (ta[0].trim() === '1'){ obj.option1 = ta[1].trim()}
+        else if (ta[0].trim() === '2'){ obj.option2 = ta[1].trim()}
       })
       const element1 = document.createElement('span');
       element1.innerHTML = obj.option1;
@@ -135,6 +135,23 @@ angular.module('services')
       }
     }
     return inputs
+  }
+
+  is.prepareForAngular = function(htmlString, inputs){
+    var inputsArray = inputs ? Object.keys(inputs) : [];
+    if (inputsArray.length === 0) { // if no inputs
+      return htmlSting
+    } else { // if inputs exist
+      for (var i = 0, len = inputsArray.length; i < len; i++) {
+        const input = inputsArray[i];
+        // temporary while not all 13 stories have "type"
+        inputs[input].type = inputs[input].type || 'text';
+        // end temporary
+        var inputRegex = new RegExp('"'+input+'"','g');
+        htmlString = htmlString.replace(inputRegex,'"storyObj.inputs.'+inputsArray[i]+'.value"')
+      }
+      return htmlString
+    }
   }
 
   return is;
