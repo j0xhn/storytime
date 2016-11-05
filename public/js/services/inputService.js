@@ -110,7 +110,7 @@ angular.module('services')
       // if changed / updated
       if (input.keyword && input.keyword != k && !input.temporary){ inputs[input.keyword] = input; delete inputs[k]; }
       // if empty
-      if (!input.keyword){ delete inputs[k] }
+      if (!input.hasOwnProperty('keyword')){ delete inputs[k] }
       // if added new
       if (input.hasOwnProperty('temporary') ) {
         delete input.temporary;
