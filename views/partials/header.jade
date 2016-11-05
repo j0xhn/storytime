@@ -9,8 +9,7 @@
       
     .right
       div.coinBadge
-        div.coinIcon
-        span.amount #{user.paymentInfo.coins}
+        | #{user.paymentInfo.coins}
       if user
         a.profile-image(href='/account' target='_self')
               
