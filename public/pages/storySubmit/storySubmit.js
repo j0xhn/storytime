@@ -6,7 +6,15 @@ angular.module('directives')
     controller: function($scope, storiesService, inputService, userService, $routeParams, $q, analyticService, $location){
       //  For WYSIWY
       $scope.tinymceOptions = {
-        plugins: 'link image code',
+        plugins: ['link image code','paste'],
+        paste_as_text: true,
+        keep_styles: false,
+        invalid_elements: "p",
+        forced_root_block : '',
+        force_p_newlines : false,
+        force_br_newlines : true,
+        convert_newlines_to_brs : true,
+        entity_encoding: 'raw',
         toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code',
         image_dimensions: false
       };

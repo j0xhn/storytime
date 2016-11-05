@@ -2,86 +2,70 @@ angular.module('services')
 .service('inputService', function ($http, $q, analyticService) {
   var is = {};
 
-  is.getKeywordArrayWithType = function(inputArray, type){
-    const response = [];
-    for (key in inputArray) {
-        if (inputArray[key].type === type) { response.push(inputArray[key].keyword)}
-    }
-    if (response.length === 0) { return null }
-    else { return response }
-
-  }
-
   is.bindToggleKeywords = function(htmlString, bind) {
-    let response;
-    const o1phrase = 'ng-hide';
-    const o2phrase = 'ng-show';
-    const kphrase = 'data-keyword';
+    var response;
+    var o1phrase = 'ng-hide';
+    var o2phrase = 'ng-show';
+    var kphrase = 'data-keyword';
 
     function bindInputs(htmlString, o1phrase, o2phrase, kphrase){
-      const regex = /\[(.*?)\]/;
-      const toggleSections = regex.exec(htmlString);
-
-      if(!toggleSections) {
-        response = htmlString;
-        return;
-      }
-      // if a new section is found continue
-      const sections = toggleSections[1].split('#');
-      const obj = {}
-      const parts = sections.map(function(section){
-        const ta = section.split(':');
-        if (ta[0].trim() === 'k'){ obj.keyword = ta[1].trim()}
-        else if (ta[0].trim() === '1'){ obj.option1 = ta[1].trim()}
-        else if (ta[0].trim() === '2'){ obj.option2 = ta[1].trim()}
-      })
-      const element1 = document.createElement('span');
-      element1.innerHTML = obj.option1;
-      element1.setAttribute(o1phrase, obj.keyword)
-
-      const element2 = document.createElement('span');
-      element2.innerHTML = obj.option2;
-      element2.setAttribute(o2phrase, obj.keyword)
-
-      const wrapper = document.createElement('span');
-      wrapper.setAttribute(kphrase, obj.keyword);
-      wrapper.appendChild(element1);
-      wrapper.appendChild(element2);
-
-      const tempWrap = document.createElement('span');
-      tempWrap.appendChild(wrapper);
-
-      bindInputs(htmlString.replace(toggleSections[0], tempWrap.innerHTML), o1phrase, o2phrase, kphrase);
-    }
-    function reverseBindInputs(htmlString, o1phrase, o2phrase, kphrase){
-      const toggleInputs = {};
-      const searchElm = document.createElement('span');
+      // create wrapper and toggle elements
+      var searchElm = document.createElement('span');
+      htmlString = htmlString.replace(/\[/g, '<toggle>').replace(/\]/g, '</toggle>')
       searchElm.innerHTML = htmlString;
+      // get array of nodes we want to manipulate & sort nested first
+      var results = searchElm.querySelectorAllArray('toggle');
+      results = results.sort(function(a,b){
+        var ahc = !!a.querySelectorAllArray('toggle').length
+        var bhc = !!b.querySelectorAllArray('toggle').length
+        if(ahc && !bhc){
+          return 1
+        } else if (bhc && !ahc) {
+          return -1
+        } else {
+          return 0
+        }
+      })
+      // convert strings to html nodes
+      results.map(function(elm, i, results){
+        var sections = elm.innerHTML.split('#');
+        var obj = {}
+        var parts = sections.map(function(section){
+          var ta = section.split(':');
+          if (ta[0].trim() === 'k'){ obj.keyword = ta[1].replace('<br>','').trim()}
+          else if (ta[0].trim() === '1'){ obj.option1 = ta[1].trim()}
+          else if (ta[0].trim() === '2'){ obj.option2 = ta[1].trim()}
+        })
+        var element1 = document.createElement('span');
+        element1.innerHTML = obj.option1;
+        element1.setAttribute(o1phrase, obj.keyword)
 
-      const getElementArrayFor = function(searchElm, query){
-        return Array.prototype.slice.call(searchElm.querySelectorAll(query))
-      }
+        var element2 = document.createElement('span');
+        element2.innerHTML = obj.option2;
+        element2.setAttribute(o2phrase, obj.keyword)
 
-      const option1Arr = getElementArrayFor(searchElm, `span [${o1phrase}]`);
-      const option2Arr = getElementArrayFor(searchElm, `span [${o2phrase}]`);
-      const keywordArr = getElementArrayFor(searchElm, `span [${kphrase}]`);
-
-      option1Arr.forEach(function(elm){
-        const keyword = elm.getAttribute(o1phrase);
-        const option1 = elm.innerHTML;
-        toggleInputs[keyword] = {keyword: keyword, option1: option1.trim() }
+        elm.innerHTML = '';
+        elm.setAttribute(kphrase, obj.keyword);
+        elm.appendChild(element1);
+        elm.appendChild(element2);
       })
 
-      option2Arr.forEach(function(elm){
-        const keyword = elm.getAttribute(o2phrase);
-        const option2 = elm.innerHTML;
-        toggleInputs[keyword].option2 = option2.trim();
-      })
+      response = searchElm.innerHTML
+    }
+
+    function reverseBindInputs(htmlString, o1phrase, o2phrase, kphrase){
+      var toggleInputs = {};
+      var searchElm = document.createElement('span');
+      searchElm.innerHTML = htmlString;
+      var keywordArr = searchElm.querySelectorAllArray(`span [${kphrase}]`);
 
       keywordArr.forEach(function(elm){
-        const keyword = elm.getAttribute(kphrase);
-        elm.insertAdjacentText('beforeBegin', `[k:${keyword} #1:${toggleInputs[keyword].option1} #2:${toggleInputs[keyword].option2}]`);
-        elm.remove();
+        var o1a = elm.querySelectorAllArray(`span [${o1phrase}]`);
+        var o2a = elm.querySelectorAllArray(`span [${o2phrase}]`);
+        var o1 = o1a[0].innerHTML;
+        var o2 = o2a[o2a.length-1].innerHTML;
+        var keyword = elm.getAttribute(kphrase);
+        elm.outerHTML = '[k:'+keyword+'#1:'+o1+'#2:'+o2+']';
       })
 
       response = searchElm.innerHTML;
@@ -94,8 +78,8 @@ angular.module('services')
 
   is.bindTextKeywords = function(htmlString, bind){
     // setting bind to true or false is binding or unbinding
-      const sp = [ '{','<b ng-bind="'];
-      const ep = ['}','"></b>'];
+      var sp = [ '{','<b ng-bind="'];
+      var ep = ['}','"></b>'];
       return htmlString
       .replace(new RegExp( bind ? sp[0] : sp[1], 'g'), bind ? sp[1] : sp[0])
       .replace(new RegExp( bind ? ep[0] : ep[1], 'g'), bind ? ep[1] : ep[0])
@@ -104,7 +88,7 @@ angular.module('services')
   is.bindTextValues = function(htmlString, textInputArray){
     if (textInputArray.length === 0) return
     for (var i = 0, len = textInputArray.length; i < len; i++) {
-      const input = textInputArray[i];
+      var input = textInputArray[i];
         var inputRegex = new RegExp('"'+input+'"','g');
         htmlString = htmlString.replace(inputRegex,'"storyObj.inputs.'+textInputArray[i]+'.value"')
     }
@@ -126,7 +110,7 @@ angular.module('services')
       // if changed / updated
       if (input.keyword && input.keyword != k && !input.temporary){ inputs[input.keyword] = input; delete inputs[k]; }
       // if empty
-      if (!input.keyword){ delete inputs[k] }
+      if (!input.hasOwnProperty('keyword')){ delete inputs[k] }
       // if added new
       if (input.hasOwnProperty('temporary') ) {
         delete input.temporary;
@@ -140,10 +124,10 @@ angular.module('services')
   is.prepareForAngular = function(htmlString, inputs){
     var inputsArray = inputs ? Object.keys(inputs) : [];
     if (inputsArray.length === 0) { // if no inputs
-      return htmlSting
+      return htmlString
     } else { // if inputs exist
       for (var i = 0, len = inputsArray.length; i < len; i++) {
-        const input = inputsArray[i];
+        var input = inputsArray[i];
         // temporary while not all 13 stories have "type"
         inputs[input].type = inputs[input].type || 'text';
         // end temporary
