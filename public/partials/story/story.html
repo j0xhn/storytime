@@ -3,6 +3,7 @@
     <h2 class='story-title'>{{storyObj.title}}</h2>
     <img ng-if="!excludeimage" ng-src="{{storyObj.photoUrl}}" alt="Story Image" class='story-image'/>
     <input-mapper ng-repeat="input in storyObj.inputs | toArray | orderBy: 'index'" input='input'></input-mapper>
+    <divider></divider>
     <div class='story-text' id='replace-with-html'></div>
   </div>
 </div>

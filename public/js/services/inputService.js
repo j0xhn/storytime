@@ -32,7 +32,7 @@ angular.module('services')
         var obj = {}
         var parts = sections.map(function(section){
           var ta = section.split(':');
-          if (ta[0].trim() === 'k'){ obj.keyword = ta[1].trim()}
+          if (ta[0].trim() === 'k'){ obj.keyword = ta[1].replace('<br>','').trim()}
           else if (ta[0].trim() === '1'){ obj.option1 = ta[1].trim()}
           else if (ta[0].trim() === '2'){ obj.option2 = ta[1].trim()}
         })
