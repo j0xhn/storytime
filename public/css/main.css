@@ -4961,53 +4961,6 @@ a.label:hover, a.label:focus {
   .label-danger[href]:hover, .label-danger[href]:focus {
     background-color: #bf351f; }
 
-/* line 7, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_badges.scss */
-.badge {
-  display: inline-block;
-  min-width: 10px;
-  padding: 3px 7px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 1;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-align: center;
-  background-color: #777777;
-  border-radius: 10px; }
-  /* line 22, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_badges.scss */
-  .badge:empty {
-    display: none; }
-  /* line 27, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_badges.scss */
-  .btn .badge {
-    position: relative;
-    top: -1px; }
-  /* line 32, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_badges.scss */
-  .btn-xs .badge, .btn-group-xs > .btn .badge,
-  .btn-group-xs > .btn .badge {
-    top: 0;
-    padding: 1px 5px; }
-  /* line 41, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_badges.scss */
-  .list-group-item.active > .badge,
-  .nav-pills > .active > a > .badge {
-    color: #4d90fc;
-    background-color: #fff; }
-  /* line 47, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_badges.scss */
-  .list-group-item > .badge {
-    float: right; }
-  /* line 51, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_badges.scss */
-  .list-group-item > .badge + .badge {
-    margin-right: 5px; }
-  /* line 55, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_badges.scss */
-  .nav-pills > li > a > .badge {
-    margin-left: 3px; }
-
-/* line 62, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_badges.scss */
-a.badge:hover, a.badge:focus {
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer; }
-
 /* line 6, /Users/John/Dev/projects/storytime/public/css/lib/bootstrap/_jumbotron.scss */
 .jumbotron {
   padding-top: 30px;
@@ -10713,493 +10666,497 @@ button.close {
   border-right: none !important; }
 
 /* line 20, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.flex {
+  display: flex; }
+
+/* line 21, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fac {
   display: flex;
   align-items: center; }
 
-/* line 21, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 22, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fjc {
   display: flex;
   justify-content: center; }
 
-/* line 22, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 23, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fjac {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-/* line 24, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 25, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .txt-gray {
   color: #999 !important; }
 
-/* line 25, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 26, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .txt-black {
   color: #000 !important; }
 
-/* line 26, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 27, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .txt-white {
   color: #fff !important; }
 
-/* line 27, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 28, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .txt-lightGray {
   color: #ccc !important; }
 
-/* line 28, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 29, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .txt-darkGray {
   color: #333 !important; }
 
-/* line 29, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 30, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .txt-blue {
   color: #3b5998 !important; }
 
-/* line 31, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 32, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .bgBlue {
   background-color: #3b5998; }
 
-/* line 33, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 34, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad0 {
   padding: 0 !important; }
 
-/* line 34, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 35, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad0b {
   padding-bottom: 0 !important; }
 
-/* line 35, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 36, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad0l {
   padding-left: 0 !important; }
 
-/* line 36, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 37, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad0r {
   padding-right: 0 !important; }
 
-/* line 37, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 38, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad10 {
   padding: 10px !important; }
 
-/* line 38, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 39, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad10tb {
   padding-top: 10px !important;
   padding-bottom: 10px !important; }
 
-/* line 39, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 40, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad10t {
   padding-top: 10px !important; }
 
-/* line 40, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 41, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad10b {
   padding-bottom: 10px !important; }
 
-/* line 41, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 42, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad10lr {
   padding-left: 10px !important;
   padding-right: 10px !important; }
 
-/* line 42, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 43, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad10l {
   padding-left: 10px !important; }
 
-/* line 43, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 44, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad10r {
   padding-right: 10px !important; }
 
-/* line 44, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 45, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad15 {
   padding: 15px !important; }
 
-/* line 45, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 46, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad15tb {
   padding-top: 15px !important;
   padding-bottom: 15px !important; }
 
-/* line 46, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 47, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad15t {
   padding-top: 15px !important; }
 
-/* line 47, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 48, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad15b {
   padding-bottom: 15px !important; }
 
-/* line 48, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 49, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad15lr {
   padding-left: 15px !important;
   padding-right: 15px !important; }
 
-/* line 49, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 50, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad15l {
   padding-left: 15px !important; }
 
-/* line 50, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 51, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad15r {
   padding-right: 15px !important; }
 
-/* line 51, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 52, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad20 {
   padding: 20px !important; }
 
-/* line 52, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 53, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad20tb {
   padding-top: 20px !important;
   padding-bottom: 20px !important; }
 
-/* line 53, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 54, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad20t {
   padding-top: 20px !important; }
 
-/* line 54, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 55, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad20b {
   padding-bottom: 20px !important; }
 
-/* line 55, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 56, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad20lr {
   padding-left: 20px !important;
   padding-right: 20px !important; }
 
-/* line 56, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 57, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad20l {
   padding-left: 20px !important; }
 
-/* line 57, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 58, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad20r {
   padding-right: 20px !important; }
 
-/* line 58, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 59, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad30 {
   padding: 30px !important; }
 
-/* line 59, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 60, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad30tb {
   padding-top: 30px !important;
   padding-bottom: 30px !important; }
 
-/* line 60, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 61, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad30t {
   padding-top: 30px !important; }
 
-/* line 61, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 62, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad30b {
   padding-bottom: 30px !important; }
 
-/* line 62, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 63, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad30lr {
   padding-left: 30px !important;
   padding-right: 30px !important; }
 
-/* line 63, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 64, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad30l {
   padding-left: 30px !important; }
 
-/* line 64, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 65, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad30r {
   padding-right: 30px !important; }
 
-/* line 65, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 66, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad40 {
   padding: 40px !important; }
 
-/* line 66, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 67, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad40tb {
   padding-top: 40px !important;
   padding-bottom: 40px !important; }
 
-/* line 67, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 68, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad40t {
   padding-top: 40px !important; }
 
-/* line 68, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 69, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad40b {
   padding-bottom: 40px !important; }
 
-/* line 69, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 70, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad40lr {
   padding-left: 40px !important;
   padding-right: 40px !important; }
 
-/* line 70, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 71, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad40l {
   padding-left: 40px !important; }
 
-/* line 71, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 72, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad40r {
   padding-right: 40px !important; }
 
-/* line 72, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 73, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .pad60t {
   padding-top: 60px !important; }
 
-/* line 74, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 75, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar0a {
   margin: 0 auto !important; }
 
-/* line 75, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 76, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mara {
   margin-left: auto !important;
   margin-right: auto !important; }
 
-/* line 76, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 77, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar0 {
   margin: 0 !important; }
 
-/* line 77, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 78, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar0l {
   margin-left: 0 !important; }
 
-/* line 78, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 79, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar0r {
   margin-right: 0 !important; }
 
-/* line 79, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 80, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar0b {
   margin-bottom: 0 !important; }
 
-/* line 80, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 81, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar0lr {
   margin-left: 0 !important;
   margin-right: 0 !important; }
 
-/* line 81, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 82, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar0tb {
   margin-top: 0 !important;
   margin-bottom: 0 !important; }
 
-/* line 82, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 83, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar0t {
   margin-top: 0 !important; }
 
-/* line 83, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 84, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5 {
   margin: 5 !important; }
 
-/* line 84, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 85, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5l {
   margin-left: 5 !important; }
 
-/* line 85, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 86, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5r {
   margin-right: 5 !important; }
 
-/* line 86, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 87, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5b {
   margin-bottom: 5 !important; }
 
-/* line 87, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 88, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5lr {
   margin-left: 5 !important;
   margin-right: 5 !important; }
 
-/* line 88, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 89, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5tb {
   margin-top: 5 !important;
   margin-bottom: 5 !important; }
 
-/* line 89, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 90, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5t {
   margin-top: 5 !important; }
 
-/* line 90, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 91, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar10 {
   margin: 10px !important; }
 
-/* line 91, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 92, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar10tb {
   margin-top: 10px !important;
   margin-bottom: 10px !important; }
 
-/* line 92, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 93, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar10t {
   margin-top: 10px !important; }
 
-/* line 93, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 94, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar10b {
   margin-bottom: 10px !important; }
 
-/* line 94, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 95, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar10lr {
   margin-left: 10px !important;
   margin-right: 10px !important; }
 
-/* line 95, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 96, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar10l {
   margin-left: 10px !important; }
 
-/* line 96, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 97, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar10r {
   margin-right: 10px !important; }
 
-/* line 97, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 98, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar20 {
   margin: 20px !important; }
 
-/* line 98, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 99, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar20tb {
   margin-top: 20px !important;
   margin-bottom: 20px !important; }
 
-/* line 99, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 100, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar20t {
   margin-top: 20px !important; }
 
-/* line 100, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 101, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar20b {
   margin-bottom: 20px !important; }
 
-/* line 101, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 102, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar20lr {
   margin-left: 20px !important;
   margin-right: 20px !important; }
 
-/* line 102, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 103, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar20l {
   margin-left: 20px !important; }
 
-/* line 103, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 104, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar20r {
   margin-right: 20px !important; }
 
-/* line 104, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 105, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar30 {
   margin: 30px !important; }
 
-/* line 105, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 106, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar30tb {
   margin-top: 30px !important;
   margin-bottom: 30px !important; }
 
-/* line 106, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 107, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar30t {
   margin-top: 30px !important; }
 
-/* line 107, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 108, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar30b {
   margin-bottom: 30px !important; }
 
-/* line 108, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 109, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar30lr {
   margin-left: 30px !important;
   margin-right: 30px !important; }
 
-/* line 109, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 110, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar30l {
   margin-left: 30px !important; }
 
-/* line 110, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 111, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar30r {
   margin-right: 30px !important; }
 
-/* line 111, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 112, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar40b {
   margin-bottom: 40px !important; }
 
-/* line 112, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 113, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar40tb {
   margin-bottom: 40px !important;
   margin-top: 40px !important; }
 
-/* line 113, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 114, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar50t {
   margin-top: 50px !important; }
 
-/* line 114, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 115, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar50b {
   margin-bottom: 50px !important; }
 
-/* line 116, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 117, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max300 {
   max-width: 300px !important; }
 
-/* line 117, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 118, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max400 {
   max-width: 400px !important; }
 
-/* line 118, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 119, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max500 {
   max-width: 500px !important; }
 
-/* line 119, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 120, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max600 {
   max-width: 600px !important; }
 
-/* line 121, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 122, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .f12 {
   font-size: 12px !important; }
 
-/* line 122, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 123, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .f14 {
   font-size: 14px !important; }
 
-/* line 123, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 124, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .f16 {
   font-size: 16px !important; }
 
-/* line 124, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 125, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .f18 {
   font-size: 18px !important; }
 
-/* line 126, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 127, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw100 {
   font-weight: 100; }
 
-/* line 127, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 128, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw200 {
   font-weight: 200; }
 
-/* line 128, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 129, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw300 {
   font-weight: 300; }
 
-/* line 129, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 130, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw400 {
   font-weight: 400; }
 
-/* line 130, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 131, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw500 {
   font-weight: 500; }
 
-/* line 131, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 132, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw600 {
   font-weight: 600; }
 
-/* line 134, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 135, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h100 {
   height: 100px; }
 
-/* line 135, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 136, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h200 {
   height: 200px; }
 
-/* line 136, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 137, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h300 {
   height: 300px; }
 
-/* line 137, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 138, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h400 {
   height: 400px; }
 
-/* line 139, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 140, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max100 {
   max-width: 100px; }
 
-/* line 140, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 141, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max200 {
   max-width: 200px; }
 
-/* line 141, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 142, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max300 {
   max-width: 300px; }
 
-/* line 142, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 143, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max400 {
   max-width: 400px; }
 
-/* line 145, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 146, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .italic {
   font-style: italic !important; }
 
-/* line 146, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 147, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; }
-  /* line 151, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+  /* line 152, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
   .ellipsis.multiLine {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -11210,15 +11167,21 @@ button.close {
 .coinIcon {
   height: 14px;
   width: 14px;
-  background: url(/images/coin.svg); }
+  background: url(/images/svg/coin.svg); }
 
 /* line 7, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+.stopWatchIcon {
+  height: 14px;
+  width: 14px;
+  background: url(/images/svg/stopwatch.svg); }
+
+/* line 13, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
 .menuIcon {
   height: 12px;
   padding-left: 15px;
   position: relative;
   cursor: pointer; }
-  /* line 12, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 18, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .menuIcon:before {
     content: "";
     position: absolute;
@@ -11229,7 +11192,7 @@ button.close {
     background: black;
     box-shadow: 0 5px 0 0 black, 0 10px 0 0 black; }
 
-/* line 26, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+/* line 32, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
 .closeIcon {
   position: relative;
   display: inline-block;
@@ -11237,7 +11200,7 @@ button.close {
   height: 25px;
   overflow: hidden;
   cursor: pointer; }
-  /* line 34, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 40, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .closeIcon::before, .closeIcon::after {
     content: '';
     position: absolute;
@@ -11247,20 +11210,20 @@ button.close {
     left: 0;
     margin-top: -1px;
     background: #999; }
-  /* line 44, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 50, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .closeIcon.white {
     background: #fff; }
-  /* line 45, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 51, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .closeIcon.gray {
     background: #999; }
-  /* line 46, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 52, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .closeIcon::before {
     transform: rotate(45deg); }
-  /* line 49, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 55, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .closeIcon::after {
     transform: rotate(-45deg); }
 
-/* line 54, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+/* line 60, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
 .searchIcon {
   width: 22px;
   height: 22px;
@@ -11278,7 +11241,7 @@ button.close {
   text-align: left;
   text-indent: -9999px;
   direction: ltr; }
-  /* line 71, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 77, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .searchIcon:before {
     content: '';
     pointer-events: none;
@@ -11292,18 +11255,18 @@ button.close {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
-  /* line 85, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 91, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .searchIcon:after {
     content: '';
     pointer-events: none; }
 
-/* line 91, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+/* line 97, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
 .checkmark {
   display: inline-block;
   width: 12px;
   height: 12px;
   position: relative; }
-  /* line 98, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 104, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .checkmark:before {
     /*Add another block-level blank space*/
     content: '';
@@ -11316,16 +11279,16 @@ button.close {
     border-width: 0 1px 1px 0;
     /*Rotate the L 45 degrees to turn it into a checkmark*/
     transform: rotate(45deg); }
-  /* line 113, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 119, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .checkmark.circle {
     width: 36px;
     height: 36px; }
-    /* line 116, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    /* line 122, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
     .checkmark.circle:before {
       position: absolute;
       top: 30%;
       left: 44%; }
-    /* line 121, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    /* line 127, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
     .checkmark.circle:after {
       content: '';
       position: absolute;
@@ -11335,24 +11298,24 @@ button.close {
       left: 0;
       border-radius: 50%;
       border: 1px solid #000; }
-  /* line 133, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 139, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .checkmark.big {
     width: 18px;
     height: 36px;
     border-width: 0 2px 2px 0; }
-    /* line 137, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    /* line 143, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
     .checkmark.big:before {
       width: 18px;
       height: 36px;
       border-width: 0 2px 2px 0; }
-    /* line 142, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    /* line 148, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
     .checkmark.big.circle, .checkmark.big:after {
       height: 108px;
       width: 108px; }
-  /* line 147, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 153, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .checkmark.green:before, .checkmark.green:after {
     border-color: #00B145; }
-  /* line 148, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 154, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .checkmark.white:before, .checkmark.white:after {
     border-color: #fff; }
 
@@ -12372,39 +12335,58 @@ Search Tags for a story
   .feedDirective .emptyFeed {
     display: block; }
 
-/* line 1, /Users/John/Dev/projects/storytime/public/partials/coinBadge/coinBadge.scss */
-.coinBadge {
-  font-size: 11px;
-  border: 1px solid #e1cd08;
-  color: #bd9131;
+/* line 1, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+.badge {
+  font-size: 12px;
+  color: #333;
   line-height: initial;
   padding: 3px 5px;
   border-radius: 5px;
   font-weight: 400;
   position: relative;
   display: flex;
-  padding-left: 19px; }
-  /* line 13, /Users/John/Dev/projects/storytime/public/partials/coinBadge/coinBadge.scss */
-  .coinBadge:before {
+  padding-left: 20px; }
+  /* line 13, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+  .badge.outline {
+    border: 1px solid #999; }
+  /* line 14, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+  .badge:before {
     content: '';
     height: 12px;
     width: 12px;
     left: 5px;
-    margin-right: 2px;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background: url(/images/coin.svg); }
+  /* line 24, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+  .badge.stopwatch {
+    color: #3b5998;
+    padding-left: 22px;
+    border-color: #45618D; }
+    /* line 28, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+    .badge.stopwatch:before {
+      background: url(/images/svg/stopwatch.svg); }
+  /* line 30, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+  .badge.coin {
+    color: #bd9131;
+    border-color: #f7ca63; }
+    /* line 33, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+    .badge.coin:before {
+      background: url(/images/svg/coin.svg); }
 
 /* line 4, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .hero {
+  overflow: hidden;
   padding: 60px 10px 80px;
   text-align: center;
   max-width: 770px;
   margin: 0 auto; }
-  /* line 10, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 11, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .hero .subTitle {
     max-width: 400px;
     margin-bottom: 30px; }
-  /* line 15, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 16, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .hero .successMessage {
     color: #00B145;
     text-align: left;
@@ -12413,13 +12395,13 @@ Search Tags for a story
     max-width: 400px;
     padding-top: 3px; }
 
-/* line 25, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 26, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .teaser-picture {
   position: absolute;
   max-width: 200px;
   max-height: 200px;
   z-index: -1; }
-  /* line 30, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 31, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.cactus {
     display: block;
     max-height: 100px;
@@ -12427,27 +12409,27 @@ Search Tags for a story
     top: -67px;
     opacity: .5;
     transform: rotate(192deg); }
-  /* line 38, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 39, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.cloud-1 {
     top: -25px;
     left: 135px;
     width: 49px; }
-  /* line 43, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 44, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.crown {
     display: none; }
     @media (min-width: 650px) {
-      /* line 43, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      /* line 44, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
       .landingPage .teaser-picture.crown {
         display: block;
         bottom: 58px;
         left: -20px;
         width: 100px;
         opacity: .5; } }
-  /* line 53, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 54, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.cylinder_hat {
     display: none; }
     @media (min-width: 650px) {
-      /* line 53, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      /* line 54, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
       .landingPage .teaser-picture.cylinder_hat {
         display: block;
         top: 122px;
@@ -12455,7 +12437,7 @@ Search Tags for a story
         width: 87px;
         opacity: .4;
         transform: rotate(-40deg); } }
-  /* line 64, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 65, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.fish-1 {
     display: block;
     top: 12px;
@@ -12463,10 +12445,10 @@ Search Tags for a story
     max-width: 50px;
     opacity: 0.3; }
     @media (min-width: 650px) {
-      /* line 64, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      /* line 65, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
       .landingPage .teaser-picture.fish-1 {
         top: 47px; } }
-  /* line 72, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 73, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.fish-2 {
     bottom: -86px;
     left: 0;
@@ -12476,16 +12458,16 @@ Search Tags for a story
     margin: 0 auto;
     transform: rotate(40deg); }
     @media (min-width: 650px) {
-      /* line 72, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      /* line 73, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
       .landingPage .teaser-picture.fish-2 {
         bottom: -70px;
         transform: rotate(22deg);
         opacity: .4; } }
-  /* line 86, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 87, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.snake-tail {
     display: none; }
     @media (min-width: 650px) {
-      /* line 86, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      /* line 87, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
       .landingPage .teaser-picture.snake-tail {
         top: -16px;
         display: block;
@@ -12495,19 +12477,19 @@ Search Tags for a story
         right: 0;
         margin: 0 auto;
         transform: rotate(3deg); } }
-  /* line 99, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 100, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.girl-1 {
     display: none; }
-  /* line 100, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 101, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .teaser-picture.girl-4 {
     display: block;
     right: 10px;
     bottom: -155px; }
-    /* line 104, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    /* line 105, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
     .landingPage .teaser-picture.girl-4.move {
       animation: MoveUpDown 3s cubic-bezier(0.53, 0.02, 0.64, 0.99); }
 
-/* line 110, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 111, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .four-squares {
   display: flex;
   align-items: center;
@@ -12515,81 +12497,86 @@ Search Tags for a story
   flex-flow: row wrap;
   max-width: 1000px;
   margin: 0 auto; }
-  /* line 117, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 118, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .four-squares .square {
     max-width: 450px;
     margin: 0 auto;
     padding: 30px; }
-  /* line 122, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 123, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .four-squares .img {
     border-radius: 50%;
     width: 150px;
     box-shadow: 5px 5px 10px -5px black;
     margin-bottom: 20px; }
-  /* line 128, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 129, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .four-squares .text {
     color: white;
     margin-bottom: 10px;
     font-size: 18px; }
-  /* line 129, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+  /* line 130, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
   .landingPage .four-squares .link {
     text-decoration: underline;
     opacity: .7;
     font-size: 12px; }
-    /* line 133, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    /* line 134, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
     .landingPage .four-squares .link .fa {
       margin-left: 5px;
       position: relative;
       top: 2px; }
   @media (min-width: 600px) {
-    /* line 110, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    /* line 111, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
     .landingPage .four-squares {
       align-items: initial; }
-      /* line 141, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+      /* line 142, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
       .landingPage .four-squares .square {
         width: 40%; } }
   @media (min-width: 1000px) {
-    /* line 147, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    /* line 148, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
     .landingPage .four-squares .square {
       width: 25%;
       min-height: auto; }
-    /* line 148, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    /* line 149, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
     .landingPage .four-squares .img {
       width: 150px; } }
 
-/* line 152, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 153, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage section {
   padding: 40px 20px;
   text-align: center;
   position: relative; }
 
-/* line 158, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 159, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .title {
   margin-bottom: 20px;
   font-size: 34px;
   line-height: 42px;
   font-weight: bold; }
 
-/* line 165, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 166, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .subTitle {
   margin: 0 auto 20px; }
 
-/* line 169, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 170, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .parentChildReading {
   width: 100%;
   max-width: 500px;
   margin-bottom: 20px; }
 
-/* line 175, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 176, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .exampleStory .content {
-  border: 1px solid #ccc;
-  border-radius: 5px; }
+  padding: 0; }
+  @media (min-width: 600px) {
+    /* line 176, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+    .landingPage .exampleStory .content {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 30px; } }
 
-/* line 180, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 185, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .item {
   margin-bottom: 10px; }
 
-/* line 181, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 186, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .innerContent {
   max-width: 500px;
   margin: 0 auto; }
@@ -12600,7 +12587,7 @@ Search Tags for a story
   to {
     opacity: 1; } }
 
-/* line 184, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
+/* line 189, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage #values::after {
   content: '|';
   -webkit-animation: blink 500ms infinite;
@@ -12641,14 +12628,15 @@ Search Tags for a story
   margin: 0 auto; }
   /* line 5, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .title {
-    font-weight: 500;
-    margin-bottom: 10px; }
+    font-weight: 500; }
   /* line 6, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .story-image {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    width: 100%; }
   /* line 7, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
-  .detailPage .detail-bullets, .detailPage .desc {
-    margin-bottom: 40px; }
+  .detailPage .detail-bullets {
+    margin-bottom: 20px;
+    padding-left: 30px; }
   /* line 8, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .button-wrapper {
     position: fixed;

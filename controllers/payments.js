@@ -11,7 +11,11 @@ var gateway = braintree.connect({
 
 exports.getBraintreeToken = (req, res) => {
   gateway.clientToken.generate({}, function (err, response) {
-    res.send(response.clientToken);
+    if(err){
+      console.error('error generating token - possible connection issues');
+      res.send({"error":"Error generating payment token"})
+    }
+    else { res.send(response.clientToken); }
   });
 };
 

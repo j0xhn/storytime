@@ -11,7 +11,7 @@ angular.module('directives')
         */
         storiesService.getSelectedStory($routeParams.storyId).then(function(story){
           $scope.story = story;
-          if(story.authorId === userService.user._id){$scope.authorIsViewing = true;}
+          if(story.authorId === userService.user._id || userService.isAdmin()){$scope.authorIsViewing = true;}
         });
       },
 			templateUrl: '/pages/storyPage/storyPage.html',

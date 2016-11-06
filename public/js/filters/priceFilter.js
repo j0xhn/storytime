@@ -4,7 +4,6 @@ angular.module('filters')
     if(isNaN(input)){
       return input;
     } else {
-      var symbol = symbol || '$';
       if (input < 1){
         input = ''+input;
         while(input.charAt(0) === '0')
@@ -12,9 +11,11 @@ angular.module('filters')
       }
       var place = place === undefined ? true : place;
       if(place === true){
-        return symbol + input;
+        // if you will return icon here
+        return input;
       } else{
-        return input + symbol;
+        // if you will return icon
+        return input;
       }
     }
   }
