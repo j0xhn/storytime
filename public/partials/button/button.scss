@@ -53,7 +53,7 @@
     box-shadow: 0 3px darken($lightBlue, 5%);
     &.outline {color: $lightBlue; border-color: $lightBlue;}
   }
-  
+
   &.blue{
     background-color: $blue;
     box-shadow: 0 3px darken($blue, 5%);
@@ -95,7 +95,7 @@
     display: block;
     width: 100%;
   }
-  @media (min-width: $small-width){
+  @media (min-width: $medium-width){
     &.mobileFull {
       display: inline-block;
       width: auto;

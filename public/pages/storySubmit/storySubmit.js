@@ -73,6 +73,7 @@ angular.module('directives')
 
         story.authorName = userService.isLoggedIn() ? 'Guest Author' : userService.user.profile.name;
         story.authorId = story.authorId || userService.user._id;
+        story.authorImageUrl = story.authorImageUrl || userService.user.profile.picture;
 
         storiesService.postStory(story).then(function(res){
           if(!res.data || res.data.error){

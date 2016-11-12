@@ -43,7 +43,10 @@ body {
   &.mobileFull{
     padding-left: 0;
     padding-right: 0;
-    @media (min-width: $small-width){ padding-left: $space-from-side; padding-right: $space-from-side; }
+    @media (min-width: $medium-width){ padding-left: $space-from-side*2; padding-right: $space-from-side*2; }
+  }
+  &.mobileOnly{
+    @media (min-width: $medium-width){ padding-left:0; padding-right:0; }
   }
 }
 

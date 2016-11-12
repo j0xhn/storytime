@@ -1,11 +1,25 @@
 .detailPage{
+  $imageWidth: 350px;
+  $bottomPadding: 100px; // makes room for button
   background-color: white;
-  padding-bottom: 100px; // makes room for button
+  padding-bottom: $bottomPadding;
   margin: 0 auto;
+  overflow: auto;
+  max-width: $imageWidth;
+  @media (min-width: $small-width){ padding-top: 10px;}
+  @media (min-width: $medium-width){ max-width: $imageWidth *2.5; padding: 30px 30px $bottomPadding 30px;}
   .title { font-weight: 500;}
-  .story-image { margin-bottom: 20px; width: 100%; }
-  .detail-bullets { margin-bottom: 20px; padding-left: 30px; }
-  .button-wrapper{
+  .story-tags { overflow: auto; width: 100%; }
+  .story-image {
+    margin-bottom: 20px;
+    .image{ width: 100%;}
+    @media (min-width: $small-width){ border-radius: 5px; overflow: hidden; }
+  }
+  .detail-bullets {
+    margin-bottom: 20px;
+    padding-left: 30px;
+  }
+  .button-wrapper {
     position: fixed;
     z-index: 1;
     bottom: 0;
@@ -15,51 +29,18 @@
     width: 100%;
     left: 0;
     padding: 15px;
-    max-width: $small-width;
     transition-duration: 300ms;
-
-    &.pickType{
-      .paymentType { display: block; }
-      .purchase-button { display: none; }
-    }
-
-    &.showForm{
-      .paymentType { display: none; }
-      .purchase-button { display: none; }
-      #storyPurchaseForm { display: block; }
-    }
-
-    &.createAccount{
-      .createAccountSection { display: block; }
-      .purchase-button { display: none; }
-    }
-  }
-
-  #storyPurchaseForm, .paymentType, .createAccountSection {
-    display: none;
-  }
-
-  @media (min-width: $small-width){
-    margin-top: 20px;
-    .story-image{ margin-bottom: 0; }
-    .story-image, .detail-bullets, .left {
-      width: 300px;
-      float: left;
-      margin-right: 20px;
-    }
-
-    .detailSection{
-      border-top: 1px solid $lighterGray;
-      margin-top: 40px;
-      padding-top: 40px;
-    }
-
-    .button-wrapper{
+    @media (min-width: $medium-width) {
       position: relative;
       box-shadow: none;
       width: auto;
-      padding: 0;
       background-color: transparent;
+      margin-bottom: 20px;
     }
+  }
+
+  @media (min-width: $medium-width){
+    .story-image, .story-tags { float: left; width: $imageWidth; }
+    .right { float: right; width: calc(100% - #{$imageWidth + 20}); text-align: left; }
   }
 }

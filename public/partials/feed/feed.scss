@@ -5,15 +5,18 @@
   height: 100%;
   overflow: auto;
   background-color: $lighterGray;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   .feedWrapper{
     display: flex;
     flex-flow: row wrap;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: center;
+
     .header{
       width: 100%;
-      display: block;
+    display: block;
       text-align: center;
       margin-bottom: 20px;
     }

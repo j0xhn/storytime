@@ -25,6 +25,6 @@ angular.module('services')
 
     user: cachedUser,
     isLoggedIn: function() { return !!cachedUser.password; },
-    isAdmin: function() { return cachedUser.permissions.contains('admin') }
+    isAdmin: function() { return cachedUser.permissions.indexOf('admin') > -1 }
   }
 });

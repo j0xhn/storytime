@@ -62,8 +62,8 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
           deferred.resolve(true)
         }else{
           // TODO: just swap out these lines for purchase info
-          deferred.resolve(true)
-          // $location.path('/detail/'+$route.current.params.storyId).replace();
+          // deferred.resolve(true)
+          $location.path('/detail/'+$route.current.params.storyId).replace();
         }
         return deferred.promise;
       }

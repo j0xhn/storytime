@@ -125,6 +125,7 @@ angular.module('services')
     "shortDesc" : "A mother get's her fussy little Pokemon to go to sleep.  She does so with the help of her child's favorite hero and helps them understand that sleeping will help her child be happier at school and while doing their favorite activity.",
     "salesPitch" : "This is a perfect story not only for the child but also the parents reading it.  If you're not 100% satisified with this story message me at tonynacu@gmail.com and i'll send you a refund myself!",
     "authorName" : "Tony Nacu",
+    "authorImageUrl" : "/images/local_500x500.jpg",
     "authorId" : "57e894497d466949e782cdf2",
     "tags" : [
       "Pokemon Go",
