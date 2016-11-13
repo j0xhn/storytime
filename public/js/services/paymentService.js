@@ -16,6 +16,17 @@ angular.module('services')
         url: '/braintree/process',
         data: paymentDetails
       })
+    },
+
+    payWithCoins: function(storyId, price){
+      console.log('starting coin payment: ', storyId, price)
+      var paymentDetails = {storyId: storyId, price: price};
+      paymentDetails._csrf = window._csrf;
+      return $http({
+        method: 'POST',
+        url: '/payments/coin',
+        data: paymentDetails
+      })
     }
 
   }

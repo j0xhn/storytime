@@ -145,6 +145,7 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
  * API examples routes.
  */
 app.get('/api', apiController.getApi);
+app.post('/payments/coin', paymentsController.payWithCoins)
 app.get('/braintree/token', paymentsController.getBraintreeToken)
 app.post('/braintree/process', paymentsController.processPayment)
 app.get('/api/facebook', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getFacebook);

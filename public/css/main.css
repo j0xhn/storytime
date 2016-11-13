@@ -12686,11 +12686,11 @@ Search Tags for a story
       .detailPage .story-image {
         border-radius: 5px;
         overflow: hidden; } }
-  /* line 18, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  /* line 21, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .detail-bullets {
     margin-bottom: 20px;
     padding-left: 30px; }
-  /* line 22, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+  /* line 25, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
   .detailPage .button-wrapper {
     position: fixed;
     z-index: 1;
@@ -12703,7 +12703,7 @@ Search Tags for a story
     padding: 15px;
     transition-duration: 300ms; }
     @media (min-width: 760px) {
-      /* line 22, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+      /* line 25, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
       .detailPage .button-wrapper {
         position: relative;
         box-shadow: none;
@@ -12711,11 +12711,11 @@ Search Tags for a story
         background-color: transparent;
         margin-bottom: 20px; } }
   @media (min-width: 760px) {
-    /* line 43, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 46, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .story-image, .detailPage .story-tags {
       float: left;
       width: 350px; }
-    /* line 44, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
+    /* line 47, /Users/John/Dev/projects/storytime/public/pages/detail/detailPage.scss */
     .detailPage .right {
       float: right;
       width: calc(100% - 370px);

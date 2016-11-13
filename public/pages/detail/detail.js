@@ -19,12 +19,14 @@ angular.module('directives')
       handle non-logged in, not enough credit scenarios
       */
       $scope.nextStep = function (e) {
-        if(userService.user.paymentInfo.coins){
+        if(!userService.isLoggedIn()){
           // download and take from autoPay
-        } else if(!userService.isLoggedIn()) {
           $scope.paymentState = 'createAccount';
-        } else if ($scope.story.price < userService.user.paymentInfo.coins){
-          $scope.paymentState = 'pickType';
+        } else {
+          paymentService.payWithCoins($scope.story._id, $scope.story.price).then(function(res){
+            userService.addStory
+            window.location.pathname = '/story/'+res.data.storyId
+          })
         }
       }
 

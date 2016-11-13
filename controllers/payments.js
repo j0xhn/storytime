@@ -51,5 +51,13 @@ exports.processPayment = (req, res) => {
       res.send(result)
     }
   });
+}
 
+exports.payWithCoins = (req,res) => {
+  // console.log('current coin coint:', req.user.paymentInfo.coins)
+  // minus coins, add story to their purchased list
+  res.send({
+    success: 'Story Purchased',
+    storyId: req.body.storyId
+  });
 };
