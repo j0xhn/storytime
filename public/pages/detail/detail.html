@@ -6,7 +6,7 @@
 
   <div class="right">
     <article class="content story-info">
-      <h2 class="bold">{{story.title}}</h2>
+      <h2 class="bold mar5b">{{story.title}}</h2>
       <div class="meta-info flex mar20b">
         <span class="coin badge">{{story.price | price }}</span>
         <span class="stopwatch badge">{{story.length}} mins</span>
@@ -35,6 +35,7 @@
 
     <div class="content mar40b sales-pitch">
       <testimonial
+      ng-if="story.salesPitch"
         imageurl="{{story.authorImageUrl}}"
         name="{{story.authorName}}"
         descriptor="Author"

@@ -1,14 +1,9 @@
 angular.module('filters')
 .filter('price', function () {
   return function(input, symbol, place){
-    if(isNaN(input)){
-      return input;
+    if(isNaN(input) || input < 1){
+      return 'FREE';
     } else {
-      if (input < 1){
-        input = ''+input;
-        while(input.charAt(0) === '0')
-        input = input.substr(1);
-      }
       var place = place === undefined ? true : place;
       if(place === true){
         // if you will return icon here

@@ -24,8 +24,11 @@ angular.module('directives')
           $scope.paymentState = 'createAccount';
         } else {
           paymentService.payWithCoins($scope.story._id, $scope.story.price).then(function(res){
-            userService.addStory
-            window.location.pathname = '/story/'+res.data.storyId
+            debugger;
+            userService.syncUser().then(function(success){
+              debugger;
+              if(success){ window.location.pathname = 'story/'}
+            });
           })
         }
       }

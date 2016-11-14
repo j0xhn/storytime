@@ -1,5 +1,5 @@
 angular.module('services')
-.service('userService', function ($http) {
+.service('userService', function ($http, $q, analyticService) {
 
   var cachedUser = user;
   delete window.user;
@@ -23,20 +23,25 @@ angular.module('services')
       });
     },
 
-    syncUser: function() {
-      // create promise
-
-      // get user
-
-      // set as cachedUser and resolve
-      return $http({
+    syncUser: function () {
+      var deferred = $q.defer();
+      $http({
         method: 'GET',
-
-      })
-    }
+        url: '/users/current'
+      }).then(function(res){
+        debugger;
+        if(res.data.success){ deferred.resolve(user)}
+        else{
+          analyticService.error('syncUser', 'userService line 34')
+          deferred.resolve(false, res.data.message);
+        }
+      });
+      return deferred.promise;
+    },
 
     user: cachedUser,
     isLoggedIn: function() { return !!cachedUser.password; },
-    isAdmin: function() { return cachedUser.permissions.indexOf('admin') > -1 }
+    isAdmin: function() { return cachedUser.permissions.indexOf('admin') > -1 },
+    hasPurchased: function(storyId) { return cachedUser.purchased && cachedUser.purchased.hasOwnProperty(storyId) }
   }
 });

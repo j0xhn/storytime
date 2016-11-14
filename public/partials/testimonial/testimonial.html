@@ -1,6 +1,6 @@
 <div class="st-testimonial-wrapper">
   <div class="st-testimonial">
-    <img class="st-testimonial-image" ng-src="{{imageurl}}" alt="Testimonial Image" />
+    <img class="st-testimonial-image" ng-if="imageUrl" ng-src="{{imageurl}}" alt="Testimonial Image" />
     <h6 class="uppercase txt-gray mar10b"> {{name}}<span ng-if="descriptor">, {{descriptor}} </span></h6>
     <div ng-transclude></div>
   </div>

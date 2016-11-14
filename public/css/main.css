@@ -10928,33 +10928,33 @@ button.close {
 
 /* line 85, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5 {
-  margin: 5 !important; }
+  margin: 5px !important; }
 
 /* line 86, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5l {
-  margin-left: 5 !important; }
+  margin-left: 5px !important; }
 
 /* line 87, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5r {
-  margin-right: 5 !important; }
+  margin-right: 5px !important; }
 
 /* line 88, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5b {
-  margin-bottom: 5 !important; }
+  margin-bottom: 5px !important; }
 
 /* line 89, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5lr {
-  margin-left: 5 !important;
-  margin-right: 5 !important; }
+  margin-left: 5px !important;
+  margin-right: 5px !important; }
 
 /* line 90, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5tb {
-  margin-top: 5 !important;
-  margin-bottom: 5 !important; }
+  margin-top: 5px !important;
+  margin-bottom: 5px !important; }
 
 /* line 91, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar5t {
-  margin-top: 5 !important; }
+  margin-top: 5px !important; }
 
 /* line 92, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .mar10 {
@@ -12357,11 +12357,16 @@ Search Tags for a story
   font-weight: 400;
   position: relative;
   display: flex;
-  padding-left: 20px; }
-  /* line 13, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
-  .badge.outline {
-    border: 1px solid #999; }
+  padding-left: 20px;
+  margin-left: -5px; }
   /* line 14, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+  .badge + .badge {
+    margin-left: 3px; }
+  /* line 15, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+  .badge.outline {
+    border: 1px solid #999;
+    margin-left: 0; }
+  /* line 16, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
   .badge:before {
     content: '';
     height: 12px;
@@ -12371,19 +12376,19 @@ Search Tags for a story
     top: 50%;
     transform: translateY(-50%);
     background: url(/images/coin.svg); }
-  /* line 24, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+  /* line 26, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
   .badge.stopwatch {
     color: #3b5998;
     padding-left: 22px;
     border-color: #45618D; }
-    /* line 28, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+    /* line 30, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
     .badge.stopwatch:before {
       background: url(/images/svg/stopwatch.svg); }
-  /* line 30, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+  /* line 32, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
   .badge.coin {
     color: #bd9131;
     border-color: #f7ca63; }
-    /* line 33, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+    /* line 35, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
     .badge.coin:before {
       background: url(/images/svg/coin.svg); }
 

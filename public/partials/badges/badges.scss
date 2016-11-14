@@ -10,7 +10,9 @@
   position: relative;
   display: flex;
   padding-left: $iconWidth + 8px;
-  &.outline{ border: 1px solid $gray; }
+  margin-left: -$badgeSidePadding;
+  & + .badge { margin-left: 3px; }
+  &.outline{ border: 1px solid $gray; margin-left: 0; }
   &:before{
     content: '';
     height: $iconWidth;

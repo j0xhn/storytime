@@ -1,6 +1,7 @@
 'use strict';
 const braintree = require('braintree');
 const User = require('../models/User');
+const ResponseUtil = require('../util/ResponseUtil');
 
 var gateway = braintree.connect({
   environment: braintree.Environment[process.env.NODE_ENV],
@@ -37,27 +38,36 @@ exports.processPayment = (req, res) => {
       debugger;
       if (!req.user) res.send({error: 'No User'})
       console.log(req);
-      // User.findById(req.user.id, (err, user) => {
-      //   if (err) { return next(err); }
-      //   user.purchased.push()
-      //   user.save((err) => {
-      //     if (err) {
-      //       return next(err);
-      //     }
-      //     req.flash('success', { msg: 'Profile information has been updated.' });
-      //     res.redirect('/story/');
-      //   });
-      // })
       res.send(result)
     }
   });
 }
 
 exports.payWithCoins = (req,res) => {
-  // console.log('current coin coint:', req.user.paymentInfo.coins)
-  // minus coins, add story to their purchased list
-  res.send({
-    success: 'Story Purchased',
-    storyId: req.body.storyId
+  User.findById(req.user.id, (err, user) => {
+    var coins = isNaN(req.body.price) ? 0 : req.body.price;
+    var storyId = req.body.storyId
+
+    if (err) { return next(err); }
+    if (user.purchased.hasOwnProperty(storyId)){
+      ResponseUtil.success(req, res, {message: 'Story has already been unlocked'})
+    } else {
+      var purchaseInfo = {
+        storyId: storyId,
+        purchaseDate: new Date(),
+        price: coins
+      };
+
+      user.paymentInfo.coins = user.paymentInfo.coins - coins;
+      user.purchased[storyId] = purchaseInfo;
+      user.markModified('purchased');
+      user.save((err, user) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        }
+        ResponseUtil.success(req, res);
+      });
+    }
   });
 };
