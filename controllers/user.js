@@ -182,11 +182,7 @@ exports.getAllUsers = (req, res) => {
 * Gets current user
 */
 exports.getCurrentUser = (req, res) => {
-  debugger
-  User.findById(req.user.id, (err, user) => {
-    if (err) { return next(err); }
-    else { ResponseUtil.success(req, res, user) }
-  });
+  ResponseUtil.success(req, res, req.user)
 }
 
 /**

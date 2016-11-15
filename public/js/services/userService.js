@@ -1,8 +1,9 @@
 angular.module('services')
-.service('userService', function ($http, $q, analyticService) {
+.service('userService', function ($http, $q, analyticService, responseService) {
 
   var cachedUser = user;
   delete window.user;
+
 
   return {
 
@@ -29,11 +30,11 @@ angular.module('services')
         method: 'GET',
         url: '/users/current'
       }).then(function(res){
-        debugger;
-        if(res.data.success){ deferred.resolve(user)}
+        debugger
+        if(responseService.isSuccess(res)){ deferred.resolve(true)}
         else{
-          analyticService.error('syncUser', 'userService line 34')
-          deferred.resolve(false, res.data.message);
+          analyticService.error('syncUser', 'userService.js')
+          deferred.resolve(false);
         }
       });
       return deferred.promise;

@@ -1,3 +1,4 @@
+const codes = require('../config/httpCodes');
 const ResponseUtil = {};
 
 function checkIfObject(variable){
@@ -5,18 +6,16 @@ function checkIfObject(variable){
 }
 
 ResponseUtil.success = function(req, res, data){
-  debugger;
   if (data && checkIfObject(data)){
     console.error('response with different type than object provided, unexpected results may occur')
   }
-  res.send({success: true, payload:data});
+  res.status(codes.success).send(data);
 };
 
 ResponseUtil.error = function(req, res, data){
-  debugger;
   if (data && checkIfObject(data)){
     console.error('response with different type than object provided, unexpected results may occur')
   }
-  res.send({error: true, payload:data});
+  res.status(codes.error).send(data);
 };
 module.exports = ResponseUtil;

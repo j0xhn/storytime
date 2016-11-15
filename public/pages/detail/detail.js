@@ -3,7 +3,7 @@ angular.module('directives')
   return {
     restrict: 'EA',
     replace: true,
-    controller: function($scope, $routeParams, $q, $timeout, $rootScope, storiesService, paymentService, userService) {
+    controller: function($scope, $routeParams, $q, $timeout, $rootScope, storiesService, paymentService, userService, responseService, analyticService) {
       /*
       remove feedback button
       */
@@ -16,19 +16,27 @@ angular.module('directives')
         $scope.story = res;
       });
       /*
-      handle non-logged in, not enough credit scenarios
+      handle non-logged in,
+      not enough credit scenarios,
+      success
       */
+      function handleSuccess(){
+        window.location.pathname = '/story/'+$routeParams.storyId;
+      }
       $scope.nextStep = function (e) {
         if(!userService.isLoggedIn()){
           // download and take from autoPay
           $scope.paymentState = 'createAccount';
         } else {
           paymentService.payWithCoins($scope.story._id, $scope.story.price).then(function(res){
-            debugger;
-            userService.syncUser().then(function(success){
-              debugger;
-              if(success){ window.location.pathname = 'story/'}
-            });
+            if (responseService.isSuccess(res)){
+              userService.syncUser().then(function(res){
+                if(res){ handleSuccess();
+                } else { analyticService.error('user sync', 'detail.js') }
+              });
+            } else {
+              analyticService.error('coin payment', 'detail.js')
+            }
           })
         }
       }

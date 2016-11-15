@@ -36,9 +36,11 @@ exports.processPayment = (req, res) => {
       res.send(err)
     } else {
       debugger;
-      if (!req.user) res.send({error: 'No User'})
-      console.log(req);
-      res.send(result)
+      if (!req.user) {res.send({error: 'No User'})
+      } else {
+        console.log(req);
+        res.send(result)
+      }
     }
   });
 }
@@ -63,10 +65,11 @@ exports.payWithCoins = (req,res) => {
       user.markModified('purchased');
       user.save((err, user) => {
         if (err) {
-          console.log(err);
           return next(err);
+          ResponseUtil.error(req, res, err);
+        } else {
+          ResponseUtil.success(req, res);
         }
-        ResponseUtil.success(req, res);
       });
     }
   });
