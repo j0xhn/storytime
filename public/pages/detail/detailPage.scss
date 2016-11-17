@@ -44,6 +44,11 @@
 
   @media (min-width: $medium-width){
     .story-image, .story-tags { float: left; width: $imageWidth; }
-    .right { float: right; width: calc(100% - #{$imageWidth + 20}); text-align: left; }
+    .right {
+      float: right;
+      width: calc(100% - #{$imageWidth + 20});
+      text-align: left;
+      min-height: $imageWidth + 50; // makes it so the tags stay to the left
+     }
   }
 }

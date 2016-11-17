@@ -73,7 +73,7 @@ angular.module('services')
   };
 
   ss.exampleStory = {
-    "_id" : "57ee7ef2002a8c317ffe5c30",
+    "_id" : "example",
     "updatedAt" : "2016-10-24T03:24:49.763Z",
     "createdAt" : "2016-09-30T15:04:18.034Z",
     "inputs" : {

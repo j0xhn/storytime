@@ -1,12 +1,14 @@
 angular.module('storytime', [
   'ngRoute',
   'ui.tinymce',
+  'angularModalService',
   'filters',
   'services',
   'directives'
 ]);
 angular.module('filters',[]);
 angular.module('services',[]);
+angular.module('controllers',[]);
 angular.module('directives',[]);
 angular.module('storytime').config(function ($routeProvider, $locationProvider) {
   // use the HTML5 History API
@@ -61,8 +63,6 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
         if(userService.hasPurchased(storyId) || storyId === 'example'){
           deferred.resolve(true)
         }else{
-          // TODO: just swap out these lines for purchase info
-          // deferred.resolve(true)
           $location.path('/detail/'+$route.current.params.storyId).replace();
         }
         return deferred.promise;

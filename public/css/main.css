@@ -12724,7 +12724,8 @@ Search Tags for a story
     .detailPage .right {
       float: right;
       width: calc(100% - 370px);
-      text-align: left; } }
+      text-align: left;
+      min-height: 400px; } }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/pages/account/accountPage.scss */
 .accountPage {

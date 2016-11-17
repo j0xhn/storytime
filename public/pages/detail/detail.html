@@ -26,11 +26,19 @@
 
     <div class="button-wrapper content" ng-class="paymentState">
       <promise-button
+        ng-if="needToUnlock"
         class="full purchase-button"
         ng-click="nextStep()"
       >
         <i class="fa fa-unlock-alt"></i>Unlock
       </promise-button>
+      <a
+        class="full purchase-button button"
+        ng-if="!needToUnlock"
+        ng-href="/story/{{story._id}}"
+      >
+        View Story
+      </a>
     </div>
 
     <div class="content mar40b sales-pitch">
@@ -45,7 +53,7 @@
     </div>
 
   </div>
-  <div class="story-tags content mobileOnly">
+  <div class="story-tags content mobileOnly" ng-if="story.tags.length > 0">
     <h4 class="title mar10b">Search Tags</h4>
     <tags tags="story.tags" class="section-content"></tags>
   </div>

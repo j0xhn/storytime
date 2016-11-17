@@ -30,7 +30,6 @@ angular.module('services')
         method: 'GET',
         url: '/users/current'
       }).then(function(res){
-        debugger
         if(responseService.isSuccess(res)){ deferred.resolve(true)}
         else{
           analyticService.error('syncUser', 'userService.js')
