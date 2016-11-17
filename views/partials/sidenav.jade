@@ -1,9 +1,9 @@
 #sideNav
   div.sideNavWrapper
-    i.closeIcon(onclick="navigation.toggleSideNav()")
+    i.closeIcon(onclick="window.navigation.toggleSideNav()")
     div.item.atypical
       if !user
-        a(class='button outline small mar20r' href='/signup' target="_self") Signup 
+        a(class='button outline small mar20r' href='/signup' target="_self") Signup
         a(class='button outline blue small' href='/login' target="_self") Login
       else
         a.profile-image(href='/account' target='_self')

@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "angular": "^1.5.7",
-    "angular-modal-service": "^0.10.1",
     "angular-route": "^1.5.7",
     "angular-ui-bootstrap": "^2.2.0",
     "angular-ui-tinymce": "0.0.16",

@@ -54,7 +54,7 @@ angular.module('directives')
         } else {
           ModalService.showModal({
             templateUrl: "partials/modals/baseModal/baseModal.html",
-            controller: function(){}
+            controller: "BaseModalController"
           }).then(function(modal) {
             // listen for close
             modal.close.then(function(result) {

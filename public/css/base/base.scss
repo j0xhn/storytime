@@ -24,7 +24,7 @@ body {
     overflow: hidden;
     .backdrop{
       transition: background-color 200ms ease;
-      background-color: $lightGray;
+      background-color: $darkGray;
       z-index: $z-backdrop-active;
       opacity: .5;
     }

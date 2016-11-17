@@ -11394,7 +11394,7 @@ body {
     /* line 25, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
     body.lock .backdrop {
       transition: background-color 200ms ease;
-      background-color: #ccc;
+      background-color: #333;
       z-index: 2;
       opacity: .5; }
 
@@ -12410,6 +12410,24 @@ Search Tags for a story
       margin-bottom: 5px;
       margin-top: -35px;
       box-shadow: 0 0 10px 0 #ccc; }
+
+/* line 1, /Users/John/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
+.base-modal {
+  background-color: white;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  width: 300px;
+  margin: 0 auto;
+  z-index: 2; }
+  /* line 12, /Users/John/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
+  .base-modal .base-modal-close {
+    position: absolute;
+    top: 20px;
+    left: 20px; }
 
 /* line 4, /Users/John/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .hero {

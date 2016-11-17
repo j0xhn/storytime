@@ -1,4 +1,4 @@
-angular.module('storytime', [
+window.storytimeAngularApp = angular.module('storytime', [
   'ngRoute',
   'ui.tinymce',
   'angularModalService',
@@ -8,17 +8,14 @@ angular.module('storytime', [
 ]);
 angular.module('filters',[]);
 angular.module('services',[]);
-angular.module('controllers',[]);
 angular.module('directives',[]);
 angular.module('storytime').config(function ($routeProvider, $locationProvider) {
-  // use the HTML5 History API
-  // use target="_self" in href to trigger a whole page reload
-  // and hence the ability for express to handle route
-  // debugger;
-  // var user;
-  // userService.getCurrentUser().then(function(res){
-  //   user = res.data;
-  // });
+
+  /*
+    use target="_self" in href to trigger a whole page reload
+    and hence the ability for express to handle route
+  */
+
   $locationProvider.html5Mode(true);
   $routeProvider
   .when('/_=_', {redirectTo: '/'}) // facebook ugliness
@@ -73,13 +70,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
   .otherwise({ redirectTo: '/' })
 }).run(function ($rootScope, $location, userService) { //Insert in the function definition the dependencies you need.
   $rootScope.$on("$routeChangeStart", function(event, next, current){
-    navigation.toggleSideNav(false);
-    // checks for facebook ungliness
-    if (window.location.hash == '#_=_'){
-      console.log("Facebook ugly detected");
-      history.replaceState
-      ? history.replaceState(null, null, window.location.href.split('#')[0])
-      : window.location.hash = '';
-    }
+    // removes side nav and lock screen on navigation
+    window.navigation.toggleSideNav(false);
   });
 });

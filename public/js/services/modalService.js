@@ -1,3 +1,6 @@
+// Uses angular-modal-service code found at:
+// https://github.com/dwmkerr/angular-modal-service
+//
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
