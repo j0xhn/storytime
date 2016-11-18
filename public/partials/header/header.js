@@ -2,6 +2,17 @@ window.navigation = {};
 window.navigation.toggleSideNav = function(){};
 window.navigation.toggleScreenLock = function(){};
 window.navigation.clear = function(){};
+/*
+  I use the same backdrop for my modals
+  as I do for the side-nav bar.
+  Because this app is not 100% angular
+  the angular code found in my modals listnes to
+  the broadcasts when backdrop is clicked.
+
+  All functions need to be defined pre-DOMContentLoaded
+  so that the HTML doesn't throw error, but then renamed below
+  so that we have access to the angular instance
+*/
 
 document.addEventListener("DOMContentLoaded", function() {
   var $rootScope = angular.element('body').scope().$root
