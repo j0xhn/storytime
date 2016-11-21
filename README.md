@@ -1,7 +1,7 @@
 ### Getting Started
-Clone this repo, run `npm i` and `npm start`.  
+Clone this repo, run ```npm i```.  
 
-If you haven't already, make sure your machine is setup to have MongoDB running.  If you haven't installed it already I suggest getting setup with HomeBrew: http://brew.sh/ and then downloading MongoDB via the command: `brew install mongodb` then starting it with `mongod`.
+If you haven't already, make sure your machine is setup to have MongoDB running.  If you haven't installed it already I suggest getting setup with HomeBrew: http://brew.sh/ and then downloading and setting up MongoDB by following this nice little getting started guide: http://treehouse.github.io/installation-guides/mac/mongo-mac.html
 
 After all that `npm start` should get you up and running on localhost:3000
 
