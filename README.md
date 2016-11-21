@@ -1,17 +1,17 @@
 ### Storytime
-[ ] Weekly / Monthly / Daily email send out via SendGrid with a “subscription center” front-end
-[ ] Modal asking for users to submit their email to receive Weekly / Monthly / Daily emails
-E-commerce API through Braintree to purchase “coins” to be used in-app
-[ ] E-commerce front-end (UX) to handle purchasing paths
-[ ] Form Validation on the www.storytimebedtime.com/submit page where stories are created
-- that textarea is under 160
-- all keywords that they've entered are also keywords in the storyDiv
-- catch errors on everything
-[ ] MongoDB services to update the DB when we update versions
-[ ] Create new MongoDB collection / UI for stories that need approval
-[ ] Create Paginated API call
+- Weekly / Monthly / Daily email send out via SendGrid with a “subscription center” front-end
+- Modal asking for users to submit their email to receive Weekly / Monthly / Daily emails
+- E-commerce API through Braintree to purchase “coins” to be used in-app
+- E-commerce front-end (UX) to handle purchasing paths
+- Form Validation on the www.storytimebedtime.com/submit page where stories are created
+  - that textarea is under 160
+  - all keywords that they've entered are also keywords in the storyDiv
+  - catch errors on everything
+- MongoDB services to update the DB when we update versions
+- Create new MongoDB collection / UI for stories that need approval
+- Create Paginated API call
 
-[ ] Other
+### Other
 - get page titles working
 - testimonials
 - possibly a blinking cursor in inputs or auto select?
