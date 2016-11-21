@@ -1,5 +1,9 @@
 ### Getting Started
-Clone this repo, run `npm i` and `npm start`.  If you haven't already, make sure your machine is setup to have MongoDB running.  If you haven't installed it already I suggest getting setup with HomeBrew: http://brew.sh/ and then downloading MongoDB via the command: `brew install mongodb` then starting it with `mongod`.  After all that `npm start` should get you up and running on localhost:3000
+Clone this repo, run `npm i` and `npm start`.  
+
+If you haven't already, make sure your machine is setup to have MongoDB running.  If you haven't installed it already I suggest getting setup with HomeBrew: http://brew.sh/ and then downloading MongoDB via the command: `brew install mongodb` then starting it with `mongod`.
+
+After all that `npm start` should get you up and running on localhost:3000
 
 ### Main Features
 - Weekly / Monthly / Daily email send out via SendGrid with a “subscription center” front-end
