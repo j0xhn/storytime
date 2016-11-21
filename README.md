@@ -1,4 +1,7 @@
-### Storytime
+### Getting Started
+Clone this repo, run `npm i` and `npm start`.  If you haven't already, make sure your machine is setup to have MongoDB running.  If you haven't installed it already I suggest getting setup with HomeBrew: http://brew.sh/ and then downloading MongoDB via the command: `brew install mongodb` then starting it with `mongod`.  After all that `npm start` should get you up and running on localhost:3000
+
+### Main Features
 - Weekly / Monthly / Daily email send out via SendGrid with a “subscription center” front-end
 - Modal asking for users to submit their email to receive Weekly / Monthly / Daily emails
 - E-commerce API through Braintree to purchase “coins” to be used in-app
@@ -11,7 +14,7 @@
 - Create new MongoDB collection / UI for stories that need approval
 - Create Paginated API call
 
-### Other
+### Other Features (after beta)
 - get page titles working
 - testimonials
 - possibly a blinking cursor in inputs or auto select?
