@@ -206,9 +206,9 @@ app.get('/auth/pinterest/callback', passport.authorize('pinterest', { failureRed
 app.get('/users/current', userController.getCurrentUser );
 app.post('/story/submit', passportConfig.isAuthenticated, storiesController.postStory );
 app.get('/stories/search', storiesController.searchStories );
-app.post('/payments/coin', paymentsController.payWithCoins)
+app.post('/payments/coin', passportConfig.isAuthenticated, paymentsController.payWithCoins)
 app.get('/braintree/token', paymentsController.getBraintreeToken)
-app.post('/braintree/process', paymentsController.processPayment)
+app.post('/braintree/process', passportConfig.isAuthenticated, paymentsController.processPayment)
 app.get('*', angularPagesController.angularHandoff);
 /**
  * Error Handler.

@@ -11096,71 +11096,75 @@ button.close {
   font-size: 18px !important; }
 
 /* line 128, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+.o5 {
+  opacity: .5; }
+
+/* line 130, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw100 {
   font-weight: 100; }
 
-/* line 129, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 131, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw200 {
   font-weight: 200; }
 
-/* line 130, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 132, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw300 {
   font-weight: 300; }
 
-/* line 131, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 133, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw400 {
   font-weight: 400; }
 
-/* line 132, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 134, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw500 {
   font-weight: 500; }
 
-/* line 133, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 135, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .fw600 {
   font-weight: 600; }
 
-/* line 136, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 138, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h100 {
   height: 100px; }
 
-/* line 137, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 139, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h200 {
   height: 200px; }
 
-/* line 138, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 140, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h300 {
   height: 300px; }
 
-/* line 139, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 141, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .h400 {
   height: 400px; }
 
-/* line 141, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 143, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max100 {
   max-width: 100px; }
 
-/* line 142, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 144, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max200 {
   max-width: 200px; }
 
-/* line 143, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 145, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max300 {
   max-width: 300px; }
 
-/* line 144, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 146, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .max400 {
   max-width: 400px; }
 
-/* line 147, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 149, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .italic {
   font-style: italic !important; }
 
-/* line 148, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 150, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
 .ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; }
-  /* line 153, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
+  /* line 155, /Users/John/Dev/projects/storytime/public/css/base/shorthand.scss */
   .ellipsis.multiLine {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -11223,11 +11227,41 @@ button.close {
   /* line 52, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .closeIcon::before {
     transform: rotate(45deg); }
-  /* line 55, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 53, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .closeIcon::after {
     transform: rotate(-45deg); }
 
-/* line 60, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+/* line 56, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+.chevron::before {
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 0.45em; }
+
+/* line 70, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+.chevron.right:before {
+  left: 0;
+  transform: rotate(45deg); }
+
+/* line 75, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+.chevron.down:before {
+  top: 0;
+  left: 0;
+  transform: rotate(135deg); }
+
+/* line 81, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+.chevron.left:before {
+  left: 0.25em;
+  transform: rotate(-135deg); }
+
+/* line 86, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
 .searchIcon {
   width: 22px;
   height: 22px;
@@ -11245,7 +11279,7 @@ button.close {
   text-align: left;
   text-indent: -9999px;
   direction: ltr; }
-  /* line 77, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 103, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .searchIcon:before {
     content: '';
     pointer-events: none;
@@ -11259,18 +11293,18 @@ button.close {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
-  /* line 91, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 117, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .searchIcon:after {
     content: '';
     pointer-events: none; }
 
-/* line 97, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+/* line 123, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
 .checkmark {
   display: inline-block;
   width: 12px;
   height: 12px;
   position: relative; }
-  /* line 104, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 130, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .checkmark:before {
     /*Add another block-level blank space*/
     content: '';
@@ -11283,16 +11317,16 @@ button.close {
     border-width: 0 1px 1px 0;
     /*Rotate the L 45 degrees to turn it into a checkmark*/
     transform: rotate(45deg); }
-  /* line 119, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 145, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .checkmark.circle {
     width: 36px;
     height: 36px; }
-    /* line 122, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    /* line 148, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
     .checkmark.circle:before {
       position: absolute;
       top: 30%;
       left: 44%; }
-    /* line 127, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    /* line 153, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
     .checkmark.circle:after {
       content: '';
       position: absolute;
@@ -11302,24 +11336,24 @@ button.close {
       left: 0;
       border-radius: 50%;
       border: 1px solid #000; }
-  /* line 139, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 165, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .checkmark.big {
     width: 18px;
     height: 36px;
     border-width: 0 2px 2px 0; }
-    /* line 143, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    /* line 169, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
     .checkmark.big:before {
       width: 18px;
       height: 36px;
       border-width: 0 2px 2px 0; }
-    /* line 148, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+    /* line 174, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
     .checkmark.big.circle, .checkmark.big:after {
       height: 108px;
       width: 108px; }
-  /* line 153, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 179, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .checkmark.green:before, .checkmark.green:after {
     border-color: #00B145; }
-  /* line 154, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
+  /* line 180, /Users/John/Dev/projects/storytime/public/css/base/elements.scss */
   .checkmark.white:before, .checkmark.white:after {
     border-color: #fff; }
 
@@ -12155,8 +12189,16 @@ Search Tags for a story
   position: relative;
   width: 20px;
   height: 20px; }
+  /* line 5, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+  .ispinner.fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto; }
 
-/* line 5, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 14, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade {
   position: absolute;
   left: 44.5%;
@@ -12169,109 +12211,109 @@ Search Tags for a story
   -webkit-animation-play-state: paused;
   animation-play-state: paused; }
 
-/* line 16, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 25, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(1) {
   -webkit-animation-delay: -1.66667s;
   animation-delay: -1.66667s;
   -webkit-transform: rotate(30deg) translate(0, -150%);
   transform: rotate(30deg) translate(0, -150%); }
 
-/* line 21, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 30, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(2) {
   -webkit-animation-delay: -1.58333s;
   animation-delay: -1.58333s;
   -webkit-transform: rotate(60deg) translate(0, -150%);
   transform: rotate(60deg) translate(0, -150%); }
 
-/* line 26, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 35, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(3) {
   -webkit-animation-delay: -1.5s;
   animation-delay: -1.5s;
   -webkit-transform: rotate(90deg) translate(0, -150%);
   transform: rotate(90deg) translate(0, -150%); }
 
-/* line 31, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 40, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(4) {
   -webkit-animation-delay: -1.41667s;
   animation-delay: -1.41667s;
   -webkit-transform: rotate(120deg) translate(0, -150%);
   transform: rotate(120deg) translate(0, -150%); }
 
-/* line 36, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 45, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(5) {
   -webkit-animation-delay: -1.33333s;
   animation-delay: -1.33333s;
   -webkit-transform: rotate(150deg) translate(0, -150%);
   transform: rotate(150deg) translate(0, -150%); }
 
-/* line 41, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 50, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(6) {
   -webkit-animation-delay: -1.25s;
   animation-delay: -1.25s;
   -webkit-transform: rotate(180deg) translate(0, -150%);
   transform: rotate(180deg) translate(0, -150%); }
 
-/* line 46, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 55, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(7) {
   -webkit-animation-delay: -1.16667s;
   animation-delay: -1.16667s;
   -webkit-transform: rotate(210deg) translate(0, -150%);
   transform: rotate(210deg) translate(0, -150%); }
 
-/* line 51, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 60, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(8) {
   -webkit-animation-delay: -1.08333s;
   animation-delay: -1.08333s;
   -webkit-transform: rotate(240deg) translate(0, -150%);
   transform: rotate(240deg) translate(0, -150%); }
 
-/* line 56, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 65, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(9) {
   -webkit-animation-delay: -1s;
   animation-delay: -1s;
   -webkit-transform: rotate(270deg) translate(0, -150%);
   transform: rotate(270deg) translate(0, -150%); }
 
-/* line 61, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 70, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(10) {
   -webkit-animation-delay: -0.91667s;
   animation-delay: -0.91667s;
   -webkit-transform: rotate(300deg) translate(0, -150%);
   transform: rotate(300deg) translate(0, -150%); }
 
-/* line 66, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 75, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(11) {
   -webkit-animation-delay: -0.83333s;
   animation-delay: -0.83333s;
   -webkit-transform: rotate(330deg) translate(0, -150%);
   transform: rotate(330deg) translate(0, -150%); }
 
-/* line 71, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 80, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner .ispinner__blade:nth-child(12) {
   -webkit-animation-delay: -0.75s;
   animation-delay: -0.75s;
   -webkit-transform: rotate(360deg) translate(0, -150%);
   transform: rotate(360deg) translate(0, -150%); }
 
-/* line 76, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 85, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner.ispinner--animating .ispinner__blade {
   -webkit-animation-play-state: running;
   animation-play-state: running; }
 
-/* line 79, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 88, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner.ispinner--white .ispinner__blade {
   background-color: white; }
 
-/* line 81, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 90, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner.ispinner--gray .ispinner__blade {
   background-color: #8C8C8C; }
 
-/* line 83, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 92, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner.ispinner--large {
   width: 35px;
   height: 35px; }
 
-/* line 86, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
+/* line 95, /Users/John/Dev/projects/storytime/public/partials/spinner/spinner.scss */
 .ispinner.ispinner--large .ispinner__blade {
   width: 8.57143%;
   height: 25.71429%;
@@ -12410,6 +12452,43 @@ Search Tags for a story
       margin-bottom: 5px;
       margin-top: -35px;
       box-shadow: 0 0 10px 0 #ccc; }
+
+/* line 1, /Users/John/Dev/projects/storytime/public/partials/dropdownInput/dropdownInput.scss */
+.dropdown-input-wrapper {
+  position: relative; }
+  /* line 3, /Users/John/Dev/projects/storytime/public/partials/dropdownInput/dropdownInput.scss */
+  .dropdown-input-wrapper .diw-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex; }
+  /* line 10, /Users/John/Dev/projects/storytime/public/partials/dropdownInput/dropdownInput.scss */
+  .dropdown-input-wrapper .select {
+    border-color: #36C6B1;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 45px;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: none;
+    outline: none;
+    border-radius: 0;
+    line-height: 25px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding-right: 12%;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  /* line 29, /Users/John/Dev/projects/storytime/public/partials/dropdownInput/dropdownInput.scss */
+  .dropdown-input-wrapper #optionsAsButtons {
+    display: none; }
+  /* line 30, /Users/John/Dev/projects/storytime/public/partials/dropdownInput/dropdownInput.scss */
+  .dropdown-input-wrapper.disabled {
+    opacity: .4;
+    pointer-events: none; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
 .base-modal {
@@ -12771,3 +12850,19 @@ Search Tags for a story
   /* line 3, /Users/John/Dev/projects/storytime/public/pages/success/successPage.scss */
   .successPage .checkmark {
     margin: 20px auto; }
+
+/* line 2, /Users/John/Dev/projects/storytime/public/pages/checkoutPage/checkoutPage.scss */
+.checkoutPage .select-title {
+  margin-bottom: 10px; }
+
+/* line 3, /Users/John/Dev/projects/storytime/public/pages/checkoutPage/checkoutPage.scss */
+.checkoutPage #form-field-wrapper {
+  min-height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 9, /Users/John/Dev/projects/storytime/public/pages/checkoutPage/checkoutPage.scss */
+.checkoutPage .loading {
+  opacity: .5;
+  transition: all 300ms ease-in-out; }

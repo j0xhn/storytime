@@ -44,12 +44,13 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
         if (userService.isLoggedIn()){
           deferred.resolve(true);
         } else {
-          $window.location = '/login';
+        $window.location = '/login';
         }
         return deferred.promise;
       }
     }
   })
+  .when('/checkout',  { template: '<checkout-page></checkout-page>' })
   .when('/landing',  { template: '<landing></landing>' })
   .when('/story/:storyId', {
     template: '<story-page></story-page>',

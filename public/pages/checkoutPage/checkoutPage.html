@@ -1,0 +1,31 @@
+<div class="checkoutPage">
+  <spinner
+    color='gray'
+    fill='true'
+    ng-if="paymentState === 'loading'"
+  ></spinner>
+  <form class='form' ng-class="paymentState">
+    <h2 class="mar30b mar10t">Buy Coins</h2>
+    <div class="formGroup">
+      <p class="select-title"> Choose Coin Amount </p>
+      <dropdown-input
+      model="selectedPaymentOption"
+      options="paymentOptions"
+      changehandler="paymentOptionSelected"
+      ></dropdown-input>
+      <input type="checkbox" ng-model="monthly" ng-click="createPaymentOptions()">
+        <span class="txt-gray f12">subscribe monthly and recieve a 50% discount</span>
+      </input>
+    </div>
+    <div id="form-field-wrapper" class="mar20b">
+    </div>
+    <button
+      promise-button
+      class="full"
+      type="submit"
+    >
+      Buy
+    </button>
+    <span class="form-error" ng-if="checkoutError"><i class="fa fa-warning"></i> {{checkoutError}}</span>
+  </form>
+</div>

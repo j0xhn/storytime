@@ -2,6 +2,7 @@
 const braintree = require('braintree');
 const User = require('../models/User');
 const ResponseUtil = require('../util/ResponseUtil');
+const UserUtil = require('../util/UserUtil');
 
 var gateway = braintree.connect({
   environment: braintree.Environment[process.env.NODE_ENV],
@@ -13,36 +14,62 @@ var gateway = braintree.connect({
 exports.getBraintreeToken = (req, res) => {
   gateway.clientToken.generate({}, function (err, response) {
     if(err){
+      ResponseUtil.error(req, res, err);
       console.error('error generating token - possible connection issues');
-      res.send({"error":"Error generating payment token"})
     }
-    else { res.send(response.clientToken); }
+    else { ResponseUtil.success(req, res, response.clientToken); }
   });
 };
 
 exports.processPayment = (req, res) => {
-  // console.log('process payment: ', req);
-  const {amount, repeating, nonce, storyId } = req.body;
-  debugger;
-  gateway.transaction.sale({
-    amount: amount,
-    paymentMethodNonce: nonce,
-    options: {
-      submitForSettlement: true
-    }
-  }, function (err, result) {
-    console.log('result: ',result);
-    if(err){
-      res.send(err)
-    } else {
-      debugger;
-      if (!req.user) {res.send({error: 'No User'})
-      } else {
-        console.log(req);
-        res.send(result)
+  const {amount, recurring, nonce, paymentMethodToken } = req.body;
+  function proccess(amount, recurring, paymentMethodToken) {
+    gateway.transaction.sale({
+      amount: amount,
+      paymentMethodNonce: nonce,
+      recurring: recurring,
+      options: {
+        submitForSettlement: true,
+        storeInVaultOnSuccess: true
       }
-    }
-  });
+    }, function (err, result) {
+      if(err){
+        ResponseUtil.error(req, res, err);
+      } else if (!req.user) {
+        ResponseUtil.error(req, res, { message: 'No User'} )
+      } else if (result.success) {
+        result.transaction.customer.id;
+        user.paymentInfo.customerId = result.customer_id;
+        UserUtil.saveUser(user).then(function(){
+          ResponseUtil.success(req, res)
+        })
+      } else {
+
+      }
+    });
+  }
+  if(!paymentMethodToken){
+    gateway.customer.create({
+      firstName: req.user.profile.name,
+      paymentMethodNonce: nonceFromTheClient
+    }, function (err, result) {
+      if(result.success){
+        user.paymentInfo.customerId = result.customer.id;
+        user.paymentInfo.paymentMethodToken = result.customer.paymentMethods[0].token;
+        user.save((err, user) => {
+          if (err) {
+            return next(err);
+            ResponseUtil.error(req, res, err);
+          } else {
+            debugger;
+            // now subscribe or do one of transaction
+          }
+        });
+      }
+    });
+  } else {
+    proccess(amount, recurring, paymentMethodToken)
+  }
 }
 
 exports.payWithCoins = (req,res) => {

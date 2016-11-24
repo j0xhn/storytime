@@ -8,7 +8,7 @@ angular.module('services')
 
   return {
     isSuccess: function(res){
-      if (res.statusCode === 200){ console.error('API needs to be refactored to use ResponseUtil'); }
+      if (res.statusCode === 200 || res.status === 200){ console.error('API needs to be refactored to use ResponseUtil'); }
       else { return res.status === codes.success }
     }
   }
