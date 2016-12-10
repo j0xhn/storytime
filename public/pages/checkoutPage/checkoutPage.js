@@ -14,7 +14,7 @@ angular.module('directives')
           $scope.paymentOptions && $scope.paymentOptions.map(function(obj, index){
             if (angular.equals(obj,$scope.selectedPaymentOption)){ initialIndex = index }
           });
-          $scope.paymentOptions = Array(5, 10, 20).map(function(value){
+          $scope.paymentOptions = Array(1, 2, 5).map(function(value){
             var coins = value * 100;
             var cost = value * rate;
             return {
@@ -40,6 +40,7 @@ angular.module('directives')
               $scope.$apply($scope.paymentState = 'ready');
             },
             onPaymentMethodReceived: function (result) {
+              $scope.paymentState = 'loading';
               $scope.paymentData = Object.assign($scope.selectedPaymentOption, result);
               $scope.purchase($scope.paymentData);
             }
@@ -51,6 +52,7 @@ angular.module('directives')
           return paymentService.paymentPromise(payload).then(function(res){
             $scope.paymentState = 'success';
             console.log("response: ", res);
+            debugger;
             /*
             show success screen
             store user as being in vault and set autoPay:

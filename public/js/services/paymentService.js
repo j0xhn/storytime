@@ -1,5 +1,5 @@
 angular.module('services')
-.service('paymentService', function ($http, $q) {
+.service('paymentService', function ($http, $q, userService) {
   const tokenRequest = $http({
     method: 'GET',
     url: '/braintree/token'
@@ -11,10 +11,13 @@ angular.module('services')
     paymentPromise: function(paymentDetails){
       console.log('starting request: ', paymentDetails)
       paymentDetails._csrf = window._csrf;
+      paymentDetails.paymentMethodToken = userService.getPaymentMethodToken();
       return $http({
         method: 'POST',
         url: '/braintree/process',
         data: paymentDetails
+      }).then(function(res){
+        debugger;
       })
     },
 

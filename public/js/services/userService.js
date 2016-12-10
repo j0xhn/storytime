@@ -42,6 +42,8 @@ angular.module('services')
     user: cachedUser,
     isLoggedIn: function() { return !!cachedUser.password; },
     isAdmin: function() { return cachedUser.permissions.indexOf('admin') > -1 },
-    hasPurchased: function(storyId) { return cachedUser.purchased && cachedUser.purchased.hasOwnProperty(storyId) }
+    hasPurchased: function(storyId) { return cachedUser.purchased && cachedUser.purchased.hasOwnProperty(storyId) },
+    getCustomerId: function() { return cachedUser.paymentInfo.customerId },
+    getPaymentMethodToken: function() { return cachedUser.paymentInfo.paymentMethodToken }
   }
 });

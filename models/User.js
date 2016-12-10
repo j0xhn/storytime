@@ -9,10 +9,10 @@ const userSchema = new mongoose.Schema({
   passwordResetExpires: Date,
 
   paymentInfo: {
-    autoPay: {type: Boolean, default: false },
     coins: {type: Number, default: 0 },
     freeStories: {type: Number, defualt: 0},
-    customerId: {type: Number }
+    customerId: {type: Number },
+    paymentMethodToken: {type: String}
   },
 
   facebook: String,
