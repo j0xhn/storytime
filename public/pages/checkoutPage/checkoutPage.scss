@@ -9,6 +9,7 @@
   .loading{
     opacity: .5;
     transition: all 300ms ease-in-out;
+    pointer-events: none;
   }
 
 }

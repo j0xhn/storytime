@@ -3,11 +3,12 @@ angular.module('directives')
 		return {
 			restrict: 'EA',
 			replace: true,
-      controller:  function($scope, $timeout, userService, paymentService, responseService, analyticService) {
+      controller:  function($scope, $timeout, $location, userService, paymentService, responseService, analyticService) {
         angular.element('.feedbackButton').hide();
         var paymentToken;
         $scope.monthly = true;
         $scope.paymentState = 'loading';
+
         $scope.createPaymentOptions = function(){
           var rate = $scope.monthly ? .5 : 1;
           var initialIndex = 1; // default value
@@ -50,28 +51,19 @@ angular.module('directives')
 
         $scope.purchase = function(payload){
           return paymentService.paymentPromise(payload).then(function(res){
-            $scope.paymentState = 'success';
-            console.log("response: ", res);
-            debugger;
-            /*
-            show success screen
-            store user as being in vault and set autoPay:
-            https://developers.braintreepayments.com/guides/payment-methods/node
-            https://developers.braintreepayments.com/guides/recurring-billing/overview
-            as true on their user
-            */
+            window.location.pathname = '/success/purchase-coins'
           })
         }
 
-        paymentService.tokenRequest().then(function(res){
-          if(responseService.isSuccess(res)){
-            paymentToken = res.data;
-            $scope.initBraintree();
-          } else {
-            analyticService.error('token request', 'checkout.js');
-            $scope.checkoutError = 'It appears you are offline, check your internet connection';
-          }
-        })
+				paymentService.tokenRequest().then(function(res){
+					if(responseService.isSuccess(res)){
+						paymentToken = res.data;
+						$scope.initBraintree();
+					} else {
+						analyticService.error('token request', 'checkout.js');
+						$scope.checkoutError = 'It appears you are offline, check your internet connection';
+					}
+				})
       },
 			templateUrl: '/pages/checkoutPage/checkoutPage.html',
       scope:{}

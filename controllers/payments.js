@@ -35,7 +35,8 @@ const createUser = function(user, nonceFromTheClient){
 }
 
 exports.getBraintreeToken = (req, res) => {
-  gateway.clientToken.generate({}, function (err, response) {
+  console.log(req.query.customerId)
+  gateway.clientToken.generate({customerId: req.query.customerId}, function (err, response) {
     if(err){
       ResponseUtil.error(req, res, err);
       console.error('error generating token - possible connection issues');
@@ -59,7 +60,9 @@ exports.processPayment = (req, res) => {
       } else {
         var multiplier = result.transaction.recurring ? 2 : 1;
         var coins = result.transaction.amount *  multiplier * 100;
-        ResponseUtil.success(req, res, {coins: coins})
+        UserUtil.addCoins(req.user.id, coins).then(function(response){
+          ResponseUtil.success(req, res, {coins: coins})
+        })
       }
     });
   }

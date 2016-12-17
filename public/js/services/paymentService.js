@@ -1,12 +1,16 @@
 angular.module('services')
-.service('paymentService', function ($http, $q, userService) {
+.service('paymentService', function ($http, $q, userService, analyticService, responseService) {
+
   const tokenRequest = $http({
     method: 'GET',
-    url: '/braintree/token'
+    url: '/braintree/token',
+    params: { customerId: userService.user.paymentInfo.customerId }
   });
 
   return {
-    tokenRequest: function(){return tokenRequest},
+    tokenRequest: function(){
+      return tokenRequest
+    },
 
     paymentPromise: function(paymentDetails){
       console.log('starting request: ', paymentDetails)
@@ -16,8 +20,9 @@ angular.module('services')
         method: 'POST',
         url: '/braintree/process',
         data: paymentDetails
-      }).then(function(res){
-        debugger;
+      }).catch(function(err){
+        analyticService.error('paymentPromise', err)
+        console.error(res);
       })
     },
 
@@ -30,6 +35,19 @@ angular.module('services')
         url: '/payments/coin',
         data: paymentDetails
       })
+    }
+
+    coinAnimation: function(addedCoins){
+    $btn = angular.element(this);
+    var $cart = angular.element('.topNav .coin')
+    var $coin = $('<div class="coin badge">')
+        .insertAfter($btn)
+        .animate({
+            "top": $cart.offset().top,
+            "left": $cart.offset().left
+        }, 1000, function() {
+            $coin.remove();
+        });
     }
 
   }

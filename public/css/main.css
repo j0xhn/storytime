@@ -12864,4 +12864,5 @@ Search Tags for a story
 /* line 9, /Users/John/Dev/projects/storytime/public/pages/checkoutPage/checkoutPage.scss */
 .checkoutPage .loading {
   opacity: .5;
-  transition: all 300ms ease-in-out; }
+  transition: all 300ms ease-in-out;
+  pointer-events: none; }
