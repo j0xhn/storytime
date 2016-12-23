@@ -1,0 +1,21 @@
+.st-testimonial-wrapper{
+  $sttp: 20px;
+  $sti-width: 70px;
+  padding-top: $sttp;
+  .st-testimonial {
+    // @include box-shadow-loose();
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    border: 5px solid $lightestGray;
+    background-color: $white;
+    .st-testimonial-image{
+      width: $sti-width;
+      height: $sti-width;
+      border-radius: 50%;
+      margin-bottom: 5px;
+      margin-top: -$sti-width/2;
+      @include box-shadow-tight();
+    }
+  }
+}

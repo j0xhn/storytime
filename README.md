@@ -20,6 +20,7 @@ After all that `npm start` should get you up and running on localhost:3000
 
 ### Other Features (after beta)
 - get page titles working
+- submit page preview for story card and story detail page
 - testimonials
 - possibly a blinking cursor in inputs or auto select?
 - share story on facebook prompt - on success page, and at end of story

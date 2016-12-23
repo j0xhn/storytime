@@ -5,6 +5,7 @@ const helper = require('sendgrid').mail;
 const passport = require('passport');
 const User = require('../models/User');
 const MessagingUtil = require('../util/MessagingUtil');
+const ResponseUtil = require('../util/ResponseUtil');
 
 /**
 * GET /login
@@ -138,7 +139,7 @@ exports.postSignup = (req, res, next) => {
         req.flash('info', { msg: `An error occured.` });
         console.error('MessageUtil returned error sending welcome email');
       } else {
-        //TODO: google analytics success log 
+        //TODO: google analytics success log
       }
       res.redirect('/');
     }
@@ -181,7 +182,7 @@ exports.getAllUsers = (req, res) => {
 * Gets current user
 */
 exports.getCurrentUser = (req, res) => {
-  res.send(req.user)
+  ResponseUtil.success(req, res, req.user)
 }
 
 /**

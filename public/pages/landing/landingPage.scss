@@ -172,9 +172,13 @@
     margin-bottom: 20px;
   }
 
-  .exampleStory .content{
-    border: 1px solid $lightGray;
-    border-radius: 5px;
+  .exampleStory .content {
+    padding: 0;
+    @media (min-width: $small-width){
+      border: 1px solid $lightGray;
+      border-radius: 5px;
+      padding: 30px;
+    }
   }
 
   .item{ margin-bottom: 10px;}

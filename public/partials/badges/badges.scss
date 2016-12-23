@@ -1,0 +1,45 @@
+.badge {
+  $iconWidth: 12px;
+  $badgeSidePadding: 5px;
+  font-size: 12px;
+  color: $darkGray;
+  line-height: initial;
+  padding: 3px $badgeSidePadding;
+  border-radius: 5px;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  padding-left: $iconWidth + 8px;
+  margin-left: -$badgeSidePadding;
+  & + .badge { margin-left: 3px; }
+  &.outline{ border: 1px solid $gray; margin-left: 0; }
+  &:before{
+    content: '';
+    height: $iconWidth;
+    width: $iconWidth;
+    left: $badgeSidePadding;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(/images/coin.svg);
+  }
+  &.stopwatch{
+    color: $blue;
+    padding-left: $iconWidth + 10px;
+    border-color: $darkBlue;
+    &:before{ background: url(/images/svg/stopwatch.svg); }
+  }
+  &.coin {
+    color: $darkGold;
+    border-color: $gold;
+    transition-duration: 300ms;
+    &:before{
+      background: url(/images/svg/coin.svg);
+      // these fight the pre-determined styles above
+      // to allow for the transform animation to work correctly below
+      top: 4px;
+      transform: none;
+    }
+    &.animate::before{ animation:  flip .3s infinite linear; }
+  }
+}

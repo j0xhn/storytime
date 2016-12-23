@@ -1,0 +1,21 @@
+<div class="dropdown-input-wrapper" ng-class="{'disabled': disabled}">
+    <div class="chevron down diw-icon"></div>
+    <select
+      ng-change="internalChangeHandler(model)"
+      ng-model="model"
+      class="select"
+      ng-class="elementclasses"
+      autocomplete="off"
+      ng-options="item as item.label for item in options track by item.value"
+    >
+      <option value='' class="none" disabled selected ng-if="placeholder">{{placeholder}}</option>
+    </select>
+
+    <div class="tal" id="optionsAsButtons" ng-show="includebuttons">
+      <span
+        class="button outline"
+        ng-class="{'mint selected': model == v}"
+        ng-repeat="v in options"
+        ng-click="internalChangeHandler(v)">{{v}}</span>
+    </div>
+  </div>

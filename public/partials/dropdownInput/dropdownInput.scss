@@ -1,0 +1,33 @@
+.dropdown-input-wrapper{
+  position: relative;
+  .diw-icon{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+  }
+	.select{
+		border-color: $mint;
+		background-color: $white;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		height: 45px;
+		padding: 10px;
+		font-size: 16px;
+		box-shadow: none;
+		outline: none;
+		border-radius: 0;
+		line-height: 25px; // fights bootstrap
+		width: 100%;
+		display: block;
+		overflow: hidden;
+		padding-right: 12%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	#optionsAsButtons{ display: none; }
+	&.disabled { opacity: .4; pointer-events: none; }
+	// if you want buttons instead of dropdown that should be done on individual page basis
+	// for example look to _reviews.scss for selection of media query
+}

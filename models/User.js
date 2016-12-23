@@ -9,9 +9,10 @@ const userSchema = new mongoose.Schema({
   passwordResetExpires: Date,
 
   paymentInfo: {
-    autoPay: {type: Boolean, default: false },
-    credit: {type: Number },
-    customerId: {type: String }
+    coins: {type: Number, default: 0 },
+    freeStories: {type: Number, defualt: 0},
+    customerId: {type: Number },
+    paymentMethodToken: {type: String}
   },
 
   facebook: String,
@@ -22,7 +23,7 @@ const userSchema = new mongoose.Schema({
   linkedin: String,
   steam: String,
   tokens: Array,
-  purchased: { type: Array, default: [] },
+  purchased: { type: Object, default: {} },
   permissions: { type: Array, default: [] },
 
   profile: {

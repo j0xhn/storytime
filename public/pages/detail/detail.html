@@ -1,62 +1,61 @@
 <div class="detailPage">
-  <div class="topSection clearfix">
-    <div class="content mobileFull story-image-wrapper">
-      <img class="story-image" ng-src="{{story.photoUrl}}" />
-    </div>
-    <div class="content">
-      <h4 class="title bold">{{story.title}}</h4>
-      <p class="desc"> {{story.longDesc}} </p>
 
-      <div class="button-wrapper" ng-class="paymentState">
-
-        <!-- 1. CTA -->
-        <promise-button class="full purchase-button" ng-click="nextStep()">Download</promise-button>
-        <!-- 1.5 Account -->
-        <div class="createAccountSection tac">
-          <h3 class="mar10b">Create Account</h3>
-          <p class='mar20b'>You need an account to download this story</p>
-          <a class="button outline lightBlue full" href="/signup" target="_self">Signup</a>
-          <divider text='or'></divider>
-          <a class="button outline full" href="/login" target="_self">Login</a>
-        </div>
-      <!-- 2. Pick Payment Type -->
-        <div class="paymentType">
-          <button promise-button class="full lightBlue" ng-click="showForm('single')">Single Item Download {{story.price | price}}</button>
-          <divider text='or'></divider>
-          <promise-button class="button full" ng-click="showForm('unlimited')"> Unlimited Downloads $3/mo </promise-button>
-        </div>
-
-        <!-- 3. Fill Form -->
-        <form name='storyPurchaseForm' id='storyPurchaseForm'>
-          <div id="form-field-wrapper" class="mar20b"></div>
-          <button promise-button class="full" type="submit" ng-class="{loading: !paymentState === 'formReady'}">Submit</button>
-        </form>
-
-
-        <!-- <button promise-button class="full" type="submit" ng-class="{loading: !paymentState === 'formReady'}" ng-click="purchase()">Purchase</button> -->
-      </div>
-    </div>
+  <div class="story-image">
+    <img class="image" ng-src="{{story.photoUrl}}" />
   </div>
 
-  <div class="detailSection content">
-    <div class="left">
-      <h4 class="title">Details</h4>
-      <div class="detail-bullets">
-        <li class="p">Price of {{story.price | price }}</li>
+  <div class="right">
+    <article class="content story-info">
+      <h2 class="bold mar5b">{{story.title}}</h2>
+      <div class="meta-info flex mar20b">
+        <span class="coin badge">{{story.price | price }}</span>
+        <span class="stopwatch badge">{{story.length}} mins</span>
+      </div>
+    </article>
+
+    <article class="content story-bullets">
+      <p class="mar20b"> {{story.shortDesc}} </p>
+      <ul class="detail-bullets">
         <li class="p">Written by {{story.authorName}}</li>
         <li class="p">Ages {{story.ages}}</li>
         <li class="p">{{story.length}} Minutes</li>
-        <!-- <li>{{story.maleFemale}}</li> -->
-        <!-- <li>{{story.alternativeEndings}}</li> -->
-        <!-- <li>{{story.imageCount}}</li> -->
         <li class="p">{{story.inputs ? 'Interactive Inputs' : ''}}</li>
         <li class="p">Created on {{story.createdOn}}</li>
-      </div>
+      </ul>
+    </article>
+
+    <div class="button-wrapper content" ng-class="paymentState">
+      <promise-button
+        ng-if="needToUnlock"
+        class="full purchase-button"
+        ng-click="nextStep()"
+      >
+        <i class="fa fa-unlock-alt"></i>Unlock
+      </promise-button>
+      <a
+        class="full purchase-button button"
+        ng-if="!needToUnlock"
+        ng-href="/story/{{story._id}}"
+      >
+        View Story
+      </a>
     </div>
-    <div class="right">
-      <h4 class="title">Search Tags</h4>
-      <tags tags="story.tags" class="section-content">
+
+    <div class="content mar40b sales-pitch">
+      <testimonial
+      ng-if="story.salesPitch"
+        imageurl="{{story.authorImageUrl}}"
+        name="{{story.authorName}}"
+        descriptor="Author"
+      >
+        <span class="italic">{{story.salesPitch}}</span>
+      </testimonial>
     </div>
+
+  </div>
+  <div class="story-tags content mobileOnly" ng-if="story.tags.length > 0">
+    <h4 class="title mar10b">Search Tags</h4>
+    <tags tags="story.tags" class="section-content"></tags>
   </div>
 
 </div>

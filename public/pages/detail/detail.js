@@ -3,76 +3,68 @@ angular.module('directives')
   return {
     restrict: 'EA',
     replace: true,
-    controller: function($scope, $routeParams, $q, $timeout, $rootScope, storiesService, paymentService, userService) {
-      var promiseOfStory = storiesService.getSelectedStory($routeParams.storyId);
-      $scope.paymentData = {};
-
-
-      promiseOfStory.then(function(res){
+    controller: function(
+      $scope,
+      $routeParams,
+      $q,
+      $timeout,
+      $rootScope,
+      ModalService,
+      storiesService,
+      paymentService,
+      userService,
+      responseService,
+      analyticService) {
+      /*
+      remove feedback button
+      */
+      angular.element('.feedbackButton').hide()
+      /*
+      get story, variables, and format appropriately
+      */
+      storiesService.getSelectedStory($routeParams.storyId).then(function(res){
         res.createdOn = moment(res.createdAt).format('MMM Do, YYYY');
         $scope.story = res;
-        $scope.paymentData.amount = res.price;
-        $scope.paymentData.storyId = res._id;
+        $scope.needToUnlock = !userService.hasPurchased($routeParams.storyId) && $scope.story.price;
       });
-
-
-      paymentService.tokenRequest().then(function(res){
-        const formName = 'form-field-wrapper'
-        $scope.token = res.data;
-        braintree.setup($scope.token, 'dropin', {
-          container: formName,
-          enableCORS: true,
-          onReady: function() {
-            paymentState = 'formReady'
-          },
-          onPaymentMethodReceived: function (result) {
-            $scope.paymentState = 'processing';
-            $scope.paymentData = Object.assign($scope.paymentData,result);
-            $scope.purchase($scope.paymentData);
-          }
-        });
-      })
+      /*
+      handle non-logged in,
+      not enough credit scenarios,
+      success
+      */
+      $scope.handleSuccess = function(){
+        window.location.pathname = '/story/'+$routeParams.storyId;
+      }
 
       $scope.nextStep = function (e) {
-        if(userService.user.autoPay){
+        if(!userService.isLoggedIn()){
           // download and take from autoPay
-        } else if(userService.isLoggedIn()) {
-          $scope.paymentState = 'createAccount'
+          $scope.paymentState = 'createAccount';
+        } else if (userService.user.paymentInfo.coins >= $scope.story.price) {
+          paymentService.payWithCoins($scope.story._id, $scope.story.price).then(function(res){
+            if (responseService.isSuccess(res)){
+              userService.syncUser().then(function(res){
+                if(res){ $scope.handleSuccess();
+                } else { analyticService.error('user sync', 'detail.js') }
+              });
+            } else {
+              analyticService.error('coin payment', 'detail.js')
+            }
+          })
         } else {
-          $scope.paymentState = 'pickType';
+          ModalService.showModal({
+            templateUrl: "partials/modals/baseModal/baseModal.html",
+            controller: "BaseModalController"
+          }).then(function(modal) {
+            // listen for close
+            modal.close.then(function(result) {
+              $scope.customResult = "All good!";
+            });
+          });
+          $scope.paymentState = 'buyCredit';
         }
       }
 
-      $scope.purchase = function(payload){
-        return paymentService.paymentPromise(payload).then(function(res){
-          $scope.paymentState = 'success';
-          console.log("response: ", res);
-          /*
-          show success screen
-          store user as being in vault and set autoPay:
-          https://developers.braintreepayments.com/guides/payment-methods/node
-          https://developers.braintreepayments.com/guides/recurring-billing/overview
-          as true on their user
-          */
-        })
-      }
-
-      $scope.showForm = function (paymentType) {
-        var amount,
-            singleUseValue;
-
-        if (paymentType === 'single'){
-          $scope.paymentData.amount = $scope.story.price;
-          $scope.paymentData.repeating = false;
-          singleUseValue = true;
-        } else {
-          amount = 3.00
-          $scope.paymentData.repeating = true;
-          singleUseValue = false;
-        }
-
-        $scope.paymentState = 'showForm'
-      }
     },
     templateUrl: '/pages/detail/detail.html',
     scope: {}

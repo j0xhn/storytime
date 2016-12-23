@@ -1,3 +1,11 @@
 @mixin transition-default(){
   @include transition(all 300ms cubic-bezier(.53,.02,.64,.99));
 }
+
+@mixin box-shadow-loose(){
+  box-shadow: 0 0 30px -6px $lightGray;
+}
+
+@mixin box-shadow-tight(){
+  box-shadow: 0 0 10px 0 $lightGray;
+}

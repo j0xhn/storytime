@@ -5,9 +5,9 @@ angular.module('directives')
 			replace: true,
       templateUrl: '/partials/spinner/spinner.html',
       link: function(scope, elm, attrs){
-        if (attrs.color === 'gray'){
-          elm[0].className = elm[0].className + ' ispinner--gray';
-        }
+        var spinner = elm[0];
+        if (attrs.color === 'gray'){ spinner.classList.add('ispinner--gray'); }
+        if (attrs.fill) { spinner.classList.add('fill'); }
       }
 		}
 	}

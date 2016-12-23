@@ -4,7 +4,9 @@
 .tac { text-align: center !important;}
 .tal { text-align: left !important;}
 .underline { text-decoration: underline !important; }
+.uppercase { text-transform: uppercase  !important; }
 .bold { font-weight: bold; }
+.break-word {word-wrap: break-word;}
 
 .relative{position: relative;}
 
@@ -15,6 +17,11 @@
   border-left: none !important;
   border-right: none !important;
 }
+
+.flex { display: flex; }
+.fac { display: flex; align-items: center; }
+.fjc { display: flex; justify-content: center; }
+.fjac { display: flex; justify-content: center; align-items: center; }
 
 .txt-gray { color: $gray !important;}
 .txt-black { color: $black !important;}
@@ -66,16 +73,22 @@
 .pad40r 	{ padding-right: 40px !important; }
 .pad60t 	{ padding-top: 60px !important; }
 
-.mar0		{ margin: 0 !important; }
+.mar0a		{ margin: 0 auto !important; }
+.mara		  { margin-left: auto !important; margin-right: auto !important;}
+.mar0		  { margin: 0 !important; }
 .mar0l		{ margin-left: 0 !important; }
 .mar0r		{ margin-right: 0 !important; }
 .mar0b		{ margin-bottom: 0 !important; }
 .mar0lr		{ margin-left: 0 !important; margin-right: 0 !important; }
 .mar0tb		{ margin-top: 0 !important; margin-bottom: 0 !important; }
 .mar0t		{ margin-top: 0 !important; }
-.mar0a		{ margin: 0 auto !important; }
-.mara		{ margin-left: auto !important; margin-right: auto !important;}
-.mar5b		{margin-bottom: 5px !important; }
+.mar5		  { margin: 5px !important; }
+.mar5l		{ margin-left: 5px !important; }
+.mar5r		{ margin-right: 5px !important; }
+.mar5b		{ margin-bottom: 5px !important; }
+.mar5lr		{ margin-left: 5px !important; margin-right: 5px !important; }
+.mar5tb		{ margin-top: 5px !important; margin-bottom: 5px !important; }
+.mar5t		{ margin-top: 5px !important; }
 .mar10 		{ margin: 10px !important; }
 .mar10tb 	{ margin-top: 10px !important; margin-bottom: 10px !important; }
 .mar10t		{ margin-top: 10px !important; }
@@ -111,6 +124,8 @@
 .f14 { font-size: 14px !important; }
 .f16 { font-size: 16px !important; }
 .f18 { font-size: 18px !important; }
+
+.o5 { opacity: .5; }
 
 .fw100 { font-weight: 100;}
 .fw200 { font-weight: 200;}

@@ -35,7 +35,8 @@ angular.module('services')
   */
   ss.getSelectedStory = function(id){
     var deferred = $q.defer();
-    if (ss.selectedStory){
+    if (id === 'example'){ deferred.resolve(ss.exampleStory); }
+    else if (ss.selectedStory){
       // if looking for something particular
       // then needs to match locally or possibly in cache
       if (id){
@@ -72,7 +73,7 @@ angular.module('services')
   };
 
   ss.exampleStory = {
-    "_id" : "57ee7ef2002a8c317ffe5c30",
+    "_id" : "example",
     "updatedAt" : "2016-10-24T03:24:49.763Z",
     "createdAt" : "2016-09-30T15:04:18.034Z",
     "inputs" : {
@@ -116,14 +117,15 @@ angular.module('services')
       }
     },
     "html" : "<p>Once upon a time there lived a big pikachu named <b ng-bind=\"parent\"></b> who had a <span data-keyword=\"gender\"><span ng-hide=\"gender\">rambunctious pikachu named <b ng-bind=\"child\"></b></span><span ng-show=\"gender\">adorable pikachu named <b ng-bind=\"child\"></b></span></span>. &nbsp;</p>\n<p><b ng-bind=\"child\"></b> was extremely fussy. &nbsp;\"NO SLEEPING!\" - he would yell at his mom but secretly deep down he knew he loved to sleep.&nbsp;</p>\n<p><strong>UNTIL ONE DAY!</strong> When the little pikachu couldn't fall asleep! &nbsp;All night whriling and twerling, trying to get to sleep because <b ng-bind=\"child\"></b> knew it was important to get a full nights sleep to be be excellent at school, <b ng-bind=\"activity\"></b>, and be of good health.&nbsp;</p>\n<p>He asked his mom to help, and she knew just the who to call -- <strong><b ng-bind=\"hero\"></b></strong>!</p>\n<p><b ng-bind=\"hero\"></b> read <b ng-bind=\"child\"></b> lots of stories until the littlest pikachu couldn't help but to fall asleep right away. &nbsp;</p>\n<p><span data-keyword=\"ending\"><span ng-hide=\"ending\">The End</span><span ng-show=\"ending\"> <b ng-bind=\"parent\"></b> was so proud that he told <b ng-bind=\"hero\"></b> that they could <b ng-bind=\"activity\"></b> tomrrow when <b ng-bind=\"child\"></b> woke up!</span></span></p>",
-    "price" : 1,
+    "price" : 5,
     "photoUrl" : "/images/landing/example.jpg",
     "title" : "The Very Tired Picachu",
     "ages" : "4+",
     "length" : 2,
     "shortDesc" : "A mother get's her fussy little Pokemon to go to sleep.  She does so with the help of her child's favorite hero and helps them understand that sleeping will help her child be happier at school and while doing their favorite activity.",
-    "longDesc" : "",
-    "authorName" : "Guest Author",
+    "salesPitch" : "This is a perfect story not only for the child but also the parents reading it.  If you're not 100% satisified with this story message me at tonynacu@gmail.com and i'll send you a refund myself!",
+    "authorName" : "Tony Nacu",
+    "authorImageUrl" : "/images/local_500x500.jpg",
     "authorId" : "57e894497d466949e782cdf2",
     "tags" : [
       "Pokemon Go",

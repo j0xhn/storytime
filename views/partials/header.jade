@@ -1,13 +1,18 @@
 .navigation
   .topNav.content
-    .left
-      span.menuIcon(onclick="navigation.toggleSideNav()") Menu
-    a.logo(href='/' target='_self') Storytime
-    .right
+    .left.fac
+      div.menuIcon.mar10r(onclick="window.navigation.toggleSideNav()")
       div.searchIconWrapper
-        i.searchIcon.txt-black(onclick="navigation.toggleSideNav()")
+        i.searchIcon.txt-black(onclick="window.navigation.toggleSideNav()")
+    div
+      a.logo(href='/' target='_self') Storytime
+
+    .right
       if user
+        div.coin.badge.outline
+          | #{user.paymentInfo.coins}
         a.profile-image(href='/account' target='_self')
+
           if user.profile.picture
             img.img(src="#{user.profile.picture}")
           else

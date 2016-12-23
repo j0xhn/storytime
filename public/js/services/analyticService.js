@@ -1,5 +1,5 @@
 angular.module('services')
-.service('analyticService', function (userService) {
+.service('analyticService', function () {
   // load google analytics on layout.jade
   return {
     event: function(category, action, label){
@@ -8,7 +8,6 @@ angular.module('services')
         eventCategory: category,
         eventAction: action,
         eventLabel: label,
-        userId: userService.user ? userService.user._id : null
       });
     },
     error: function(action, label){
@@ -18,7 +17,6 @@ angular.module('services')
         eventCategory: 'error',
         eventAction: action,
         eventLabel: label,
-        userId: userService.user ? userService.user._id : null
       });
     }
   }

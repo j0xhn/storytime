@@ -4,6 +4,11 @@
   <div ng-if="type === 'save-story'" class='save-story'>
     <h4 class='mar10b'>Successfully Saved Story</h4>
     <p> Share your story with friends and family using this url:</p>
-    <a ng-href="{{url}}" class='strong underline txt-blue'>{{url}}</a>
+    <a ng-href="{{url}}" class='strong underline txt-blue break-word'>{{url}}</a>
+  </div>
+
+  <div ng-if="type === 'purchase-coins'">
+    <h4 class='mar10b'>Successfully Purchased Coins</h4>
+    <h1 class='added-coins inline'>+{{addedCoins}}</h1>
   </div>
 </div>

@@ -24,12 +24,13 @@
     .searchIcon { cursor: pointer;}
     .profile-image{
       cursor: pointer;
+      position: relative;
       .img{
         width: 25px;
         height: 25px;
         background-color: $lightGray;
         border-radius: 50%;
-        margin-left: 5px;
+        margin-left: 10px;
         &.fa-user{
           display: flex;
           align-items: center;
