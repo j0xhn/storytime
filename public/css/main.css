@@ -11399,6 +11399,12 @@ h1, h2, h3, h4, h5, h6 {
 p, .p {
   color: #333; }
 
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(359deg); } }
+
 /* line 1, /Users/John/Dev/projects/storytime/public/css/base/base.scss */
 html, .pageWrapperNormalize {
   position: relative;
@@ -12429,10 +12435,16 @@ Search Tags for a story
   /* line 32, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
   .badge.coin {
     color: #bd9131;
-    border-color: #f7ca63; }
-    /* line 35, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+    border-color: #f7ca63;
+    transition-duration: 300ms; }
+    /* line 36, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
     .badge.coin:before {
-      background: url(/images/svg/coin.svg); }
+      background: url(/images/svg/coin.svg);
+      top: 4px;
+      transform: none; }
+    /* line 43, /Users/John/Dev/projects/storytime/public/partials/badges/badges.scss */
+    .badge.coin.animate::before {
+      animation: flip .3s infinite linear; }
 
 /* line 1, /Users/John/Dev/projects/storytime/public/partials/testimonial/testimonial.scss */
 .st-testimonial-wrapper {

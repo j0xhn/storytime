@@ -32,6 +32,14 @@
   &.coin {
     color: $darkGold;
     border-color: $gold;
-    &:before{ background: url(/images/svg/coin.svg); }
+    transition-duration: 300ms;
+    &:before{
+      background: url(/images/svg/coin.svg);
+      // these fight the pre-determined styles above
+      // to allow for the transform animation to work correctly below
+      top: 4px;
+      transform: none;
+    }
+    &.animate::before{ animation:  flip .3s infinite linear; }
   }
 }

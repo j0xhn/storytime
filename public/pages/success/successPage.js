@@ -3,7 +3,7 @@ angular.module('directives')
 		return {
 			restrict: 'EA',
 			replace: true,
-      controller:  function($scope, $routeParams, $timeout, $compile, storiesService, paymentService, {
+      controller:  function($scope, $routeParams, $timeout, $compile, storiesService, paymentService) {
         /*
         success page for all my generic success situations
         */
@@ -13,7 +13,9 @@ angular.module('directives')
         // successful coin
         $scope.addedCoins = $routeParams.coins;
         if($scope.addedCoins){
-          paymentService.coinAnimation($scope.addedCoins);
+          $timeout(function(){
+            paymentService.coinAnimation(angular.element('.added-coins')[0], $scope.addedCoins);
+          }, 1000);
         }
       },
 			templateUrl: '/pages/success/successPage.html',

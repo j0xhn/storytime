@@ -1,5 +1,5 @@
 angular.module('services')
-.service('paymentService', function ($http, $q, userService, analyticService, responseService) {
+.service('paymentService', function ($http, $q, $timeout, userService, analyticService, responseService) {
 
   const tokenRequest = $http({
     method: 'GET',
@@ -35,20 +35,24 @@ angular.module('services')
         url: '/payments/coin',
         data: paymentDetails
       })
-    }
+    },
 
-    coinAnimation: function(addedCoins){
-    $btn = angular.element(this);
-    var $cart = angular.element('.topNav .coin')
-    var $coin = $('<div class="coin badge">')
-        .insertAfter($btn)
-        .animate({
-            "top": $cart.offset().top,
-            "left": $cart.offset().left
-        }, 1000, function() {
-            $coin.remove();
-        });
+    coinAnimation: function(element, addedCoins){
+    var $cart = angular.element('.topNav .coin').addClass('animate');
+    var count = $cart.text();
+    var coinArray = new Array(addedCoins);
+    var goal = addedCoins;
+    function countdown(){
+      var delay = (600/goal);
+      $cart.text(count++);
+      if(goal){
+        goal--
+        $timeout(countdown,delay)
+      }
+      else($cart.removeClass('animate'))
     }
-
+    countdown();
   }
+
+}
 });
