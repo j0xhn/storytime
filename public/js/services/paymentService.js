@@ -42,8 +42,9 @@ angular.module('services')
     var count = $cart.text();
     var coinArray = new Array(addedCoins);
     var goal = addedCoins;
+    var delay = (600/addedCoins);
+
     function countdown(){
-      var delay = (600/goal);
       $cart.text(count++);
       if(goal){
         goal--
