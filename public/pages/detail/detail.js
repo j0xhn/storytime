@@ -25,6 +25,7 @@ angular.module('directives')
       storiesService.getSelectedStory($routeParams.storyId).then(function(res){
         res.createdOn = moment(res.createdAt).format('MMM Do, YYYY');
         $scope.story = res;
+        $scope.story.price = $scope.story.price || 0;
         $scope.needToUnlock = !userService.hasPurchased($routeParams.storyId) && $scope.story.price;
       });
       /*
