@@ -216,9 +216,8 @@ app.get('*', angularPagesController.angularHandoff);
  */
 app.use(errorHandler());
 /**
- * Error Handler.
+ * Update Handler.
  */
-
 
 
 /**
