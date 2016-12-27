@@ -58,7 +58,10 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
       hasPurchasedStory:function($location, $route, $q, userService){
         var storyId = $route.current.params.storyId;
         var deferred = $q.defer();
-        if(userService.hasPurchased(storyId) || storyId === 'example'){
+        var hasPurchased = userService.hasPurchased(storyId) || storyId === 'example';
+        // TODO: hack until I have purchase working for free stories
+        var isAdmin = $route.current.params.isAdmin;
+        if(hasPurchased || isAdmin){
           deferred.resolve(true)
         }else{
           $location.path('/detail/'+$route.current.params.storyId).replace();
