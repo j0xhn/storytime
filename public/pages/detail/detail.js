@@ -38,15 +38,17 @@ angular.module('directives')
       }
 
       $scope.nextStep = function (e) {
+        var hasEnoughCoins = userService.user.paymentInfo.coins >= $scope.story.price;
+        debugger;
         if(!userService.isLoggedIn()){
           // download and take from autoPay
           $scope.paymentState = 'createAccount';
-        } else if (userService.user.paymentInfo.coins >= $scope.story.price || $scope.story.price === 0) {
+        } else if ( hasEnoughCoins ) {
           paymentService.payWithCoins($scope.story._id, $scope.story.price).then(function(res){
             if (responseService.isSuccess(res)){
               userService.syncUser().then(function(res){
-                if(res){ $scope.handleSuccess();
-                } else { analyticService.error('user sync', 'detail.js') }
+                if(res){ $scope.handleSuccess(); }
+                else { analyticService.error('user sync', 'detail.js') }
               });
             } else {
               analyticService.error('coin payment', 'detail.js')

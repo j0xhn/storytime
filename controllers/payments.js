@@ -76,8 +76,10 @@ exports.processPayment = (req, res) => {
 }
 
 exports.payWithCoins = (req,res) => {
+  console.log('pay with coins entered')
   User.findById(req.user.id, (err, user) => {
     var coins = isNaN(req.body.price) ? 0 : req.body.price;
+    console.log('coins ', coins)
     var storyId = req.body.storyId
 
     if (err) { return next(err); }

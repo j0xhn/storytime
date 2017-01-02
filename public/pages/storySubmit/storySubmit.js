@@ -71,9 +71,11 @@ angular.module('directives')
           story.html = inputService.bindToggleKeywords(story.html, true);
         }
 
+        // set default values on submit
         story.authorName = userService.isLoggedIn() ? 'Guest Author' : userService.user.profile.name;
         story.authorId = story.authorId || userService.user._id;
         story.authorImageUrl = story.authorImageUrl || userService.user.profile.picture;
+        story.price = story.price || 0;
 
         storiesService.postStory(story).then(function(res){
           if(!res.data || res.data.error){
