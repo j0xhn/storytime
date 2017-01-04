@@ -9,4 +9,11 @@ UpdateUtil.updateStoryPrice = function(){
     })
   })
 };
+UpdateUtil.updateUser = function(){
+  User.find(function(err, users){
+    users.forEach(function(user){
+      console.log(user.paymentInfo.coins)
+    })
+  })
+};
 module.exports = UpdateUtil;
