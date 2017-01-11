@@ -39,7 +39,6 @@ angular.module('directives')
 
       $scope.nextStep = function (e) {
         var hasEnoughCoins = userService.user.paymentInfo.coins >= $scope.story.price;
-        debugger;
         if(!userService.isLoggedIn()){
           // download and take from autoPay
           $scope.paymentState = 'createAccount';
@@ -55,9 +54,16 @@ angular.module('directives')
             }
           })
         } else {
+          var data = angular.merge($scope, {
+            title: 'Not Enough Coins',
+            body: "You currently don't have enough coins to purchase this story.  Don't worry though, you can buy more!",
+            okayButtonText: 'Buy Coins',
+            okayButtonLink: '/checkout'
+          });
           ModalService.showModal({
             templateUrl: "partials/modals/baseModal/baseModal.html",
-            controller: "BaseModalController"
+            controller: "BaseModalController",
+            scope: data
           }).then(function(modal) {
             // listen for close
             modal.close.then(function(result) {

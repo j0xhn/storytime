@@ -3,7 +3,9 @@ Clone this repo, run ```npm i```.
 
 If you haven't already, make sure your machine is setup to have MongoDB running.  If you haven't installed it already I suggest getting setup with HomeBrew: http://brew.sh/ and then downloading and setting up MongoDB by following this nice little getting started guide: http://treehouse.github.io/installation-guides/mac/mongo-mac.html
 
-After all that `npm start` should get you up and running on localhost:3000
+You'll have to get the correct keys from me for the .env.example file for the app to actually run.  Provided you have that file then you can continue below.
+
+After all that `npm start` should get you up and running on localhost:3000 as long as you have nodemon installed.  If you don't have nodemon run `npm install -g nodemon` before `npm start`
 
 ### Main Features
 - Weekly / Monthly / Daily email send out via SendGrid with a “subscription center” front-end

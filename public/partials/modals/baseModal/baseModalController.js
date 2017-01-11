@@ -1,5 +1,5 @@
 angular.module('storytime')
-.controller('BaseModalController', ['$scope', 'close', function($scope, close) {
+.controller('BaseModalController', ['$scope', 'close', '$location', function($scope, close, $location) {
   /*
     I use the same backdrop for my modals
     as I do for the side-nav bar.
@@ -11,9 +11,17 @@ angular.module('storytime')
   */
   window.document.body.classList.add('lock');
   $scope.$on('BACKDROP_CLICKED', function(){
-    console.log('made it here')
     close();
   })
-  $scope.close = close;
-
+  $scope.close = function(){
+    // Not quite sure why I need this, but closing the modal doesn't
+    // remove the backdrop, so I do it manually here.
+    window.document.body.classList.remove('lock');
+    close();
+  };
+  $scope.okayClick = function(message){
+    if($scope.okayButtonLink){
+      $location.path($scope.okayButtonLink)
+    }
+  }
 }])

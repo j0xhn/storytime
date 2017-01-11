@@ -1,4 +1,8 @@
   <div class="base-modal">
-    <div class="base-modal-close" ng-click="close()">x</div>
-    TEST MODAL FOR COINS
+    <div class="bm-close closeIcon" ng-click="close()"></div>
+    <h2 class="bm-title">{{title}}</h2>
+    <p class="bm-body">{{body}}</p>
+    <div class="bm-buttons">
+      <promise-button class="mobileFull" ng-click="okayClick()">{{okayButtonText}}</promise-button>
+    </div>
   </div>

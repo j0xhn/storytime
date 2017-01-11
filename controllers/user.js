@@ -54,16 +54,18 @@ exports.postLogin = (req, res, next) => {
     if (!user) {
       // checks for guest user
       User.findOne({ email: req.body.email }, (err, user) => {
-        if (err) {
+        console.log(user, err, req.user)
+        if (err || !user) {
           console.log("error in find query");
           req.flash('errors', info);
           return res.redirect('/login');
         }
-        if (user.password){
+        if (user && user.password){
           req.flash('errors', info)
           return res.redirect('/login');
         } else {
           user.password = req.body.password;
+          user.email = req.body.email;
           user.save((err) => {
             if (err) { return next(err); }
             req.logIn(user, (err) => {
@@ -73,7 +75,7 @@ exports.postLogin = (req, res, next) => {
             });
           });
         }
-      });
+      })
     } else {
       req.logIn(user, (err) => {
         if (err) { return next(err); }
