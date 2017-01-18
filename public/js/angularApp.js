@@ -35,6 +35,8 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     }
   })
   .when('/stories', { template: '<feed></feed>' })
+  .when('/privacy', { template: '<privacy-page></privacy-page>' })
+  .when('/terms', { template: '<terms-page></terms-page>' })
   .when('/success/:type?', { template: '<success-page></success-page>' })
   .when('/submit/:storyId?',  {
     template: '<story-submit></story-submit>',
