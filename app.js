@@ -28,6 +28,12 @@ if (process.env.NODE_ENV != 'Production'){
   console.log('Node Enviorment:', process.env.NODE_ENV);
 }
 
+// Read the Certbot SSL stuff
+const letsEncryptReponse = process.env.CERTBOT_RESPONSE;
+app.get('/.well-known/acme-challenge/:content', function(req, res) {
+  res.send(letsEncryptReponse);
+});
+
 /**
  * Controllers (route handlers).
  */
