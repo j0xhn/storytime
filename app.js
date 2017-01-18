@@ -30,10 +30,10 @@ if (enviroment.toLowerCase() != 'production'){
 }
 
 // Read the Certbot SSL stuff
-// const letsEncryptReponse = process.env.CERTBOT_RESPONSE;
-// app.get('/.well-known/acme-challenge/:content', function(req, res) {
-//   res.send(letsEncryptReponse);
-// });
+const letsEncryptReponse = process.env.CERTBOT_RESPONSE;
+app.get('/.well-known/acme-challenge/:content', function(req, res) {
+  res.send(letsEncryptReponse);
+});
 
 /**
  * Controllers (route handlers).
