@@ -23,7 +23,8 @@ const upload = multer({ dest: path.join(__dirname, 'uploads') });
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
  */
-if (process.env.NODE_ENV != 'Production'){
+const enviroment = process.env.NODE_ENV;
+if (enviroment.toLowerCase() != 'production'){
   dotenv.load({ path: './config/.env.example' });
   console.log('Node Enviorment:', process.env.NODE_ENV);
 }
