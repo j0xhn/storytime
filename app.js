@@ -29,11 +29,6 @@ if (enviroment.toLowerCase() != 'production'){
   console.log('Node Enviorment:', process.env.NODE_ENV);
 }
 
-// Read the Certbot SSL stuff
-const letsEncryptReponse = process.env.CERTBOT_RESPONSE;
-app.get('/.well-known/acme-challenge/:content', function(req, res) {
-  res.send(letsEncryptReponse);
-});
 
 /**
  * Controllers (route handlers).
@@ -127,7 +122,11 @@ app.use(function(req, res, next) {
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
-
+// Read the Certbot SSL stuff
+const letsEncryptReponse = process.env.CERTBOT_RESPONSE;
+app.get('/.well-known/acme-challenge/:content', function(req, res) {
+  res.send(letsEncryptReponse);
+});
 
 /**
  * Primary app routes.
