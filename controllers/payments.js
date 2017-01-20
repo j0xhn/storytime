@@ -86,27 +86,29 @@ exports.payWithCoins = (req,res) => {
     if (user.purchased.hasOwnProperty(storyId)){
       ResponseUtil.success(req, res, {message: 'Story has already been unlocked'})
     } else {
-      var set = { purchased: {} };
+      var set = { purchased: {}, };
       set.purchased[storyId] = {
         storyId: storyId,
         purchaseDate: new Date(),
         price: coins
       };
-      //TODO: update the user's coins as well :)
-      // user.paymentInfo.coins = user.paymentInfo.coins - coins;
+
       User.update(
          { _id: user._id },
-         { $set: set },
+         {
+           $set: set,
+           $inc: { 'paymentInfo.coins': -coins }
+         },
          (err, user) => {
-           console.log('err:', err)
-           console.log('user:', user)
            if (err) {
-               ResponseUtil.error(req, res, err);
-             } else {
-               ResponseUtil.success(req, res);
-             }
+             console.log('err:', err)
+             ResponseUtil.error(req, res, err);
+           } else {
+             console.log('user:', user)
+             ResponseUtil.success(req, res);
+           }
          }
-      )
-    }
+       )
+     }
   });
 };

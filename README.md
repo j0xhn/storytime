@@ -16,14 +16,13 @@ After all that `npm start` should get you up and running on localhost:3000 as lo
   - all keywords that they've entered are also keywords in the storyDiv
   - catch errors on everything
 - MongoDB services to update the DB when we update versions
-- E-commerce front-end (UX) to handle purchasing paths
 - Create new MongoDB collection / UI for stories that need approval
 - Create Paginated API call
+- Testimonials
 
 ### Other Features (after beta)
 - get page titles working
 - submit page preview for story card and story detail page
-- testimonials
 - possibly a blinking cursor in inputs or auto select?
 - share story on facebook prompt - on success page, and at end of story
 - delete stories by sending them to another collection called "deleted" or something
