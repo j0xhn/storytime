@@ -5,8 +5,16 @@ angular.module('directives')
 			replace: true,
 			templateUrl: '/partials/storyCard/storycard.html',
 			scope: {
-				story: '='
-			}
+				story: '@',
+        storyId: '='
+			},
+      controller: function($scope, storiesService){
+        if(!$scope.story && $scope.storyId){
+          storiesService.getSelectedStory($scope.storyId).then(function(res){
+            $scope.story = res;
+          })
+        }
+      }
 		}
 	}
 )

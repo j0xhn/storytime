@@ -12,7 +12,6 @@ angular.module('directives')
         $scope.purchasedStories = userService.getPurchased();
       },
 			templateUrl: '/pages/myStories/myStories.html',
-      scope:{}
 		}
 	}
 )
