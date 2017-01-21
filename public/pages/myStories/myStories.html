@@ -1,0 +1,8 @@
+<div class="myStoriesPage">
+  {{purchasedStories}}
+  <!-- TODO: Need to either pass in IDs to these individual story cards, or pass in Ids to feed -->
+  <div
+    story-card
+    ng-repeat="story in purchasedStories | orderBy: 'createdAt': 'desc'"
+  </div>
+</div>

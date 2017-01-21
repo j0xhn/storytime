@@ -20,9 +20,7 @@ angular.module('directives')
           });
         };
 
-        $scope.setAsSelectedStory = function(story){
-          storiesService.setSelectedStory(story);
-        }
+        $scope.setAsSelectedStory = storiesService.setSelectedStory;
 
         searchStories($scope.search);
       },

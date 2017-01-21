@@ -43,6 +43,7 @@ angular.module('services')
     isLoggedIn: function() { return !!cachedUser.password; },
     isAdmin: function() { return cachedUser.permissions.indexOf('admin') > -1 },
     hasPurchased: function(storyId) { return cachedUser.purchased && cachedUser.purchased.hasOwnProperty(storyId) },
+    getPurchased: function() { return cachedUser.purchased },
     getCustomerId: function() { return cachedUser.paymentInfo.customerId },
     getPaymentMethodToken: function() { return cachedUser.paymentInfo.paymentMethodToken }
   }

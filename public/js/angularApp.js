@@ -15,43 +15,39 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     use target="_self" in href to trigger a whole page reload
     and hence the ability for express to handle route
   */
+  var ifLoggedIn = function(directiveName, redirectPath) {
+    return {
+      template: '<'+directiveName+'></'+directiveName+'>',
+      resolve:{
+        user: function($q, $location, userService){
+          var deferred = $q.defer();
+          if (userService.isLoggedIn()){
+            deferred.resolve(true);
+          } else {
+            console.log('user is not logged in, redirecting to ', redirectPath);
+            var excludePaths = ['/login']; // paths that are not part of angular routes
+            if(excludePaths.includes(redirectPath)){
+              window.location.pathname = redirectPath;
+            } else {
+              $location.path(redirectPath).replace();
+            }
+          }
+          return deferred.promise;
+        }
+      }
+    }
+  }
 
   $locationProvider.html5Mode(true);
   $routeProvider
   .when('/_=_', {redirectTo: '/'}) // facebook ugliness
-  .when('/',        {
-    template: '<feed></feed>',
-    resolve:{
-      user: function($q, $location, userService){
-        var deferred = $q.defer();
-        if (userService.isLoggedIn()){
-          deferred.resolve(true);
-        } else {
-          console.log('user is not logged in, redirecting');
-          $location.path('/landing').replace();
-        }
-        return deferred.promise;
-      }
-    }
-  })
+  .when('/', ifLoggedIn('feed', '/landing'))
   .when('/stories', { template: '<feed></feed>' })
+  .when('/myStories', ifLoggedIn('my-stories', '/login'))
   .when('/privacy', { template: '<privacy-page></privacy-page>' })
   .when('/terms', { template: '<terms-page></terms-page>' })
   .when('/success/:type?', { template: '<success-page></success-page>' })
-  .when('/submit/:storyId?',  {
-    template: '<story-submit></story-submit>',
-    resolve: {
-      user: function($q, $window, userService){
-        var deferred = $q.defer();
-        if (userService.isLoggedIn()){
-          deferred.resolve(true);
-        } else {
-        $window.location = '/login';
-        }
-        return deferred.promise;
-      }
-    }
-  })
+  .when('/submit/:storyId?', ifLoggedIn('story-submit', '/login'))
   .when('/checkout',  { template: '<checkout-page></checkout-page>' })
   .when('/landing',  { template: '<landing></landing>' })
   .when('/story/:storyId', {
@@ -61,9 +57,7 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
         var storyId = $route.current.params.storyId;
         var deferred = $q.defer();
         var hasPurchased = userService.hasPurchased(storyId) || storyId === 'example';
-        // TODO: hack until I have purchase working for free stories
-        var isAdmin = $route.current.params.isAdmin;
-        if(hasPurchased || isAdmin){
+        if(hasPurchased){
           deferred.resolve(true)
         }else{
           $location.path('/detail/'+$route.current.params.storyId).replace();
