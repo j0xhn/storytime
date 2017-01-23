@@ -86,7 +86,7 @@ exports.payWithCoins = (req,res) => {
     if (user.purchased.hasOwnProperty(storyId)){
       ResponseUtil.success(req, res, {message: 'Story has already been unlocked'})
     } else {
-      var set = { purchased: {}, };
+      var set = { purchased: user.purchased || {} };
       set.purchased[storyId] = {
         storyId: storyId,
         purchaseDate: new Date(),
@@ -101,10 +101,8 @@ exports.payWithCoins = (req,res) => {
          },
          (err, user) => {
            if (err) {
-             console.log('err:', err)
              ResponseUtil.error(req, res, err);
            } else {
-             console.log('user:', user)
              ResponseUtil.success(req, res);
            }
          }

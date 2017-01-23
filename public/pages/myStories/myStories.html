@@ -1,8 +1,11 @@
 <div class="myStoriesPage">
-  {{purchasedStories}}
-  <!-- TODO: Need to either pass in IDs to these individual story cards, or pass in Ids to feed -->
-  <div
-    story-card
-    ng-repeat="story in purchasedStories | orderBy: 'createdAt': 'desc'"
+  <feed
+    ng-if="purchasedStories"
+    storyids="purchasedStories"
+    header="My Stories"
+  ></feed>
+  <div class="pad40 tac">
+    <div ng-if="message" class="mar30b"> {{message}} </div>
+    <promise-button href="/stories">Browse Stories</promise-button>
   </div>
 </div>
