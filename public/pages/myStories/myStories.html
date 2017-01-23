@@ -4,8 +4,8 @@
     storyids="purchasedStories"
     header="My Stories"
   ></feed>
-  <div class="pad40 tac">
-    <div ng-if="message" class="mar30b"> {{message}} </div>
+  <div class="pad40 tac" ng-if="message">
+    <div class="mar30b"> {{message}} </div>
     <promise-button href="/stories">Browse Stories</promise-button>
   </div>
 </div>
