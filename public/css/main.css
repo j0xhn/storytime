@@ -12761,6 +12761,10 @@ Search Tags for a story
     display: block;
     text-align: center; }
 
+/* line 1, /Users/john/Dev/projects/storytime/public/pages/myStories/myStoriesPage.scss */
+.myStoriesPage {
+  height: 100%; }
+
 /* line 1, /Users/john/Dev/projects/storytime/public/pages/storySubmit/storySubmitPage.scss */
 .submit-page {
   background-color: #fff;

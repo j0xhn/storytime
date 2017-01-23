@@ -15,7 +15,7 @@ window.navigation.clear = function(){};
 */
 
 document.addEventListener("DOMContentLoaded", function() {
-  var $rootScope = angular.element('body').scope().$root
+  var $rootScope = window.angular ? window.angular.element('body').scope().$root : null;
 
   window.navigation.toggleSideNav = function(force){
     const isForced = typeof force === 'boolean';

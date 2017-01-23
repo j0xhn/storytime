@@ -5,7 +5,7 @@ Taken inhouse so I can utilize how I want :)  Thanks!
 */
 
 angular.module('directives')
-    .directive('promiseButton', ['$parse', '$compile', function ($parse, $compile)
+    .directive('promiseButton', ['$parse', '$compile','$location','$rootScope', function ($parse, $compile, $location, $rootScope)
     {
         'use strict';
 
@@ -35,6 +35,13 @@ angular.module('directives')
                 // some of my custom stuff
                 // adds className
                 el.addClass('button');
+                if(attrs.href){
+                  el.on('click', function(){
+                    $rootScope.$apply(function(){
+                      $location.path(attrs.href);
+                    })
+                  })
+                }
                 // puts everything inside into an element so it can be hidden on loading
                 el = wrapContents(el);
 
