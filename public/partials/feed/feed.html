@@ -1,23 +1,26 @@
 <div class="feedDirective">
-  <div class="content feedWrapper">
-    <h4 class="header" ng-if="searchTerm || header">
-      <span>{{header}}</span>
-      <span ng-if="noResults && searchTerm">
-        <span ng-if="noResults">No r</span><span ng-if="!noResults">R</span>esults for "<strong>{{searchTerm}}</strong>"
-      </span>
-    </h4>
-    <div
-      story-card
-      ng-repeat="story in myStories | toArray | orderBy: 'createdAt': 'desc'"
-      story="story"
-      ng-click="setAsSelectedStory(story)">
+  <spinner fill="true" color="gray" ng-if="loading"></spinner>
+  <div ng-if="!loading">
+    <div class="content feedWrapper">
+      <h4 class="header" ng-if="searchTerm || header">
+        <span>{{header}}</span>
+        <span ng-if="noResults && searchTerm">
+          <span ng-if="noResults">No r</span><span ng-if="!noResults">R</span>esults for "<strong>{{searchTerm}}</strong>"
+        </span>
+      </h4>
+      <div
+        story-card
+        ng-repeat="story in myStories | toArray | orderBy: 'createdAt': 'desc'"
+        story="story"
+        ng-click="setAsSelectedStory(story)">
+      </div>
     </div>
-  </div>
-  <div class="resultsFooter tac" ng-if="searchTerm">
-    <div class="pad20">
-      <divider></divider>
+    <div class="resultsFooter tac" ng-if="searchTerm">
+      <div class="pad20">
+        <divider></divider>
+      </div>
+      <p class='mar20b'> Not finding what you want?  Submit your story today! </p>
+      <a class="button" href="/submit">Create Your Story</a>
     </div>
-    <p class='mar20b'> Not finding what you want?  Submit your story today! </p>
-    <a class="button" href="/submit">Create Your Story</a>
   </div>
 </div>

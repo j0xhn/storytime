@@ -12,7 +12,9 @@ angular.module('directives')
           var searchObj = { general: $scope.searchTerm }
 
           var searchStories = function (searchObj){
+						$scope.loading = true;
             storiesService.searchStories(searchObj).then(function(res) {
+							$scope.loading = false;
               if (!res) analyticService.error('searchStories', 'no response - server is fouling up')
               $scope.myStories = res.data;
               if(!$scope.myStories || $scope.myStories.length === 0){
@@ -22,7 +24,6 @@ angular.module('directives')
           };
 
           $scope.setAsSelectedStory = storiesService.setSelectedStory;
-
           searchStories(searchObj);
         }
       },
