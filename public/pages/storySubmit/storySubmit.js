@@ -53,6 +53,7 @@ angular.module('directives')
         story.html = inputService.bindTextKeywords(story.html, false);
         story.html = inputService.bindToggleKeywords(story.html, false);
         story.inputs = story.inputs || {};
+        story.authorName = userService.isLoggedIn() ? userService.user.profile.name : 'Guest Author';
         $scope.story = story;
       })
 
@@ -72,7 +73,6 @@ angular.module('directives')
         }
 
         // set default values on submit
-        story.authorName = userService.isLoggedIn() ? 'Guest Author' : userService.user.profile.name;
         story.authorId = story.authorId || userService.user._id;
         story.authorImageUrl = story.authorImageUrl || userService.user.profile.picture;
         story.price = story.price || 0;
