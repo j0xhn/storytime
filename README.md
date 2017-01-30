@@ -15,8 +15,8 @@ After all that `npm start` should get you up and running on localhost:3000 as lo
   - add error handling to input directives
   - all keywords that they've entered are also keywords in the storyDiv
   - catch errors on everything
-- MongoDB services to update the DB when we update versions
 - Create new MongoDB collection / UI for stories that need approval
+- Create new MongoDB collection that logs purchases for seller reconcilliation
 - Create Paginated API call
 - Testimonials
 

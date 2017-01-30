@@ -75,6 +75,13 @@ exports.processPayment = (req, res) => {
   }
 }
 
+exports.getPayments = (req, res) => {
+  User.find( {}, { purchased: 1, _id: 0 }, (err, purchased) => {
+    if(err){ return next(err)}
+    else{ ResponseUtil.success(req, res, purchased)}
+  })
+},
+
 exports.payWithCoins = (req,res) => {
   console.log('pay with coins entered')
   User.findById(req.user.id, (err, user) => {

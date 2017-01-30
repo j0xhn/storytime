@@ -37,6 +37,13 @@ angular.module('services')
       })
     },
 
+    getPayments: function(){
+      return $http({
+        method: 'GET',
+        url: '/payments'
+      })
+    },
+
     coinAnimation: function(element, addedCoins){
     var $cart = angular.element('.topNav .coin').addClass('animate');
     var count = $cart.text();

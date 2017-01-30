@@ -38,6 +38,29 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     }
   }
 
+  var ifAdmin = function(directiveName, redirectPath) {
+    return {
+      template: '<'+directiveName+'></'+directiveName+'>',
+      resolve:{
+        user: function($q, $location, userService){
+          var deferred = $q.defer();
+          if (userService.isAdmin()){
+            deferred.resolve(true);
+          } else {
+            console.log('user is not admin, redirecting to ', redirectPath);
+            var excludePaths = ['/login']; // paths that are not part of angular routes
+            if(excludePaths.includes(redirectPath)){
+              window.location.pathname = redirectPath;
+            } else {
+              $location.path(redirectPath).replace();
+            }
+          }
+          return deferred.promise;
+        }
+      }
+    }
+  }
+
   $locationProvider.html5Mode(true);
   $routeProvider
   .when('/_=_', {redirectTo: '/'}) // facebook ugliness
@@ -67,6 +90,8 @@ angular.module('storytime').config(function ($routeProvider, $locationProvider) 
     }
   })
   .when('/detail/:storyId', { template: '<detail-page></detail-page>' })
+  // ADMIN
+  .when('/purchases/', ifAdmin('admin-payments-page', '/'))
   .otherwise({ redirectTo: '/' })
 }).run(function ($rootScope, $location, userService) { //Insert in the function definition the dependencies you need.
   $rootScope.$on("$routeChangeStart", function(event, next, current){
