@@ -19,6 +19,10 @@ After all that `npm start` should get you up and running on localhost:3000 as lo
 - Create new MongoDB collection / UI for stories that need approval
 - Create Paginated API call
 - Testimonials
+- Testing Framework ()
+- Photo upload
+- Polish Checkout Process
+
 
 ### Other Features (after beta)
 - get page titles working
