@@ -1,1 +1,8 @@
-<h1>Payments</h1>
+<div class="payments-page pad20">
+  <h1>Purchases</h1>
+  <div class="storySummary" ng-repeat="batch in payments">
+    <a ng-href="/story/batch.storyId" class="pp-storyId">{{batch.storyId}}</a>
+    <span class="pp-total">{{batch.details.length}}</span>
+    <span class="pp-coins">{{batch.coins}}</span>
+  </div>
+</div>

@@ -76,9 +76,38 @@ exports.processPayment = (req, res) => {
 }
 
 exports.getPayments = (req, res) => {
-  User.find( {}, { purchased: 1, _id: 0 }, (err, purchased) => {
-    if(err){ return next(err)}
-    else{ ResponseUtil.success(req, res, purchased)}
+  //TODO: group by the storyId
+  // User.aggregate(
+  //   [
+  //     { $project : { purchased : 1 } }
+  //     { $group : { _id : "$storyId" } }
+  //   ]
+  // ).exec((err, res) => { debugger })
+  User.find( {}, { purchased: 1 }, (err, purchased) => {
+    if(err){ ResponseUtil.error(req, res, err)}
+    else{
+      const purchases = {};
+      purchased.forEach(function(user){
+        Object.keys(user.purchased).map(function(key, index) {
+          delete user.purchased[key].storyId
+          user.purchased[key].userId = user._id;
+          const purchaseObj = user.purchased[key];
+          const existingArray = purchases[key];
+          if (existingArray) {
+            purchases[key].details.push(purchaseObj)
+            purchases[key].coins += purchaseObj.price
+          }
+          else {
+            purchases[key] = {
+              details: Array(purchaseObj),
+              storyId: key,
+              coins: purchaseObj.price
+            }
+          }
+        });
+      })
+      ResponseUtil.success(req, res, purchases)
+    }
   })
 },
 

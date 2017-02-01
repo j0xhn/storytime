@@ -12889,3 +12889,15 @@ Search Tags for a story
   opacity: .5;
   transition: all 300ms ease-in-out;
   pointer-events: none; }
+
+/* line 2, /Users/john/Dev/projects/storytime/public/pages/admin/payments/payments.scss */
+.payments-page .pp-storyId {
+  width: 50%; }
+
+/* line 3, /Users/john/Dev/projects/storytime/public/pages/admin/payments/payments.scss */
+.payments-page .pp-total {
+  width: 25%; }
+
+/* line 4, /Users/john/Dev/projects/storytime/public/pages/admin/payments/payments.scss */
+.payments-page .pp-coins {
+  width: 25%; }

@@ -7,7 +7,7 @@ angular.module('directives')
       controller: function($scope, paymentService){
         var test = paymentService.getPayments;
         paymentService.getPayments().then(function(res){
-          debugger;
+          $scope.payments = res.data;
         })
       }
 		}
