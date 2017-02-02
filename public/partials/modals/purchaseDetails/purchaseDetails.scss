@@ -1,0 +1,9 @@
+.purchase-details{
+  max-width: 600px;
+  width: 100%;
+  .pd-row{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

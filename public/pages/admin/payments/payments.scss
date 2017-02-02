@@ -1,0 +1,20 @@
+.payments-page{
+  .pp-batch   {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    &:nth-child(odd){ background-color: $lighterGray }
+    .pp-storyId { width: 50%; display: inline-block; padding-left: 10px; }
+    .pp-total   { width: 20%; display: inline-block; }
+    .pp-coins   { width: 20%; display: inline-block; }
+    .fa-info-circle {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform:
+      translateY(-50%);
+      color: $gray;
+      cursor: pointer;
+    }
+  }
+}

@@ -35,6 +35,7 @@
 @import "../partials/dropdownInput/dropdownInput";
 
 @import "../partials/modals/baseModal/baseModal.scss";
+@import "../partials/modals/purchaseDetails/purchaseDetails.scss";
 
 @import "../pages/landing/landingPage";
 @import "../pages/storyPage/storyPage";
@@ -44,3 +45,5 @@
 @import "../pages/account/accountPage";
 @import "../pages/success/successPage";
 @import "../pages/checkoutPage/checkoutPage";
+
+@import "../pages/admin/payments/payments";

@@ -1,0 +1,13 @@
+<div class="base-modal purchase-details">
+  <div class="bm-close closeIcon" ng-click="close()"></div>
+  <div class="pd-row">
+    <span class="percent50">User Id</span>
+    <span class="percent10">Price</span>
+    <span class="percent30">Date</span>
+  </div>
+  <div class="pd-row" ng-repeat="detail in details">
+    <span class="percent50 ellipsis">{{detail.userId}}</span>
+    <span class="percent10 ellipsis">{{detail.price}}</span>
+    <span class="percent30  ellipsis">{{detail.purchaseDate | date}}</span>
+  </div>
+</div>

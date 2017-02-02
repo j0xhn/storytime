@@ -11155,16 +11155,56 @@ button.close {
 .max400 {
   max-width: 400px; }
 
+/* line 148, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+.percent10 {
+  width: 10%; }
+
 /* line 149, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+.percent20 {
+  width: 20%; }
+
+/* line 150, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+.percent30 {
+  width: 30%; }
+
+/* line 151, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+.percent40 {
+  width: 40%; }
+
+/* line 152, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+.percent50 {
+  width: 50%; }
+
+/* line 153, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+.percent60 {
+  width: 60%; }
+
+/* line 154, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+.percent70 {
+  width: 70%; }
+
+/* line 155, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+.percent80 {
+  width: 80%; }
+
+/* line 156, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+.percent90 {
+  width: 90%; }
+
+/* line 157, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+.percent100 {
+  width: 100%; }
+
+/* line 160, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
 .italic {
   font-style: italic !important; }
 
-/* line 150, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+/* line 161, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
 .ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; }
-  /* line 155, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
+  /* line 166, /Users/john/Dev/projects/storytime/public/css/base/shorthand.scss */
   .ellipsis.multiLine {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -12505,7 +12545,7 @@ Search Tags for a story
 /* line 1, /Users/john/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
 .base-modal {
   background-color: white;
-  padding: 40px;
+  padding: 20px;
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
@@ -12515,17 +12555,36 @@ Search Tags for a story
   margin: 0 auto;
   z-index: 2;
   text-align: center; }
-  /* line 13, /Users/john/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
+  @media (min-width: 500px) {
+    /* line 1, /Users/john/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
+    .base-modal {
+      padding: 40px; } }
+  /* line 14, /Users/john/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
   .base-modal .bm-close {
     position: absolute;
-    top: 20px;
-    right: 20px; }
-  /* line 18, /Users/john/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
+    top: 10px;
+    right: 10px; }
+    @media (min-width: 500px) {
+      /* line 14, /Users/john/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
+      .base-modal .bm-close {
+        top: 20px;
+        right: 20px; } }
+  /* line 20, /Users/john/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
   .base-modal .bm-title {
     margin-bottom: 15px; }
-  /* line 19, /Users/john/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
+  /* line 21, /Users/john/Dev/projects/storytime/public/partials/modals/baseModal/baseModal.scss */
   .base-modal .bm-body {
     margin-bottom: 25px; }
+
+/* line 1, /Users/john/Dev/projects/storytime/public/partials/modals/purchaseDetails/purchaseDetails.scss */
+.purchase-details {
+  max-width: 600px;
+  width: 100%; }
+  /* line 4, /Users/john/Dev/projects/storytime/public/partials/modals/purchaseDetails/purchaseDetails.scss */
+  .purchase-details .pd-row {
+    display: flex;
+    justify-content: space-between;
+    text-align: left; }
 
 /* line 4, /Users/john/Dev/projects/storytime/public/pages/landing/landingPage.scss */
 .landingPage .hero {
@@ -12889,3 +12948,33 @@ Search Tags for a story
   opacity: .5;
   transition: all 300ms ease-in-out;
   pointer-events: none; }
+
+/* line 2, /Users/john/Dev/projects/storytime/public/pages/admin/payments/payments.scss */
+.payments-page .pp-batch {
+  display: flex;
+  position: relative;
+  justify-content: space-between; }
+  /* line 6, /Users/john/Dev/projects/storytime/public/pages/admin/payments/payments.scss */
+  .payments-page .pp-batch:nth-child(odd) {
+    background-color: #eee; }
+  /* line 7, /Users/john/Dev/projects/storytime/public/pages/admin/payments/payments.scss */
+  .payments-page .pp-batch .pp-storyId {
+    width: 50%;
+    display: inline-block;
+    padding-left: 10px; }
+  /* line 8, /Users/john/Dev/projects/storytime/public/pages/admin/payments/payments.scss */
+  .payments-page .pp-batch .pp-total {
+    width: 20%;
+    display: inline-block; }
+  /* line 9, /Users/john/Dev/projects/storytime/public/pages/admin/payments/payments.scss */
+  .payments-page .pp-batch .pp-coins {
+    width: 20%;
+    display: inline-block; }
+  /* line 10, /Users/john/Dev/projects/storytime/public/pages/admin/payments/payments.scss */
+  .payments-page .pp-batch .fa-info-circle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    cursor: pointer; }

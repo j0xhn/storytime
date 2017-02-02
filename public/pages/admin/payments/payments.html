@@ -1,0 +1,14 @@
+<div class="payments-page pad20">
+  <h1 class="mar20b">Purchases</h1>
+  <div class="pp-batch">
+    <span class="percent50 ellipsis">Story Id</span>
+    <span class="percent20 ellipsis">Downloads</span>
+    <span class="percent20 ellipsis">Coins</span>
+  </div>
+  <div class="pp-batch" ng-repeat="batch in payments">
+    <a ng-href="/story/{{batch.storyId}}" class="percent50 ellipsis">{{batch.storyId}}</a>
+    <span class="percent20 ellipsis">{{batch.details.length}}</span>
+    <span class="percent20 ellipsis">{{batch.coins}}</span>
+    <i class="fa fa-info-circle" ng-click="showDetails(batch.details)"></i>
+  </div>
+</div>

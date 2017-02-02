@@ -1,6 +1,6 @@
 .base-modal{
   background-color: white;
-  padding: 40px;
+  padding: 20px;
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
@@ -10,10 +10,12 @@
   margin: 0 auto;
   z-index: $z-backdrop-active;
   text-align: center;
+  @media (min-width: $small-width){ padding: 40px; }
   .bm-close{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
+    @media (min-width: $small-width){ top: 20px; right: 20px; }
   }
   .bm-title { margin-bottom: 15px; }
   .bm-body { margin-bottom: 25px;}
